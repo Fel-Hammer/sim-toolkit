@@ -1,0 +1,29 @@
+# SimC configuration
+report_details=0
+optimize_expressions=1
+
+# Character configuration
+demonhunter="Base"
+source=default
+spec=havoc
+level=80
+race=blood_elf
+timeofday=day
+role=dps
+position=front
+talents=
+
+# Buff configuration
+optimal_raid=1
+# override.bloodlust=0
+
+# Default consumables
+potion=tempered_potion_3
+flask=flask_of_alchemical_chaos_3
+food=feast_of_the_divine_day
+augmentation=crystallized
+temporary_enchant=main_hand:ironclaw_whetstone_3/off_hand:ironclaw_whetstone_3
+
+# Imports
+input=gear.simc
+input=actions.simc

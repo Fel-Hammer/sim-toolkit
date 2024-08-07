@@ -1,0 +1,16 @@
+# Ignore
+log.txt
+*.xml
+*.code-workspace
+.DS_Store
+config.ini
+venv/
+*.lock
+*.pkl
+__pycache__/
+
+# Allow
+!website_havoc/*
+!website_vengeance/*
+!reports_havoc/*
+!reports_vengeance/*

@@ -1,0 +1,17 @@
+# Default gear
+head=impalers_of_the_hypogeal_nemesis,id=212065,ilevel=639,gem_id=213485,bonus_id=8780
+neck=sureki_zealots_insignia,id=225577,ilevel=639,gem_id=213485/213743
+shoulder=warmantle_of_the_hypogeal_nemesis,id=212063,ilevel=639
+back=wings_of_shattered_sorrow,id=225574,ilevel=639,enchant_id=7409
+chest=omnivores_venomous_camouflage,id=212433,ilevel=639,enchant_id=7364
+wrist=runebranded_armbands,id=219334,bonus_id=10520,ilevel=636,gem_id=213485,enchant_id=7391,crafted_stats=36/40
+hands=claws_of_the_hypogeal_nemesis,id=212066,ilevel=639
+waist=behemoths_eroded_cinch,id=225583,ilevel=639,gem_id=213485
+legs=pantaloons_of_the_hypogeal_nemesis,id=212064,ilevel=639,enchant_id=6490
+feet=runebranded_kickers,id=219327,bonus_id=10520,ilevel=636,enchant_id=7418,crafted_stats=36/40
+finger1=seal_of_the_poisoned_pact,id=225578,ilevel=639,gem_id=213485/213485,enchant_id=7473
+finger2=key_to_the_unseeming,id=212447,ilevel=639,gem_id=213485/213485,enchant_id=7473
+trinket1=arakara_sacbrood,id=219314,ilevel=639
+trinket2=bottled_flayedwing_toxin,id=178742,ilevel=639
+main_hand=venometched_claw,id=212409,ilevel=639,enchant_id=7460
+off_hand=void_reapers_warp_blade,id=219877,ilevel=639,enchant_id=7460

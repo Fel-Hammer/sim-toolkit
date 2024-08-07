@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>$TITLE</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+        $STYLES
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="mdc-typography--headline3">$TITLE</h1>
+        <div id="bestBuilds" class="best-builds-container">
+            <h2>Highest Damage Builds</h2>
+            <div class="best-builds-grid">
+                <div class="best-build-section">
+                    <h3>Aldrachi Overall</h3>
+                    <iframe id="aldrachiOverall" width="100%" height="450" frameborder="0"></iframe>
+                </div>
+                <div class="best-build-section">
+                    <h3>Aldrachi Single Target</h3>
+                    <iframe id="aldrachiSingleTarget" width="100%" height="450" frameborder="0"></iframe>
+                </div>
+                <div class="best-build-section">
+                    <h3>Felscarred Overall</h3>
+                    <iframe id="felscarredOverall" width="100%" height="450" frameborder="0"></iframe>
+                </div>
+                <div class="best-build-section">
+                    <h3>Felscarred Single Target</h3>
+                    <iframe id="felscarredSingleTarget" width="100%" height="450" frameborder="0"></iframe>
+                </div>
+            </div>
+        </div>
+        <button id="toggleFilters" class="mdc-button mdc-button--raised">
+            <span class="mdc-button__label">Toggle Filters</span>
+        </button>
+        <div id="filters" style="display: none">
+            <div class="filter-section">
+                <h3>Hero Talents</h3>
+                <div id="heroTalentFilters" class="filter-container"></div>
+            </div>
+            <div class="filter-section">
+                <h3>Class Talents</h3>
+                <div id="classTalentFilters" class="filter-container"></div>
+            </div>
+            <div class="filter-section">
+                <h3>Defensive Spec Talents</h3>
+                <div id="defensiveTalentFilters" class="filter-container"></div>
+            </div>
+            <div class="filter-section">
+                <h3>Offensive Spec Talents</h3>
+                <div id="offensiveTalentFilters" class="filter-container"></div>
+            </div>
+        </div>
+
+        <div class="mdc-data-table">
+            <table id="dataTable" class="mdc-data-table__table">
+                <thead>
+                    <tr class="mdc-data-table__header-row">
+                        <th class="mdc-data-table__header-cell build-name" role="columnheader" scope="col">Build</th>
+                        <th class="mdc-data-table__header-cell rank" role="columnheader" scope="col" onclick="sortTable(1)">
+                            Rank <i class="material-icons sort-icon">arrow_downward</i>
+                        </th>
+                        $TABLE_HEADERS
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Table body will be dynamically populated -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script>
+        $SCRIPT
+    </script>
+</body>
+</html>

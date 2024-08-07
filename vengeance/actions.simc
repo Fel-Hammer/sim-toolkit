@@ -1,0 +1,47 @@
+# Generic pre-combat actions
+actions.precombat=flask
+actions.precombat+=/augmentation
+actions.precombat+=/food
+actions.precombat+=/snapshot_stats
+
+# Target count variables
+actions.precombat+=/variable,name=single_target,value=spell_targets.spirit_bomb=1
+actions.precombat+=/variable,name=small_aoe,value=spell_targets.spirit_bomb>=2&spell_targets.spirit_bomb<=5
+actions.precombat+=/variable,name=big_aoe,value=spell_targets.spirit_bomb>=6
+
+# Max number of souls we can reliably generate with our next GCD (excluding major cooldowns)
+actions+=/variable,name=num_spawnable_souls,op=reset,default=0
+actions+=/variable,name=num_spawnable_souls,op=max,value=2,if=talent.fracture&cooldown.fracture.charges_fractional>=1&!buff.metamorphosis.up
+actions+=/variable,name=num_spawnable_souls,op=max,value=3,if=talent.fracture&cooldown.fracture.charges_fractional>=1&buff.metamorphosis.up
+actions+=/variable,name=num_spawnable_souls,op=max,value=1,if=talent.soul_sigils&cooldown.sigil_of_flame.up
+# We add one additional soul to account for soul carver's soul spawns
+actions+=/variable,name=num_spawnable_souls,op=add,value=1,if=talent.soul_carver&(cooldown.soul_carver.remains>(cooldown.soul_carver.duration-3))
+
+# Time to complete the current GCD and execute the upcoming action
+$(this_action)=gcd.remains+execute_time
+# Check if fiery demise debuff is active on current target
+$(fd_active)=talent.fiery_demise&dot.fiery_brand.ticking
+
+# Pre-pull actions
+actions.precombat+=/arcane_torrent
+# We don't want to use sigil of flame in pre-combat if we're using felscarred flamebound because we will be sending a double sigil right as we meta to get extra sigils of doom
+actions.precombat+=/sigil_of_flame,if=hero_tree.aldrachi_reaver|(hero_tree.felscarred&talent.student_of_suffering)
+actions.precombat+=/immolation_aura
+
+# Generic actions for both hero trees
+actions+=/auto_attack
+# Always preferentially target whatever has reavers mark on it
+actions+=/retarget_auto_attack,line_cd=1,target_if=min:debuff.reavers_mark.remains,if=hero_tree.aldrachi_reaver
+actions+=/disrupt,if=target.debuff.casting.react
+actions+=/infernal_strike,use_off_gcd=1
+actions+=/demon_spikes,use_off_gcd=1,if=!buff.demon_spikes.up&!cooldown.pause_action.remains
+actions+=/run_action_list,name=ar,if=hero_tree.aldrachi_reaver
+actions+=/run_action_list,name=fs,if=hero_tree.felscarred
+
+# External buffs
+actions.externals=invoke_external_buff,name=symbol_of_hope
+actions.externals+=/invoke_external_buff,name=power_infusion
+
+input=actions_aldrachi_reaver.simc
+input=actions_felscarred.simc
+

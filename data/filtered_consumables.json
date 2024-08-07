@@ -1,0 +1,74 @@
+[
+  {
+    "value": "tempered_potion_3",
+    "shortName": "Tempered 3",
+    "name": "Tempered Potion (Quality 3)",
+    "itemId": 212265,
+    "icon": "trade_alchemy_potiona4",
+    "expansion": 10,
+    "craftingQuality": 3
+  },
+  {
+    "value": "potion_of_unwavering_focus_3",
+    "shortName": "Unwavering Focus 3",
+    "name": "Potion of Unwavering Focus (Quality 3)",
+    "itemId": 212259,
+    "icon": "inv_potion_16",
+    "expansion": 10,
+    "craftingQuality": 3
+  },
+  {
+    "value": "grotesque_vial_3",
+    "shortName": "Grotesque 3",
+    "name": "Grotesque Vial (Quality 3)",
+    "itemId": 212256,
+    "icon": "inv_summerfest_firepotion",
+    "expansion": 10,
+    "craftingQuality": 3
+  },
+  {
+    "value": "flask_of_alchemical_chaos_3",
+    "shortName": "Alchemical Chaos 3",
+    "name": "Flask of Alchemical Chaos (Quality 3)",
+    "itemId": 212283,
+    "icon": "inv_potion_orange",
+    "expansion": 10,
+    "craftingQuality": 3
+  },
+  {
+    "value": "flask_of_tempered_mastery_3",
+    "shortName": "Tempered Mastery 3",
+    "name": "Flask of Tempered Mastery (Quality 3)",
+    "itemId": 212280,
+    "icon": "inv_potion_purlple",
+    "expansion": 10,
+    "craftingQuality": 3
+  },
+  {
+    "value": "flask_of_tempered_swiftness_3",
+    "shortName": "Tempered Swiftness 3",
+    "name": "Flask of Tempered Swiftness (Quality 3)",
+    "itemId": 212274,
+    "icon": "inv_potion_green",
+    "expansion": 10,
+    "craftingQuality": 3
+  },
+  {
+    "value": "flask_of_tempered_versatility_3",
+    "shortName": "Tempered Versatility 3",
+    "name": "Flask of Tempered Versatility (Quality 3)",
+    "itemId": 212277,
+    "icon": "inv_potion_blue",
+    "expansion": 10,
+    "craftingQuality": 3
+  },
+  {
+    "value": "flask_of_tempered_aggression_3",
+    "shortName": "Tempered Aggression 3",
+    "name": "Flask of Tempered Aggression (Quality 3)",
+    "itemId": 212271,
+    "icon": "inv_potion_red",
+    "expansion": 10,
+    "craftingQuality": 3
+  }
+]

@@ -1,0 +1,10944 @@
+[
+  {
+    "id": 56440,
+    "name": "Skardyn's Grace",
+    "icon": "inv_misc_coin_08",
+    "quality": 3,
+    "itemClass": 4,
+    "itemSubClass": 0,
+    "inventoryType": 12,
+    "itemLevel": 37,
+    "uniqueEquipped": true,
+    "itemLimit": {
+      "category": 122,
+      "quantity": 1
+    },
+    "stats": [
+      {
+        "id": 3,
+        "alloc": 6666
+      }
+    ],
+    "sources": [
+      {
+        "instanceId": 71,
+        "encounterId": 2617
+      }
+    ],
+    "onUseTrinket": true,
+    "expansion": 3
+  },
+  {
+    "id": 56441,
+    "name": "Modgud's Blade",
+    "icon": "inv_knife_1h_cataclysm_c_01",
+    "quality": 3,
+    "itemClass": 2,
+    "itemSubClass": 15,
+    "inventoryType": 13,
+    "itemLevel": 37,
+    "stats": [
+      {
+        "id": 5,
+        "alloc": 5259
+      },
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 32,
+        "alloc": 3711
+      },
+      {
+        "id": 36,
+        "alloc": 3161
+      },
+      {
+        "id": 5,
+        "alloc": 25370
+      }
+    ],
+    "sources": [
+      {
+        "instanceId": 71,
+        "encounterId": 2617
+      }
+    ],
+    "expansion": 3
+  },
+  {
+    "id": 56442,
+    "name": "Cursed Skardyn Vest",
+    "icon": "inv_chest_cloth_15",
+    "quality": 3,
+    "itemClass": 4,
+    "itemSubClass": 2,
+    "inventoryType": 5,
+    "itemLevel": 37,
+    "hasSockets": true,
+    "socketInfo": {
+      "sockets": [
+        {
+          "type": "PRISMATIC"
+        },
+        {
+          "type": "PRISMATIC"
+        }
+      ]
+    },
+    "stats": [
+      {
+        "id": 73,
+        "alloc": 5259
+      },
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 40,
+        "alloc": 3506
+      },
+      {
+        "id": 49,
+        "alloc": 3506
+      }
+    ],
+    "sources": [
+      {
+        "instanceId": 71,
+        "encounterId": 2617
+      }
+    ],
+    "expansion": 3
+  },
+  {
+    "id": 56444,
+    "name": "Umbriss Band",
+    "icon": "inv_misc_stonering2",
+    "quality": 3,
+    "itemClass": 4,
+    "itemSubClass": 0,
+    "inventoryType": 11,
+    "itemLevel": 37,
+    "uniqueEquipped": true,
+    "stats": [
+      {
+        "id": 4,
+        "alloc": 5259
+      },
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 32,
+        "alloc": 2664
+      },
+      {
+        "id": 49,
+        "alloc": 5259
+      }
+    ],
+    "sources": [
+      {
+        "instanceId": 71,
+        "encounterId": 2617
+      }
+    ],
+    "expansion": 3
+  },
+  {
+    "id": 56445,
+    "name": "Ring of Dun Algaz",
+    "icon": "inv_misc_kingsring2",
+    "quality": 3,
+    "itemClass": 4,
+    "itemSubClass": 0,
+    "inventoryType": 11,
+    "itemLevel": 37,
+    "uniqueEquipped": true,
+    "stats": [
+      {
+        "id": 3,
+        "alloc": 5259
+      },
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 32,
+        "alloc": 3761
+      },
+      {
+        "id": 36,
+        "alloc": 3076
+      }
+    ],
+    "sources": [
+      {
+        "instanceId": 71,
+        "encounterId": 2627
+      }
+    ],
+    "expansion": 3
+  },
+  {
+    "id": 56449,
+    "name": "Throngus's Finger",
+    "icon": "inv_gizmo_felironshell",
+    "quality": 3,
+    "itemClass": 4,
+    "itemSubClass": 0,
+    "inventoryType": 12,
+    "itemLevel": 37,
+    "uniqueEquipped": true,
+    "itemLimit": {
+      "category": 123,
+      "quantity": 1
+    },
+    "specs": [
+      66,
+      73,
+      250,
+      268,
+      581
+    ],
+    "stats": [
+      {
+        "id": 14,
+        "alloc": 6666
+      }
+    ],
+    "sources": [
+      {
+        "instanceId": 71,
+        "encounterId": 2627
+      }
+    ],
+    "expansion": 3
+  },
+  {
+    "id": 56450,
+    "name": "Azureborne Cloak",
+    "icon": "inv_misc_cape_naxxramas_01",
+    "quality": 3,
+    "itemClass": 4,
+    "itemSubClass": 1,
+    "inventoryType": 16,
+    "itemLevel": 37,
+    "stats": [
+      {
+        "id": 5,
+        "alloc": 5259
+      },
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 40,
+        "alloc": 3761
+      },
+      {
+        "id": 32,
+        "alloc": 3076
+      }
+    ],
+    "sources": [
+      {
+        "instanceId": 71,
+        "encounterId": 2618
+      }
+    ],
+    "expansion": 3
+  },
+  {
+    "id": 56454,
+    "name": "Windwalker Blade",
+    "icon": "inv_knife_1h_cataclysm_c_05",
+    "quality": 3,
+    "itemClass": 2,
+    "itemSubClass": 15,
+    "inventoryType": 13,
+    "itemLevel": 37,
+    "stats": [
+      {
+        "id": 3,
+        "alloc": 5259
+      },
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 32,
+        "alloc": 3506
+      },
+      {
+        "id": 36,
+        "alloc": 3506
+      }
+    ],
+    "sources": [
+      {
+        "instanceId": 71,
+        "encounterId": 2618
+      }
+    ],
+    "expansion": 3
+  },
+  {
+    "id": 56455,
+    "name": "Vest of Misshapen Hides",
+    "icon": "inv_chest_leather_31",
+    "quality": 3,
+    "itemClass": 4,
+    "itemSubClass": 2,
+    "inventoryType": 5,
+    "itemLevel": 37,
+    "hasSockets": true,
+    "socketInfo": {
+      "sockets": [
+        {
+          "type": "PRISMATIC"
+        },
+        {
+          "type": "PRISMATIC"
+        }
+      ]
+    },
+    "stats": [
+      {
+        "id": 73,
+        "alloc": 5259
+      },
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 32,
+        "alloc": 3506
+      },
+      {
+        "id": 49,
+        "alloc": 3506
+      }
+    ],
+    "sources": [
+      {
+        "instanceId": 71,
+        "encounterId": 2619
+      }
+    ],
+    "expansion": 3
+  },
+  {
+    "id": 56457,
+    "name": "Circle of Bone",
+    "icon": "inv_jewelry_ring_66",
+    "quality": 3,
+    "itemClass": 4,
+    "itemSubClass": 0,
+    "inventoryType": 11,
+    "itemLevel": 37,
+    "uniqueEquipped": true,
+    "stats": [
+      {
+        "id": 4,
+        "alloc": 5259
+      },
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 36,
+        "alloc": 3506
+      },
+      {
+        "id": 32,
+        "alloc": 3506
+      }
+    ],
+    "sources": [
+      {
+        "instanceId": 71,
+        "encounterId": 2619
+      }
+    ],
+    "expansion": 3
+  },
+  {
+    "id": 56458,
+    "name": "Mark of Khardros",
+    "icon": "inv_hammer_04",
+    "quality": 3,
+    "itemClass": 4,
+    "itemSubClass": 0,
+    "inventoryType": 12,
+    "itemLevel": 37,
+    "uniqueEquipped": true,
+    "itemLimit": {
+      "category": 121,
+      "quantity": 1
+    },
+    "stats": [
+      {
+        "id": 4,
+        "alloc": 6666
+      }
+    ],
+    "sources": [
+      {
+        "instanceId": 71,
+        "encounterId": 2619
+      }
+    ],
+    "onUseTrinket": true,
+    "expansion": 3
+  },
+  {
+    "id": 56459,
+    "name": "Mace of Transformed Bone",
+    "icon": "inv_mace_1h_cataclysm_c_03",
+    "quality": 3,
+    "itemClass": 2,
+    "itemSubClass": 4,
+    "inventoryType": 13,
+    "itemLevel": 37,
+    "stats": [
+      {
+        "id": 4,
+        "alloc": 3997
+      },
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 13,
+        "alloc": 5259
+      },
+      {
+        "id": 32,
+        "alloc": 2664
+      }
+    ],
+    "sources": [
+      {
+        "instanceId": 71,
+        "encounterId": 2619
+      }
+    ],
+    "expansion": 3
+  },
+  {
+    "id": 56462,
+    "name": "Gale of Shadows",
+    "icon": "spell_shadow_gathershadows",
+    "quality": 3,
+    "itemClass": 4,
+    "itemSubClass": 0,
+    "inventoryType": 12,
+    "itemLevel": 37,
+    "uniqueEquipped": true,
+    "itemLimit": {
+      "category": 120,
+      "quantity": 1
+    },
+    "specs": [
+      62,
+      63,
+      64,
+      65,
+      102,
+      105,
+      256,
+      257,
+      258,
+      262,
+      264,
+      265,
+      266,
+      267,
+      270,
+      1467,
+      1468,
+      1473
+    ],
+    "stats": [
+      {
+        "id": 36,
+        "alloc": 6666
+      }
+    ],
+    "sources": [
+      {
+        "instanceId": 71,
+        "encounterId": 2619
+      }
+    ],
+    "expansion": 3
+  },
+  {
+    "id": 56463,
+    "name": "Corrupted Egg Shell",
+    "icon": "inv_misc_cat_trinket09",
+    "quality": 3,
+    "itemClass": 4,
+    "itemSubClass": 0,
+    "inventoryType": 12,
+    "itemLevel": 37,
+    "uniqueEquipped": true,
+    "itemLimit": {
+      "category": 119,
+      "quantity": 1
+    },
+    "specs": [
+      65,
+      105,
+      256,
+      257,
+      264,
+      270,
+      1468
+    ],
+    "sources": [
+      {
+        "instanceId": 71,
+        "encounterId": 2619
+      }
+    ],
+    "onUseTrinket": true,
+    "expansion": 3
+  },
+  {
+    "id": 133282,
+    "name": "Skardyn's Grace",
+    "icon": "inv_misc_coin_08",
+    "quality": 3,
+    "itemClass": 4,
+    "itemSubClass": 0,
+    "inventoryType": 12,
+    "itemLevel": 37,
+    "uniqueEquipped": true,
+    "specs": [
+      103,
+      253,
+      254,
+      255,
+      259,
+      260,
+      261,
+      263,
+      269,
+      577
+    ],
+    "stats": [
+      {
+        "id": 3,
+        "alloc": 6666
+      }
+    ],
+    "sources": [
+      {
+        "instanceId": 71,
+        "encounterId": 2617
+      },
+      {
+        "instanceId": -1,
+        "encounterId": 71
+      }
+    ],
+    "onUseTrinket": true,
+    "expansion": 3
+  },
+  {
+    "id": 133283,
+    "name": "Modgud's Blade",
+    "icon": "inv_knife_1h_cataclysm_c_01",
+    "quality": 3,
+    "itemClass": 2,
+    "itemSubClass": 15,
+    "inventoryType": 13,
+    "itemLevel": 37,
+    "stats": [
+      {
+        "id": 5,
+        "alloc": 5259
+      },
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 32,
+        "alloc": 3839
+      },
+      {
+        "id": 36,
+        "alloc": 3161
+      },
+      {
+        "id": 5,
+        "alloc": 25370
+      }
+    ],
+    "sources": [
+      {
+        "instanceId": 71,
+        "encounterId": 2617
+      },
+      {
+        "instanceId": -1,
+        "encounterId": 71
+      }
+    ],
+    "expansion": 3
+  },
+  {
+    "id": 133284,
+    "name": "Cursed Skardyn Vest",
+    "icon": "inv_chest_leather_31",
+    "quality": 3,
+    "itemClass": 4,
+    "itemSubClass": 2,
+    "inventoryType": 5,
+    "itemLevel": 37,
+    "stats": [
+      {
+        "id": 73,
+        "alloc": 5259
+      },
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 36,
+        "alloc": 3506
+      },
+      {
+        "id": 49,
+        "alloc": 3494
+      }
+    ],
+    "sources": [
+      {
+        "instanceId": 71,
+        "encounterId": 2617
+      },
+      {
+        "instanceId": -1,
+        "encounterId": 71
+      }
+    ],
+    "expansion": 3
+  },
+  {
+    "id": 133286,
+    "name": "Umbriss Band",
+    "icon": "inv_misc_stonering2",
+    "quality": 3,
+    "itemClass": 4,
+    "itemSubClass": 0,
+    "inventoryType": 11,
+    "itemLevel": 37,
+    "uniqueEquipped": true,
+    "stats": [
+      {
+        "id": 4,
+        "alloc": 5259
+      },
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 32,
+        "alloc": 1741
+      },
+      {
+        "id": 49,
+        "alloc": 5259
+      }
+    ],
+    "sources": [
+      {
+        "instanceId": 71,
+        "encounterId": 2617
+      },
+      {
+        "instanceId": -1,
+        "encounterId": 71
+      }
+    ],
+    "expansion": 3
+  },
+  {
+    "id": 133287,
+    "name": "Ring of Dun Algaz",
+    "icon": "inv_misc_kingsring2",
+    "quality": 3,
+    "itemClass": 4,
+    "itemSubClass": 0,
+    "inventoryType": 11,
+    "itemLevel": 37,
+    "uniqueEquipped": true,
+    "stats": [
+      {
+        "id": 3,
+        "alloc": 5259
+      },
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 32,
+        "alloc": 3924
+      },
+      {
+        "id": 36,
+        "alloc": 3076
+      }
+    ],
+    "sources": [
+      {
+        "instanceId": 71,
+        "encounterId": 2627
+      },
+      {
+        "instanceId": -1,
+        "encounterId": 71
+      }
+    ],
+    "expansion": 3
+  },
+  {
+    "id": 133291,
+    "name": "Throngus's Finger",
+    "icon": "inv_gizmo_felironshell",
+    "quality": 3,
+    "itemClass": 4,
+    "itemSubClass": 0,
+    "inventoryType": 12,
+    "itemLevel": 37,
+    "uniqueEquipped": true,
+    "specs": [
+      66,
+      73,
+      250,
+      268,
+      581
+    ],
+    "stats": [
+      {
+        "id": 40,
+        "alloc": 6666
+      }
+    ],
+    "sources": [
+      {
+        "instanceId": 71,
+        "encounterId": 2627
+      },
+      {
+        "instanceId": -1,
+        "encounterId": 71
+      }
+    ],
+    "expansion": 3
+  },
+  {
+    "id": 133292,
+    "name": "Azureborne Cloak",
+    "icon": "inv_misc_cape_naxxramas_01",
+    "quality": 3,
+    "itemClass": 4,
+    "itemSubClass": 1,
+    "inventoryType": 16,
+    "itemLevel": 37,
+    "stats": [
+      {
+        "id": 71,
+        "alloc": 5259
+      },
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 40,
+        "alloc": 3924
+      },
+      {
+        "id": 32,
+        "alloc": 3076
+      }
+    ],
+    "sources": [
+      {
+        "instanceId": 71,
+        "encounterId": 2618
+      },
+      {
+        "instanceId": -1,
+        "encounterId": 71
+      }
+    ],
+    "expansion": 3
+  },
+  {
+    "id": 133296,
+    "name": "Windwalker Blade",
+    "icon": "inv_knife_1h_cataclysm_c_05",
+    "quality": 3,
+    "itemClass": 2,
+    "itemSubClass": 15,
+    "inventoryType": 13,
+    "itemLevel": 37,
+    "stats": [
+      {
+        "id": 3,
+        "alloc": 5259
+      },
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 32,
+        "alloc": 3494
+      },
+      {
+        "id": 36,
+        "alloc": 3506
+      }
+    ],
+    "sources": [
+      {
+        "instanceId": 71,
+        "encounterId": 2618
+      },
+      {
+        "instanceId": -1,
+        "encounterId": 71
+      }
+    ],
+    "expansion": 3
+  },
+  {
+    "id": 133297,
+    "name": "Vest of Misshapen Hides",
+    "icon": "inv_chest_leather_31",
+    "quality": 3,
+    "itemClass": 4,
+    "itemSubClass": 2,
+    "inventoryType": 5,
+    "itemLevel": 37,
+    "stats": [
+      {
+        "id": 73,
+        "alloc": 5259
+      },
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 32,
+        "alloc": 3506
+      },
+      {
+        "id": 49,
+        "alloc": 3494
+      }
+    ],
+    "sources": [
+      {
+        "instanceId": 71,
+        "encounterId": 2619
+      },
+      {
+        "instanceId": -1,
+        "encounterId": 71
+      }
+    ],
+    "expansion": 3
+  },
+  {
+    "id": 133299,
+    "name": "Circle of Bone",
+    "icon": "inv_jewelry_ring_66",
+    "quality": 3,
+    "itemClass": 4,
+    "itemSubClass": 0,
+    "inventoryType": 11,
+    "itemLevel": 37,
+    "uniqueEquipped": true,
+    "stats": [
+      {
+        "id": 4,
+        "alloc": 5259
+      },
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 36,
+        "alloc": 3494
+      },
+      {
+        "id": 32,
+        "alloc": 3506
+      }
+    ],
+    "sources": [
+      {
+        "instanceId": 71,
+        "encounterId": 2619
+      },
+      {
+        "instanceId": -1,
+        "encounterId": 71
+      }
+    ],
+    "expansion": 3
+  },
+  {
+    "id": 133300,
+    "name": "Mark of Khardros",
+    "icon": "inv_hammer_04",
+    "quality": 3,
+    "itemClass": 4,
+    "itemSubClass": 0,
+    "inventoryType": 12,
+    "itemLevel": 37,
+    "uniqueEquipped": true,
+    "specs": [
+      70,
+      71,
+      72,
+      251,
+      252
+    ],
+    "stats": [
+      {
+        "id": 4,
+        "alloc": 6666
+      }
+    ],
+    "sources": [
+      {
+        "instanceId": 71,
+        "encounterId": 2619
+      },
+      {
+        "instanceId": -1,
+        "encounterId": 71
+      }
+    ],
+    "onUseTrinket": true,
+    "expansion": 3
+  },
+  {
+    "id": 133301,
+    "name": "Mace of Transformed Bone",
+    "icon": "inv_mace_1h_cataclysm_c_03",
+    "quality": 3,
+    "itemClass": 2,
+    "itemSubClass": 4,
+    "inventoryType": 13,
+    "itemLevel": 37,
+    "stats": [
+      {
+        "id": 4,
+        "alloc": 3997
+      },
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 49,
+        "alloc": 4336
+      },
+      {
+        "id": 32,
+        "alloc": 2664
+      }
+    ],
+    "sources": [
+      {
+        "instanceId": 71,
+        "encounterId": 2619
+      },
+      {
+        "instanceId": -1,
+        "encounterId": 71
+      }
+    ],
+    "expansion": 3
+  },
+  {
+    "id": 133304,
+    "name": "Gale of Shadows",
+    "icon": "spell_shadow_gathershadows",
+    "quality": 3,
+    "itemClass": 4,
+    "itemSubClass": 0,
+    "inventoryType": 12,
+    "itemLevel": 37,
+    "uniqueEquipped": true,
+    "specs": [
+      62,
+      63,
+      64,
+      65,
+      102,
+      105,
+      256,
+      257,
+      258,
+      262,
+      264,
+      265,
+      266,
+      267,
+      270,
+      1467,
+      1468,
+      1473
+    ],
+    "stats": [
+      {
+        "id": 36,
+        "alloc": 6666
+      }
+    ],
+    "sources": [
+      {
+        "instanceId": 71,
+        "encounterId": 2627
+      },
+      {
+        "instanceId": -1,
+        "encounterId": 71
+      }
+    ],
+    "expansion": 3
+  },
+  {
+    "id": 133305,
+    "name": "Corrupted Egg Shell",
+    "icon": "inv_misc_cat_trinket09",
+    "quality": 3,
+    "itemClass": 4,
+    "itemSubClass": 0,
+    "inventoryType": 12,
+    "itemLevel": 37,
+    "uniqueEquipped": true,
+    "specs": [
+      65,
+      105,
+      256,
+      257,
+      264,
+      270,
+      1468
+    ],
+    "sources": [
+      {
+        "instanceId": 71,
+        "encounterId": 2619
+      },
+      {
+        "instanceId": -1,
+        "encounterId": 71
+      }
+    ],
+    "onUseTrinket": true,
+    "expansion": 3
+  },
+  {
+    "id": 133307,
+    "name": "Abandoned Dark Iron Ring",
+    "icon": "inv_misc_vinering",
+    "quality": 3,
+    "itemClass": 4,
+    "itemSubClass": 0,
+    "inventoryType": 11,
+    "itemLevel": 37,
+    "uniqueEquipped": true,
+    "stats": [
+      {
+        "id": 5,
+        "alloc": 5259
+      },
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 32,
+        "alloc": 3494
+      },
+      {
+        "id": 36,
+        "alloc": 3506
+      }
+    ],
+    "sources": [
+      {
+        "instanceId": 71,
+        "encounterId": 2617
+      },
+      {
+        "instanceId": -1,
+        "encounterId": 71
+      }
+    ],
+    "expansion": 3
+  },
+  {
+    "id": 133309,
+    "name": "Shroud of Dark Memories",
+    "icon": "inv_misc_cape_cataclysm_tank_c_01",
+    "quality": 3,
+    "itemClass": 4,
+    "itemSubClass": 1,
+    "inventoryType": 16,
+    "itemLevel": 37,
+    "stats": [
+      {
+        "id": 71,
+        "alloc": 5259
+      },
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 40,
+        "alloc": 4336
+      },
+      {
+        "id": 32,
+        "alloc": 2664
+      }
+    ],
+    "sources": [
+      {
+        "instanceId": 71,
+        "encounterId": 2619
+      },
+      {
+        "instanceId": -1,
+        "encounterId": 71
+      }
+    ],
+    "expansion": 3
+  },
+  {
+    "id": 133353,
+    "name": "Troggbone Cinch",
+    "icon": "inv_belt_103",
+    "quality": 3,
+    "itemClass": 4,
+    "itemSubClass": 2,
+    "inventoryType": 6,
+    "itemLevel": 37,
+    "stats": [
+      {
+        "id": 73,
+        "alloc": 5259
+      },
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 32,
+        "alloc": 3924
+      },
+      {
+        "id": 36,
+        "alloc": 3076
+      }
+    ],
+    "sources": [
+      {
+        "instanceId": 71,
+        "encounterId": 2627
+      },
+      {
+        "instanceId": -1,
+        "encounterId": 71
+      }
+    ],
+    "expansion": 3
+  },
+  {
+    "id": 133354,
+    "name": "Glimmerthread Pantaloons",
+    "icon": "inv_pants_leather_dungeonleather_c_05",
+    "quality": 3,
+    "itemClass": 4,
+    "itemSubClass": 2,
+    "inventoryType": 7,
+    "itemLevel": 37,
+    "stats": [
+      {
+        "id": 73,
+        "alloc": 5259
+      },
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 36,
+        "alloc": 3506
+      },
+      {
+        "id": 32,
+        "alloc": 3494
+      }
+    ],
+    "sources": [
+      {
+        "instanceId": 71,
+        "encounterId": 2618
+      },
+      {
+        "instanceId": -1,
+        "encounterId": 71
+      }
+    ],
+    "expansion": 3
+  },
+  {
+    "id": 133363,
+    "name": "Troggstitched Drape",
+    "icon": "inv_misc_cape_cataclysm_caster_b_01",
+    "quality": 3,
+    "itemClass": 4,
+    "itemSubClass": 1,
+    "inventoryType": 16,
+    "itemLevel": 37,
+    "stats": [
+      {
+        "id": 71,
+        "alloc": 5259
+      },
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 32,
+        "alloc": 3506
+      },
+      {
+        "id": 49,
+        "alloc": 3494
+      }
+    ],
+    "sources": [
+      {
+        "instanceId": 71,
+        "encounterId": 2618
+      },
+      {
+        "instanceId": -1,
+        "encounterId": 71
+      }
+    ],
+    "expansion": 3
+  },
+  {
+    "id": 157596,
+    "name": "Glimmerthread Pantaloons",
+    "icon": "inv_pants_leather_dungeonleather_c_05",
+    "quality": 3,
+    "itemClass": 4,
+    "itemSubClass": 2,
+    "inventoryType": 7,
+    "itemLevel": 37,
+    "stats": [
+      {
+        "id": 73,
+        "alloc": 5259
+      },
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 36,
+        "alloc": 3506
+      },
+      {
+        "id": 32,
+        "alloc": 3494
+      }
+    ],
+    "sources": [
+      {
+        "instanceId": 71,
+        "encounterId": 2617
+      }
+    ],
+    "expansion": 3
+  },
+  {
+    "id": 157597,
+    "name": "Troggstitched Drape",
+    "icon": "inv_misc_cape_cataclysm_caster_b_01",
+    "quality": 3,
+    "itemClass": 4,
+    "itemSubClass": 1,
+    "inventoryType": 16,
+    "itemLevel": 37,
+    "stats": [
+      {
+        "id": 71,
+        "alloc": 5259
+      },
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 32,
+        "alloc": 3506
+      },
+      {
+        "id": 49,
+        "alloc": 3494
+      }
+    ],
+    "sources": [
+      {
+        "instanceId": 71,
+        "encounterId": 2627
+      }
+    ],
+    "expansion": 3
+  },
+  {
+    "id": 157613,
+    "name": "Geomancy Slicer",
+    "icon": "inv_weapon_hand_35",
+    "quality": 3,
+    "itemClass": 2,
+    "itemSubClass": 13,
+    "inventoryType": 13,
+    "itemLevel": 37,
+    "stats": [
+      {
+        "id": 5,
+        "alloc": 5259
+      },
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 32,
+        "alloc": 3506
+      },
+      {
+        "id": 36,
+        "alloc": 3506
+      },
+      {
+        "id": 5,
+        "alloc": 25370
+      }
+    ],
+    "sources": [
+      {
+        "instanceId": 71,
+        "encounterId": 2627
+      }
+    ],
+    "expansion": 3
+  },
+  {
+    "id": 157614,
+    "name": "Flame Invoker's Treads",
+    "icon": "inv_boots_chain_03",
+    "quality": 3,
+    "itemClass": 4,
+    "itemSubClass": 2,
+    "inventoryType": 8,
+    "itemLevel": 37,
+    "stats": [
+      {
+        "id": 73,
+        "alloc": 5259
+      },
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 36,
+        "alloc": 3506
+      },
+      {
+        "id": 49,
+        "alloc": 3506
+      }
+    ],
+    "sources": [
+      {
+        "instanceId": 71,
+        "encounterId": 2618
+      }
+    ],
+    "expansion": 3
+  },
+  {
+    "id": 159309,
+    "name": "Port Pillager's Belt",
+    "icon": "inv_belt_leather_kultirasdungeon_c_01",
+    "quality": 3,
+    "itemClass": 4,
+    "itemSubClass": 2,
+    "inventoryType": 6,
+    "itemLevel": 59,
+    "stats": [
+      {
+        "id": 73,
+        "alloc": 5259
+      },
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 36,
+        "alloc": 4550
+      },
+      {
+        "id": 32,
+        "alloc": 2450
+      }
+    ],
+    "sources": [
+      {
+        "instanceId": 1023,
+        "encounterId": 2173
+      },
+      {
+        "instanceId": -1,
+        "encounterId": 1023
+      }
+    ],
+    "expansion": 7
+  },
+  {
+    "id": 159310,
+    "name": "Circlet of the Enveloping Leviathan",
+    "icon": "inv_helm_leather_kultirasdungeon_c_01",
+    "quality": 3,
+    "itemClass": 4,
+    "itemSubClass": 2,
+    "inventoryType": 1,
+    "itemLevel": 59,
+    "stats": [
+      {
+        "id": 73,
+        "alloc": 10000
+      },
+      {
+        "id": 7,
+        "alloc": 11500
+      }
+    ],
+    "sources": [
+      {
+        "instanceId": 1023,
+        "encounterId": 2140
+      }
+    ],
+    "expansion": 7
+  },
+  {
+    "id": 159314,
+    "name": "Cephalohide Jacket",
+    "icon": "inv_chest_leather_kultirasdungeon_c_01",
+    "quality": 3,
+    "itemClass": 4,
+    "itemSubClass": 2,
+    "inventoryType": 5,
+    "itemLevel": 59,
+    "stats": [
+      {
+        "id": 73,
+        "alloc": 10000
+      },
+      {
+        "id": 7,
+        "alloc": 11500
+      }
+    ],
+    "sources": [
+      {
+        "instanceId": 1023,
+        "encounterId": 2140
+      }
+    ],
+    "expansion": 7
+  },
+  {
+    "id": 159320,
+    "name": "Besieger's Deckstalkers",
+    "icon": "inv_boot_leather_kultirasdungeon_c_01",
+    "quality": 3,
+    "itemClass": 4,
+    "itemSubClass": 2,
+    "inventoryType": 8,
+    "itemLevel": 59,
+    "stats": [
+      {
+        "id": 73,
+        "alloc": 5259
+      },
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 40,
+        "alloc": 4400
+      },
+      {
+        "id": 32,
+        "alloc": 2600
+      }
+    ],
+    "sources": [
+      {
+        "instanceId": 1023,
+        "encounterId": 2173
+      },
+      {
+        "instanceId": -1,
+        "encounterId": 1023
+      }
+    ],
+    "expansion": 7
+  },
+  {
+    "id": 159322,
+    "name": "Seawalker's Pantaloons",
+    "icon": "inv_pant_leather_kultirasdungeon_c_01",
+    "quality": 3,
+    "itemClass": 4,
+    "itemSubClass": 2,
+    "inventoryType": 7,
+    "itemLevel": 59,
+    "stats": [
+      {
+        "id": 73,
+        "alloc": 5259
+      },
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 32,
+        "alloc": 3950
+      },
+      {
+        "id": 36,
+        "alloc": 3050
+      }
+    ],
+    "sources": [
+      {
+        "instanceId": 1023,
+        "encounterId": 2134
+      },
+      {
+        "instanceId": -1,
+        "encounterId": 1023
+      }
+    ],
+    "expansion": 7
+  },
+  {
+    "id": 159328,
+    "name": "Wharf Warden's Gloves",
+    "icon": "inv_glove_leather_kultirasdungeon_c_01",
+    "quality": 3,
+    "itemClass": 4,
+    "itemSubClass": 2,
+    "inventoryType": 10,
+    "itemLevel": 59,
+    "stats": [
+      {
+        "id": 73,
+        "alloc": 5259
+      },
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 36,
+        "alloc": 4400
+      },
+      {
+        "id": 49,
+        "alloc": 2600
+      }
+    ],
+    "sources": [
+      {
+        "instanceId": 1023,
+        "encounterId": 2133
+      },
+      {
+        "instanceId": -1,
+        "encounterId": 1023
+      }
+    ],
+    "faction": "horde",
+    "expansion": 7
+  },
+  {
+    "id": 159461,
+    "name": "Band of the Ancient Dredger",
+    "icon": "inv_ring_80_05b",
+    "quality": 3,
+    "itemClass": 4,
+    "itemSubClass": 0,
+    "inventoryType": 11,
+    "itemLevel": 59,
+    "uniqueEquipped": true,
+    "stats": [
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 32,
+        "alloc": 9200
+      },
+      {
+        "id": 36,
+        "alloc": 8300
+      }
+    ],
+    "sources": [
+      {
+        "instanceId": 1023,
+        "encounterId": 2134
+      },
+      {
+        "instanceId": -1,
+        "encounterId": 1023
+      }
+    ],
+    "expansion": 7
+  },
+  {
+    "id": 159622,
+    "name": "Hadal's Nautilus",
+    "icon": "inv_misc_shell_04",
+    "quality": 3,
+    "itemClass": 4,
+    "itemSubClass": 0,
+    "inventoryType": 12,
+    "itemLevel": 59,
+    "uniqueEquipped": true,
+    "specs": [
+      62,
+      63,
+      64,
+      102,
+      258,
+      262,
+      265,
+      266,
+      267,
+      1467,
+      1473
+    ],
+    "stats": [
+      {
+        "id": 5,
+        "alloc": 6666
+      }
+    ],
+    "sources": [
+      {
+        "instanceId": 1023,
+        "encounterId": 2134
+      },
+      {
+        "instanceId": -1,
+        "encounterId": 1023
+      }
+    ],
+    "expansion": 7
+  },
+  {
+    "id": 159623,
+    "name": "Dead-Eye Spyglass",
+    "icon": "inv_misc_spyglass_02",
+    "quality": 3,
+    "itemClass": 4,
+    "itemSubClass": 0,
+    "inventoryType": 12,
+    "itemLevel": 59,
+    "uniqueEquipped": true,
+    "specs": [
+      103,
+      104,
+      253,
+      254,
+      255,
+      259,
+      260,
+      261,
+      263,
+      268,
+      269,
+      577,
+      581
+    ],
+    "stats": [
+      {
+        "id": 3,
+        "alloc": 6666
+      }
+    ],
+    "sources": [
+      {
+        "instanceId": 1023,
+        "encounterId": 2173
+      },
+      {
+        "instanceId": -1,
+        "encounterId": 1023
+      }
+    ],
+    "expansion": 7
+  },
+  {
+    "id": 159648,
+    "name": "Bainbridge's Blackjack",
+    "icon": "inv_mace_1h_battledungeon_c_02",
+    "quality": 3,
+    "itemClass": 2,
+    "itemSubClass": 4,
+    "inventoryType": 13,
+    "itemLevel": 59,
+    "stats": [
+      {
+        "id": 3,
+        "alloc": 5259
+      },
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 49,
+        "alloc": 3950
+      },
+      {
+        "id": 40,
+        "alloc": 3050
+      }
+    ],
+    "sources": [
+      {
+        "instanceId": 1023,
+        "encounterId": 2133
+      },
+      {
+        "instanceId": -1,
+        "encounterId": 1023
+      }
+    ],
+    "faction": "horde",
+    "expansion": 7
+  },
+  {
+    "id": 159649,
+    "name": "Saber of Dread Pirate Lockwood",
+    "icon": "inv_sword_1h_battledungeon_c_01",
+    "quality": 3,
+    "itemClass": 2,
+    "itemSubClass": 7,
+    "inventoryType": 13,
+    "itemLevel": 59,
+    "stats": [
+      {
+        "id": 4,
+        "alloc": 5259
+      },
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 40,
+        "alloc": 3700
+      },
+      {
+        "id": 49,
+        "alloc": 3300
+      }
+    ],
+    "sources": [
+      {
+        "instanceId": 1023,
+        "encounterId": 2173
+      },
+      {
+        "instanceId": -1,
+        "encounterId": 1023
+      }
+    ],
+    "expansion": 7
+  },
+  {
+    "id": 159968,
+    "name": "Gloves of the Iron Reavers",
+    "icon": "inv_glove_leather_kultirasdungeon_c_01",
+    "quality": 3,
+    "itemClass": 4,
+    "itemSubClass": 2,
+    "inventoryType": 10,
+    "itemLevel": 59,
+    "stats": [
+      {
+        "id": 73,
+        "alloc": 5259
+      },
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 36,
+        "alloc": 4400
+      },
+      {
+        "id": 49,
+        "alloc": 2600
+      }
+    ],
+    "sources": [
+      {
+        "instanceId": 1023,
+        "encounterId": 2132
+      },
+      {
+        "instanceId": 1023,
+        "encounterId": 2654
+      },
+      {
+        "instanceId": -1,
+        "encounterId": 1023
+      },
+      {
+        "instanceId": -1,
+        "encounterId": 1023
+      }
+    ],
+    "faction": "alliance",
+    "expansion": 7
+  },
+  {
+    "id": 159973,
+    "name": "Boarder's Billy Club",
+    "icon": "inv_mace_1h_battledungeon_c_02",
+    "quality": 3,
+    "itemClass": 2,
+    "itemSubClass": 4,
+    "inventoryType": 13,
+    "itemLevel": 59,
+    "stats": [
+      {
+        "id": 3,
+        "alloc": 5259
+      },
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 40,
+        "alloc": 3950
+      },
+      {
+        "id": 49,
+        "alloc": 3050
+      }
+    ],
+    "sources": [
+      {
+        "instanceId": 1023,
+        "encounterId": 2132
+      },
+      {
+        "instanceId": 1023,
+        "encounterId": 2654
+      },
+      {
+        "instanceId": -1,
+        "encounterId": 1023
+      },
+      {
+        "instanceId": -1,
+        "encounterId": 1023
+      }
+    ],
+    "faction": "alliance",
+    "expansion": 7
+  },
+  {
+    "id": 162541,
+    "name": "Band of the Roving Scalawag",
+    "icon": "inv_ring_80_02a",
+    "quality": 3,
+    "itemClass": 4,
+    "itemSubClass": 0,
+    "inventoryType": 11,
+    "itemLevel": 59,
+    "uniqueEquipped": true,
+    "stats": [
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 49,
+        "alloc": 10500
+      },
+      {
+        "id": 32,
+        "alloc": 7000
+      }
+    ],
+    "sources": [
+      {
+        "instanceId": 1023,
+        "encounterId": 2132
+      },
+      {
+        "instanceId": 1023,
+        "encounterId": 2654
+      },
+      {
+        "instanceId": -1,
+        "encounterId": 1023
+      },
+      {
+        "instanceId": -1,
+        "encounterId": 1023
+      }
+    ],
+    "faction": "alliance",
+    "expansion": 7
+  },
+  {
+    "id": 162542,
+    "name": "Seal of the City Watch",
+    "icon": "inv_ring_80_02a",
+    "quality": 3,
+    "itemClass": 4,
+    "itemSubClass": 0,
+    "inventoryType": 11,
+    "itemLevel": 59,
+    "uniqueEquipped": true,
+    "stats": [
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 49,
+        "alloc": 10500
+      },
+      {
+        "id": 32,
+        "alloc": 7000
+      }
+    ],
+    "sources": [
+      {
+        "instanceId": 1023,
+        "encounterId": 2133
+      },
+      {
+        "instanceId": -1,
+        "encounterId": 1023
+      }
+    ],
+    "faction": "horde",
+    "expansion": 7
+  },
+  {
+    "id": 178691,
+    "name": "Hood of the Hidden Path",
+    "icon": "inv_helm_leather_oribosdungeon_c_01",
+    "quality": 3,
+    "itemClass": 4,
+    "itemSubClass": 2,
+    "inventoryType": 1,
+    "itemLevel": 158,
+    "contextLevels": {
+      "25": 134,
+      "26": 139,
+      "27": 144
+    },
+    "stats": [
+      {
+        "id": 73,
+        "alloc": 5259
+      },
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 36,
+        "alloc": 4550
+      },
+      {
+        "id": 49,
+        "alloc": 2450
+      }
+    ],
+    "sources": [
+      {
+        "instanceId": 1184,
+        "encounterId": 2402
+      },
+      {
+        "instanceId": -1,
+        "encounterId": 1184
+      }
+    ],
+    "expansion": 8
+  },
+  {
+    "id": 178698,
+    "name": "Rainshadow Hauberk",
+    "icon": "inv_chest_leather_oribosdungeon_c_01",
+    "quality": 3,
+    "itemClass": 4,
+    "itemSubClass": 2,
+    "inventoryType": 5,
+    "itemLevel": 158,
+    "contextLevels": {
+      "25": 134,
+      "26": 139,
+      "27": 144
+    },
+    "stats": [
+      {
+        "id": 73,
+        "alloc": 5259
+      },
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 36,
+        "alloc": 4100
+      },
+      {
+        "id": 32,
+        "alloc": 2900
+      }
+    ],
+    "sources": [
+      {
+        "instanceId": 1184,
+        "encounterId": 2400
+      },
+      {
+        "instanceId": -1,
+        "encounterId": 1184
+      }
+    ],
+    "expansion": 8
+  },
+  {
+    "id": 178699,
+    "name": "Sapgorger Belt",
+    "icon": "inv_belt_leather_oribosdungeon_c_01",
+    "quality": 3,
+    "itemClass": 4,
+    "itemSubClass": 2,
+    "inventoryType": 6,
+    "itemLevel": 158,
+    "contextLevels": {
+      "25": 134,
+      "26": 139,
+      "27": 144
+    },
+    "stats": [
+      {
+        "id": 73,
+        "alloc": 5259
+      },
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 36,
+        "alloc": 4400
+      },
+      {
+        "id": 40,
+        "alloc": 2600
+      }
+    ],
+    "sources": [
+      {
+        "instanceId": 1184,
+        "encounterId": 2405
+      },
+      {
+        "instanceId": -1,
+        "encounterId": 1184
+      }
+    ],
+    "expansion": 8
+  },
+  {
+    "id": 178702,
+    "name": "Bands of the Undergrowth",
+    "icon": "inv_bracer_leather_oribosdungeon_c_01",
+    "quality": 3,
+    "itemClass": 4,
+    "itemSubClass": 2,
+    "inventoryType": 9,
+    "itemLevel": 158,
+    "contextLevels": {
+      "25": 134,
+      "26": 139,
+      "27": 144
+    },
+    "stats": [
+      {
+        "id": 73,
+        "alloc": 5259
+      },
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 32,
+        "alloc": 4250
+      },
+      {
+        "id": 40,
+        "alloc": 2750
+      }
+    ],
+    "sources": [
+      {
+        "instanceId": 1184,
+        "encounterId": 2405
+      },
+      {
+        "instanceId": -1,
+        "encounterId": 1184
+      }
+    ],
+    "expansion": 8
+  },
+  {
+    "id": 178707,
+    "name": "Trailspinner Pendant",
+    "icon": "inv_neck_ardenweald_01_silver",
+    "quality": 3,
+    "itemClass": 4,
+    "itemSubClass": 0,
+    "inventoryType": 2,
+    "itemLevel": 158,
+    "contextLevels": {
+      "25": 134,
+      "26": 139,
+      "27": 144
+    },
+    "stats": [
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 49,
+        "alloc": 11000
+      },
+      {
+        "id": 32,
+        "alloc": 6500
+      }
+    ],
+    "sources": [
+      {
+        "instanceId": 1184,
+        "encounterId": 2402
+      },
+      {
+        "instanceId": -1,
+        "encounterId": 1184
+      }
+    ],
+    "expansion": 8
+  },
+  {
+    "id": 178708,
+    "name": "Unbound Changeling",
+    "icon": "spell_animaardenweald_nova",
+    "quality": 3,
+    "itemClass": 4,
+    "itemSubClass": 0,
+    "inventoryType": 12,
+    "itemLevel": 158,
+    "contextLevels": {
+      "25": 134,
+      "26": 139,
+      "27": 144
+    },
+    "uniqueEquipped": true,
+    "stats": [
+      {
+        "id": 5,
+        "alloc": 6666
+      }
+    ],
+    "bonusLists": [
+      6915
+    ],
+    "sources": [
+      {
+        "instanceId": 1184,
+        "encounterId": 2400
+      },
+      {
+        "instanceId": -1,
+        "encounterId": 1184
+      }
+    ],
+    "expansion": 8
+  },
+  {
+    "id": 178709,
+    "name": "Scithewood Scepter",
+    "icon": "inv_mace_1h_oribosdungeon_c_01",
+    "quality": 3,
+    "itemClass": 2,
+    "itemSubClass": 4,
+    "inventoryType": 13,
+    "itemLevel": 158,
+    "contextLevels": {
+      "25": 134,
+      "26": 139,
+      "27": 144
+    },
+    "stats": [
+      {
+        "id": 5,
+        "alloc": 5259
+      },
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 49,
+        "alloc": 4550
+      },
+      {
+        "id": 32,
+        "alloc": 2450
+      },
+      {
+        "id": 5,
+        "alloc": 25370
+      }
+    ],
+    "sources": [
+      {
+        "instanceId": 1184,
+        "encounterId": 2400
+      },
+      {
+        "instanceId": -1,
+        "encounterId": 1184
+      }
+    ],
+    "expansion": 8
+  },
+  {
+    "id": 178710,
+    "name": "Tanglewood Thorn",
+    "icon": "inv_knife_1h_oribosdungeon_c_01",
+    "quality": 3,
+    "itemClass": 2,
+    "itemSubClass": 15,
+    "inventoryType": 13,
+    "itemLevel": 158,
+    "contextLevels": {
+      "25": 134,
+      "26": 139,
+      "27": 144
+    },
+    "stats": [
+      {
+        "id": 3,
+        "alloc": 5259
+      },
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 36,
+        "alloc": 4400
+      },
+      {
+        "id": 40,
+        "alloc": 2600
+      }
+    ],
+    "sources": [
+      {
+        "instanceId": 1184,
+        "encounterId": 2402
+      },
+      {
+        "instanceId": -1,
+        "encounterId": 1184
+      }
+    ],
+    "expansion": 8
+  },
+  {
+    "id": 178711,
+    "name": "Axe of the Deadgrove",
+    "icon": "inv_axe_1h_oribosdungeon_c_01",
+    "quality": 3,
+    "itemClass": 2,
+    "itemSubClass": 0,
+    "inventoryType": 13,
+    "itemLevel": 158,
+    "contextLevels": {
+      "25": 134,
+      "26": 139,
+      "27": 144
+    },
+    "stats": [
+      {
+        "id": 4,
+        "alloc": 5259
+      },
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 40,
+        "alloc": 4250
+      },
+      {
+        "id": 36,
+        "alloc": 2750
+      }
+    ],
+    "sources": [
+      {
+        "instanceId": 1184,
+        "encounterId": 2405
+      },
+      {
+        "instanceId": -1,
+        "encounterId": 1184
+      }
+    ],
+    "expansion": 8
+  },
+  {
+    "id": 178715,
+    "name": "Mistcaller Ocarina",
+    "icon": "inv_misc_primitive_toy03",
+    "quality": 3,
+    "itemClass": 4,
+    "itemSubClass": 0,
+    "inventoryType": 12,
+    "itemLevel": 158,
+    "contextLevels": {
+      "25": 134,
+      "26": 139,
+      "27": 144
+    },
+    "uniqueEquipped": true,
+    "stats": [
+      {
+        "id": 3,
+        "alloc": 6666
+      }
+    ],
+    "sources": [
+      {
+        "instanceId": 1184,
+        "encounterId": 2402
+      },
+      {
+        "instanceId": -1,
+        "encounterId": 1184
+      }
+    ],
+    "expansion": 8
+  },
+  {
+    "id": 178730,
+    "name": "Engorged Worm Smasher",
+    "icon": "inv_mace_1h_oribosdungeon_c_02",
+    "quality": 3,
+    "itemClass": 2,
+    "itemSubClass": 4,
+    "inventoryType": 13,
+    "itemLevel": 158,
+    "contextLevels": {
+      "25": 134,
+      "26": 139,
+      "27": 144
+    },
+    "stats": [
+      {
+        "id": 4,
+        "alloc": 5259
+      },
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 36,
+        "alloc": 4550
+      },
+      {
+        "id": 40,
+        "alloc": 2450
+      }
+    ],
+    "sources": [
+      {
+        "instanceId": 1182,
+        "encounterId": 2395
+      },
+      {
+        "instanceId": -1,
+        "encounterId": 1182
+      }
+    ],
+    "expansion": 8
+  },
+  {
+    "id": 178731,
+    "name": "Viscera-Stitched Footpads",
+    "icon": "inv_boot_leather_oribosdungeon_c_01",
+    "quality": 3,
+    "itemClass": 4,
+    "itemSubClass": 2,
+    "inventoryType": 8,
+    "itemLevel": 158,
+    "contextLevels": {
+      "25": 134,
+      "26": 139,
+      "27": 144
+    },
+    "stats": [
+      {
+        "id": 73,
+        "alloc": 5259
+      },
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 40,
+        "alloc": 4550
+      },
+      {
+        "id": 32,
+        "alloc": 2450
+      }
+    ],
+    "sources": [
+      {
+        "instanceId": 1182,
+        "encounterId": 2395
+      },
+      {
+        "instanceId": -1,
+        "encounterId": 1182
+      }
+    ],
+    "expansion": 8
+  },
+  {
+    "id": 178736,
+    "name": "Stitchflesh's Misplaced Signet",
+    "icon": "inv_argus_ring02",
+    "quality": 3,
+    "itemClass": 4,
+    "itemSubClass": 0,
+    "inventoryType": 11,
+    "itemLevel": 158,
+    "contextLevels": {
+      "25": 134,
+      "26": 139,
+      "27": 144
+    },
+    "uniqueEquipped": true,
+    "stats": [
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 36,
+        "alloc": 11250
+      },
+      {
+        "id": 40,
+        "alloc": 6250
+      }
+    ],
+    "sources": [
+      {
+        "instanceId": 1182,
+        "encounterId": 2395
+      },
+      {
+        "instanceId": -1,
+        "encounterId": 1182
+      }
+    ],
+    "expansion": 8
+  },
+  {
+    "id": 178737,
+    "name": "Amarth's Spellblade",
+    "icon": "inv_1h_oribosdungeon_c_01",
+    "quality": 3,
+    "itemClass": 2,
+    "itemSubClass": 7,
+    "inventoryType": 13,
+    "itemLevel": 158,
+    "contextLevels": {
+      "25": 134,
+      "26": 139,
+      "27": 144
+    },
+    "stats": [
+      {
+        "id": 5,
+        "alloc": 5259
+      },
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 32,
+        "alloc": 4100
+      },
+      {
+        "id": 36,
+        "alloc": 2900
+      },
+      {
+        "id": 5,
+        "alloc": 25370
+      }
+    ],
+    "sources": [
+      {
+        "instanceId": 1182,
+        "encounterId": 2391
+      },
+      {
+        "instanceId": -1,
+        "encounterId": 1182
+      }
+    ],
+    "expansion": 8
+  },
+  {
+    "id": 178741,
+    "name": "Risen Monstrosity Cuffs",
+    "icon": "inv_bracer_leather_oribosdungeon_c_01",
+    "quality": 3,
+    "itemClass": 4,
+    "itemSubClass": 2,
+    "inventoryType": 9,
+    "itemLevel": 158,
+    "contextLevels": {
+      "25": 134,
+      "26": 139,
+      "27": 144
+    },
+    "stats": [
+      {
+        "id": 73,
+        "alloc": 5259
+      },
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 36,
+        "alloc": 4400
+      },
+      {
+        "id": 40,
+        "alloc": 2600
+      }
+    ],
+    "sources": [
+      {
+        "instanceId": 1182,
+        "encounterId": 2391
+      },
+      {
+        "instanceId": -1,
+        "encounterId": 1182
+      }
+    ],
+    "expansion": 8
+  },
+  {
+    "id": 178742,
+    "name": "Bottled Flayedwing Toxin",
+    "icon": "inv_alchemy_70_potion2",
+    "quality": 3,
+    "itemClass": 4,
+    "itemSubClass": 0,
+    "inventoryType": 12,
+    "itemLevel": 158,
+    "contextLevels": {
+      "25": 134,
+      "26": 139,
+      "27": 144
+    },
+    "uniqueEquipped": true,
+    "stats": [
+      {
+        "id": 3,
+        "alloc": 6666
+      }
+    ],
+    "sources": [
+      {
+        "instanceId": 1182,
+        "encounterId": 2391
+      },
+      {
+        "instanceId": -1,
+        "encounterId": 1182
+      }
+    ],
+    "expansion": 8
+  },
+  {
+    "id": 178743,
+    "name": "Stitchflesh's Scalpel",
+    "icon": "inv_knife_1h_oribosdungeon_c_01",
+    "quality": 3,
+    "itemClass": 2,
+    "itemSubClass": 15,
+    "inventoryType": 13,
+    "itemLevel": 158,
+    "contextLevels": {
+      "25": 134,
+      "26": 139,
+      "27": 144
+    },
+    "stats": [
+      {
+        "id": 3,
+        "alloc": 5259
+      },
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 49,
+        "alloc": 4250
+      },
+      {
+        "id": 32,
+        "alloc": 2750
+      }
+    ],
+    "sources": [
+      {
+        "instanceId": 1182,
+        "encounterId": 2392
+      },
+      {
+        "instanceId": -1,
+        "encounterId": 1182
+      }
+    ],
+    "expansion": 8
+  },
+  {
+    "id": 178744,
+    "name": "Freshly Embalmed Jerkin",
+    "icon": "inv_chest_leather_oribosdungeon_c_01",
+    "quality": 3,
+    "itemClass": 4,
+    "itemSubClass": 2,
+    "inventoryType": 5,
+    "itemLevel": 158,
+    "contextLevels": {
+      "25": 134,
+      "26": 139,
+      "27": 144
+    },
+    "stats": [
+      {
+        "id": 73,
+        "alloc": 5259
+      },
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 49,
+        "alloc": 4100
+      },
+      {
+        "id": 32,
+        "alloc": 2900
+      }
+    ],
+    "sources": [
+      {
+        "instanceId": 1182,
+        "encounterId": 2392
+      },
+      {
+        "instanceId": -1,
+        "encounterId": 1182
+      }
+    ],
+    "expansion": 8
+  },
+  {
+    "id": 178751,
+    "name": "Spare Meat Hook",
+    "icon": "inv_archaeology_70_tauren_moosebonefishhook",
+    "quality": 3,
+    "itemClass": 4,
+    "itemSubClass": 0,
+    "inventoryType": 12,
+    "itemLevel": 158,
+    "contextLevels": {
+      "25": 134,
+      "26": 139,
+      "27": 144
+    },
+    "uniqueEquipped": true,
+    "stats": [
+      {
+        "id": 4,
+        "alloc": 6666
+      }
+    ],
+    "sources": [
+      {
+        "instanceId": 1182,
+        "encounterId": 2392
+      },
+      {
+        "instanceId": -1,
+        "encounterId": 1182
+      }
+    ],
+    "onUseTrinket": true,
+    "expansion": 8
+  },
+  {
+    "id": 178772,
+    "name": "Satchel of Misbegotten Minions",
+    "icon": "inv_misc_coinbag07",
+    "quality": 3,
+    "itemClass": 4,
+    "itemSubClass": 0,
+    "inventoryType": 12,
+    "itemLevel": 158,
+    "contextLevels": {
+      "25": 134,
+      "26": 139,
+      "27": 144
+    },
+    "uniqueEquipped": true,
+    "specs": [
+      62,
+      63,
+      64,
+      102,
+      258,
+      262,
+      265,
+      266,
+      267,
+      1467,
+      1473
+    ],
+    "stats": [
+      {
+        "id": 5,
+        "alloc": 6666
+      }
+    ],
+    "sources": [
+      {
+        "instanceId": 1182,
+        "encounterId": 2392
+      },
+      {
+        "instanceId": -1,
+        "encounterId": 1182
+      }
+    ],
+    "expansion": 8
+  },
+  {
+    "id": 178779,
+    "name": "Undying Chill Shoulderpads",
+    "icon": "inv_shoulder_leather_oribosdungeon_c_01",
+    "quality": 3,
+    "itemClass": 4,
+    "itemSubClass": 2,
+    "inventoryType": 3,
+    "itemLevel": 158,
+    "contextLevels": {
+      "25": 134,
+      "26": 139,
+      "27": 144
+    },
+    "stats": [
+      {
+        "id": 73,
+        "alloc": 5259
+      },
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 49,
+        "alloc": 4250
+      },
+      {
+        "id": 40,
+        "alloc": 2750
+      }
+    ],
+    "sources": [
+      {
+        "instanceId": 1182,
+        "encounterId": 2396
+      },
+      {
+        "instanceId": -1,
+        "encounterId": 1182
+      }
+    ],
+    "expansion": 8
+  },
+  {
+    "id": 178781,
+    "name": "Ritual Commander's Ring",
+    "icon": "inv_ring_revendreth_01_brown",
+    "quality": 3,
+    "itemClass": 4,
+    "itemSubClass": 0,
+    "inventoryType": 11,
+    "itemLevel": 158,
+    "contextLevels": {
+      "25": 134,
+      "26": 139,
+      "27": 144
+    },
+    "uniqueEquipped": true,
+    "stats": [
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 40,
+        "alloc": 10750
+      },
+      {
+        "id": 32,
+        "alloc": 6750
+      }
+    ],
+    "sources": [
+      {
+        "instanceId": 1182,
+        "encounterId": 2396
+      },
+      {
+        "instanceId": -1,
+        "encounterId": 1182
+      }
+    ],
+    "expansion": 8
+  },
+  {
+    "id": 178783,
+    "name": "Siphoning Phylactery Shard",
+    "icon": "inv_enchanting_70_chaosshard",
+    "quality": 3,
+    "itemClass": 4,
+    "itemSubClass": 0,
+    "inventoryType": 12,
+    "itemLevel": 158,
+    "contextLevels": {
+      "25": 134,
+      "26": 139,
+      "27": 144
+    },
+    "uniqueEquipped": true,
+    "specs": [
+      65,
+      105,
+      256,
+      257,
+      264,
+      270,
+      1468
+    ],
+    "stats": [
+      {
+        "id": 5,
+        "alloc": 6666
+      }
+    ],
+    "sources": [
+      {
+        "instanceId": 1182,
+        "encounterId": 2396
+      },
+      {
+        "instanceId": -1,
+        "encounterId": 1182
+      }
+    ],
+    "expansion": 8
+  },
+  {
+    "id": 210816,
+    "name": "Algari Alchemist Stone",
+    "icon": "inv_10_alchemy_alchemystone_color4",
+    "quality": 4,
+    "itemClass": 4,
+    "itemSubClass": 0,
+    "inventoryType": 12,
+    "itemLevel": 593,
+    "itemLimit": {
+      "category": 130,
+      "quantity": 1
+    },
+    "stats": [
+      {
+        "id": 40,
+        "alloc": 6666
+      }
+    ],
+    "bonusLists": [
+      10421,
+      9633,
+      8902
+    ],
+    "sources": [
+      {
+        "instanceId": -66,
+        "encounterId": -43
+      }
+    ],
+    "profession": {
+      "id": 171,
+      "recipeSpellId": 427185,
+      "optionalCraftingSlots": [
+        {
+          "id": 256,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 366,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 279,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 268,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 257,
+          "count": 4,
+          "recraftCount": 2
+        },
+        {
+          "id": 362,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 354,
+          "count": 1,
+          "recraftCount": 1
+        }
+      ]
+    },
+    "expansion": 10
+  },
+  {
+    "id": 212060,
+    "name": "Drape of the Hypogeal Nemesis",
+    "icon": "inv_leather_raiddemonhunternerubian_d_01_cape",
+    "quality": 4,
+    "itemClass": 4,
+    "itemSubClass": 1,
+    "inventoryType": 16,
+    "itemLevel": 571,
+    "allowableClasses": [
+      12
+    ],
+    "stats": [
+      {
+        "id": 71,
+        "alloc": 5259
+      },
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 40,
+        "alloc": 4930
+      },
+      {
+        "id": 32,
+        "alloc": 2070
+      }
+    ],
+    "expansion": 10
+  },
+  {
+    "id": 212061,
+    "name": "Armguards of the Hypogeal Nemesis",
+    "icon": "inv_leather_raiddemonhunternerubian_d_01_bracer",
+    "quality": 4,
+    "itemClass": 4,
+    "itemSubClass": 2,
+    "inventoryType": 9,
+    "itemLevel": 571,
+    "allowableClasses": [
+      12
+    ],
+    "stats": [
+      {
+        "id": 73,
+        "alloc": 5259
+      },
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 32,
+        "alloc": 4713
+      },
+      {
+        "id": 36,
+        "alloc": 2287
+      }
+    ],
+    "expansion": 10
+  },
+  {
+    "id": 212062,
+    "name": "Waistguard of the Hypogeal Nemesis",
+    "icon": "inv_leather_raiddemonhunternerubian_d_01_belt",
+    "quality": 4,
+    "itemClass": 4,
+    "itemSubClass": 2,
+    "inventoryType": 6,
+    "itemLevel": 571,
+    "allowableClasses": [
+      12
+    ],
+    "stats": [
+      {
+        "id": 73,
+        "alloc": 5259
+      },
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 36,
+        "alloc": 4556
+      },
+      {
+        "id": 49,
+        "alloc": 2444
+      }
+    ],
+    "expansion": 10
+  },
+  {
+    "id": 212063,
+    "name": "War-Mantle of the Hypogeal Nemesis",
+    "icon": "inv_leather_raiddemonhunternerubian_d_01_shoulder",
+    "quality": 4,
+    "itemClass": 4,
+    "itemSubClass": 2,
+    "inventoryType": 3,
+    "itemLevel": 571,
+    "itemSetId": 1695,
+    "allowableClasses": [
+      12
+    ],
+    "stats": [
+      {
+        "id": 73,
+        "alloc": 5259
+      },
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 36,
+        "alloc": 4942
+      },
+      {
+        "id": 40,
+        "alloc": 2058
+      }
+    ],
+    "expansion": 10
+  },
+  {
+    "id": 212064,
+    "name": "Pantaloons of the Hypogeal Nemesis",
+    "icon": "inv_leather_raiddemonhunternerubian_d_01_pant",
+    "quality": 4,
+    "itemClass": 4,
+    "itemSubClass": 2,
+    "inventoryType": 7,
+    "itemLevel": 571,
+    "itemSetId": 1695,
+    "allowableClasses": [
+      12
+    ],
+    "stats": [
+      {
+        "id": 73,
+        "alloc": 5259
+      },
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 32,
+        "alloc": 4871
+      },
+      {
+        "id": 36,
+        "alloc": 2129
+      }
+    ],
+    "expansion": 10
+  },
+  {
+    "id": 212065,
+    "name": "Impalers of the Hypogeal Nemesis",
+    "icon": "inv_leather_raiddemonhunternerubian_d_01_helm",
+    "quality": 4,
+    "itemClass": 4,
+    "itemSubClass": 2,
+    "inventoryType": 1,
+    "itemLevel": 571,
+    "itemSetId": 1695,
+    "allowableClasses": [
+      12
+    ],
+    "stats": [
+      {
+        "id": 73,
+        "alloc": 5259
+      },
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 49,
+        "alloc": 4721
+      },
+      {
+        "id": 36,
+        "alloc": 2279
+      }
+    ],
+    "expansion": 10
+  },
+  {
+    "id": 212066,
+    "name": "Claws of the Hypogeal Nemesis",
+    "icon": "inv_leather_raiddemonhunternerubian_d_01_glove",
+    "quality": 4,
+    "itemClass": 4,
+    "itemSubClass": 2,
+    "inventoryType": 10,
+    "itemLevel": 571,
+    "itemSetId": 1695,
+    "allowableClasses": [
+      12
+    ],
+    "stats": [
+      {
+        "id": 73,
+        "alloc": 5259
+      },
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 40,
+        "alloc": 4765
+      },
+      {
+        "id": 32,
+        "alloc": 2235
+      }
+    ],
+    "expansion": 10
+  },
+  {
+    "id": 212067,
+    "name": "Talons of the Hypogeal Nemesis",
+    "icon": "inv_leather_raiddemonhunternerubian_d_01_boot",
+    "quality": 4,
+    "itemClass": 4,
+    "itemSubClass": 2,
+    "inventoryType": 8,
+    "itemLevel": 571,
+    "allowableClasses": [
+      12
+    ],
+    "stats": [
+      {
+        "id": 73,
+        "alloc": 5259
+      },
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 49,
+        "alloc": 4778
+      },
+      {
+        "id": 40,
+        "alloc": 2222
+      }
+    ],
+    "expansion": 10
+  },
+  {
+    "id": 212068,
+    "name": "Chestguard of the Hypogeal Nemesis",
+    "icon": "inv_leather_raiddemonhunternerubian_d_01_chest",
+    "quality": 4,
+    "itemClass": 4,
+    "itemSubClass": 2,
+    "inventoryType": 5,
+    "itemLevel": 571,
+    "itemSetId": 1695,
+    "allowableClasses": [
+      12
+    ],
+    "stats": [
+      {
+        "id": 73,
+        "alloc": 5259
+      },
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 32,
+        "alloc": 4666
+      },
+      {
+        "id": 49,
+        "alloc": 2334
+      }
+    ],
+    "expansion": 10
+  },
+  {
+    "id": 212392,
+    "name": "Duelist's Dancing Steel",
+    "icon": "inv_sword_1h_nerubianraid_d_01",
+    "quality": 4,
+    "itemClass": 2,
+    "itemSubClass": 7,
+    "inventoryType": 13,
+    "itemLevel": 571,
+    "stats": [
+      {
+        "id": 4,
+        "alloc": 5259
+      },
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 36,
+        "alloc": 4689
+      },
+      {
+        "id": 32,
+        "alloc": 2311
+      }
+    ],
+    "sources": [
+      {
+        "instanceId": 1273,
+        "encounterId": 2599
+      }
+    ],
+    "expansion": 10
+  },
+  {
+    "id": 212394,
+    "name": "Sovereign's Disdain",
+    "icon": "inv_knife_1h_nerubianraid_d_02",
+    "quality": 4,
+    "itemClass": 2,
+    "itemSubClass": 15,
+    "inventoryType": 13,
+    "itemLevel": 571,
+    "stats": [
+      {
+        "id": 5,
+        "alloc": 5259
+      },
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 36,
+        "alloc": 4873
+      },
+      {
+        "id": 32,
+        "alloc": 2127
+      },
+      {
+        "id": 5,
+        "alloc": 25370
+      }
+    ],
+    "sources": [
+      {
+        "instanceId": 1273,
+        "encounterId": 2602
+      }
+    ],
+    "expansion": 10
+  },
+  {
+    "id": 212395,
+    "name": "Blood-Kissed Kukri",
+    "icon": "inv_knife_1h_nerubianraid_d_02",
+    "quality": 4,
+    "itemClass": 2,
+    "itemSubClass": 15,
+    "inventoryType": 13,
+    "itemLevel": 571,
+    "stats": [
+      {
+        "id": 3,
+        "alloc": 5259
+      },
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 32,
+        "alloc": 4999
+      },
+      {
+        "id": 40,
+        "alloc": 2001
+      }
+    ],
+    "sources": [
+      {
+        "instanceId": 1273,
+        "encounterId": 2611
+      }
+    ],
+    "expansion": 10
+  },
+  {
+    "id": 212396,
+    "name": "Monster Weapon - 1H Sword",
+    "icon": "inv_sword_1h_revendrethquest_b_01",
+    "quality": 4,
+    "itemClass": 2,
+    "itemSubClass": 7,
+    "inventoryType": 13,
+    "itemLevel": 280,
+    "stats": [
+      {
+        "id": 3,
+        "alloc": 5259
+      },
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 40,
+        "alloc": 3950
+      },
+      {
+        "id": 32,
+        "alloc": 3050
+      }
+    ],
+    "expansion": 10
+  },
+  {
+    "id": 212398,
+    "name": "Bludgeons of Blistering Wind",
+    "icon": "inv_mace_1h_nerubianraid_d_01",
+    "quality": 4,
+    "itemClass": 2,
+    "itemSubClass": 4,
+    "inventoryType": 13,
+    "itemLevel": 571,
+    "stats": [
+      {
+        "id": 3,
+        "alloc": 5259
+      },
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 49,
+        "alloc": 4631
+      },
+      {
+        "id": 32,
+        "alloc": 2369
+      }
+    ],
+    "sources": [
+      {
+        "instanceId": 1273,
+        "encounterId": 2609
+      }
+    ],
+    "expansion": 10
+  },
+  {
+    "id": 212401,
+    "name": "Ansurek's Final Judgment",
+    "icon": "inv_axe_1h_nerubianraid_d_01",
+    "quality": 4,
+    "itemClass": 2,
+    "itemSubClass": 0,
+    "inventoryType": 13,
+    "itemLevel": 571,
+    "stats": [
+      {
+        "id": 4,
+        "alloc": 5259
+      },
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 32,
+        "alloc": 4979
+      },
+      {
+        "id": 49,
+        "alloc": 2021
+      }
+    ],
+    "sources": [
+      {
+        "instanceId": 1273,
+        "encounterId": 2602
+      }
+    ],
+    "expansion": 10
+  },
+  {
+    "id": 212402,
+    "name": "11.0 Raid Template - Axe1H - Agi - Weapon",
+    "icon": "inv_axe_1h_newplayer_a_01",
+    "quality": 4,
+    "itemClass": 2,
+    "itemSubClass": 0,
+    "inventoryType": 13,
+    "itemLevel": 280,
+    "stats": [
+      {
+        "id": 3,
+        "alloc": 5259
+      },
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 36,
+        "alloc": 3950
+      },
+      {
+        "id": 32,
+        "alloc": 3050
+      }
+    ],
+    "expansion": 10
+  },
+  {
+    "id": 212403,
+    "name": "11.0 Raid Template - Axe1H - Int - Weapon",
+    "icon": "inv_axe_1h_newplayer_a_01",
+    "quality": 4,
+    "itemClass": 2,
+    "itemSubClass": 0,
+    "inventoryType": 13,
+    "itemLevel": 280,
+    "stats": [
+      {
+        "id": 5,
+        "alloc": 5259
+      },
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 49,
+        "alloc": 3800
+      },
+      {
+        "id": 32,
+        "alloc": 3200
+      },
+      {
+        "id": 5,
+        "alloc": 25370
+      }
+    ],
+    "expansion": 10
+  },
+  {
+    "id": 212404,
+    "name": "Scepter of Manifested Miasma",
+    "icon": "inv_mace_1h_nerubianraid_d_02",
+    "quality": 4,
+    "itemClass": 2,
+    "itemSubClass": 4,
+    "inventoryType": 13,
+    "itemLevel": 571,
+    "stats": [
+      {
+        "id": 5,
+        "alloc": 5259
+      },
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 36,
+        "alloc": 4981
+      },
+      {
+        "id": 40,
+        "alloc": 2019
+      },
+      {
+        "id": 5,
+        "alloc": 25370
+      }
+    ],
+    "sources": [
+      {
+        "instanceId": 1273,
+        "encounterId": 2611
+      }
+    ],
+    "expansion": 10
+  },
+  {
+    "id": 212405,
+    "name": "Flawless Phase Blade",
+    "icon": "inv_sword_1h_nerubianraid_d_01",
+    "quality": 4,
+    "itemClass": 2,
+    "itemSubClass": 7,
+    "inventoryType": 13,
+    "itemLevel": 571,
+    "stats": [
+      {
+        "id": 5,
+        "alloc": 5259
+      },
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 32,
+        "alloc": 4633
+      },
+      {
+        "id": 49,
+        "alloc": 2367
+      },
+      {
+        "id": 5,
+        "alloc": 25370
+      }
+    ],
+    "sources": [
+      {
+        "instanceId": 1273,
+        "encounterId": 2599
+      }
+    ],
+    "expansion": 10
+  },
+  {
+    "id": 212406,
+    "name": "11.0 Raid Template - Mace1H - Str - Weapon",
+    "icon": "inv_mace_1h_revendrethquest_b_01",
+    "quality": 4,
+    "itemClass": 2,
+    "itemSubClass": 4,
+    "inventoryType": 13,
+    "itemLevel": 280,
+    "stats": [
+      {
+        "id": 4,
+        "alloc": 5259
+      },
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 49,
+        "alloc": 3650
+      },
+      {
+        "id": 36,
+        "alloc": 3350
+      }
+    ],
+    "expansion": 10
+  },
+  {
+    "id": 212409,
+    "name": "Venom-Etched Claw",
+    "icon": "inv_hand_1h_nerubianraid_d_01",
+    "quality": 4,
+    "itemClass": 2,
+    "itemSubClass": 13,
+    "inventoryType": 13,
+    "itemLevel": 571,
+    "stats": [
+      {
+        "id": 3,
+        "alloc": 5259
+      },
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 40,
+        "alloc": 4740
+      },
+      {
+        "id": 36,
+        "alloc": 2260
+      }
+    ],
+    "sources": [
+      {
+        "instanceId": 1273,
+        "encounterId": 2607
+      }
+    ],
+    "expansion": 10
+  },
+  {
+    "id": 212417,
+    "name": "Beyond's Dark Visage",
+    "icon": "inv_leather_raiddemonhunternerubian_d_01_helm",
+    "quality": 4,
+    "itemClass": 4,
+    "itemSubClass": 2,
+    "inventoryType": 1,
+    "itemLevel": 571,
+    "stats": [
+      {
+        "id": 73,
+        "alloc": 5259
+      },
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 40,
+        "alloc": 4852
+      },
+      {
+        "id": 32,
+        "alloc": 2148
+      }
+    ],
+    "sources": [
+      {
+        "instanceId": 1273,
+        "encounterId": 2611
+      }
+    ],
+    "expansion": 10
+  },
+  {
+    "id": 212423,
+    "name": "Rebel's Drained Marrowslacks",
+    "icon": "inv_pant_leather_raidmonknerubian_d_01",
+    "quality": 4,
+    "itemClass": 4,
+    "itemSubClass": 2,
+    "inventoryType": 7,
+    "itemLevel": 571,
+    "stats": [
+      {
+        "id": 73,
+        "alloc": 5259
+      },
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 32,
+        "alloc": 4808
+      },
+      {
+        "id": 49,
+        "alloc": 2192
+      }
+    ],
+    "sources": [
+      {
+        "instanceId": 1273,
+        "encounterId": 2607
+      }
+    ],
+    "expansion": 10
+  },
+  {
+    "id": 212425,
+    "name": "Devourer's Taut Innards",
+    "icon": "inv_belt_leather_raidroguenerubian_d_01",
+    "quality": 4,
+    "itemClass": 4,
+    "itemSubClass": 2,
+    "inventoryType": 6,
+    "itemLevel": 571,
+    "stats": [
+      {
+        "id": 73,
+        "alloc": 5259
+      },
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 40,
+        "alloc": 4873
+      },
+      {
+        "id": 49,
+        "alloc": 2127
+      }
+    ],
+    "sources": [
+      {
+        "instanceId": 1273,
+        "encounterId": 2607
+      }
+    ],
+    "expansion": 10
+  },
+  {
+    "id": 212432,
+    "name": "Thousand-Scar Impalers",
+    "icon": "inv_glove_leather_raiddruidnerubian_d_01",
+    "quality": 4,
+    "itemClass": 4,
+    "itemSubClass": 2,
+    "inventoryType": 10,
+    "itemLevel": 571,
+    "stats": [
+      {
+        "id": 73,
+        "alloc": 5259
+      },
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 32,
+        "alloc": 4865
+      },
+      {
+        "id": 36,
+        "alloc": 2135
+      }
+    ],
+    "sources": [
+      {
+        "instanceId": 1273,
+        "encounterId": 2608
+      }
+    ],
+    "expansion": 10
+  },
+  {
+    "id": 212433,
+    "name": "Omnivore's Venomous Camouflage",
+    "icon": "inv_chest_leather_raiddruidnerubian_d_01",
+    "quality": 4,
+    "itemClass": 4,
+    "itemSubClass": 2,
+    "inventoryType": 5,
+    "itemLevel": 571,
+    "stats": [
+      {
+        "id": 73,
+        "alloc": 5259
+      },
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 49,
+        "alloc": 4765
+      },
+      {
+        "id": 36,
+        "alloc": 2235
+      }
+    ],
+    "sources": [
+      {
+        "instanceId": 1273,
+        "encounterId": 2602
+      }
+    ],
+    "expansion": 10
+  },
+  {
+    "id": 212438,
+    "name": "Polluted Spectre's Wraps",
+    "icon": "inv_bracer_leather_raidroguenerubian_d_01",
+    "quality": 4,
+    "itemClass": 4,
+    "itemSubClass": 2,
+    "inventoryType": 9,
+    "itemLevel": 571,
+    "stats": [
+      {
+        "id": 73,
+        "alloc": 5259
+      },
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 49,
+        "alloc": 4700
+      },
+      {
+        "id": 36,
+        "alloc": 2300
+      }
+    ],
+    "sources": [
+      {
+        "instanceId": 1273,
+        "encounterId": 2611
+      }
+    ],
+    "expansion": 10
+  },
+  {
+    "id": 212444,
+    "name": "Frame of Felled Insurgents",
+    "icon": "inv_shoulder_leather_raidmonknerubian_d_01",
+    "quality": 4,
+    "itemClass": 4,
+    "itemSubClass": 2,
+    "inventoryType": 3,
+    "itemLevel": 571,
+    "stats": [
+      {
+        "id": 73,
+        "alloc": 5259
+      },
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 36,
+        "alloc": 4597
+      },
+      {
+        "id": 40,
+        "alloc": 2403
+      }
+    ],
+    "sources": [
+      {
+        "instanceId": 1273,
+        "encounterId": 2602
+      }
+    ],
+    "expansion": 10
+  },
+  {
+    "id": 212445,
+    "name": "Chitin-Spiked Jackboots",
+    "icon": "inv_leather_raiddemonhunternerubian_d_01_boot",
+    "quality": 4,
+    "itemClass": 4,
+    "itemSubClass": 2,
+    "inventoryType": 8,
+    "itemLevel": 571,
+    "stats": [
+      {
+        "id": 73,
+        "alloc": 5259
+      },
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 36,
+        "alloc": 4678
+      },
+      {
+        "id": 49,
+        "alloc": 2322
+      }
+    ],
+    "sources": [
+      {
+        "instanceId": 1273,
+        "encounterId": 2599
+      }
+    ],
+    "expansion": 10
+  },
+  {
+    "id": 212446,
+    "name": "Royal Emblem of Nerub-ar",
+    "icon": "inv_cape_special_nerubian_d_02",
+    "quality": 4,
+    "itemClass": 4,
+    "itemSubClass": 1,
+    "inventoryType": 16,
+    "itemLevel": 571,
+    "stats": [
+      {
+        "id": 71,
+        "alloc": 5259
+      },
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 49,
+        "alloc": 4800
+      },
+      {
+        "id": 32,
+        "alloc": 2200
+      }
+    ],
+    "sources": [
+      {
+        "instanceId": 1273,
+        "encounterId": 2607
+      }
+    ],
+    "expansion": 10
+  },
+  {
+    "id": 212447,
+    "name": "Key to the Unseeming",
+    "icon": "inv_nerubian_ring_02_color5",
+    "quality": 4,
+    "itemClass": 4,
+    "itemSubClass": 0,
+    "inventoryType": 11,
+    "itemLevel": 571,
+    "uniqueEquipped": true,
+    "stats": [
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 36,
+        "alloc": 13750
+      },
+      {
+        "id": 49,
+        "alloc": 3750
+      }
+    ],
+    "sources": [
+      {
+        "instanceId": 1273,
+        "encounterId": 2611
+      }
+    ],
+    "expansion": 10
+  },
+  {
+    "id": 212448,
+    "name": "Locket of Broken Memories",
+    "icon": "inv_nerubian_necklace_02_color3",
+    "quality": 4,
+    "itemClass": 4,
+    "itemSubClass": 0,
+    "inventoryType": 2,
+    "itemLevel": 571,
+    "stats": [
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 32,
+        "alloc": 14000
+      },
+      {
+        "id": 36,
+        "alloc": 3500
+      }
+    ],
+    "sources": [
+      {
+        "instanceId": 1273,
+        "encounterId": 2609
+      }
+    ],
+    "expansion": 10
+  },
+  {
+    "id": 212449,
+    "name": "Sikran's Endless Arsenal",
+    "icon": "inv_raid_sikransarsenal_purple",
+    "quality": 4,
+    "itemClass": 4,
+    "itemSubClass": 0,
+    "inventoryType": 12,
+    "itemLevel": 571,
+    "uniqueEquipped": true,
+    "specs": [
+      70,
+      71,
+      72,
+      103,
+      251,
+      252,
+      255,
+      259,
+      260,
+      261,
+      263,
+      269,
+      577
+    ],
+    "stats": [
+      {
+        "id": 72,
+        "alloc": 6666
+      }
+    ],
+    "sources": [
+      {
+        "instanceId": 1273,
+        "encounterId": 2599
+      }
+    ],
+    "onUseTrinket": true,
+    "expansion": 10
+  },
+  {
+    "id": 212450,
+    "name": "Swarmlord's Authority",
+    "icon": "inv_raid_swarmlordsauthority_purple",
+    "quality": 4,
+    "itemClass": 4,
+    "itemSubClass": 0,
+    "inventoryType": 12,
+    "itemLevel": 571,
+    "uniqueEquipped": true,
+    "specs": [
+      66,
+      73,
+      104,
+      250,
+      268,
+      581
+    ],
+    "stats": [
+      {
+        "id": 36,
+        "alloc": 6666
+      }
+    ],
+    "sources": [
+      {
+        "instanceId": 1273,
+        "encounterId": 2608
+      }
+    ],
+    "onUseTrinket": true,
+    "expansion": 10
+  },
+  {
+    "id": 212451,
+    "name": "Aberrant Spellforge",
+    "icon": "inv_raid_aberrantspellforge_pink",
+    "quality": 4,
+    "itemClass": 4,
+    "itemSubClass": 0,
+    "inventoryType": 12,
+    "itemLevel": 571,
+    "uniqueEquipped": true,
+    "specs": [
+      62,
+      63,
+      64,
+      102,
+      258,
+      262,
+      265,
+      266,
+      267,
+      1467,
+      1473
+    ],
+    "stats": [
+      {
+        "id": 5,
+        "alloc": 6666
+      }
+    ],
+    "sources": [
+      {
+        "instanceId": 1273,
+        "encounterId": 2611
+      }
+    ],
+    "expansion": 10
+  },
+  {
+    "id": 212452,
+    "name": "Gruesome Syringe",
+    "icon": "inv_raid_gruesomesyringe_red",
+    "quality": 4,
+    "itemClass": 4,
+    "itemSubClass": 0,
+    "inventoryType": 12,
+    "itemLevel": 571,
+    "uniqueEquipped": true,
+    "specs": [
+      65,
+      105,
+      256,
+      257,
+      264,
+      270,
+      1468
+    ],
+    "stats": [
+      {
+        "id": 32,
+        "alloc": 6666
+      }
+    ],
+    "sources": [
+      {
+        "instanceId": 1273,
+        "encounterId": 2612
+      }
+    ],
+    "expansion": 10
+  },
+  {
+    "id": 212453,
+    "name": "Skyterror's Corrosive Organ",
+    "icon": "inv_raid_oversizedacidgland_green",
+    "quality": 4,
+    "itemClass": 4,
+    "itemSubClass": 0,
+    "inventoryType": 12,
+    "itemLevel": 571,
+    "uniqueEquipped": true,
+    "specs": [
+      66,
+      70,
+      71,
+      72,
+      73,
+      250,
+      251,
+      252
+    ],
+    "stats": [
+      {
+        "id": 4,
+        "alloc": 6666
+      }
+    ],
+    "sources": [
+      {
+        "instanceId": 1273,
+        "encounterId": 2609
+      }
+    ],
+    "onUseTrinket": true,
+    "expansion": 10
+  },
+  {
+    "id": 212454,
+    "name": "Mad Queen's Mandate",
+    "icon": "inv_raid_abyssaleffigy_purple",
+    "quality": 4,
+    "itemClass": 4,
+    "itemSubClass": 0,
+    "inventoryType": 12,
+    "itemLevel": 571,
+    "uniqueEquipped": true,
+    "stats": [
+      {
+        "id": 32,
+        "alloc": 6666
+      }
+    ],
+    "sources": [
+      {
+        "instanceId": 1273,
+        "encounterId": 2602
+      }
+    ],
+    "onUseTrinket": true,
+    "expansion": 10
+  },
+  {
+    "id": 212455,
+    "name": "11.0 Raid Template - Physical DPS - Trinket",
+    "icon": "sha_spell_fire_bluehellfire_nightmare",
+    "quality": 4,
+    "itemClass": 4,
+    "itemSubClass": 0,
+    "inventoryType": 12,
+    "itemLevel": 280,
+    "uniqueEquipped": true,
+    "specs": [
+      70,
+      71,
+      72,
+      103,
+      251,
+      252,
+      253,
+      254,
+      255,
+      259,
+      260,
+      261,
+      263,
+      269,
+      577
+    ],
+    "stats": [
+      {
+        "id": 72,
+        "alloc": 6666
+      }
+    ],
+    "expansion": 10
+  },
+  {
+    "id": 212456,
+    "name": "Void Reaper's Contract",
+    "icon": "inv_10_inscription2_repcontracts_trade_archaeology_apexisscroll_uprez_color4",
+    "quality": 4,
+    "itemClass": 4,
+    "itemSubClass": 0,
+    "inventoryType": 12,
+    "itemLevel": 571,
+    "itemSetId": 1613,
+    "uniqueEquipped": true,
+    "specs": [
+      103,
+      104,
+      253,
+      254,
+      255,
+      259,
+      260,
+      261,
+      263,
+      268,
+      269,
+      577,
+      581
+    ],
+    "stats": [
+      {
+        "id": 3,
+        "alloc": 6666
+      }
+    ],
+    "sources": [
+      {
+        "instanceId": 1273,
+        "encounterId": 2601
+      }
+    ],
+    "expansion": 10
+  },
+  {
+    "id": 212457,
+    "name": "11.0 Raid Template - INT - Trinket",
+    "icon": "inv_artifact_tome01",
+    "quality": 4,
+    "itemClass": 4,
+    "itemSubClass": 0,
+    "inventoryType": 12,
+    "itemLevel": 280,
+    "uniqueEquipped": true,
+    "specs": [
+      62,
+      63,
+      64,
+      65,
+      102,
+      105,
+      256,
+      257,
+      258,
+      262,
+      264,
+      265,
+      266,
+      267,
+      270,
+      1467,
+      1468,
+      1473
+    ],
+    "stats": [
+      {
+        "id": 5,
+        "alloc": 6666
+      }
+    ],
+    "expansion": 10
+  },
+  {
+    "id": 213423,
+    "name": "Bygone Weapon Charm",
+    "icon": "inv_archaeology_70_highborne_inertleystonecharm",
+    "quality": 4,
+    "itemClass": 4,
+    "itemSubClass": 0,
+    "inventoryType": 12,
+    "itemLevel": 1,
+    "stats": [
+      {
+        "id": 38,
+        "alloc": 200
+      },
+      {
+        "id": 41,
+        "alloc": 200
+      },
+      {
+        "id": 7,
+        "alloc": 400
+      },
+      {
+        "id": 36,
+        "alloc": 50
+      }
+    ],
+    "expansion": 10
+  },
+  {
+    "id": 213533,
+    "name": "Ancient Weapon Charm",
+    "icon": "inv_archaeology_70_highborne_inertleystonecharm",
+    "quality": 5,
+    "itemClass": 4,
+    "itemSubClass": 0,
+    "inventoryType": 12,
+    "itemLevel": 1,
+    "stats": [
+      {
+        "id": 38,
+        "alloc": 400
+      },
+      {
+        "id": 41,
+        "alloc": 400
+      },
+      {
+        "id": 7,
+        "alloc": 800
+      },
+      {
+        "id": 36,
+        "alloc": 100
+      }
+    ],
+    "expansion": 10
+  },
+  {
+    "id": 213534,
+    "name": "Bygone Armor Charm",
+    "icon": "inv_jewelry_ring_13",
+    "quality": 4,
+    "itemClass": 4,
+    "itemSubClass": 0,
+    "inventoryType": 12,
+    "itemLevel": 1,
+    "stats": [
+      {
+        "id": 38,
+        "alloc": 200
+      },
+      {
+        "id": 41,
+        "alloc": 200
+      },
+      {
+        "id": 7,
+        "alloc": 400
+      },
+      {
+        "id": 36,
+        "alloc": 50
+      }
+    ],
+    "expansion": 10
+  },
+  {
+    "id": 213535,
+    "name": "Ancient Armor Charm",
+    "icon": "inv_jewelry_ring_13",
+    "quality": 5,
+    "itemClass": 4,
+    "itemSubClass": 0,
+    "inventoryType": 12,
+    "itemLevel": 1,
+    "stats": [
+      {
+        "id": 38,
+        "alloc": 400
+      },
+      {
+        "id": 41,
+        "alloc": 400
+      },
+      {
+        "id": 7,
+        "alloc": 800
+      },
+      {
+        "id": 36,
+        "alloc": 100
+      }
+    ],
+    "expansion": 10
+  },
+  {
+    "id": 215133,
+    "name": "Binding of Binding",
+    "icon": "inv_11_0_jewelcrafting_ring_color1",
+    "quality": 4,
+    "itemClass": 4,
+    "itemSubClass": 0,
+    "inventoryType": 11,
+    "itemLevel": 593,
+    "socketInfo": {
+      "sockets": [
+        {
+          "type": "PRISMATIC"
+        }
+      ]
+    },
+    "uniqueEquipped": true,
+    "itemLimit": {
+      "category": 512,
+      "quantity": 2
+    },
+    "stats": [
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 24,
+        "alloc": 8750
+      },
+      {
+        "id": 25,
+        "alloc": 8750
+      }
+    ],
+    "bonusLists": [
+      8960,
+      10421,
+      9633,
+      8902,
+      10878
+    ],
+    "sources": [
+      {
+        "instanceId": -66,
+        "encounterId": -37
+      }
+    ],
+    "profession": {
+      "id": 755,
+      "recipeSpellId": 435382,
+      "optionalCraftingSlots": [
+        {
+          "id": 256,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 275,
+          "count": 25,
+          "recraftCount": 14
+        },
+        {
+          "id": 283,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 284,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 367,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 346,
+          "count": 1,
+          "recraftCount": 1
+        }
+      ]
+    },
+    "expansion": 10
+  },
+  {
+    "id": 215134,
+    "name": "Fractured Gemstone Locket",
+    "icon": "inv_11_0_arathor_necklace_02_color5",
+    "quality": 4,
+    "itemClass": 4,
+    "itemSubClass": 0,
+    "inventoryType": 2,
+    "itemLevel": 593,
+    "socketInfo": {
+      "sockets": [
+        {
+          "type": "PRISMATIC"
+        }
+      ]
+    },
+    "itemLimit": {
+      "category": 512,
+      "quantity": 2
+    },
+    "stats": [
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 24,
+        "alloc": 8750
+      },
+      {
+        "id": 25,
+        "alloc": 8750
+      }
+    ],
+    "bonusLists": [
+      8960,
+      10421,
+      9633,
+      8902,
+      10878
+    ],
+    "sources": [
+      {
+        "instanceId": -66,
+        "encounterId": -37
+      }
+    ],
+    "profession": {
+      "id": 755,
+      "recipeSpellId": 435383,
+      "optionalCraftingSlots": [
+        {
+          "id": 256,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 275,
+          "count": 25,
+          "recraftCount": 14
+        },
+        {
+          "id": 283,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 284,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 367,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 346,
+          "count": 1,
+          "recraftCount": 1
+        }
+      ]
+    },
+    "expansion": 10
+  },
+  {
+    "id": 215135,
+    "name": "Ring of Earthen Craftsmanship",
+    "icon": "inv_11_0_earthen_earthenring_color1",
+    "quality": 4,
+    "itemClass": 4,
+    "itemSubClass": 0,
+    "inventoryType": 11,
+    "itemLevel": 593,
+    "socketInfo": {
+      "sockets": [
+        {
+          "type": "PRISMATIC"
+        }
+      ]
+    },
+    "stats": [
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 24,
+        "alloc": 8750
+      },
+      {
+        "id": 25,
+        "alloc": 8750
+      }
+    ],
+    "bonusLists": [
+      10421,
+      9633,
+      8902,
+      10878
+    ],
+    "sources": [
+      {
+        "instanceId": -66,
+        "encounterId": -37
+      }
+    ],
+    "profession": {
+      "id": 755,
+      "recipeSpellId": 435384,
+      "optionalCraftingSlots": [
+        {
+          "id": 256,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 334,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 278,
+          "count": 20,
+          "recraftCount": 10
+        },
+        {
+          "id": 283,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 284,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 367,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 346,
+          "count": 1,
+          "recraftCount": 1
+        }
+      ]
+    },
+    "expansion": 10
+  },
+  {
+    "id": 215136,
+    "name": "Amulet of Earthen Craftsmanship",
+    "icon": "inv_11_0_earthen_earthennecklace02_color1",
+    "quality": 4,
+    "itemClass": 4,
+    "itemSubClass": 0,
+    "inventoryType": 2,
+    "itemLevel": 593,
+    "socketInfo": {
+      "sockets": [
+        {
+          "type": "PRISMATIC"
+        }
+      ]
+    },
+    "stats": [
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 24,
+        "alloc": 8750
+      },
+      {
+        "id": 25,
+        "alloc": 8750
+      }
+    ],
+    "bonusLists": [
+      10421,
+      9633,
+      8902,
+      10878
+    ],
+    "sources": [
+      {
+        "instanceId": -66,
+        "encounterId": -37
+      }
+    ],
+    "profession": {
+      "id": 755,
+      "recipeSpellId": 435385,
+      "optionalCraftingSlots": [
+        {
+          "id": 256,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 334,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 278,
+          "count": 20,
+          "recraftCount": 10
+        },
+        {
+          "id": 283,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 284,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 367,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 346,
+          "count": 1,
+          "recraftCount": 1
+        }
+      ]
+    },
+    "expansion": 10
+  },
+  {
+    "id": 217857,
+    "name": "Charged Mace",
+    "icon": "spell_misc_emotionsad",
+    "quality": 4,
+    "itemClass": 2,
+    "itemSubClass": 15,
+    "inventoryType": 13,
+    "itemLevel": 593,
+    "stats": [
+      {
+        "id": 3,
+        "alloc": 5259
+      },
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 24,
+        "alloc": 3500
+      },
+      {
+        "id": 25,
+        "alloc": 3500
+      }
+    ],
+    "bonusLists": [
+      10421,
+      9633,
+      8902
+    ],
+    "expansion": 10
+  },
+  {
+    "id": 217858,
+    "name": "Charged Shiv",
+    "icon": "spell_misc_emotionsad",
+    "quality": 4,
+    "itemClass": 2,
+    "itemSubClass": 15,
+    "inventoryType": 13,
+    "itemLevel": 593,
+    "stats": [
+      {
+        "id": 72,
+        "alloc": 5259
+      },
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 24,
+        "alloc": 3500
+      },
+      {
+        "id": 25,
+        "alloc": 3500
+      }
+    ],
+    "bonusLists": [
+      10421,
+      9633,
+      8902
+    ],
+    "expansion": 10
+  },
+  {
+    "id": 217861,
+    "name": "Charged Glaive",
+    "icon": "spell_misc_emotionsad",
+    "quality": 4,
+    "itemClass": 2,
+    "itemSubClass": 15,
+    "inventoryType": 13,
+    "itemLevel": 593,
+    "stats": [
+      {
+        "id": 3,
+        "alloc": 5259
+      },
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 24,
+        "alloc": 3500
+      },
+      {
+        "id": 25,
+        "alloc": 3500
+      }
+    ],
+    "bonusLists": [
+      10421,
+      9633,
+      8902
+    ],
+    "expansion": 10
+  },
+  {
+    "id": 219167,
+    "name": "Myconic Wristbands",
+    "icon": "inv_leather_outdoorarathor_d_01_bracer",
+    "quality": 4,
+    "itemClass": 4,
+    "itemSubClass": 2,
+    "inventoryType": 9,
+    "itemLevel": 350,
+    "stats": [
+      {
+        "id": 73,
+        "alloc": 5259
+      },
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 36,
+        "alloc": 4100
+      },
+      {
+        "id": 49,
+        "alloc": 2900
+      }
+    ],
+    "expansion": 10
+  },
+  {
+    "id": 219168,
+    "name": "Myconic Strap",
+    "icon": "inv_leather_outdoorarathor_d_01_belt",
+    "quality": 4,
+    "itemClass": 4,
+    "itemSubClass": 2,
+    "inventoryType": 6,
+    "itemLevel": 350,
+    "stats": [
+      {
+        "id": 73,
+        "alloc": 5259
+      },
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 32,
+        "alloc": 4250
+      },
+      {
+        "id": 40,
+        "alloc": 2750
+      }
+    ],
+    "expansion": 10
+  },
+  {
+    "id": 219169,
+    "name": "Myconic Shoulderstrap",
+    "icon": "inv_leather_outdoorarathor_d_01_shoulder",
+    "quality": 4,
+    "itemClass": 4,
+    "itemSubClass": 2,
+    "inventoryType": 3,
+    "itemLevel": 350,
+    "stats": [
+      {
+        "id": 73,
+        "alloc": 5259
+      },
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 36,
+        "alloc": 4400
+      },
+      {
+        "id": 40,
+        "alloc": 2600
+      }
+    ],
+    "expansion": 10
+  },
+  {
+    "id": 219170,
+    "name": "Myconic Chausses",
+    "icon": "inv_leather_outdoorarathor_d_01_pant",
+    "quality": 4,
+    "itemClass": 4,
+    "itemSubClass": 2,
+    "inventoryType": 7,
+    "itemLevel": 350,
+    "stats": [
+      {
+        "id": 73,
+        "alloc": 5259
+      },
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 32,
+        "alloc": 4550
+      },
+      {
+        "id": 49,
+        "alloc": 2450
+      }
+    ],
+    "expansion": 10
+  },
+  {
+    "id": 219171,
+    "name": "Myconic Hood",
+    "icon": "inv_leather_outdoorarathor_d_01_helm",
+    "quality": 4,
+    "itemClass": 4,
+    "itemSubClass": 2,
+    "inventoryType": 1,
+    "itemLevel": 350,
+    "stats": [
+      {
+        "id": 73,
+        "alloc": 5259
+      },
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 32,
+        "alloc": 4550
+      },
+      {
+        "id": 36,
+        "alloc": 2450
+      }
+    ],
+    "expansion": 10
+  },
+  {
+    "id": 219172,
+    "name": "Myconic Clutches",
+    "icon": "inv_leather_outdoorarathor_d_01_glove",
+    "quality": 4,
+    "itemClass": 4,
+    "itemSubClass": 2,
+    "inventoryType": 10,
+    "itemLevel": 350,
+    "stats": [
+      {
+        "id": 73,
+        "alloc": 5259
+      },
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 40,
+        "alloc": 4250
+      },
+      {
+        "id": 49,
+        "alloc": 2750
+      }
+    ],
+    "expansion": 10
+  },
+  {
+    "id": 219173,
+    "name": "Myconic Waders",
+    "icon": "inv_leather_outdoorarathor_d_01_boot",
+    "quality": 4,
+    "itemClass": 4,
+    "itemSubClass": 2,
+    "inventoryType": 8,
+    "itemLevel": 350,
+    "stats": [
+      {
+        "id": 73,
+        "alloc": 5259
+      },
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 49,
+        "alloc": 4100
+      },
+      {
+        "id": 40,
+        "alloc": 2900
+      }
+    ],
+    "expansion": 10
+  },
+  {
+    "id": 219174,
+    "name": "Myconic Frock",
+    "icon": "inv_leather_outdoorarathor_d_01_robe",
+    "quality": 4,
+    "itemClass": 4,
+    "itemSubClass": 2,
+    "inventoryType": 5,
+    "itemLevel": 350,
+    "stats": [
+      {
+        "id": 73,
+        "alloc": 5259
+      },
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 36,
+        "alloc": 4400
+      },
+      {
+        "id": 32,
+        "alloc": 2600
+      }
+    ],
+    "expansion": 10
+  },
+  {
+    "id": 219183,
+    "name": "Amice of Hidden Stars",
+    "icon": "inv_plate_outdoorarathor_d_01_cape",
+    "quality": 4,
+    "itemClass": 4,
+    "itemSubClass": 1,
+    "inventoryType": 16,
+    "itemLevel": 350,
+    "stats": [
+      {
+        "id": 71,
+        "alloc": 5259
+      },
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 40,
+        "alloc": 4400
+      },
+      {
+        "id": 36,
+        "alloc": 2600
+      }
+    ],
+    "expansion": 10
+  },
+  {
+    "id": 219184,
+    "name": "Enkindled Locket",
+    "icon": "inv_11_0_arathor_necklace_01_color1",
+    "quality": 4,
+    "itemClass": 4,
+    "itemSubClass": 0,
+    "inventoryType": 2,
+    "itemLevel": 350,
+    "stats": [
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 36,
+        "alloc": 10250
+      },
+      {
+        "id": 49,
+        "alloc": 7250
+      }
+    ],
+    "expansion": 10
+  },
+  {
+    "id": 219185,
+    "name": "Serape of the Stygian Sea",
+    "icon": "inv_mail_outdoorarathor_d_01_cape",
+    "quality": 4,
+    "itemClass": 4,
+    "itemSubClass": 1,
+    "inventoryType": 16,
+    "itemLevel": 350,
+    "stats": [
+      {
+        "id": 71,
+        "alloc": 5259
+      },
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 49,
+        "alloc": 4400
+      },
+      {
+        "id": 40,
+        "alloc": 2600
+      }
+    ],
+    "expansion": 10
+  },
+  {
+    "id": 219186,
+    "name": "Myconic Wrap",
+    "icon": "inv_leather_outdoorarathor_d_01_cape",
+    "quality": 4,
+    "itemClass": 4,
+    "itemSubClass": 1,
+    "inventoryType": 16,
+    "itemLevel": 350,
+    "stats": [
+      {
+        "id": 71,
+        "alloc": 5259
+      },
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 32,
+        "alloc": 4400
+      },
+      {
+        "id": 49,
+        "alloc": 2600
+      }
+    ],
+    "expansion": 10
+  },
+  {
+    "id": 219187,
+    "name": "Bone-Carved Circlet",
+    "icon": "inv_11_0_nerubian_ring_02_color4",
+    "quality": 4,
+    "itemClass": 4,
+    "itemSubClass": 0,
+    "inventoryType": 11,
+    "itemLevel": 350,
+    "uniqueEquipped": true,
+    "stats": [
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 49,
+        "alloc": 12000
+      },
+      {
+        "id": 32,
+        "alloc": 5500
+      }
+    ],
+    "expansion": 10
+  },
+  {
+    "id": 219188,
+    "name": "Dark Abyss Hoop",
+    "icon": "inv_11_0_arathor_ring_02_color5",
+    "quality": 4,
+    "itemClass": 4,
+    "itemSubClass": 0,
+    "inventoryType": 11,
+    "itemLevel": 350,
+    "uniqueEquipped": true,
+    "stats": [
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 40,
+        "alloc": 11750
+      },
+      {
+        "id": 36,
+        "alloc": 5750
+      }
+    ],
+    "expansion": 10
+  },
+  {
+    "id": 219189,
+    "name": "Fuzzy Molding Halo",
+    "icon": "inv_11_0_earthen_earthenring_color3",
+    "quality": 4,
+    "itemClass": 4,
+    "itemSubClass": 0,
+    "inventoryType": 11,
+    "itemLevel": 350,
+    "uniqueEquipped": true,
+    "stats": [
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 36,
+        "alloc": 12250
+      },
+      {
+        "id": 49,
+        "alloc": 5250
+      }
+    ],
+    "expansion": 10
+  },
+  {
+    "id": 219190,
+    "name": "Unkindled Waxweave Mozzetta",
+    "icon": "inv_cloth_outdoorarathor_d_01_cape",
+    "quality": 4,
+    "itemClass": 4,
+    "itemSubClass": 1,
+    "inventoryType": 16,
+    "itemLevel": 350,
+    "stats": [
+      {
+        "id": 71,
+        "alloc": 5259
+      },
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 36,
+        "alloc": 4400
+      },
+      {
+        "id": 32,
+        "alloc": 2600
+      }
+    ],
+    "expansion": 10
+  },
+  {
+    "id": 219207,
+    "name": "Flame-Bearing Crozier",
+    "icon": "inv_mace_1h_arathoroutdoor_d_02",
+    "quality": 4,
+    "itemClass": 2,
+    "itemSubClass": 4,
+    "inventoryType": 13,
+    "itemLevel": 350,
+    "stats": [
+      {
+        "id": 5,
+        "alloc": 5259
+      },
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 40,
+        "alloc": 4250
+      },
+      {
+        "id": 36,
+        "alloc": 2750
+      },
+      {
+        "id": 5,
+        "alloc": 25370
+      }
+    ],
+    "expansion": 10
+  },
+  {
+    "id": 219208,
+    "name": "Pyretic Star",
+    "icon": "inv_mace_1h_arathoroutdoor_d_01",
+    "quality": 4,
+    "itemClass": 2,
+    "itemSubClass": 4,
+    "inventoryType": 13,
+    "itemLevel": 350,
+    "stats": [
+      {
+        "id": 3,
+        "alloc": 5259
+      },
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 49,
+        "alloc": 4400
+      },
+      {
+        "id": 40,
+        "alloc": 2600
+      }
+    ],
+    "expansion": 10
+  },
+  {
+    "id": 219209,
+    "name": "Worshipper's Poniard",
+    "icon": "inv_knife_1h_arathoroutdoor_d_01",
+    "quality": 4,
+    "itemClass": 2,
+    "itemSubClass": 15,
+    "inventoryType": 13,
+    "itemLevel": 350,
+    "stats": [
+      {
+        "id": 3,
+        "alloc": 5259
+      },
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 32,
+        "alloc": 4400
+      },
+      {
+        "id": 49,
+        "alloc": 2600
+      }
+    ],
+    "expansion": 10
+  },
+  {
+    "id": 219210,
+    "name": "Sanctifier's Startierce",
+    "icon": "inv_axe_1h_arathoroutdoor_d_01",
+    "quality": 4,
+    "itemClass": 2,
+    "itemSubClass": 0,
+    "inventoryType": 13,
+    "itemLevel": 350,
+    "stats": [
+      {
+        "id": 4,
+        "alloc": 5259
+      },
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 40,
+        "alloc": 4250
+      },
+      {
+        "id": 36,
+        "alloc": 2750
+      }
+    ],
+    "expansion": 10
+  },
+  {
+    "id": 219217,
+    "name": "Gold-Thread Choker",
+    "icon": "inv_11_0_nerubian_necklace_01_color1",
+    "quality": 4,
+    "itemClass": 4,
+    "itemSubClass": 0,
+    "inventoryType": 2,
+    "itemLevel": 350,
+    "stats": [
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 32,
+        "alloc": 10250
+      },
+      {
+        "id": 40,
+        "alloc": 7250
+      }
+    ],
+    "expansion": 10
+  },
+  {
+    "id": 219221,
+    "name": "Ceremonial Song Ring",
+    "icon": "inv_11_0_arathor_ring_01_color1",
+    "quality": 4,
+    "itemClass": 4,
+    "itemSubClass": 0,
+    "inventoryType": 11,
+    "itemLevel": 350,
+    "uniqueEquipped": true,
+    "stats": [
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 32,
+        "alloc": 12000
+      },
+      {
+        "id": 40,
+        "alloc": 5500
+      }
+    ],
+    "expansion": 10
+  },
+  {
+    "id": 219300,
+    "name": "Skarmorak Shard",
+    "icon": "inv_arathordungeon_fragment_color2",
+    "quality": 3,
+    "itemClass": 4,
+    "itemSubClass": 0,
+    "inventoryType": 12,
+    "itemLevel": 437,
+    "uniqueEquipped": true,
+    "stats": [
+      {
+        "id": 4,
+        "alloc": 6666
+      }
+    ],
+    "sources": [
+      {
+        "instanceId": 1269,
+        "encounterId": 2579
+      },
+      {
+        "instanceId": -1,
+        "encounterId": 1269
+      },
+      {
+        "instanceId": -32,
+        "encounterId": 1269
+      }
+    ],
+    "onUseTrinket": true,
+    "expansion": 10
+  },
+  {
+    "id": 219301,
+    "name": "Overclocked Gear-a-Rang Launcher",
+    "icon": "inv_firearm_2h_engineering_c_01_blue",
+    "quality": 3,
+    "itemClass": 4,
+    "itemSubClass": 0,
+    "inventoryType": 12,
+    "itemLevel": 437,
+    "uniqueEquipped": true,
+    "specs": [
+      70,
+      71,
+      72,
+      103,
+      251,
+      252,
+      255,
+      259,
+      260,
+      261,
+      263,
+      269,
+      577,
+      1453
+    ],
+    "sources": [
+      {
+        "instanceId": 1269,
+        "encounterId": 2590
+      },
+      {
+        "instanceId": -1,
+        "encounterId": 1269
+      },
+      {
+        "instanceId": -32,
+        "encounterId": 1269
+      }
+    ],
+    "onUseTrinket": true,
+    "expansion": 10
+  },
+  {
+    "id": 219302,
+    "name": "Scrapsinger's Symphony",
+    "icon": "inv_10_blacksmithing_craftedoptional_engineering_color1",
+    "quality": 3,
+    "itemClass": 4,
+    "itemSubClass": 0,
+    "inventoryType": 12,
+    "itemLevel": 437,
+    "uniqueEquipped": true,
+    "specs": [
+      65,
+      105,
+      256,
+      257,
+      264,
+      270,
+      1468
+    ],
+    "stats": [
+      {
+        "id": 5,
+        "alloc": 6666
+      }
+    ],
+    "sources": [
+      {
+        "instanceId": 1269,
+        "encounterId": 2590
+      },
+      {
+        "instanceId": -1,
+        "encounterId": 1269
+      },
+      {
+        "instanceId": -32,
+        "encounterId": 1269
+      }
+    ],
+    "expansion": 10
+  },
+  {
+    "id": 219303,
+    "name": "High Speaker's Accretion",
+    "icon": "inv_magic_swirl_color3",
+    "quality": 3,
+    "itemClass": 4,
+    "itemSubClass": 0,
+    "inventoryType": 12,
+    "itemLevel": 437,
+    "uniqueEquipped": true,
+    "specs": [
+      62,
+      63,
+      64,
+      65,
+      102,
+      105,
+      256,
+      257,
+      258,
+      262,
+      264,
+      265,
+      266,
+      267,
+      270,
+      1449,
+      1452,
+      1454,
+      1465,
+      1467,
+      1468,
+      1473
+    ],
+    "stats": [
+      {
+        "id": 49,
+        "alloc": 6666
+      }
+    ],
+    "sources": [
+      {
+        "instanceId": 1269,
+        "encounterId": 2582
+      },
+      {
+        "instanceId": -1,
+        "encounterId": 1269
+      },
+      {
+        "instanceId": -32,
+        "encounterId": 1269
+      }
+    ],
+    "onUseTrinket": true,
+    "expansion": 10
+  },
+  {
+    "id": 219311,
+    "name": "Void Pactstone",
+    "icon": "inv_10_alchemy_alchemystone_color4",
+    "quality": 3,
+    "itemClass": 4,
+    "itemSubClass": 0,
+    "inventoryType": 12,
+    "itemLevel": 437,
+    "uniqueEquipped": true,
+    "stats": [
+      {
+        "id": 4,
+        "alloc": 6666
+      }
+    ],
+    "sources": [
+      {
+        "instanceId": 1270,
+        "encounterId": 2580
+      },
+      {
+        "instanceId": -1,
+        "encounterId": 1270
+      },
+      {
+        "instanceId": -32,
+        "encounterId": 1270
+      }
+    ],
+    "expansion": 10
+  },
+  {
+    "id": 219312,
+    "name": "Empowering Crystal of Anub'ikkaj",
+    "icon": "inv_arathordungeon_fragment_color5",
+    "quality": 3,
+    "itemClass": 4,
+    "itemSubClass": 0,
+    "inventoryType": 12,
+    "itemLevel": 437,
+    "uniqueEquipped": true,
+    "stats": [
+      {
+        "id": 73,
+        "alloc": 6666
+      }
+    ],
+    "sources": [
+      {
+        "instanceId": 1270,
+        "encounterId": 2581
+      },
+      {
+        "instanceId": -1,
+        "encounterId": 1270
+      },
+      {
+        "instanceId": -32,
+        "encounterId": 1270
+      }
+    ],
+    "expansion": 10
+  },
+  {
+    "id": 219313,
+    "name": "Mereldar's Toll",
+    "icon": "inv_arathordungeon_bell_color1",
+    "quality": 3,
+    "itemClass": 4,
+    "itemSubClass": 0,
+    "inventoryType": 12,
+    "itemLevel": 437,
+    "uniqueEquipped": true,
+    "stats": [
+      {
+        "id": 5,
+        "alloc": 6666
+      }
+    ],
+    "sources": [
+      {
+        "instanceId": 1270,
+        "encounterId": 2593
+      },
+      {
+        "instanceId": -1,
+        "encounterId": 1270
+      },
+      {
+        "instanceId": -32,
+        "encounterId": 1270
+      }
+    ],
+    "onUseTrinket": true,
+    "expansion": 10
+  },
+  {
+    "id": 219314,
+    "name": "Ara-Kara Sacbrood",
+    "icon": "inv_raid_mercurialegg_red",
+    "quality": 3,
+    "itemClass": 4,
+    "itemSubClass": 0,
+    "inventoryType": 12,
+    "itemLevel": 437,
+    "uniqueEquipped": true,
+    "stats": [
+      {
+        "id": 36,
+        "alloc": 6666
+      }
+    ],
+    "sources": [
+      {
+        "instanceId": 1271,
+        "encounterId": 2583
+      },
+      {
+        "instanceId": -1,
+        "encounterId": 1271
+      },
+      {
+        "instanceId": -32,
+        "encounterId": 1271
+      }
+    ],
+    "expansion": 10
+  },
+  {
+    "id": 219315,
+    "name": "Refracting Aggression Module",
+    "icon": "inv_10_engineering2_tinkermodules_color1",
+    "quality": 3,
+    "itemClass": 4,
+    "itemSubClass": 0,
+    "inventoryType": 12,
+    "itemLevel": 437,
+    "uniqueEquipped": true,
+    "specs": [
+      66,
+      73,
+      104,
+      250,
+      268,
+      581
+    ],
+    "stats": [
+      {
+        "id": 72,
+        "alloc": 6666
+      }
+    ],
+    "sources": [
+      {
+        "instanceId": 1269,
+        "encounterId": 2572
+      },
+      {
+        "instanceId": -1,
+        "encounterId": 1269
+      },
+      {
+        "instanceId": -32,
+        "encounterId": 1269
+      }
+    ],
+    "expansion": 10
+  },
+  {
+    "id": 219316,
+    "name": "Ceaseless Swarmgland",
+    "icon": "inv_misc_organmass_color2",
+    "quality": 3,
+    "itemClass": 4,
+    "itemSubClass": 0,
+    "inventoryType": 12,
+    "itemLevel": 437,
+    "uniqueEquipped": true,
+    "specs": [
+      66,
+      73,
+      104,
+      250,
+      268,
+      581
+    ],
+    "stats": [
+      {
+        "id": 72,
+        "alloc": 6666
+      }
+    ],
+    "sources": [
+      {
+        "instanceId": 1271,
+        "encounterId": 2584
+      },
+      {
+        "instanceId": -1,
+        "encounterId": 1271
+      },
+      {
+        "instanceId": -32,
+        "encounterId": 1271
+      }
+    ],
+    "expansion": 10
+  },
+  {
+    "id": 219317,
+    "name": "Harvester's Edict",
+    "icon": "inv_11_0_dungeon_oldgodstatuepiece_purple",
+    "quality": 3,
+    "itemClass": 4,
+    "itemSubClass": 0,
+    "inventoryType": 12,
+    "itemLevel": 437,
+    "uniqueEquipped": true,
+    "stats": [
+      {
+        "id": 73,
+        "alloc": 6666
+      }
+    ],
+    "sources": [
+      {
+        "instanceId": 1271,
+        "encounterId": 2585
+      },
+      {
+        "instanceId": -1,
+        "encounterId": 1271
+      },
+      {
+        "instanceId": -32,
+        "encounterId": 1271
+      }
+    ],
+    "expansion": 10
+  },
+  {
+    "id": 219318,
+    "name": "Oppressive Orator's Larynx",
+    "icon": "spell_shadow_shadowmend",
+    "quality": 3,
+    "itemClass": 4,
+    "itemSubClass": 0,
+    "inventoryType": 12,
+    "itemLevel": 437,
+    "uniqueEquipped": true,
+    "specs": [
+      65,
+      66,
+      70,
+      71,
+      72,
+      73,
+      250,
+      251,
+      252,
+      1446,
+      1451,
+      1455
+    ],
+    "sources": [
+      {
+        "instanceId": 1274,
+        "encounterId": 2594
+      },
+      {
+        "instanceId": -1,
+        "encounterId": 1274
+      },
+      {
+        "instanceId": -32,
+        "encounterId": 1274
+      }
+    ],
+    "onUseTrinket": true,
+    "expansion": 10
+  },
+  {
+    "id": 219319,
+    "name": "Twin Fang Instruments",
+    "icon": "inv_11_0_dungeon_fancybox_purple",
+    "quality": 3,
+    "itemClass": 4,
+    "itemSubClass": 0,
+    "inventoryType": 12,
+    "itemLevel": 437,
+    "uniqueEquipped": true,
+    "specs": [
+      103,
+      253,
+      254,
+      255,
+      259,
+      260,
+      261,
+      263,
+      269,
+      577,
+      1448,
+      1453
+    ],
+    "stats": [
+      {
+        "id": 3,
+        "alloc": 6666
+      }
+    ],
+    "sources": [
+      {
+        "instanceId": 1274,
+        "encounterId": 2595
+      },
+      {
+        "instanceId": -1,
+        "encounterId": 1274
+      },
+      {
+        "instanceId": -32,
+        "encounterId": 1274
+      }
+    ],
+    "onUseTrinket": true,
+    "expansion": 10
+  },
+  {
+    "id": 219320,
+    "name": "Viscous Coaglam",
+    "icon": "inv_raid_creepingcoagulum_blue",
+    "quality": 3,
+    "itemClass": 4,
+    "itemSubClass": 0,
+    "inventoryType": 12,
+    "itemLevel": 437,
+    "uniqueEquipped": true,
+    "specs": [
+      65,
+      105,
+      256,
+      257,
+      264,
+      270,
+      1468
+    ],
+    "stats": [
+      {
+        "id": 5,
+        "alloc": 6666
+      }
+    ],
+    "sources": [
+      {
+        "instanceId": 1274,
+        "encounterId": 2600
+      },
+      {
+        "instanceId": -1,
+        "encounterId": 1274
+      },
+      {
+        "instanceId": -32,
+        "encounterId": 1274
+      }
+    ],
+    "expansion": 10
+  },
+  {
+    "id": 219321,
+    "name": "Cirral Concoctory",
+    "icon": "inv_11_0_dungeon_tentaclevial_red",
+    "quality": 3,
+    "itemClass": 4,
+    "itemSubClass": 0,
+    "inventoryType": 12,
+    "itemLevel": 437,
+    "uniqueEquipped": true,
+    "stats": [
+      {
+        "id": 5,
+        "alloc": 6666
+      }
+    ],
+    "sources": [
+      {
+        "instanceId": 1274,
+        "encounterId": 2596
+      },
+      {
+        "instanceId": -1,
+        "encounterId": 1274
+      },
+      {
+        "instanceId": -32,
+        "encounterId": 1274
+      }
+    ],
+    "expansion": 10
+  },
+  {
+    "id": 219327,
+    "name": "Rune-Branded Kickers",
+    "icon": "inv_leather_outdoorarathor_d_01_boot",
+    "quality": 4,
+    "itemClass": 4,
+    "itemSubClass": 2,
+    "inventoryType": 8,
+    "itemLevel": 593,
+    "stats": [
+      {
+        "id": 73,
+        "alloc": 5259
+      },
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 24,
+        "alloc": 3500
+      },
+      {
+        "id": 25,
+        "alloc": 3500
+      }
+    ],
+    "bonusLists": [
+      10421,
+      9633,
+      8902
+    ],
+    "sources": [
+      {
+        "instanceId": -66,
+        "encounterId": -38
+      }
+    ],
+    "profession": {
+      "id": 165,
+      "recipeSpellId": 441052,
+      "optionalCraftingSlots": [
+        {
+          "id": 296,
+          "count": 3,
+          "recraftCount": 1
+        },
+        {
+          "id": 269,
+          "count": 150,
+          "recraftCount": 75
+        },
+        {
+          "id": 300,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 284,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 281,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 283,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 256,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 286,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 346,
+          "count": 1,
+          "recraftCount": 1
+        }
+      ]
+    },
+    "expansion": 10
+  },
+  {
+    "id": 219328,
+    "name": "Rune-Branded Tunic",
+    "icon": "inv_leather_outdoorarathor_d_01_robe",
+    "quality": 4,
+    "itemClass": 4,
+    "itemSubClass": 2,
+    "inventoryType": 5,
+    "itemLevel": 593,
+    "stats": [
+      {
+        "id": 73,
+        "alloc": 5259
+      },
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 24,
+        "alloc": 3500
+      },
+      {
+        "id": 25,
+        "alloc": 3500
+      }
+    ],
+    "bonusLists": [
+      10421,
+      9633,
+      8902
+    ],
+    "sources": [
+      {
+        "instanceId": -66,
+        "encounterId": -38
+      }
+    ],
+    "profession": {
+      "id": 165,
+      "recipeSpellId": 441051,
+      "optionalCraftingSlots": [
+        {
+          "id": 297,
+          "count": 3,
+          "recraftCount": 2
+        },
+        {
+          "id": 269,
+          "count": 150,
+          "recraftCount": 75
+        },
+        {
+          "id": 300,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 284,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 281,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 283,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 256,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 286,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 346,
+          "count": 1,
+          "recraftCount": 1
+        }
+      ]
+    },
+    "expansion": 10
+  },
+  {
+    "id": 219329,
+    "name": "Rune-Branded Hood",
+    "icon": "inv_leather_outdoorarathor_d_01_helm",
+    "quality": 4,
+    "itemClass": 4,
+    "itemSubClass": 2,
+    "inventoryType": 1,
+    "itemLevel": 593,
+    "stats": [
+      {
+        "id": 73,
+        "alloc": 5259
+      },
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 24,
+        "alloc": 3500
+      },
+      {
+        "id": 25,
+        "alloc": 3500
+      }
+    ],
+    "bonusLists": [
+      10421,
+      9633,
+      8902
+    ],
+    "sources": [
+      {
+        "instanceId": -66,
+        "encounterId": -38
+      }
+    ],
+    "profession": {
+      "id": 165,
+      "recipeSpellId": 441054,
+      "optionalCraftingSlots": [
+        {
+          "id": 295,
+          "count": 3,
+          "recraftCount": 1
+        },
+        {
+          "id": 269,
+          "count": 150,
+          "recraftCount": 75
+        },
+        {
+          "id": 300,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 284,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 281,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 283,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 256,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 286,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 346,
+          "count": 1,
+          "recraftCount": 1
+        }
+      ]
+    },
+    "expansion": 10
+  },
+  {
+    "id": 219330,
+    "name": "Rune-Branded Mantle",
+    "icon": "inv_leather_outdoorarathor_d_01_shoulder",
+    "quality": 4,
+    "itemClass": 4,
+    "itemSubClass": 2,
+    "inventoryType": 3,
+    "itemLevel": 593,
+    "stats": [
+      {
+        "id": 73,
+        "alloc": 5259
+      },
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 24,
+        "alloc": 3500
+      },
+      {
+        "id": 25,
+        "alloc": 3500
+      }
+    ],
+    "bonusLists": [
+      10421,
+      9633,
+      8902
+    ],
+    "sources": [
+      {
+        "instanceId": -66,
+        "encounterId": -38
+      }
+    ],
+    "profession": {
+      "id": 165,
+      "recipeSpellId": 441056,
+      "optionalCraftingSlots": [
+        {
+          "id": 297,
+          "count": 3,
+          "recraftCount": 2
+        },
+        {
+          "id": 269,
+          "count": 150,
+          "recraftCount": 75
+        },
+        {
+          "id": 300,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 284,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 281,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 283,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 256,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 286,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 346,
+          "count": 1,
+          "recraftCount": 1
+        }
+      ]
+    },
+    "expansion": 10
+  },
+  {
+    "id": 219331,
+    "name": "Rune-Branded Waistband",
+    "icon": "inv_leather_outdoorarathor_d_01_belt",
+    "quality": 4,
+    "itemClass": 4,
+    "itemSubClass": 2,
+    "inventoryType": 6,
+    "itemLevel": 593,
+    "stats": [
+      {
+        "id": 73,
+        "alloc": 5259
+      },
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 24,
+        "alloc": 3500
+      },
+      {
+        "id": 25,
+        "alloc": 3500
+      }
+    ],
+    "bonusLists": [
+      10421,
+      9633,
+      8902
+    ],
+    "sources": [
+      {
+        "instanceId": -66,
+        "encounterId": -38
+      }
+    ],
+    "profession": {
+      "id": 165,
+      "recipeSpellId": 441057,
+      "optionalCraftingSlots": [
+        {
+          "id": 294,
+          "count": 3,
+          "recraftCount": 1
+        },
+        {
+          "id": 269,
+          "count": 150,
+          "recraftCount": 75
+        },
+        {
+          "id": 300,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 284,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 281,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 283,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 256,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 286,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 346,
+          "count": 1,
+          "recraftCount": 1
+        }
+      ]
+    },
+    "expansion": 10
+  },
+  {
+    "id": 219332,
+    "name": "Rune-Branded Legwraps",
+    "icon": "inv_leather_outdoorarathor_d_01_pant",
+    "quality": 4,
+    "itemClass": 4,
+    "itemSubClass": 2,
+    "inventoryType": 7,
+    "itemLevel": 593,
+    "stats": [
+      {
+        "id": 73,
+        "alloc": 5259
+      },
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 24,
+        "alloc": 3500
+      },
+      {
+        "id": 25,
+        "alloc": 3500
+      }
+    ],
+    "bonusLists": [
+      10421,
+      9633,
+      8902
+    ],
+    "sources": [
+      {
+        "instanceId": -66,
+        "encounterId": -38
+      }
+    ],
+    "profession": {
+      "id": 165,
+      "recipeSpellId": 441055,
+      "optionalCraftingSlots": [
+        {
+          "id": 294,
+          "count": 3,
+          "recraftCount": 1
+        },
+        {
+          "id": 269,
+          "count": 150,
+          "recraftCount": 75
+        },
+        {
+          "id": 300,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 284,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 281,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 283,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 256,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 286,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 346,
+          "count": 1,
+          "recraftCount": 1
+        }
+      ]
+    },
+    "expansion": 10
+  },
+  {
+    "id": 219333,
+    "name": "Rune-Branded Grasps",
+    "icon": "inv_leather_outdoorarathor_d_01_glove",
+    "quality": 4,
+    "itemClass": 4,
+    "itemSubClass": 2,
+    "inventoryType": 10,
+    "itemLevel": 593,
+    "stats": [
+      {
+        "id": 73,
+        "alloc": 5259
+      },
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 24,
+        "alloc": 3500
+      },
+      {
+        "id": 25,
+        "alloc": 3500
+      }
+    ],
+    "bonusLists": [
+      10421,
+      9633,
+      8902
+    ],
+    "sources": [
+      {
+        "instanceId": -66,
+        "encounterId": -38
+      }
+    ],
+    "profession": {
+      "id": 165,
+      "recipeSpellId": 441053,
+      "optionalCraftingSlots": [
+        {
+          "id": 297,
+          "count": 3,
+          "recraftCount": 1
+        },
+        {
+          "id": 269,
+          "count": 150,
+          "recraftCount": 75
+        },
+        {
+          "id": 300,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 284,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 281,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 283,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 256,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 286,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 346,
+          "count": 1,
+          "recraftCount": 1
+        }
+      ]
+    },
+    "expansion": 10
+  },
+  {
+    "id": 219334,
+    "name": "Rune-Branded Armbands",
+    "icon": "inv_leather_outdoorarathor_d_01_bracer",
+    "quality": 4,
+    "itemClass": 4,
+    "itemSubClass": 2,
+    "inventoryType": 9,
+    "itemLevel": 593,
+    "stats": [
+      {
+        "id": 73,
+        "alloc": 5259
+      },
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 24,
+        "alloc": 3500
+      },
+      {
+        "id": 25,
+        "alloc": 3500
+      }
+    ],
+    "bonusLists": [
+      10421,
+      9633,
+      8902
+    ],
+    "sources": [
+      {
+        "instanceId": -66,
+        "encounterId": -38
+      }
+    ],
+    "profession": {
+      "id": 165,
+      "recipeSpellId": 441058,
+      "optionalCraftingSlots": [
+        {
+          "id": 295,
+          "count": 3,
+          "recraftCount": 1
+        },
+        {
+          "id": 269,
+          "count": 150,
+          "recraftCount": 75
+        },
+        {
+          "id": 300,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 284,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 281,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 283,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 256,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 286,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 346,
+          "count": 1,
+          "recraftCount": 1
+        }
+      ]
+    },
+    "expansion": 10
+  },
+  {
+    "id": 219382,
+    "name": "Fateweaved Needle",
+    "icon": "inv_knife_1h_nerubianraid_d_02",
+    "quality": 4,
+    "itemClass": 2,
+    "itemSubClass": 15,
+    "inventoryType": 13,
+    "itemLevel": 350,
+    "stats": [
+      {
+        "id": 5,
+        "alloc": 5259
+      },
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 5,
+        "alloc": 25370
+      }
+    ],
+    "expansion": 10
+  },
+  {
+    "id": 219489,
+    "name": "Waders of the Unifying Flame",
+    "icon": "inv_leather_outdoorarathor_d_01_boot",
+    "quality": 4,
+    "itemClass": 4,
+    "itemSubClass": 2,
+    "inventoryType": 8,
+    "itemLevel": 593,
+    "itemLimit": {
+      "category": 512,
+      "quantity": 2
+    },
+    "stats": [
+      {
+        "id": 73,
+        "alloc": 5259
+      },
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 36,
+        "alloc": 4000
+      },
+      {
+        "id": 49,
+        "alloc": 3000
+      }
+    ],
+    "bonusLists": [
+      8960,
+      10421,
+      9633,
+      8902
+    ],
+    "sources": [
+      {
+        "instanceId": -66,
+        "encounterId": -38
+      }
+    ],
+    "profession": {
+      "id": 165,
+      "recipeSpellId": 444071,
+      "optionalCraftingSlots": [
+        {
+          "id": 294,
+          "count": 3,
+          "recraftCount": 1
+        },
+        {
+          "id": 269,
+          "count": 150,
+          "recraftCount": 75
+        },
+        {
+          "id": 300,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 284,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 256,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 286,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 346,
+          "count": 1,
+          "recraftCount": 1
+        }
+      ]
+    },
+    "expansion": 10
+  },
+  {
+    "id": 219502,
+    "name": "Adrenal Surge Clasp",
+    "icon": "inv_belt_leather_undergroundquest_b_01",
+    "quality": 4,
+    "itemClass": 4,
+    "itemSubClass": 2,
+    "inventoryType": 6,
+    "itemLevel": 593,
+    "itemLimit": {
+      "category": 512,
+      "quantity": 2
+    },
+    "stats": [
+      {
+        "id": 73,
+        "alloc": 5259
+      },
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 32,
+        "alloc": 4000
+      },
+      {
+        "id": 40,
+        "alloc": 3000
+      }
+    ],
+    "bonusLists": [
+      8960,
+      10421,
+      9633,
+      8902
+    ],
+    "sources": [
+      {
+        "instanceId": -66,
+        "encounterId": -38
+      }
+    ],
+    "profession": {
+      "id": 165,
+      "recipeSpellId": 444070,
+      "optionalCraftingSlots": [
+        {
+          "id": 295,
+          "count": 2,
+          "recraftCount": 1
+        },
+        {
+          "id": 300,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 284,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 256,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 286,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 346,
+          "count": 1,
+          "recraftCount": 1
+        }
+      ]
+    },
+    "expansion": 10
+  },
+  {
+    "id": 219511,
+    "name": "Rook Feather Wristwraps",
+    "icon": "inv_leather_outdoorarathor_d_01_bracer",
+    "quality": 4,
+    "itemClass": 4,
+    "itemSubClass": 2,
+    "inventoryType": 9,
+    "itemLevel": 593,
+    "itemSetId": 1612,
+    "itemLimit": {
+      "category": 512,
+      "quantity": 2
+    },
+    "stats": [
+      {
+        "id": 73,
+        "alloc": 5259
+      },
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 49,
+        "alloc": 3000
+      },
+      {
+        "id": 40,
+        "alloc": 4000
+      }
+    ],
+    "bonusLists": [
+      8960,
+      10421,
+      9633,
+      8902
+    ],
+    "sources": [
+      {
+        "instanceId": -66,
+        "encounterId": -38
+      }
+    ],
+    "profession": {
+      "id": 165,
+      "recipeSpellId": 443949,
+      "optionalCraftingSlots": [
+        {
+          "id": 296,
+          "count": 2,
+          "recraftCount": 1
+        },
+        {
+          "id": 300,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 284,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 256,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 286,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 346,
+          "count": 1,
+          "recraftCount": 1
+        }
+      ]
+    },
+    "expansion": 10
+  },
+  {
+    "id": 219512,
+    "name": "Weathered Stormfront Vest",
+    "icon": "inv_leather_outdoorarathor_d_01_robe",
+    "quality": 4,
+    "itemClass": 4,
+    "itemSubClass": 2,
+    "inventoryType": 5,
+    "itemLevel": 593,
+    "itemSetId": 1612,
+    "itemLimit": {
+      "category": 512,
+      "quantity": 2
+    },
+    "stats": [
+      {
+        "id": 73,
+        "alloc": 5259
+      },
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 32,
+        "alloc": 4000
+      },
+      {
+        "id": 49,
+        "alloc": 3000
+      }
+    ],
+    "bonusLists": [
+      8960,
+      10421,
+      9633,
+      8902
+    ],
+    "sources": [
+      {
+        "instanceId": -66,
+        "encounterId": -38
+      }
+    ],
+    "profession": {
+      "id": 165,
+      "recipeSpellId": 443951,
+      "optionalCraftingSlots": [
+        {
+          "id": 296,
+          "count": 3,
+          "recraftCount": 2
+        },
+        {
+          "id": 300,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 284,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 256,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 286,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 346,
+          "count": 1,
+          "recraftCount": 1
+        }
+      ]
+    },
+    "expansion": 10
+  },
+  {
+    "id": 219513,
+    "name": "Roiling Thunderstrike Talons",
+    "icon": "inv_leather_outdoorarathor_d_01_glove",
+    "quality": 4,
+    "itemClass": 4,
+    "itemSubClass": 2,
+    "inventoryType": 10,
+    "itemLevel": 593,
+    "itemSetId": 1612,
+    "itemLimit": {
+      "category": 512,
+      "quantity": 2
+    },
+    "stats": [
+      {
+        "id": 73,
+        "alloc": 5259
+      },
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 36,
+        "alloc": 4000
+      },
+      {
+        "id": 40,
+        "alloc": 3000
+      }
+    ],
+    "bonusLists": [
+      8960,
+      10421,
+      9633,
+      8902
+    ],
+    "sources": [
+      {
+        "instanceId": -66,
+        "encounterId": -38
+      }
+    ],
+    "profession": {
+      "id": 165,
+      "recipeSpellId": 443950,
+      "optionalCraftingSlots": [
+        {
+          "id": 296,
+          "count": 2,
+          "recraftCount": 1
+        },
+        {
+          "id": 300,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 284,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 256,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 286,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 346,
+          "count": 1,
+          "recraftCount": 1
+        }
+      ]
+    },
+    "expansion": 10
+  },
+  {
+    "id": 219672,
+    "name": "Darkmoon Deck: Radiance",
+    "icon": "inv_inscriptions_darkmoondeckshine_0",
+    "quality": 4,
+    "itemClass": 4,
+    "itemSubClass": 0,
+    "inventoryType": 12,
+    "itemLevel": 577,
+    "uniqueEquipped": true,
+    "stats": [
+      {
+        "id": 71,
+        "alloc": 6666
+      }
+    ],
+    "expansion": 10
+  },
+  {
+    "id": 219877,
+    "name": "Void Reaper's Warp Blade",
+    "icon": "inv_hand_1h_nerubianraid_d_02_blue",
+    "quality": 4,
+    "itemClass": 2,
+    "itemSubClass": 13,
+    "inventoryType": 13,
+    "itemLevel": 571,
+    "itemSetId": 1613,
+    "uniqueEquipped": true,
+    "stats": [
+      {
+        "id": 3,
+        "alloc": 5259
+      },
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 32,
+        "alloc": 7000
+      }
+    ],
+    "sources": [
+      {
+        "instanceId": 1273,
+        "encounterId": 2601,
+        "veryRare": true
+      }
+    ],
+    "expansion": 10
+  },
+  {
+    "id": 219915,
+    "name": "Foul Behemoth's Chelicera",
+    "icon": "inv_raid_foulbehemothschelicera_red",
+    "quality": 4,
+    "itemClass": 4,
+    "itemSubClass": 0,
+    "inventoryType": 12,
+    "itemLevel": 571,
+    "uniqueEquipped": true,
+    "specs": [
+      66,
+      73,
+      104,
+      250,
+      268,
+      581
+    ],
+    "stats": [
+      {
+        "id": 72,
+        "alloc": 6666
+      }
+    ],
+    "sources": [
+      {
+        "instanceId": 1273,
+        "encounterId": 2607
+      }
+    ],
+    "onUseTrinket": true,
+    "expansion": 10
+  },
+  {
+    "id": 219916,
+    "name": "Bronzebeard Family Compass",
+    "icon": "inv_10_dungeonjewelry_explorer_trinket_1compass_color5",
+    "quality": 5,
+    "itemClass": 4,
+    "itemSubClass": 0,
+    "inventoryType": 12,
+    "itemLevel": 597,
+    "contextLevels": {
+      "1": 346,
+      "2": 359,
+      "23": 372
+    },
+    "uniqueEquipped": true,
+    "stats": [
+      {
+        "id": 49,
+        "alloc": 6666
+      }
+    ],
+    "expansion": 10
+  },
+  {
+    "id": 219917,
+    "name": "Creeping Coagulum",
+    "icon": "inv_raid_creepingcoagulum_purple",
+    "quality": 4,
+    "itemClass": 4,
+    "itemSubClass": 0,
+    "inventoryType": 12,
+    "itemLevel": 571,
+    "uniqueEquipped": true,
+    "specs": [
+      65,
+      105,
+      256,
+      257,
+      264,
+      270,
+      1468
+    ],
+    "stats": [
+      {
+        "id": 5,
+        "alloc": 6666
+      }
+    ],
+    "sources": [
+      {
+        "instanceId": 1273,
+        "encounterId": 2611
+      }
+    ],
+    "onUseTrinket": true,
+    "expansion": 10
+  },
+  {
+    "id": 219941,
+    "name": "Fateweaved Mallet",
+    "icon": "inv_mace_1h_nerubianraid_d_01",
+    "quality": 4,
+    "itemClass": 2,
+    "itemSubClass": 4,
+    "inventoryType": 13,
+    "itemLevel": 350,
+    "stats": [
+      {
+        "id": 5,
+        "alloc": 5259
+      },
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 5,
+        "alloc": 25370
+      }
+    ],
+    "expansion": 10
+  },
+  {
+    "id": 220202,
+    "name": "Spymaster's Web",
+    "icon": "inv_11_0_raid_spymastersweb_purple",
+    "quality": 4,
+    "itemClass": 4,
+    "itemSubClass": 0,
+    "inventoryType": 12,
+    "itemLevel": 571,
+    "uniqueEquipped": true,
+    "specs": [
+      62,
+      63,
+      64,
+      102,
+      258,
+      262,
+      265,
+      266,
+      267,
+      1467,
+      1473
+    ],
+    "stats": [
+      {
+        "id": 49,
+        "alloc": 6666
+      }
+    ],
+    "sources": [
+      {
+        "instanceId": 1273,
+        "encounterId": 2608
+      }
+    ],
+    "onUseTrinket": true,
+    "expansion": 10
+  },
+  {
+    "id": 220305,
+    "name": "Ovi'nax's Mercurial Egg",
+    "icon": "inv_raid_mercurialegg_purple",
+    "quality": 4,
+    "itemClass": 4,
+    "itemSubClass": 0,
+    "inventoryType": 12,
+    "itemLevel": 571,
+    "uniqueEquipped": true,
+    "sources": [
+      {
+        "instanceId": 1273,
+        "encounterId": 2612
+      }
+    ],
+    "expansion": 10
+  },
+  {
+    "id": 220957,
+    "name": "Echoing Tuncheon",
+    "icon": "inv_sword_1h_dragonquest_b_01",
+    "quality": 4,
+    "itemClass": 2,
+    "itemSubClass": 7,
+    "inventoryType": 13,
+    "itemLevel": 330,
+    "stats": [
+      {
+        "id": 72,
+        "alloc": 5259
+      },
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 24,
+        "alloc": 3500
+      },
+      {
+        "id": 25,
+        "alloc": 3500
+      }
+    ],
+    "bonusLists": [
+      8851,
+      8852
+    ],
+    "expansion": 10
+  },
+  {
+    "id": 220958,
+    "name": "Haunting Void",
+    "icon": "inv_sword_1h_dragonquest_b_01",
+    "quality": 4,
+    "itemClass": 2,
+    "itemSubClass": 7,
+    "inventoryType": 13,
+    "itemLevel": 330,
+    "stats": [
+      {
+        "id": 72,
+        "alloc": 5259
+      },
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 24,
+        "alloc": 3500
+      },
+      {
+        "id": 25,
+        "alloc": 3500
+      }
+    ],
+    "bonusLists": [
+      8851,
+      8852
+    ],
+    "expansion": 10
+  },
+  {
+    "id": 220959,
+    "name": "Entangling Cutlass",
+    "icon": "inv_sword_1h_dragonquest_b_01",
+    "quality": 4,
+    "itemClass": 2,
+    "itemSubClass": 7,
+    "inventoryType": 13,
+    "itemLevel": 330,
+    "stats": [
+      {
+        "id": 72,
+        "alloc": 5259
+      },
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 24,
+        "alloc": 3500
+      },
+      {
+        "id": 25,
+        "alloc": 3500
+      }
+    ],
+    "bonusLists": [
+      8851,
+      8852
+    ],
+    "expansion": 10
+  },
+  {
+    "id": 220960,
+    "name": "Siphoning Stiletto",
+    "icon": "inv_sword_1h_dragonquest_b_01",
+    "quality": 4,
+    "itemClass": 2,
+    "itemSubClass": 7,
+    "inventoryType": 13,
+    "itemLevel": 330,
+    "stats": [
+      {
+        "id": 72,
+        "alloc": 5259
+      },
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 24,
+        "alloc": 3500
+      },
+      {
+        "id": 25,
+        "alloc": 3500
+      }
+    ],
+    "bonusLists": [
+      8851,
+      8852
+    ],
+    "expansion": 10
+  },
+  {
+    "id": 221023,
+    "name": "Treacherous Transmitter",
+    "icon": "inv_etherealraid_communicator_color1",
+    "quality": 4,
+    "itemClass": 4,
+    "itemSubClass": 0,
+    "inventoryType": 12,
+    "itemLevel": 571,
+    "uniqueEquipped": true,
+    "stats": [
+      {
+        "id": 36,
+        "alloc": 6666
+      }
+    ],
+    "sources": [
+      {
+        "instanceId": 1273,
+        "encounterId": 2601
+      }
+    ],
+    "onUseTrinket": true,
+    "expansion": 10
+  },
+  {
+    "id": 221077,
+    "name": "\"Emergency Stop\" Keychain",
+    "icon": "inv_11_0_earthen_earthennecklace01_color1",
+    "quality": 3,
+    "itemClass": 4,
+    "itemSubClass": 0,
+    "inventoryType": 2,
+    "itemLevel": 437,
+    "stats": [
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 49,
+        "alloc": 11250
+      },
+      {
+        "id": 36,
+        "alloc": 6250
+      }
+    ],
+    "sources": [
+      {
+        "instanceId": 1269,
+        "encounterId": 2572
+      },
+      {
+        "instanceId": -1,
+        "encounterId": 1269
+      },
+      {
+        "instanceId": -32,
+        "encounterId": 1269
+      }
+    ],
+    "expansion": 10
+  },
+  {
+    "id": 221081,
+    "name": "Guise of the Construct",
+    "icon": "inv_leather_earthendungeon_c_01_helm",
+    "quality": 3,
+    "itemClass": 4,
+    "itemSubClass": 2,
+    "inventoryType": 1,
+    "itemLevel": 437,
+    "stats": [
+      {
+        "id": 73,
+        "alloc": 5259
+      },
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 32,
+        "alloc": 4250
+      },
+      {
+        "id": 36,
+        "alloc": 2750
+      }
+    ],
+    "sources": [
+      {
+        "instanceId": 1269,
+        "encounterId": 2579
+      },
+      {
+        "instanceId": -1,
+        "encounterId": 1269
+      },
+      {
+        "instanceId": -32,
+        "encounterId": 1269
+      }
+    ],
+    "expansion": 10
+  },
+  {
+    "id": 221088,
+    "name": "Anvilhide Cape",
+    "icon": "inv_cape_plate_earthendungeon_c_01",
+    "quality": 3,
+    "itemClass": 4,
+    "itemSubClass": 1,
+    "inventoryType": 16,
+    "itemLevel": 437,
+    "stats": [
+      {
+        "id": 71,
+        "alloc": 5259
+      },
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 49,
+        "alloc": 4400
+      },
+      {
+        "id": 36,
+        "alloc": 2600
+      }
+    ],
+    "sources": [
+      {
+        "instanceId": 1269,
+        "encounterId": 2590
+      },
+      {
+        "instanceId": -1,
+        "encounterId": 1269
+      },
+      {
+        "instanceId": -32,
+        "encounterId": 1269
+      }
+    ],
+    "expansion": 10
+  },
+  {
+    "id": 221090,
+    "name": "Eirich's Fist of Deception",
+    "icon": "inv_hand_1h_earthendungeon_c_01",
+    "quality": 3,
+    "itemClass": 2,
+    "itemSubClass": 13,
+    "inventoryType": 13,
+    "itemLevel": 437,
+    "stats": [
+      {
+        "id": 3,
+        "alloc": 5259
+      },
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 36,
+        "alloc": 4400
+      },
+      {
+        "id": 32,
+        "alloc": 2600
+      }
+    ],
+    "sources": [
+      {
+        "instanceId": 1269,
+        "encounterId": 2582
+      },
+      {
+        "instanceId": -1,
+        "encounterId": 1269
+      },
+      {
+        "instanceId": -32,
+        "encounterId": 1269
+      }
+    ],
+    "expansion": 10
+  },
+  {
+    "id": 221091,
+    "name": "Cutting-Edge Sermon",
+    "icon": "inv_sword_1h_earthendungeon_c_01",
+    "quality": 3,
+    "itemClass": 2,
+    "itemSubClass": 7,
+    "inventoryType": 13,
+    "itemLevel": 437,
+    "stats": [
+      {
+        "id": 4,
+        "alloc": 5259
+      },
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 40,
+        "alloc": 4250
+      },
+      {
+        "id": 49,
+        "alloc": 2750
+      }
+    ],
+    "sources": [
+      {
+        "instanceId": 1269,
+        "encounterId": 2582
+      },
+      {
+        "instanceId": -1,
+        "encounterId": 1269
+      },
+      {
+        "instanceId": -32,
+        "encounterId": 1269
+      }
+    ],
+    "expansion": 10
+  },
+  {
+    "id": 221094,
+    "name": "Whispering Umbral Mantle",
+    "icon": "inv_leather_earthendungeon_c_01_shoulder",
+    "quality": 3,
+    "itemClass": 4,
+    "itemSubClass": 2,
+    "inventoryType": 3,
+    "itemLevel": 437,
+    "stats": [
+      {
+        "id": 73,
+        "alloc": 5259
+      },
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 32,
+        "alloc": 4550
+      },
+      {
+        "id": 40,
+        "alloc": 2450
+      }
+    ],
+    "sources": [
+      {
+        "instanceId": 1269,
+        "encounterId": 2582
+      },
+      {
+        "instanceId": -1,
+        "encounterId": 1269
+      },
+      {
+        "instanceId": -32,
+        "encounterId": 1269
+      }
+    ],
+    "expansion": 10
+  },
+  {
+    "id": 221134,
+    "name": "Shadow Congregant's Belt",
+    "icon": "inv_leather_earthendungeon_c_01_belt",
+    "quality": 3,
+    "itemClass": 4,
+    "itemSubClass": 2,
+    "inventoryType": 6,
+    "itemLevel": 437,
+    "stats": [
+      {
+        "id": 73,
+        "alloc": 5259
+      },
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 32,
+        "alloc": 4400
+      },
+      {
+        "id": 49,
+        "alloc": 2600
+      }
+    ],
+    "sources": [
+      {
+        "instanceId": 1270,
+        "encounterId": 2580
+      },
+      {
+        "instanceId": -1,
+        "encounterId": 1270
+      },
+      {
+        "instanceId": -32,
+        "encounterId": 1270
+      }
+    ],
+    "expansion": 10
+  },
+  {
+    "id": 221136,
+    "name": "Devout Zealot's Ring",
+    "icon": "inv_11_0_nerubian_ring_01_color4",
+    "quality": 3,
+    "itemClass": 4,
+    "itemSubClass": 0,
+    "inventoryType": 11,
+    "itemLevel": 437,
+    "uniqueEquipped": true,
+    "stats": [
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 32,
+        "alloc": 12000
+      },
+      {
+        "id": 36,
+        "alloc": 5500
+      }
+    ],
+    "sources": [
+      {
+        "instanceId": 1270,
+        "encounterId": 2580
+      },
+      {
+        "instanceId": -1,
+        "encounterId": 1270
+      },
+      {
+        "instanceId": -32,
+        "encounterId": 1270
+      }
+    ],
+    "expansion": 10
+  },
+  {
+    "id": 221138,
+    "name": "Parson's Ornamented Blade",
+    "icon": "inv_knife_1h_earthendungeon_c_02",
+    "quality": 3,
+    "itemClass": 2,
+    "itemSubClass": 15,
+    "inventoryType": 13,
+    "itemLevel": 437,
+    "stats": [
+      {
+        "id": 3,
+        "alloc": 5259
+      },
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 32,
+        "alloc": 4250
+      },
+      {
+        "id": 40,
+        "alloc": 2750
+      }
+    ],
+    "sources": [
+      {
+        "instanceId": 1270,
+        "encounterId": 2581
+      },
+      {
+        "instanceId": -1,
+        "encounterId": 1270
+      },
+      {
+        "instanceId": -32,
+        "encounterId": 1270
+      }
+    ],
+    "expansion": 10
+  },
+  {
+    "id": 221141,
+    "name": "High Nerubian Signet",
+    "icon": "inv_11_0_nerubian_ring_02_color5",
+    "quality": 3,
+    "itemClass": 4,
+    "itemSubClass": 0,
+    "inventoryType": 11,
+    "itemLevel": 437,
+    "uniqueEquipped": true,
+    "stats": [
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 40,
+        "alloc": 11750
+      },
+      {
+        "id": 49,
+        "alloc": 5750
+      }
+    ],
+    "sources": [
+      {
+        "instanceId": 1270,
+        "encounterId": 2581
+      },
+      {
+        "instanceId": -1,
+        "encounterId": 1270
+      },
+      {
+        "instanceId": -32,
+        "encounterId": 1270
+      }
+    ],
+    "expansion": 10
+  },
+  {
+    "id": 221142,
+    "name": "Scheming Assailer's Bands",
+    "icon": "inv_leather_earthendungeon_c_01_bracer",
+    "quality": 3,
+    "itemClass": 4,
+    "itemSubClass": 2,
+    "inventoryType": 9,
+    "itemLevel": 437,
+    "stats": [
+      {
+        "id": 73,
+        "alloc": 5259
+      },
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 36,
+        "alloc": 4100
+      },
+      {
+        "id": 32,
+        "alloc": 2900
+      }
+    ],
+    "sources": [
+      {
+        "instanceId": 1270,
+        "encounterId": 2581
+      },
+      {
+        "instanceId": -1,
+        "encounterId": 1270
+      },
+      {
+        "instanceId": -32,
+        "encounterId": 1270
+      }
+    ],
+    "expansion": 10
+  },
+  {
+    "id": 221144,
+    "name": "Zephyrous Sail Carver",
+    "icon": "inv_sword_1h_earthendungeon_c_02",
+    "quality": 3,
+    "itemClass": 2,
+    "itemSubClass": 7,
+    "inventoryType": 13,
+    "itemLevel": 437,
+    "stats": [
+      {
+        "id": 3,
+        "alloc": 5259
+      },
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 40,
+        "alloc": 4550
+      },
+      {
+        "id": 32,
+        "alloc": 2450
+      }
+    ],
+    "sources": [
+      {
+        "instanceId": 1270,
+        "encounterId": 2593
+      },
+      {
+        "instanceId": -1,
+        "encounterId": 1270
+      },
+      {
+        "instanceId": -32,
+        "encounterId": 1270
+      }
+    ],
+    "expansion": 10
+  },
+  {
+    "id": 221145,
+    "name": "Shipwrecker's Bludgeon",
+    "icon": "inv_mace_1h_earthendungeon_c_01",
+    "quality": 3,
+    "itemClass": 2,
+    "itemSubClass": 4,
+    "inventoryType": 13,
+    "itemLevel": 437,
+    "stats": [
+      {
+        "id": 4,
+        "alloc": 5259
+      },
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 36,
+        "alloc": 4100
+      },
+      {
+        "id": 32,
+        "alloc": 2900
+      }
+    ],
+    "sources": [
+      {
+        "instanceId": 1270,
+        "encounterId": 2593
+      },
+      {
+        "instanceId": -1,
+        "encounterId": 1270
+      },
+      {
+        "instanceId": -32,
+        "encounterId": 1270
+      }
+    ],
+    "expansion": 10
+  },
+  {
+    "id": 221148,
+    "name": "Epaulets of the Clipped Wings",
+    "icon": "inv_leather_earthendungeon_c_01_shoulder",
+    "quality": 3,
+    "itemClass": 4,
+    "itemSubClass": 2,
+    "inventoryType": 3,
+    "itemLevel": 437,
+    "stats": [
+      {
+        "id": 73,
+        "alloc": 5259
+      },
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 36,
+        "alloc": 4550
+      },
+      {
+        "id": 49,
+        "alloc": 2450
+      }
+    ],
+    "sources": [
+      {
+        "instanceId": 1270,
+        "encounterId": 2593
+      },
+      {
+        "instanceId": -1,
+        "encounterId": 1270
+      },
+      {
+        "instanceId": -32,
+        "encounterId": 1270
+      }
+    ],
+    "expansion": 10
+  },
+  {
+    "id": 221150,
+    "name": "Arachnoid Soulcleaver",
+    "icon": "inv_sword_1h_earthendungeon_c_02",
+    "quality": 3,
+    "itemClass": 2,
+    "itemSubClass": 7,
+    "inventoryType": 13,
+    "itemLevel": 437,
+    "stats": [
+      {
+        "id": 5,
+        "alloc": 5259
+      },
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 49,
+        "alloc": 4550
+      },
+      {
+        "id": 32,
+        "alloc": 2450
+      },
+      {
+        "id": 5,
+        "alloc": 25370
+      }
+    ],
+    "sources": [
+      {
+        "instanceId": 1271,
+        "encounterId": 2583
+      },
+      {
+        "instanceId": -1,
+        "encounterId": 1271
+      },
+      {
+        "instanceId": -32,
+        "encounterId": 1271
+      }
+    ],
+    "expansion": 10
+  },
+  {
+    "id": 221153,
+    "name": "Gauzewoven Legguards",
+    "icon": "inv_leather_earthendungeon_c_01_pant",
+    "quality": 3,
+    "itemClass": 4,
+    "itemSubClass": 2,
+    "inventoryType": 7,
+    "itemLevel": 437,
+    "stats": [
+      {
+        "id": 73,
+        "alloc": 5259
+      },
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 49,
+        "alloc": 4250
+      },
+      {
+        "id": 32,
+        "alloc": 2750
+      }
+    ],
+    "sources": [
+      {
+        "instanceId": 1271,
+        "encounterId": 2583
+      },
+      {
+        "instanceId": -1,
+        "encounterId": 1271
+      },
+      {
+        "instanceId": -32,
+        "encounterId": 1271
+      }
+    ],
+    "expansion": 10
+  },
+  {
+    "id": 221154,
+    "name": "Swarmcaller's Shroud",
+    "icon": "inv_cape_mail_earthendungeon_c_01",
+    "quality": 3,
+    "itemClass": 4,
+    "itemSubClass": 1,
+    "inventoryType": 16,
+    "itemLevel": 437,
+    "stats": [
+      {
+        "id": 71,
+        "alloc": 5259
+      },
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 40,
+        "alloc": 4400
+      },
+      {
+        "id": 32,
+        "alloc": 2600
+      }
+    ],
+    "sources": [
+      {
+        "instanceId": 1271,
+        "encounterId": 2584
+      },
+      {
+        "instanceId": -1,
+        "encounterId": 1271
+      },
+      {
+        "instanceId": -32,
+        "encounterId": 1271
+      }
+    ],
+    "expansion": 10
+  },
+  {
+    "id": 221157,
+    "name": "Unbreakable Beetlebane Bindings",
+    "icon": "inv_leather_earthendungeon_c_01_bracer",
+    "quality": 3,
+    "itemClass": 4,
+    "itemSubClass": 2,
+    "inventoryType": 9,
+    "itemLevel": 437,
+    "stats": [
+      {
+        "id": 73,
+        "alloc": 5259
+      },
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 32,
+        "alloc": 4250
+      },
+      {
+        "id": 49,
+        "alloc": 2750
+      }
+    ],
+    "sources": [
+      {
+        "instanceId": 1271,
+        "encounterId": 2584
+      },
+      {
+        "instanceId": -1,
+        "encounterId": 1271
+      },
+      {
+        "instanceId": -32,
+        "encounterId": 1271
+      }
+    ],
+    "expansion": 10
+  },
+  {
+    "id": 221163,
+    "name": "Whispering Mask",
+    "icon": "inv_leather_earthendungeon_c_01_helm",
+    "quality": 3,
+    "itemClass": 4,
+    "itemSubClass": 2,
+    "inventoryType": 1,
+    "itemLevel": 437,
+    "stats": [
+      {
+        "id": 73,
+        "alloc": 5259
+      },
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 49,
+        "alloc": 4400
+      },
+      {
+        "id": 40,
+        "alloc": 2600
+      }
+    ],
+    "sources": [
+      {
+        "instanceId": 1271,
+        "encounterId": 2585
+      },
+      {
+        "instanceId": -1,
+        "encounterId": 1271
+      },
+      {
+        "instanceId": -32,
+        "encounterId": 1271
+      }
+    ],
+    "expansion": 10
+  },
+  {
+    "id": 221165,
+    "name": "Unceremonious Bloodletter",
+    "icon": "inv_knife_1h_earthendungeon_c_01",
+    "quality": 3,
+    "itemClass": 2,
+    "itemSubClass": 15,
+    "inventoryType": 13,
+    "itemLevel": 437,
+    "stats": [
+      {
+        "id": 5,
+        "alloc": 5259
+      },
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 36,
+        "alloc": 4400
+      },
+      {
+        "id": 32,
+        "alloc": 2600
+      },
+      {
+        "id": 5,
+        "alloc": 25370
+      }
+    ],
+    "sources": [
+      {
+        "instanceId": 1271,
+        "encounterId": 2585
+      },
+      {
+        "instanceId": -1,
+        "encounterId": 1271
+      },
+      {
+        "instanceId": -32,
+        "encounterId": 1271
+      }
+    ],
+    "expansion": 10
+  },
+  {
+    "id": 221169,
+    "name": "Whisperer's Echoing Steps",
+    "icon": "inv_leather_earthendungeon_c_01_boot",
+    "quality": 3,
+    "itemClass": 4,
+    "itemSubClass": 2,
+    "inventoryType": 8,
+    "itemLevel": 437,
+    "stats": [
+      {
+        "id": 73,
+        "alloc": 5259
+      },
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 49,
+        "alloc": 4400
+      },
+      {
+        "id": 32,
+        "alloc": 2600
+      }
+    ],
+    "sources": [
+      {
+        "instanceId": 1274,
+        "encounterId": 2594
+      },
+      {
+        "instanceId": -1,
+        "encounterId": 1274
+      },
+      {
+        "instanceId": -32,
+        "encounterId": 1274
+      }
+    ],
+    "expansion": 10
+  },
+  {
+    "id": 221171,
+    "name": "Kingslayer's Frostfang",
+    "icon": "inv_knife_1h_earthendungeon_c_01",
+    "quality": 3,
+    "itemClass": 2,
+    "itemSubClass": 15,
+    "inventoryType": 13,
+    "itemLevel": 437,
+    "stats": [
+      {
+        "id": 5,
+        "alloc": 5259
+      },
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 49,
+        "alloc": 4100
+      },
+      {
+        "id": 40,
+        "alloc": 2900
+      },
+      {
+        "id": 5,
+        "alloc": 25370
+      }
+    ],
+    "sources": [
+      {
+        "instanceId": 1274,
+        "encounterId": 2595
+      },
+      {
+        "instanceId": -1,
+        "encounterId": 1274
+      },
+      {
+        "instanceId": -32,
+        "encounterId": 1274
+      }
+    ],
+    "expansion": 10
+  },
+  {
+    "id": 221175,
+    "name": "Shadowchill Amice",
+    "icon": "inv_leather_earthendungeon_c_01_shoulder",
+    "quality": 3,
+    "itemClass": 4,
+    "itemSubClass": 2,
+    "inventoryType": 3,
+    "itemLevel": 437,
+    "stats": [
+      {
+        "id": 73,
+        "alloc": 5259
+      },
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 40,
+        "alloc": 4550
+      },
+      {
+        "id": 32,
+        "alloc": 2450
+      }
+    ],
+    "sources": [
+      {
+        "instanceId": 1274,
+        "encounterId": 2595
+      },
+      {
+        "instanceId": -1,
+        "encounterId": 1274
+      },
+      {
+        "instanceId": -32,
+        "encounterId": 1274
+      }
+    ],
+    "expansion": 10
+  },
+  {
+    "id": 221180,
+    "name": "Gorebound Stranglers",
+    "icon": "inv_leather_earthendungeon_c_01_glove",
+    "quality": 3,
+    "itemClass": 4,
+    "itemSubClass": 2,
+    "inventoryType": 10,
+    "itemLevel": 437,
+    "stats": [
+      {
+        "id": 73,
+        "alloc": 5259
+      },
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 36,
+        "alloc": 4100
+      },
+      {
+        "id": 32,
+        "alloc": 2900
+      }
+    ],
+    "sources": [
+      {
+        "instanceId": 1274,
+        "encounterId": 2600
+      },
+      {
+        "instanceId": -1,
+        "encounterId": 1274
+      },
+      {
+        "instanceId": -32,
+        "encounterId": 1274
+      }
+    ],
+    "expansion": 10
+  },
+  {
+    "id": 221181,
+    "name": "Elder's Hemolymphal Periapt",
+    "icon": "inv_11_0_nerubian_necklace_01_color5",
+    "quality": 3,
+    "itemClass": 4,
+    "itemSubClass": 0,
+    "inventoryType": 2,
+    "itemLevel": 437,
+    "stats": [
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 40,
+        "alloc": 10750
+      },
+      {
+        "id": 32,
+        "alloc": 6750
+      }
+    ],
+    "sources": [
+      {
+        "instanceId": 1274,
+        "encounterId": 2600
+      },
+      {
+        "instanceId": -1,
+        "encounterId": 1274
+      },
+      {
+        "instanceId": -32,
+        "encounterId": 1274
+      }
+    ],
+    "expansion": 10
+  },
+  {
+    "id": 221183,
+    "name": "Splice 'n Dice",
+    "icon": "inv_knife_1h_earthendungeon_c_01",
+    "quality": 3,
+    "itemClass": 2,
+    "itemSubClass": 15,
+    "inventoryType": 13,
+    "itemLevel": 437,
+    "stats": [
+      {
+        "id": 3,
+        "alloc": 5259
+      },
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 36,
+        "alloc": 4550
+      },
+      {
+        "id": 32,
+        "alloc": 2450
+      }
+    ],
+    "sources": [
+      {
+        "instanceId": 1274,
+        "encounterId": 2596
+      },
+      {
+        "instanceId": -1,
+        "encounterId": 1274
+      },
+      {
+        "instanceId": -32,
+        "encounterId": 1274
+      }
+    ],
+    "expansion": 10
+  },
+  {
+    "id": 221188,
+    "name": "Viscera-Lathered Coat",
+    "icon": "inv_leather_earthendungeon_c_01_chest",
+    "quality": 3,
+    "itemClass": 4,
+    "itemSubClass": 2,
+    "inventoryType": 5,
+    "itemLevel": 437,
+    "stats": [
+      {
+        "id": 73,
+        "alloc": 5259
+      },
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 36,
+        "alloc": 4250
+      },
+      {
+        "id": 49,
+        "alloc": 2750
+      }
+    ],
+    "sources": [
+      {
+        "instanceId": 1274,
+        "encounterId": 2596
+      },
+      {
+        "instanceId": -1,
+        "encounterId": 1274
+      },
+      {
+        "instanceId": -32,
+        "encounterId": 1274
+      }
+    ],
+    "expansion": 10
+  },
+  {
+    "id": 221189,
+    "name": "Experiment 08752's Band",
+    "icon": "inv_11_0_nerubian_ring_01_color5",
+    "quality": 3,
+    "itemClass": 4,
+    "itemSubClass": 0,
+    "inventoryType": 11,
+    "itemLevel": 437,
+    "uniqueEquipped": true,
+    "stats": [
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 40,
+        "alloc": 10250
+      },
+      {
+        "id": 36,
+        "alloc": 7250
+      }
+    ],
+    "sources": [
+      {
+        "instanceId": 1274,
+        "encounterId": 2596
+      },
+      {
+        "instanceId": -1,
+        "encounterId": 1274
+      },
+      {
+        "instanceId": -32,
+        "encounterId": 1274
+      }
+    ],
+    "expansion": 10
+  },
+  {
+    "id": 221575,
+    "name": "Adaptive Delver's Shawl",
+    "icon": "inv_cloth_dragonpvp_d_01_cape",
+    "quality": 4,
+    "itemClass": 4,
+    "itemSubClass": 1,
+    "inventoryType": 16,
+    "itemLevel": 382,
+    "stats": [
+      {
+        "id": 71,
+        "alloc": 5259
+      },
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 24,
+        "alloc": 3500
+      },
+      {
+        "id": 25,
+        "alloc": 3500
+      }
+    ],
+    "bonusLists": [
+      8840,
+      8836,
+      8902
+    ],
+    "expansion": 10
+  },
+  {
+    "id": 221579,
+    "name": "Consecrated Cloak",
+    "icon": "inv_cloth_dragonpvp_d_01_cape",
+    "quality": 4,
+    "itemClass": 4,
+    "itemSubClass": 1,
+    "inventoryType": 16,
+    "itemLevel": 382,
+    "stats": [
+      {
+        "id": 71,
+        "alloc": 5259
+      },
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 24,
+        "alloc": 3500
+      },
+      {
+        "id": 25,
+        "alloc": 3500
+      }
+    ],
+    "bonusLists": [
+      8840,
+      8836,
+      8902
+    ],
+    "expansion": 10
+  },
+  {
+    "id": 221663,
+    "name": "Adaptive Delver's Shawl",
+    "icon": "inv_cloth_dragonpvp_d_01_cape",
+    "quality": 4,
+    "itemClass": 4,
+    "itemSubClass": 1,
+    "inventoryType": 16,
+    "itemLevel": 593,
+    "stats": [
+      {
+        "id": 71,
+        "alloc": 5259
+      },
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 24,
+        "alloc": 3500
+      },
+      {
+        "id": 25,
+        "alloc": 3500
+      }
+    ],
+    "bonusLists": [
+      10421,
+      9633,
+      8902
+    ],
+    "expansion": 10
+  },
+  {
+    "id": 221667,
+    "name": "Consecrated Cloak",
+    "icon": "inv_cloth_dragonpvp_d_01_cape",
+    "quality": 4,
+    "itemClass": 4,
+    "itemSubClass": 1,
+    "inventoryType": 16,
+    "itemLevel": 593,
+    "stats": [
+      {
+        "id": 71,
+        "alloc": 5259
+      },
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 24,
+        "alloc": 3500
+      },
+      {
+        "id": 25,
+        "alloc": 3500
+      }
+    ],
+    "bonusLists": [
+      10421,
+      9633,
+      8902
+    ],
+    "expansion": 10
+  },
+  {
+    "id": 221802,
+    "name": "Overclocked Idea Generator",
+    "icon": "inv_helm_armor_gnomish_c_01_red",
+    "quality": 4,
+    "itemClass": 4,
+    "itemSubClass": 2,
+    "inventoryType": 1,
+    "itemLevel": 593,
+    "hasSockets": true,
+    "socketInfo": {
+      "sockets": [
+        {
+          "type": "TINKER"
+        }
+      ]
+    },
+    "stats": [
+      {
+        "id": 73,
+        "alloc": 5259
+      },
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 24,
+        "alloc": 7000
+      }
+    ],
+    "bonusLists": [
+      10421,
+      9633,
+      8902
+    ],
+    "sources": [
+      {
+        "instanceId": -66,
+        "encounterId": -35
+      }
+    ],
+    "profession": {
+      "id": 202,
+      "recipeSpellId": 447315,
+      "optionalCraftingSlots": [
+        {
+          "id": 256,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 294,
+          "count": 4,
+          "recraftCount": 2
+        },
+        {
+          "id": 306,
+          "count": 12,
+          "recraftCount": 6
+        },
+        {
+          "id": 309,
+          "count": 2,
+          "recraftCount": 1
+        },
+        {
+          "id": 277,
+          "count": 2,
+          "recraftCount": 1
+        },
+        {
+          "id": 282,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 311,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 284,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 376,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 346,
+          "count": 1,
+          "recraftCount": 1
+        }
+      ]
+    },
+    "expansion": 10
+  },
+  {
+    "id": 221806,
+    "name": "Venting Vambraces",
+    "icon": "inv_leather_dragonquest_b_01_bracer",
+    "quality": 4,
+    "itemClass": 4,
+    "itemSubClass": 2,
+    "inventoryType": 9,
+    "itemLevel": 593,
+    "hasSockets": true,
+    "socketInfo": {
+      "sockets": [
+        {
+          "type": "TINKER"
+        }
+      ]
+    },
+    "stats": [
+      {
+        "id": 73,
+        "alloc": 5259
+      },
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 24,
+        "alloc": 7000
+      }
+    ],
+    "bonusLists": [
+      10421,
+      9633,
+      8902
+    ],
+    "sources": [
+      {
+        "instanceId": -66,
+        "encounterId": -35
+      }
+    ],
+    "profession": {
+      "id": 202,
+      "recipeSpellId": 447319,
+      "optionalCraftingSlots": [
+        {
+          "id": 256,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 297,
+          "count": 3,
+          "recraftCount": 1
+        },
+        {
+          "id": 306,
+          "count": 9,
+          "recraftCount": 4
+        },
+        {
+          "id": 305,
+          "count": 4,
+          "recraftCount": 2
+        },
+        {
+          "id": 308,
+          "count": 2,
+          "recraftCount": 1
+        },
+        {
+          "id": 282,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 311,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 284,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 376,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 346,
+          "count": 1,
+          "recraftCount": 1
+        }
+      ]
+    },
+    "expansion": 10
+  },
+  {
+    "id": 222438,
+    "name": "Everforged Stabber",
+    "icon": "inv_knife_1h_arathoroutdoor_d_01",
+    "quality": 4,
+    "itemClass": 2,
+    "itemSubClass": 15,
+    "inventoryType": 13,
+    "itemLevel": 593,
+    "stats": [
+      {
+        "id": 3,
+        "alloc": 5259
+      },
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 24,
+        "alloc": 3500
+      },
+      {
+        "id": 25,
+        "alloc": 3500
+      }
+    ],
+    "bonusLists": [
+      10421,
+      9633,
+      8902
+    ],
+    "sources": [
+      {
+        "instanceId": -66,
+        "encounterId": -33
+      }
+    ],
+    "profession": {
+      "id": 164,
+      "recipeSpellId": 450229,
+      "optionalCraftingSlots": [
+        {
+          "id": 299,
+          "count": 1,
+          "recraftCount": 0
+        },
+        {
+          "id": 317,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 283,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 256,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 284,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 340,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 346,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 315,
+          "count": 8,
+          "recraftCount": 4
+        },
+        {
+          "id": 316,
+          "count": 6,
+          "recraftCount": 3
+        }
+      ]
+    },
+    "expansion": 10
+  },
+  {
+    "id": 222439,
+    "name": "Everforged Dagger",
+    "icon": "inv_knife_1h_arathoroutdoor_d_01",
+    "quality": 4,
+    "itemClass": 2,
+    "itemSubClass": 15,
+    "inventoryType": 13,
+    "itemLevel": 593,
+    "stats": [
+      {
+        "id": 5,
+        "alloc": 5259
+      },
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 24,
+        "alloc": 3500
+      },
+      {
+        "id": 25,
+        "alloc": 3500
+      },
+      {
+        "id": 5,
+        "alloc": 25370
+      }
+    ],
+    "bonusLists": [
+      10421,
+      9633,
+      8902
+    ],
+    "sources": [
+      {
+        "instanceId": -66,
+        "encounterId": -33
+      }
+    ],
+    "profession": {
+      "id": 164,
+      "recipeSpellId": 450230,
+      "optionalCraftingSlots": [
+        {
+          "id": 299,
+          "count": 1,
+          "recraftCount": 0
+        },
+        {
+          "id": 317,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 283,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 256,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 284,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 340,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 346,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 315,
+          "count": 6,
+          "recraftCount": 3
+        },
+        {
+          "id": 316,
+          "count": 8,
+          "recraftCount": 4
+        }
+      ]
+    },
+    "expansion": 10
+  },
+  {
+    "id": 222440,
+    "name": "Everforged Longsword",
+    "icon": "inv_sword_1h_arathor_c_01",
+    "quality": 4,
+    "itemClass": 2,
+    "itemSubClass": 7,
+    "inventoryType": 13,
+    "itemLevel": 593,
+    "stats": [
+      {
+        "id": 72,
+        "alloc": 5259
+      },
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 24,
+        "alloc": 3500
+      },
+      {
+        "id": 25,
+        "alloc": 3500
+      }
+    ],
+    "bonusLists": [
+      10421,
+      9633,
+      8902
+    ],
+    "sources": [
+      {
+        "instanceId": -66,
+        "encounterId": -33
+      }
+    ],
+    "profession": {
+      "id": 164,
+      "recipeSpellId": 450231,
+      "optionalCraftingSlots": [
+        {
+          "id": 299,
+          "count": 1,
+          "recraftCount": 0
+        },
+        {
+          "id": 317,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 283,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 256,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 284,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 340,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 346,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 315,
+          "count": 5,
+          "recraftCount": 2
+        },
+        {
+          "id": 316,
+          "count": 12,
+          "recraftCount": 6
+        }
+      ]
+    },
+    "expansion": 10
+  },
+  {
+    "id": 222442,
+    "name": "Everforged Mace",
+    "icon": "inv_mace_1h_arathoroutdoor_d_01",
+    "quality": 4,
+    "itemClass": 2,
+    "itemSubClass": 4,
+    "inventoryType": 13,
+    "itemLevel": 593,
+    "stats": [
+      {
+        "id": 72,
+        "alloc": 5259
+      },
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 24,
+        "alloc": 3500
+      },
+      {
+        "id": 25,
+        "alloc": 3500
+      }
+    ],
+    "bonusLists": [
+      10421,
+      9633,
+      8902
+    ],
+    "sources": [
+      {
+        "instanceId": -66,
+        "encounterId": -33
+      }
+    ],
+    "profession": {
+      "id": 164,
+      "recipeSpellId": 450233,
+      "optionalCraftingSlots": [
+        {
+          "id": 299,
+          "count": 1,
+          "recraftCount": 0
+        },
+        {
+          "id": 317,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 283,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 256,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 284,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 340,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 346,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 315,
+          "count": 10,
+          "recraftCount": 5
+        },
+        {
+          "id": 316,
+          "count": 3,
+          "recraftCount": 1
+        }
+      ]
+    },
+    "expansion": 10
+  },
+  {
+    "id": 222444,
+    "name": "Charged Hexsword",
+    "icon": "inv_sword_1h_arathor_c_01",
+    "quality": 4,
+    "itemClass": 2,
+    "itemSubClass": 7,
+    "inventoryType": 13,
+    "itemLevel": 593,
+    "stats": [
+      {
+        "id": 5,
+        "alloc": 5259
+      },
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 24,
+        "alloc": 3500
+      },
+      {
+        "id": 25,
+        "alloc": 3500
+      },
+      {
+        "id": 5,
+        "alloc": 25370
+      }
+    ],
+    "bonusLists": [
+      10421,
+      9633,
+      8902
+    ],
+    "sources": [
+      {
+        "instanceId": -66,
+        "encounterId": -33
+      }
+    ],
+    "profession": {
+      "id": 164,
+      "recipeSpellId": 450235,
+      "optionalCraftingSlots": [
+        {
+          "id": 299,
+          "count": 1,
+          "recraftCount": 0
+        },
+        {
+          "id": 317,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 283,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 256,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 284,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 340,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 346,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 315,
+          "count": 5,
+          "recraftCount": 2
+        },
+        {
+          "id": 314,
+          "count": 10,
+          "recraftCount": 5
+        }
+      ]
+    },
+    "expansion": 10
+  },
+  {
+    "id": 222445,
+    "name": "Charged Runeaxe",
+    "icon": "inv_axe_1h_arathoroutdoor_d_01",
+    "quality": 4,
+    "itemClass": 2,
+    "itemSubClass": 0,
+    "inventoryType": 13,
+    "itemLevel": 593,
+    "stats": [
+      {
+        "id": 72,
+        "alloc": 5259
+      },
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 24,
+        "alloc": 3500
+      },
+      {
+        "id": 25,
+        "alloc": 3500
+      }
+    ],
+    "bonusLists": [
+      10421,
+      9633,
+      8902
+    ],
+    "sources": [
+      {
+        "instanceId": -66,
+        "encounterId": -33
+      }
+    ],
+    "profession": {
+      "id": 164,
+      "recipeSpellId": 450236,
+      "optionalCraftingSlots": [
+        {
+          "id": 299,
+          "count": 1,
+          "recraftCount": 0
+        },
+        {
+          "id": 317,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 283,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 256,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 284,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 340,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 346,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 315,
+          "count": 5,
+          "recraftCount": 2
+        },
+        {
+          "id": 314,
+          "count": 10,
+          "recraftCount": 5
+        }
+      ]
+    },
+    "expansion": 10
+  },
+  {
+    "id": 222446,
+    "name": "Charged Facesmasher",
+    "icon": "inv_hand_1h_undergroundquest_b_01",
+    "quality": 4,
+    "itemClass": 2,
+    "itemSubClass": 13,
+    "inventoryType": 13,
+    "itemLevel": 593,
+    "stats": [
+      {
+        "id": 72,
+        "alloc": 5259
+      },
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 24,
+        "alloc": 3500
+      },
+      {
+        "id": 25,
+        "alloc": 3500
+      }
+    ],
+    "bonusLists": [
+      10421,
+      9633,
+      8902
+    ],
+    "sources": [
+      {
+        "instanceId": -66,
+        "encounterId": -33
+      }
+    ],
+    "profession": {
+      "id": 164,
+      "recipeSpellId": 450237,
+      "optionalCraftingSlots": [
+        {
+          "id": 299,
+          "count": 1,
+          "recraftCount": 0
+        },
+        {
+          "id": 317,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 283,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 256,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 284,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 340,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 346,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 315,
+          "count": 6,
+          "recraftCount": 3
+        },
+        {
+          "id": 314,
+          "count": 10,
+          "recraftCount": 5
+        }
+      ]
+    },
+    "expansion": 10
+  },
+  {
+    "id": 222451,
+    "name": "Charged Slicer",
+    "icon": "inv_axe_1h_arathoroutdoor_d_01",
+    "quality": 4,
+    "itemClass": 2,
+    "itemSubClass": 0,
+    "inventoryType": 13,
+    "itemLevel": 593,
+    "stats": [
+      {
+        "id": 72,
+        "alloc": 5259
+      },
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 24,
+        "alloc": 3500
+      },
+      {
+        "id": 25,
+        "alloc": 3500
+      }
+    ],
+    "bonusLists": [
+      10421,
+      9633,
+      8902
+    ],
+    "sources": [
+      {
+        "instanceId": -66,
+        "encounterId": -33
+      }
+    ],
+    "profession": {
+      "id": 164,
+      "recipeSpellId": 450242,
+      "optionalCraftingSlots": [
+        {
+          "id": 299,
+          "count": 1,
+          "recraftCount": 0
+        },
+        {
+          "id": 317,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 283,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 256,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 284,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 340,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 346,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 315,
+          "count": 5,
+          "recraftCount": 2
+        },
+        {
+          "id": 314,
+          "count": 10,
+          "recraftCount": 5
+        }
+      ]
+    },
+    "expansion": 10
+  },
+  {
+    "id": 222463,
+    "name": "Siphoning Stiletto",
+    "icon": "inv_knife_1h_arathoroutdoor_d_01",
+    "quality": 4,
+    "itemClass": 2,
+    "itemSubClass": 15,
+    "inventoryType": 13,
+    "itemLevel": 593,
+    "itemLimit": {
+      "category": 512,
+      "quantity": 2
+    },
+    "stats": [
+      {
+        "id": 3,
+        "alloc": 5259
+      },
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 32,
+        "alloc": 3500
+      },
+      {
+        "id": 49,
+        "alloc": 3500
+      }
+    ],
+    "bonusLists": [
+      10421,
+      9633,
+      8902
+    ],
+    "sources": [
+      {
+        "instanceId": -66,
+        "encounterId": -33
+      }
+    ],
+    "profession": {
+      "id": 164,
+      "recipeSpellId": 450250,
+      "optionalCraftingSlots": [
+        {
+          "id": 256,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 315,
+          "count": 8,
+          "recraftCount": 4
+        },
+        {
+          "id": 317,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 284,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 346,
+          "count": 1,
+          "recraftCount": 1
+        }
+      ]
+    },
+    "expansion": 10
+  },
+  {
+    "id": 222653,
+    "name": "Darkmoon Deck: Symbiosis",
+    "icon": "inv_10_inscription_darkmooncards_spore_blank",
+    "quality": 4,
+    "itemClass": 4,
+    "itemSubClass": 0,
+    "inventoryType": 12,
+    "itemLevel": 577,
+    "uniqueEquipped": true,
+    "stats": [
+      {
+        "id": 71,
+        "alloc": 6666
+      }
+    ],
+    "expansion": 10
+  },
+  {
+    "id": 222671,
+    "name": "Darkmoon Deck: Vivacity",
+    "icon": "inv_inscriptions_darkmoondeckvivacity_0",
+    "quality": 4,
+    "itemClass": 4,
+    "itemSubClass": 0,
+    "inventoryType": 12,
+    "itemLevel": 577,
+    "uniqueEquipped": true,
+    "stats": [
+      {
+        "id": 71,
+        "alloc": 6666
+      }
+    ],
+    "expansion": 10
+  },
+  {
+    "id": 222680,
+    "name": "Darkmoon Deck: Ascension",
+    "icon": "inv_inscriptions_darkmoondeckevolution_0",
+    "quality": 4,
+    "itemClass": 4,
+    "itemSubClass": 0,
+    "inventoryType": 12,
+    "itemLevel": 577,
+    "uniqueEquipped": true,
+    "stats": [
+      {
+        "id": 71,
+        "alloc": 6666
+      }
+    ],
+    "expansion": 10
+  },
+  {
+    "id": 222817,
+    "name": "Consecrated Cloak",
+    "icon": "inv_cloth_outdoorarathor_d_01_cape",
+    "quality": 4,
+    "itemClass": 4,
+    "itemSubClass": 1,
+    "inventoryType": 16,
+    "itemLevel": 593,
+    "stats": [
+      {
+        "id": 71,
+        "alloc": 5259
+      },
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 24,
+        "alloc": 3500
+      },
+      {
+        "id": 25,
+        "alloc": 3500
+      }
+    ],
+    "bonusLists": [
+      10421,
+      9633,
+      8902
+    ],
+    "sources": [
+      {
+        "instanceId": -66,
+        "encounterId": -39
+      }
+    ],
+    "profession": {
+      "id": 197,
+      "recipeSpellId": 446940,
+      "optionalCraftingSlots": [
+        {
+          "id": 357,
+          "count": 10,
+          "recraftCount": 5
+        },
+        {
+          "id": 302,
+          "count": 2,
+          "recraftCount": 1
+        },
+        {
+          "id": 377,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 256,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 312,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 283,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 284,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 346,
+          "count": 1,
+          "recraftCount": 1
+        }
+      ]
+    },
+    "expansion": 10
+  },
+  {
+    "id": 225574,
+    "name": "Wings of Shattered Sorrow",
+    "icon": "inv_leather_raiddemonhunternerubian_d_01_cape",
+    "quality": 4,
+    "itemClass": 4,
+    "itemSubClass": 1,
+    "inventoryType": 16,
+    "itemLevel": 571,
+    "stats": [
+      {
+        "id": 71,
+        "alloc": 5259
+      },
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 32,
+        "alloc": 5000
+      },
+      {
+        "id": 36,
+        "alloc": 2000
+      }
+    ],
+    "sources": [
+      {
+        "instanceId": 1273,
+        "encounterId": 2609,
+        "veryRare": true
+      }
+    ],
+    "expansion": 10
+  },
+  {
+    "id": 225575,
+    "name": "Silken Advisor's Favor",
+    "icon": "inv_11_0_nerubian_necklace_02_color5",
+    "quality": 4,
+    "itemClass": 4,
+    "itemSubClass": 0,
+    "inventoryType": 2,
+    "itemLevel": 571,
+    "stats": [
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 40,
+        "alloc": 14500
+      },
+      {
+        "id": 49,
+        "alloc": 3000
+      }
+    ],
+    "sources": [
+      {
+        "instanceId": 1273,
+        "encounterId": 2608
+      }
+    ],
+    "expansion": 10
+  },
+  {
+    "id": 225576,
+    "name": "Writhing Ringworm",
+    "icon": "inv_qiraj_skinsandworm",
+    "quality": 4,
+    "itemClass": 4,
+    "itemSubClass": 0,
+    "inventoryType": 11,
+    "itemLevel": 571,
+    "uniqueEquipped": true,
+    "stats": [
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 49,
+        "alloc": 13500
+      },
+      {
+        "id": 36,
+        "alloc": 4000
+      }
+    ],
+    "sources": [
+      {
+        "instanceId": 1273,
+        "encounterId": 2612
+      }
+    ],
+    "expansion": 10
+  },
+  {
+    "id": 225577,
+    "name": "Sureki Zealot's Insignia",
+    "icon": "inv_nerubian_necklace_01_color4",
+    "quality": 4,
+    "itemClass": 4,
+    "itemSubClass": 0,
+    "inventoryType": 2,
+    "itemLevel": 571,
+    "stats": [
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 36,
+        "alloc": 14750
+      },
+      {
+        "id": 49,
+        "alloc": 2750
+      }
+    ],
+    "sources": [
+      {
+        "instanceId": 1273,
+        "encounterId": 2599,
+        "veryRare": true
+      }
+    ],
+    "expansion": 10
+  },
+  {
+    "id": 225578,
+    "name": "Seal of the Poisoned Pact",
+    "icon": "inv_nerubian_ring_01_color3",
+    "quality": 4,
+    "itemClass": 4,
+    "itemSubClass": 0,
+    "inventoryType": 11,
+    "itemLevel": 571,
+    "uniqueEquipped": true,
+    "stats": [
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 32,
+        "alloc": 15000
+      },
+      {
+        "id": 49,
+        "alloc": 2500
+      }
+    ],
+    "sources": [
+      {
+        "instanceId": 1273,
+        "encounterId": 2602,
+        "veryRare": true
+      }
+    ],
+    "expansion": 10
+  },
+  {
+    "id": 225583,
+    "name": "Behemoth's Eroded Cinch",
+    "icon": "inv_leather_raiddemonhunternerubian_d_01_belt",
+    "quality": 4,
+    "itemClass": 4,
+    "itemSubClass": 2,
+    "inventoryType": 6,
+    "itemLevel": 571,
+    "stats": [
+      {
+        "id": 73,
+        "alloc": 5259
+      },
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 36,
+        "alloc": 4648
+      },
+      {
+        "id": 32,
+        "alloc": 2352
+      }
+    ],
+    "sources": [
+      {
+        "instanceId": 1273,
+        "encounterId": 2609
+      }
+    ],
+    "expansion": 10
+  },
+  {
+    "id": 225588,
+    "name": "Sanguine Experiment's Bandages",
+    "icon": "inv_bracer_leather_raidmonknerubian_d_01",
+    "quality": 4,
+    "itemClass": 4,
+    "itemSubClass": 2,
+    "inventoryType": 9,
+    "itemLevel": 571,
+    "stats": [
+      {
+        "id": 73,
+        "alloc": 5259
+      },
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 32,
+        "alloc": 4979
+      },
+      {
+        "id": 40,
+        "alloc": 2021
+      }
+    ],
+    "sources": [
+      {
+        "instanceId": 1273,
+        "encounterId": 2612
+      }
+    ],
+    "expansion": 10
+  },
+  {
+    "id": 225591,
+    "name": "Fleeting Massacre Footpads",
+    "icon": "inv_boot_leather_raidroguenerubian_d_01",
+    "quality": 4,
+    "itemClass": 4,
+    "itemSubClass": 2,
+    "inventoryType": 8,
+    "itemLevel": 571,
+    "stats": [
+      {
+        "id": 73,
+        "alloc": 5259
+      },
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 40,
+        "alloc": 4587
+      },
+      {
+        "id": 49,
+        "alloc": 2413
+      }
+    ],
+    "sources": [
+      {
+        "instanceId": 1273,
+        "encounterId": 2601
+      }
+    ],
+    "expansion": 10
+  },
+  {
+    "id": 225636,
+    "name": "Regicide",
+    "icon": "inv_knife_1h_nerubianraid_d_01",
+    "quality": 4,
+    "itemClass": 2,
+    "itemSubClass": 15,
+    "inventoryType": 13,
+    "itemLevel": 571,
+    "stats": [
+      {
+        "id": 3,
+        "alloc": 5259
+      },
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 36,
+        "alloc": 4722
+      },
+      {
+        "id": 49,
+        "alloc": 2278
+      }
+    ],
+    "sources": [
+      {
+        "instanceId": 1273,
+        "encounterId": 2601
+      }
+    ],
+    "expansion": 10
+  },
+  {
+    "id": 225722,
+    "name": "Adorned Lynxborne Pauldrons",
+    "icon": "inv_shoulder_leather_raiddruidnerubian_d_01",
+    "quality": 4,
+    "itemClass": 4,
+    "itemSubClass": 2,
+    "inventoryType": 3,
+    "itemLevel": 571,
+    "stats": [
+      {
+        "id": 73,
+        "alloc": 5259
+      },
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 40,
+        "alloc": 4700
+      },
+      {
+        "id": 32,
+        "alloc": 2300
+      }
+    ],
+    "expansion": 10
+  },
+  {
+    "id": 225723,
+    "name": "Venom Stalker's Strap",
+    "icon": "inv_belt_leather_raiddruidnerubian_d_01",
+    "quality": 4,
+    "itemClass": 4,
+    "itemSubClass": 2,
+    "inventoryType": 6,
+    "itemLevel": 571,
+    "stats": [
+      {
+        "id": 73,
+        "alloc": 5259
+      },
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 32,
+        "alloc": 4650
+      },
+      {
+        "id": 40,
+        "alloc": 2350
+      }
+    ],
+    "expansion": 10
+  },
+  {
+    "id": 225728,
+    "name": "Acidic Attendant's Loop",
+    "icon": "inv_11_0_nerubian_ring_02_color3",
+    "quality": 4,
+    "itemClass": 4,
+    "itemSubClass": 0,
+    "inventoryType": 11,
+    "itemLevel": 280,
+    "uniqueEquipped": true,
+    "stats": [
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 40,
+        "alloc": 12750
+      },
+      {
+        "id": 49,
+        "alloc": 4750
+      }
+    ],
+    "expansion": 10
+  },
+  {
+    "id": 225732,
+    "name": "Deep Dweller's Tabi",
+    "icon": "inv_boot_leather_raidmonknerubian_d_01",
+    "quality": 4,
+    "itemClass": 4,
+    "itemSubClass": 2,
+    "inventoryType": 8,
+    "itemLevel": 571,
+    "stats": [
+      {
+        "id": 73,
+        "alloc": 5259
+      },
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 32,
+        "alloc": 4860
+      },
+      {
+        "id": 36,
+        "alloc": 2140
+      }
+    ],
+    "sources": [
+      {
+        "instanceId": 1278,
+        "encounterId": 2625
+      },
+      {
+        "instanceId": 1278,
+        "encounterId": 2635
+      },
+      {
+        "instanceId": 1278,
+        "encounterId": 2636
+      },
+      {
+        "instanceId": 1278,
+        "encounterId": 2637
+      }
+    ],
+    "expansion": 10
+  },
+  {
+    "id": 225733,
+    "name": "Abyssal Tendril Tights",
+    "icon": "inv_leather_raiddemonhunternerubian_d_01_pant",
+    "quality": 4,
+    "itemClass": 4,
+    "itemSubClass": 2,
+    "inventoryType": 7,
+    "itemLevel": 571,
+    "stats": [
+      {
+        "id": 73,
+        "alloc": 5259
+      },
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 49,
+        "alloc": 4816
+      },
+      {
+        "id": 40,
+        "alloc": 2184
+      }
+    ],
+    "sources": [
+      {
+        "instanceId": 1278,
+        "encounterId": 2625
+      },
+      {
+        "instanceId": 1278,
+        "encounterId": 2635
+      },
+      {
+        "instanceId": 1278,
+        "encounterId": 2636
+      },
+      {
+        "instanceId": 1278,
+        "encounterId": 2637
+      }
+    ],
+    "expansion": 10
+  },
+  {
+    "id": 225748,
+    "name": "Seal of the Silent Vigil",
+    "icon": "inv_earthen_earthenring_color1",
+    "quality": 4,
+    "itemClass": 4,
+    "itemSubClass": 0,
+    "inventoryType": 11,
+    "itemLevel": 571,
+    "uniqueEquipped": true,
+    "stats": [
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 40,
+        "alloc": 13900
+      },
+      {
+        "id": 32,
+        "alloc": 3600
+      }
+    ],
+    "sources": [
+      {
+        "instanceId": 1278,
+        "encounterId": 2637
+      }
+    ],
+    "expansion": 10
+  },
+  {
+    "id": 225749,
+    "name": "Seal of the Void-Touched",
+    "icon": "inv_ventureco_ring02_color5",
+    "quality": 4,
+    "itemClass": 4,
+    "itemSubClass": 0,
+    "inventoryType": 11,
+    "itemLevel": 571,
+    "uniqueEquipped": true,
+    "stats": [
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 36,
+        "alloc": 13700
+      },
+      {
+        "id": 49,
+        "alloc": 3800
+      }
+    ],
+    "sources": [
+      {
+        "instanceId": 1278,
+        "encounterId": 2635
+      }
+    ],
+    "expansion": 10
+  },
+  {
+    "id": 225750,
+    "name": "Seal of the Abyssal Terror",
+    "icon": "inv_nerubian_ring_01_color4",
+    "quality": 4,
+    "itemClass": 4,
+    "itemSubClass": 0,
+    "inventoryType": 11,
+    "itemLevel": 571,
+    "uniqueEquipped": true,
+    "stats": [
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 49,
+        "alloc": 13800
+      },
+      {
+        "id": 32,
+        "alloc": 3700
+      }
+    ],
+    "sources": [
+      {
+        "instanceId": 1278,
+        "encounterId": 2636
+      }
+    ],
+    "expansion": 10
+  },
+  {
+    "id": 225751,
+    "name": "Seal of the Broken Mountain",
+    "icon": "inv_nerubian_ring_02_color2",
+    "quality": 4,
+    "itemClass": 4,
+    "itemSubClass": 0,
+    "inventoryType": 11,
+    "itemLevel": 571,
+    "uniqueEquipped": true,
+    "stats": [
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 32,
+        "alloc": 13750
+      },
+      {
+        "id": 36,
+        "alloc": 3750
+      }
+    ],
+    "sources": [
+      {
+        "instanceId": 1278,
+        "encounterId": 2625
+      }
+    ],
+    "expansion": 10
+  },
+  {
+    "id": 226218,
+    "name": "Machine-Warden's Cloak",
+    "icon": "inv_armor_earthenisle_c_01_cape",
+    "quality": 4,
+    "itemClass": 4,
+    "itemSubClass": 1,
+    "inventoryType": 16,
+    "itemLevel": 1,
+    "cosmetic": true,
+    "expansion": 10
+  },
+  {
+    "id": 226695,
+    "name": "Cunning Advisor's Favor",
+    "icon": "inv_11_0_nerubian_necklace_02_color5",
+    "quality": 4,
+    "itemClass": 4,
+    "itemSubClass": 0,
+    "inventoryType": 2,
+    "itemLevel": 571,
+    "stats": [
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 40,
+        "alloc": 14500
+      },
+      {
+        "id": 49,
+        "alloc": 3000
+      }
+    ],
+    "expansion": 10
+  },
+  {
+    "id": 226696,
+    "name": "Mighty Advisor's Favor",
+    "icon": "inv_11_0_nerubian_necklace_02_color5",
+    "quality": 4,
+    "itemClass": 4,
+    "itemSubClass": 0,
+    "inventoryType": 2,
+    "itemLevel": 571,
+    "stats": [
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 40,
+        "alloc": 14500
+      },
+      {
+        "id": 49,
+        "alloc": 3000
+      }
+    ],
+    "expansion": 10
+  },
+  {
+    "id": 228157,
+    "name": "Impalers of the Hypogeal Nemesis",
+    "icon": "inv_leather_raiddemonhunternerubian_d_01_helm",
+    "quality": 4,
+    "itemClass": 4,
+    "itemSubClass": 2,
+    "inventoryType": 1,
+    "itemLevel": 571,
+    "allowableClasses": [
+      12
+    ],
+    "stats": [
+      {
+        "id": 73,
+        "alloc": 5259
+      },
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 49,
+        "alloc": 4721
+      },
+      {
+        "id": 36,
+        "alloc": 2279
+      }
+    ],
+    "expansion": 10
+  },
+  {
+    "id": 229000,
+    "name": "Machine-Warden's Cog",
+    "icon": "inv_cape_armor_earthencivilian_d_02_dark",
+    "quality": 4,
+    "itemClass": 4,
+    "itemSubClass": 1,
+    "inventoryType": 16,
+    "itemLevel": 1,
+    "cosmetic": true,
+    "expansion": 10
+  }
+]

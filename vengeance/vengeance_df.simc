@@ -1,0 +1,214 @@
+# 10.2.7 nerfs
+override.spell_data=effect.1026143.base_value=2
+override.spell_data=spell.202137.cooldown=90
+override.spell_data=spell.202137.charge_cooldown=90
+override.spell_data=effect.344032.ap_coefficient=1.4812
+
+desired_targets=1
+max_time=300
+optimal_raid=1
+iterations=10000
+target_error=0.05
+report_details=0
+single_actor_batch=1
+optimize_expressions=1
+# calculate_scale_factors=1
+# normalize_scale_factors=1
+# scale_only=agility,versatility,mastery,haste,crit
+# debug=1
+# output=/Users/tom/Documents/GitHub/APL/log.txt
+html=/Users/tom/Documents/GitHub/APL/report.html
+json2=/Users/tom/Documents/GitHub/APL/report.json
+report_details=1
+demonhunter="T31_Demon_Hunter_Vengeance"
+source=default
+spec=vengeance
+level=70
+race=night_elf
+timeofday=day
+role=tank
+position=front
+talents=BUkAAAAAAAAAAAAAAAAAAAAAAAAiIJJikgkkEhIlkQiWiEJSCJhEtIhEEAAAAQSSA
+
+# profileset."No SpB DiF"+=talents=BUkAAAAAAAAAAAAAAAAAAAAAAAAISSiQCSSIhkUiIhWiEhESSaJJtkESQAAAAAJJB
+# profileset."standard DiF"+=talents=BUkAAAAAAAAAAAAAAAAAAAAAAAAISSiQCSSQIJlIkolIRiESSaJJtkESQAAAAAJJB
+# profileset."No SpB IS"+=talents=BUkAAAAAAAAAAAAAAAAAAAAAAAAISSiQCSSIhk0SiEaJSESQSaJJtkESQAAAAAJJB
+# profileset."standard IS"+=talents=BUkAAAAAAAAAAAAAAAAAAAAAAAAISSiQCSSQIJtkQiWiEJSQSaJJtkESQAAAAAJJB
+# profileset."defensive IS ascending"+=talents=BUkAAAAAAAAAAAAAAAAAAAAAAAAISSiQCSSIhk0SCiWiEJSQSaJJtkESQAAAAAJJB
+# profileset."defensive IS"+=talents=BUkAAAAAAAAAAAAAAAAAAAAAAAAISSiQCSSIhEtkQiWiEJSQSaJJtkESQAAAAAJJB
+# profileset."chains no volatile"+=talents=BUkAzqt9tQbK6xteCyjwasgfTCAISSiQCSSIhk0SiIaJSkIBRaJJtkESQAAAAAJJB
+# profileset."chains no meteoric"+=talents=BUkAzqt9tQbK6xteCyjwasgfTCAISSiQCSSIhk0SCiWiEJSQSaJJtkESQAAAAAJJB
+# profileset."chains no spb"+=talents=BUkAAAAAAAAAAAAAAAAAAAAAAAAiIJJCJIJBhEtkIJaJSkIBJplk0kkWSQAAAAAJJA
+# profileset."standard sigilweaver"+=talents=BUkAAAAAAAAAAAAAAAAAAAAAAAAiIJJCJIJBhEtkIJaJSkIBJplk0kkWSQAAAAAJJA
+# profileset."standard heretic"+=talents=BUkAAAAAAAAAAAAAAAAAAAAAAAAiIJJCJIJREiUSCJaJSkIhkEJJtIhEEAAAAQSSA
+# profileset."DiF no_spb DGB BA Hunt"+=talents=BUkAAAAAAAAAAAAAAAAAAAAAAAAiIJJCJIJBhkUSChWikESQSaJJtIhEEAAAAQSSA
+# profileset."IS no_spb DGB BA ED"+=talents=BUkAAAAAAAAAAAAAAAAAAAAAAAAISSiQCSSQIJtkQolIJhEkkWSSLJhEEAAAAQSSA
+# profileset."DiF no_spb DGB carver Hunt"+=talents=BUkAAAAAAAAAAAAAAAAAAAAAAAAiIJJCJIJBhIlkQolIJhkQSaJJtIhEEAAAAQSSA
+# profileset."IS no_spb DGB carver ED"+=talents=BUkAAAAAAAAAAAAAAAAAAAAAAAAISSiQCSSQISLJEaJSSIJkkWSSLJhEEAAAAQSSA
+# profileset."DiF no_spb stoke DGB Hunt"+=talents=BUkAAAAAAAAAAAAAAAAAAAAAAAAiIJJCJIJBhIlkQolIJhESSaJJtIhEEAAAAQSSA
+# profileset."IS no_spb stoke DGB ED"+=talents=BUkAAAAAAAAAAAAAAAAAAAAAAAAISSiQCSSQISLJEaJSSIhkkWSSLJhEEAAAAQSSA
+# profileset."carver dgb shear"+=talents=BUkAAAAAAAAAAAAAAAAAAAAAAAAiIJJCJIJJRISJJIaJSOQikQSIJtIhEEAAAAQSSA
+# profileset."carver dgb"+=talents=BUkAAAAAAAAAAAAAAAAAAAAAAAAiIJJCJIJJRISJJIaJSOQikQSIJtIhEEAAAAQSSA
+# profileset."no spirit bomb"+=talents=BUkAAAAAAAAAAAAAAAAAAAAAAAAiIJJCJIJJRIKlkgolIJhkQSIJtIhSQAAAAAJJB
+# profileset."DiF carver hunt retaliation"+=talents=BUkAAAAAAAAAAAAAAAAAAAAAAAAiIJJCJIJJRISJJIaJSkIJkEJJtIhEEAAAAQSSA
+# profileset."IS stoke carver hunt"+=talents=BUkAAAAAAAAAAAAAAAAAAAAAAAAiIJJCJIJREi0SCJaJSkIJkEJJtIhEEAAAAQSSA
+# profileset."IS dgb carver elysian"+=talents=BUkAAAAAAAAAAAAAAAAAAAAAAAAISSiQCSSEhItkQiWiEJSCJRSSLJhEEAAAAQSSA
+# profileset."DiF dgb carver hunt"+=talents=BUkAAAAAAAAAAAAAAAAAAAAAAAAiIJJCJIJREiUSCJaJSkIJkEJJtIhEEAAAAQSSA
+# profileset."DiF dgb stoke hunt"+=talents=BUkAAAAAAAAAAAAAAAAAAAAAAAAiIJJCJIJRkmIlkgokIRiESSkk0iESQAAAAAJJB
+# profileset."DiF carver stoke hunt"+=talents=BUkAAAAAAAAAAAAAAAAAAAAAAAAiIJJCJIJRkmIlkgokIRikISkk0iESQAAAAAJJB
+# profileset."DiF carver stoke"+=talents=BUkAAAAAAAAAAAAAAAAAAAAAAAAISSiQCSSEpJJlIIKJSkIJiEJJtkESQAAAAAJJB
+# profileset."DiF carver cycle stoke no burning bulk"+=talents=BUkAAAAAAAAAAAAAAAAAAAAAAAAISSiQCSSEpJSJJIKJSkIJiEJJtkESQAAAAAJJB
+# profileset."DiF DGB cycle stoke no burning bulk 2"+=talents=BUkAAAAAAAAAAAAAAAAAAAAAAAAISSiQCSSEpJSJJIKJSkIhkEJJtkESQAAAAAJJB
+# profileset."DiF DGB cycle stoke no burning bulk"+=talents=BUkAAAAAAAAAAAAAAAAAAAAAAAAISSiQCSSEpJSJJIKJSkIhkEJJtkESQAAAAAJJB
+# profileset."DiF DGB cycle bulk"+=talents=BUkAAAAAAAAAAAAAAAAAAAAAAAAISSiQCSSEpJJlkgokIRiEkEJJtkESQAAAAAJJB
+# profileset."IS DGB cycle bulk"+=talents=BUkAAAAAAAAAAAAAAAAAAAAAAAAISSiQCSSEpJJtkgokIRiEkEJJtkESQAAAAAJJB
+# profileset."IS DGB cycle stoke no burning bulk"+=talents=BUkAAAAAAAAAAAAAAAAAAAAAAAAISSiQCSSEpJSLJIKJSkIhkEJJtkESQAAAAAJJB
+# profileset."IS DGB cycle frac retaliate"+=talents=BUkAAAAAAAAAAAAAAAAAAAAAAAAISSiQCSSSESSLJIaJSkIBJRSSLJhEEAAAAQSSA
+# profileset."IS DGB cycle frac bulk"+=talents=BUkAAAAAAAAAAAAAAAAAAAAAAAAISSiQCSSEpJJtkgolIRiEkEJJtkESQAAAAAJJB
+# profileset."IS DGB cycle frac"+=talents=BUkAAAAAAAAAAAAAAAAAAAAAAAAISSiQCSSEhk0SCJaJSkIBJRSSLJhEEAAAAQSSA
+# profileset."IS DGB cycle shear"+=talents=BUkAAAAAAAAAAAAAAAAAAAAAAAAISSiQCSSEhk0SCJKJSkIBJRSSLJhEEAAAAQSSA
+# profileset."IS DGB stoke"+=talents=BUkAAAAAAAAAAAAAAAAAAAAAAAAISSiQCSSEhItkQiSiEJSiIRSSLJhEEAAAAQSSA
+# profileset."IS carver stoke"+=talents=BUkAAAAAAAAAAAAAAAAAAAAAAAAISSiQCSSEhItkQiSiEJSiIRSSLJhEEAAAAQSSA
+# profileset."DiF bulk"+=talents=BUkAAAAAAAAAAAAAAAAAAAAAAAAISSiQCSSEpJSJJIaJSkIhkEJJtkESQAAAAAJJB
+# profileset."IS bulk"+=talents=BUkAAAAAAAAAAAAAAAAAAAAAAAAISSiQCSSEpJSLJIaJSkIhkEJJtkESQAAAAAJJB
+# profileset."DiF soulcrush no burning"+=talents=BUkAAAAAAAAAAAAAAAAAAAAAAAAISSiQCSSEhIlkQiWiEJSIJRSSLJhEEAAAAQSSA
+# profileset."IS soulcrush cycle stoke dgb"+=talents=BUkAAAAAAAAAAAAAAAAAAAAAAAAISSiQCSSEhItkQiSiEJSIJRSSLJhEEAAAAQSSA
+# profileset."IS soulcrush cycle stoke dgb"+=talents=BUkAAAAAAAAAAAAAAAAAAAAAAAAISSiQCSSEhItkQiWiEJSIJRSSLJhEEAAAAQSSA
+# profileset."DiF soulcrush cycle stoke dgb"+=talents=BUkAAAAAAAAAAAAAAAAAAAAAAAAISSiQCSSEhk0igokI5AJSiIRSSLJhEEAAAAQSSA
+# profileset."soulcrush carver stoke"+=talents=BUkAAAAAAAAAAAAAAAAAAAAAAAAISSiQCSSEhk0igokI5AJSiIRSSLJhEEAAAAQSSA
+# profileset."soulcrush carver cycle"+=talents=BUkAAAAAAAAAAAAAAAAAAAAAAAAISSiQCSSEhk0SCiSikDkIJIRSSLJhEEAAAAQSSA
+# profileset."soulcrush carver DGB"+=talents=BUkAAAAAAAAAAAAAAAAAAAAAAAAISSiQCSSEhk0igokI5AJSCJRSSLJhEEAAAAQSSA
+# profileset."soulcrush stoke DGB"+=talents=BUkAAAAAAAAAAAAAAAAAAAAAAAAISSiQCSSEhk0igokI5AJSIJRSSLJhEEAAAAQSSA
+# profileset."soulcrush stoke cycle"+=talents=BUkAAAAAAAAAAAAAAAAAAAAAAAAISSiQCSSEhk0SCiSikDkIhIRSSLJhEEAAAAQSSA
+# profileset."FtD DiF carver DGB stoke"+=talents=BUkAAAAAAAAAAAAAAAAAAAAAAAAISSiQCSSEhkUigokIRCSSSaJJtkESQAAAAAJJB
+# profileset."FtD carver DGB stoke"+=talents=BUkAAAAAAAAAAAAAAAAAAAAAAAAISSiQCSSEhk0igokI5AJIJJRSSLJhEEAAAAQSSA
+# profileset."FtD carver DGB cycle"+=talents=BUkAAAAAAAAAAAAAAAAAAAAAAAAISSiQCSSEhk0SCiSiEJIRSaJJtkESQAAAAAJJB
+# profileset."FtD carver DGB cycle"+=talents=BUkAAAAAAAAAAAAAAAAAAAAAAAAISSiQCSSEhk0SCiSiEJIRSaJJtkESQAAAAAJJB
+# profileset."FtD LR DGB stoke"+=talents=BUkAAAAAAAAAAAAAAAAAAAAAAAAISSiQCSSEhk0igokIRSQSSaJJtkESQAAAAAJJB
+# profileset."FtD LR DGB cycle"+=talents=BUkAAAAAAAAAAAAAAAAAAAAAAAAISSiQCSSEhk0SCiSiEJBRSaJJtkESQAAAAAJJB
+# profileset."vuln no soulcrush"+=talents=BUkAAAAAAAAAAAAAAAAAAAAAAAAISSiQCSSEhk0igokI5AJkIJRSSLJhEEAAAAQSSA
+
+# Default consumables
+potion=elemental_potion_of_ultimate_power_3
+flask=iced_phial_of_corrupting_rage_3
+food=feisty_fish_sticks
+augmentation=draconic
+temporary_enchant=main_hand:buzzing_rune_3/off_hand:buzzing_rune_3
+
+# Executed before combat begins. Accepts non-harmful actions only.
+actions.precombat=flask
+actions.precombat+=/augmentation
+actions.precombat+=/food
+actions.precombat+=/snapshot_stats
+actions.precombat+=/sigil_of_flame
+actions.precombat+=/immolation_aura
+
+# Check if fiery demise is active and spread
+actions+=/variable,name=fd_ready,value=talent.fiery_brand&talent.fiery_demise&active_dot.fiery_brand>0
+# Don't spend fury when fel dev soon to maximize fel dev uptime
+actions+=/variable,name=dont_cleave,value=(cooldown.fel_devastation.remains<=(action.soul_cleave.execute_time+gcd.remains))&fury<80
+# When to use Spirit Bomb with Focused Cleave
+actions+=/variable,name=single_target,value=spell_targets.spirit_bomb=1
+actions+=/variable,name=small_aoe,value=spell_targets.spirit_bomb>=2&spell_targets.spirit_bomb<=5
+actions+=/variable,name=big_aoe,value=spell_targets.spirit_bomb>=6
+actions+=/variable,name=can_spb,op=setif,condition=variable.fd_ready,value=(variable.single_target&soul_fragments>=5)|(variable.small_aoe&soul_fragments>=4)|(variable.big_aoe&soul_fragments>=3),value_else=(variable.small_aoe&soul_fragments>=4)|(variable.big_aoe&soul_fragments>=3)
+actions+=/auto_attack
+actions+=/disrupt,if=target.debuff.casting.react
+actions+=/infernal_strike,use_off_gcd=1
+actions+=/demon_spikes,use_off_gcd=1,if=!buff.demon_spikes.up&!cooldown.pause_action.remains
+actions+=/metamorphosis,use_off_gcd=1,if=!buff.metamorphosis.up&cooldown.fel_devastation.remains>12
+actions+=/potion,use_off_gcd=1
+actions+=/call_action_list,name=externals
+actions+=/use_items,use_off_gcd=1
+actions+=/call_action_list,name=fiery_demise,if=talent.fiery_brand&talent.fiery_demise&active_dot.fiery_brand>0
+actions+=/call_action_list,name=maintenance
+actions+=/run_action_list,name=single_target,if=variable.single_target
+actions+=/run_action_list,name=small_aoe,if=variable.small_aoe
+actions+=/run_action_list,name=big_aoe,if=variable.big_aoe
+
+# Maintenance & upkeep
+actions.maintenance=fiery_brand,if=talent.fiery_brand&((active_dot.fiery_brand=0&(cooldown.sigil_of_flame.remains<=(execute_time+gcd.remains)|cooldown.soul_carver.remains<=(execute_time+gcd.remains)|cooldown.fel_devastation.remains<=(execute_time+gcd.remains)))|(talent.down_in_flames&full_recharge_time<=(execute_time+gcd.remains)))
+actions.maintenance+=/sigil_of_flame,if=talent.ascending_flame|(active_dot.sigil_of_flame=0&!in_flight)
+actions.maintenance+=/immolation_aura
+actions.maintenance+=/bulk_extraction,if=((5-soul_fragments)<=spell_targets)&soul_fragments<=2
+actions.maintenance+=/spirit_bomb,if=variable.can_spb
+actions.maintenance+=/felblade,if=((!talent.spirit_bomb|active_enemies=1)&fury.deficit>=40)|((cooldown.fel_devastation.remains<=(execute_time+gcd.remains))&fury<50)
+actions.maintenance+=/fracture,if=(cooldown.fel_devastation.remains<=(execute_time+gcd.remains))&fury<50
+actions.maintenance+=/shear,if=(cooldown.fel_devastation.remains<=(execute_time+gcd.remains))&fury<50
+# Don't overcap fury
+actions.maintenance+=/spirit_bomb,if=fury.deficit<=30&spell_targets>1&soul_fragments>=4
+actions.maintenance+=/soul_cleave,if=fury.deficit<=40
+
+# Fiery demise window
+actions.fiery_demise=immolation_aura
+actions.fiery_demise+=/sigil_of_flame,if=talent.ascending_flame|active_dot.sigil_of_flame=0
+actions.fiery_demise+=/felblade,if=(!talent.spirit_bomb|(cooldown.fel_devastation.remains<=(execute_time+gcd.remains)))&fury<50
+actions.fiery_demise+=/fel_devastation
+actions.fiery_demise+=/soul_carver,if=soul_fragments.total<3
+actions.fiery_demise+=/the_hunt
+actions.fiery_demise+=/elysian_decree,line_cd=1.85,if=fury>=40
+actions.fiery_demise+=/spirit_bomb,if=variable.can_spb
+
+# Single Target
+actions.single_target+=/the_hunt
+actions.single_target+=/soul_carver
+actions.single_target+=/fel_devastation
+actions.single_target+=/elysian_decree
+actions.single_target+=/soul_cleave,if=!variable.dont_cleave
+actions.single_target+=/fracture
+actions.single_target+=/shear
+actions.single_target+=/call_action_list,name=filler
+
+# 2-5 targets
+actions.small_aoe=the_hunt
+actions.small_aoe+=/fel_devastation,if=talent.collective_anguish.enabled|(talent.stoke_the_flames.enabled&talent.burning_blood.enabled)
+actions.small_aoe+=/elysian_decree,line_cd=1.85,if=!prev_gcd.1.elysian_decree&fury>=40&(soul_fragments.total<=1|soul_fragments.total>=4)
+actions.small_aoe+=/fel_devastation
+actions.small_aoe+=/soul_carver,if=soul_fragments.total<3
+actions.small_aoe+=/soul_cleave,if=(soul_fragments<=1|!talent.spirit_bomb)&!variable.dont_cleave
+actions.small_aoe+=/fracture
+actions.small_aoe+=/shear
+actions.small_aoe+=/call_action_list,name=filler
+
+# 6+ targets
+actions.big_aoe=fel_devastation,if=talent.collective_anguish|talent.stoke_the_flames
+actions.big_aoe+=/the_hunt
+actions.big_aoe+=/elysian_decree,line_cd=1.85,if=!prev_gcd.1.elysian_decree&fury>=40&(soul_fragments.total<=1|soul_fragments.total>=4)
+actions.big_aoe+=/fel_devastation
+actions.big_aoe+=/soul_carver,if=soul_fragments.total<3
+actions.big_aoe+=/spirit_bomb,if=soul_fragments>=4
+actions.big_aoe+=/soul_cleave,if=!talent.spirit_bomb&!variable.dont_cleave
+actions.big_aoe+=/fracture
+actions.big_aoe+=/shear
+actions.big_aoe+=/soul_cleave,if=!variable.dont_cleave
+actions.big_aoe+=/call_action_list,name=filler
+
+# Filler
+actions.filler=sigil_of_chains,if=talent.cycle_of_binding&talent.sigil_of_chains
+actions.filler+=/sigil_of_misery,if=talent.cycle_of_binding&talent.sigil_of_misery
+actions.filler+=/sigil_of_silence,if=talent.cycle_of_binding&talent.sigil_of_silence
+actions.filler+=/felblade
+actions.filler+=/shear
+actions.filler+=/throw_glaive
+
+# External buffs
+actions.externals=invoke_external_buff,name=symbol_of_hope
+actions.externals+=/invoke_external_buff,name=power_infusion
+
+# Default gear
+head=screaming_torchfiends_burning_scowl,id=217228,bonus_id=10359/1488/6935,gem_id=192991,enchant=incandescent_essence
+neck=terross_captive_core,id=195502,bonus_id=10359/1491/8782,gem_id=192945/192945/192945
+shoulders=screaming_torchfiends_horned_memento,id=217230,bonus_id=10359/1491
+back=voice_of_the_silent_star,id=204465,bonus_id=10359/1495/10884
+chest=screaming_torchfiends_binding,id=217226,bonus_id=10359/1488,enchant_id=6625
+wrists=lifebound_bindings,id=193419,bonus_id=9379/10359/1485/6935,gem_id=192945,crafted_stats=36/32
+hands=screaming_torchfiends_grasp,id=217227,bonus_id=10359/1488
+waist=elders_volcanic_binding,id=202655,bonus_id=10359/1488/6935,gem_id=192985
+legs=loathsome_thunderhosen,id=195530,bonus_id=10359/1488,enchant=frosted_armor_kit_3
+feet=lifebound_boots,id=193398,bonus_id=9379/10359/1485,crafted_stats=36/32
+finger1=seal_of_diurnas_chosen,id=195480,bonus_id=10359/1488/6935,gem_id=192922,enchant=devotion_of_haste_3
+finger2=onyx_impostors_birthright,id=204398,bonus_id=10359/1488/6935,gem_id=192922,enchant=devotion_of_versatility_3
+trinket1=elementium_pocket_anvil,id=202617,bonus_id=10359/1488
+trinket2=cataclysmic_signet_brand,id=207166,bonus_id=10359/1488
+main_hand=thorncaller_claw,id=207784,bonus_id=10359/1488,enchant=wafting_devotion_3
+off_hand=stormslash,id=193688,bonus_id=10359/1488,enchant=wafting_devotion_3

@@ -1,0 +1,497 @@
+{
+  "DEMON_HUNTER": {
+    "HERO_TALENTS": {
+      "aldrachi_keen": {
+        "simc_name": "aldrachi_keen",
+        "full_name": "Aldrachi Keen",
+        "abbreviation": "Aldrachi Keen"
+      },
+      "aldrachi_preemptive": {
+        "simc_name": "aldrachi_preemptive",
+        "full_name": "Aldrachi Preemptive",
+        "abbreviation": "Aldrachi Pre"
+      },
+      "felscarred_student": {
+        "simc_name": "felscarred_student",
+        "full_name": "Felscarred Student",
+        "abbreviation": "Felscarred Student"
+      },
+      "felscarred_flamebound": {
+        "simc_name": "felscarred_flamebound",
+        "full_name": "Felscarred Flamebound",
+        "abbreviation": "Felscarred Flamebound"
+      }
+    },
+    "CLASS_TALENTS": {
+      "collective_anguish": {
+        "simc_name": "collective_anguish",
+        "full_name": "Collective Anguish",
+        "abbreviation": "CA"
+      },
+      "the_hunt": {
+        "simc_name": "the_hunt",
+        "full_name": "The Hunt",
+        "abbreviation": "Hunt"
+      },
+      "sigil_of_spite": {
+        "simc_name": "sigil_of_spite",
+        "full_name": "Sigil of Spite",
+        "abbreviation": "SoSp"
+      }
+    },
+    "HAVOC_TALENTS": {
+      "a_fire_inside": {
+        "simc_name": "a_fire_inside",
+        "full_name": "A Fire Inside",
+        "abbreviation": "AFI",
+        "talent_type": "offensive"
+      },
+      "accelerated_blade": {
+        "simc_name": "accelerated_blade",
+        "full_name": "Accelerated Blade",
+        "abbreviation": "AB",
+        "talent_type": "offensive"
+      },
+      "annihilation": {
+        "simc_name": "annihilation",
+        "full_name": "Annihilation",
+        "abbreviation": "Anni",
+        "talent_type": "offensive"
+      },
+      "any_means_necessary": {
+        "simc_name": "any_means_necessary",
+        "full_name": "Any Means Necessary",
+        "abbreviation": "AMN",
+        "talent_type": "offensive"
+      },
+      "blade_dance": {
+        "simc_name": "blade_dance",
+        "full_name": "Blade Dance",
+        "abbreviation": "BD",
+        "talent_type": "offensive"
+      },
+      "blind_fury": {
+        "simc_name": "blind_fury",
+        "full_name": "Blind Fury",
+        "abbreviation": "BF",
+        "talent_type": "offensive"
+      },
+      "burning_hatred": {
+        "simc_name": "burning_hatred",
+        "full_name": "Burning Hatred",
+        "abbreviation": "BH",
+        "talent_type": "offensive"
+      },
+      "burning_wound": {
+        "simc_name": "burning_wound",
+        "full_name": "Burning Wound",
+        "abbreviation": "BW",
+        "talent_type": "offensive"
+      },
+      "champion_of_the_glaive": {
+        "simc_name": "champion_of_the_glaive",
+        "full_name": "Champion of the Glaive",
+        "abbreviation": "CotG",
+        "talent_type": "offensive"
+      },
+      "chaos_strike": {
+        "simc_name": "chaos_strike",
+        "full_name": "Chaos Strike",
+        "abbreviation": "CS",
+        "talent_type": "offensive"
+      },
+      "chaos_theory": {
+        "simc_name": "chaos_theory",
+        "full_name": "Chaos Theory",
+        "abbreviation": "CT",
+        "talent_type": "offensive"
+      },
+      "chaotic_disposition": {
+        "simc_name": "chaotic_disposition",
+        "full_name": "Chaotic Disposition",
+        "abbreviation": "CD",
+        "talent_type": "offensive"
+      },
+      "chaotic_transformation": {
+        "simc_name": "chaotic_transformation",
+        "full_name": "Chaotic Transformation",
+        "abbreviation": "CTr",
+        "talent_type": "offensive"
+      },
+      "critical_chaos": {
+        "simc_name": "critical_chaos",
+        "full_name": "Critical Chaos",
+        "abbreviation": "CC",
+        "talent_type": "offensive"
+      },
+      "cycle_of_hatred": {
+        "simc_name": "cycle_of_hatred",
+        "full_name": "Cycle of Hatred",
+        "abbreviation": "CoH",
+        "talent_type": "offensive"
+      },
+      "dancing_with_fate": {
+        "simc_name": "dancing_with_fate",
+        "full_name": "Dancing with Fate",
+        "abbreviation": "DWF",
+        "talent_type": "offensive"
+      },
+      "death_sweep": {
+        "simc_name": "death_sweep",
+        "full_name": "Death Sweep",
+        "abbreviation": "DS",
+        "talent_type": "offensive"
+      },
+      "demon_blades": {
+        "simc_name": "demon_blades",
+        "full_name": "Demon Blades",
+        "abbreviation": "DBlades",
+        "talent_type": "offensive"
+      },
+      "demonic_appetite": {
+        "simc_name": "demonic_appetite",
+        "full_name": "Demonic Appetite",
+        "abbreviation": "DA",
+        "talent_type": "offensive"
+      },
+      "demons_bite": {
+        "simc_name": "demons_bite",
+        "full_name": "Demon's Bite",
+        "abbreviation": "DBite",
+        "talent_type": "offensive"
+      },
+      "eye_beam": {
+        "simc_name": "eye_beam",
+        "full_name": "Eye Beam",
+        "abbreviation": "EB",
+        "talent_type": "offensive"
+      },
+      "fel_barrage": {
+        "simc_name": "fel_barrage",
+        "full_name": "Fel Barrage",
+        "abbreviation": "FBarr",
+        "talent_type": "offensive"
+      },
+      "fel_eruption": {
+        "simc_name": "fel_eruption",
+        "full_name": "Fel Eruption",
+        "abbreviation": "FE",
+        "talent_type": "offensive"
+      },
+      "fel_rush": {
+        "simc_name": "fel_rush",
+        "full_name": "Fel Rush",
+        "abbreviation": "FR",
+        "talent_type": "offensive"
+      },
+      "first_blood": {
+        "simc_name": "first_blood",
+        "full_name": "First Blood",
+        "abbreviation": "FiB",
+        "talent_type": "offensive"
+      },
+      "furious_gaze": {
+        "simc_name": "furious_gaze",
+        "full_name": "Furious Gaze",
+        "abbreviation": "FG",
+        "talent_type": "offensive"
+      },
+      "furious_throws": {
+        "simc_name": "furious_throws",
+        "full_name": "Furious Throws",
+        "abbreviation": "FT",
+        "talent_type": "offensive"
+      },
+      "glaive_tempest": {
+        "simc_name": "glaive_tempest",
+        "full_name": "Glaive Tempest",
+        "abbreviation": "GT",
+        "talent_type": "offensive"
+      },
+      "growing_inferno": {
+        "simc_name": "growing_inferno",
+        "full_name": "Growing Inferno",
+        "abbreviation": "GI",
+        "talent_type": "offensive"
+      },
+      "immolation_aura": {
+        "simc_name": "immolation_aura",
+        "full_name": "Immolation Aura",
+        "abbreviation": "IA",
+        "talent_type": "offensive"
+      },
+      "initiative": {
+        "simc_name": "initiative",
+        "full_name": "Initiative",
+        "abbreviation": "Init",
+        "talent_type": "offensive"
+      },
+      "inner_demon": {
+        "simc_name": "inner_demon",
+        "full_name": "Inner Demon",
+        "abbreviation": "ID",
+        "talent_type": "offensive"
+      },
+      "insatiable_hunger": {
+        "simc_name": "insatiable_hunger",
+        "full_name": "Insatiable Hunger",
+        "abbreviation": "IH",
+        "talent_type": "offensive"
+      },
+      "isolated_prey": {
+        "simc_name": "isolated_prey",
+        "full_name": "Isolated Prey",
+        "abbreviation": "IP",
+        "talent_type": "offensive"
+      },
+      "know_your_enemy": {
+        "simc_name": "know_your_enemy",
+        "full_name": "Know Your Enemy",
+        "abbreviation": "KYE",
+        "talent_type": "offensive"
+      },
+      "looks_can_kill": {
+        "simc_name": "looks_can_kill",
+        "full_name": "Looks Can Kill",
+        "abbreviation": "LCK",
+        "talent_type": "offensive"
+      },
+      "relentless_onslaught": {
+        "simc_name": "relentless_onslaught",
+        "full_name": "Relentless Onslaught",
+        "abbreviation": "RO",
+        "talent_type": "offensive"
+      },
+      "restless_hunter": {
+        "simc_name": "restless_hunter",
+        "full_name": "Restless Hunter",
+        "abbreviation": "RH",
+        "talent_type": "offensive"
+      },
+      "rush_of_chaos": {
+        "simc_name": "rush_of_chaos",
+        "full_name": "Rush of Chaos",
+        "abbreviation": "ROC",
+        "talent_type": "offensive"
+      },
+      "serrated_glaive": {
+        "simc_name": "serrated_glaive",
+        "full_name": "Serrated Glaive",
+        "abbreviation": "SG",
+        "talent_type": "offensive"
+      },
+      "shattered_destiny": {
+        "simc_name": "shattered_destiny",
+        "full_name": "Shattered Destiny",
+        "abbreviation": "SD",
+        "talent_type": "offensive"
+      },
+      "shattered_soul": {
+        "simc_name": "shattered_soul",
+        "full_name": "Shattered Soul",
+        "abbreviation": "Souls",
+        "talent_type": "offensive"
+      },
+      "soul_rending": {
+        "simc_name": "soul_rending",
+        "full_name": "Soul Rending",
+        "abbreviation": "SR",
+        "talent_type": "offensive"
+      },
+      "soulscar": {
+        "simc_name": "soulscar",
+        "full_name": "Soulscar",
+        "abbreviation": "SSc",
+        "talent_type": "offensive"
+      },
+      "trail_of_ruin": {
+        "simc_name": "trail_of_ruin",
+        "full_name": "Trail of Ruin",
+        "abbreviation": "ToR",
+        "talent_type": "offensive"
+      },
+      "unbound_chaos": {
+        "simc_name": "unbound_chaos",
+        "full_name": "Unbound Chaos",
+        "abbreviation": "UBC",
+        "talent_type": "offensive"
+      },
+      "deflecting_dance": {
+        "simc_name": "deflecting_dance",
+        "full_name": "Deflecting Dance",
+        "abbreviation": "DD",
+        "talent_type": "defensive"
+      },
+      "mortal_dance": {
+        "simc_name": "mortal_dance",
+        "full_name": "Mortal Dance",
+        "abbreviation": "MD",
+        "talent_type": "defensive"
+      },
+      "desperate_instincts": {
+        "simc_name": "desperate_instincts",
+        "full_name": "Desperate Instincts",
+        "abbreviation": "DI",
+        "talent_type": "defensive"
+      },
+      "netherwalk": {
+        "simc_name": "netherwalk",
+        "full_name": "Netherwalk",
+        "abbreviation": "NW",
+        "talent_type": "defensive"
+      }
+    },
+    "VENGEANCE_TALENTS": {
+      "ascending_flame": {
+        "simc_name": "ascending_flame",
+        "full_name": "Ascending Flame",
+        "abbreviation": "AF",
+        "talent_type": "offensive"
+      },
+      "spirit_bomb": {
+        "simc_name": "spirit_bomb",
+        "full_name": "Spirit Bomb",
+        "abbreviation": "SpB",
+        "talent_type": "offensive"
+      },
+      "bulk_extraction": {
+        "simc_name": "bulk_extraction",
+        "full_name": "Bulk Extraction",
+        "abbreviation": "BE",
+        "talent_type": "offensive"
+      },
+      "burning_blood": {
+        "simc_name": "burning_blood",
+        "full_name": "Burning Blood",
+        "abbreviation": "BB",
+        "talent_type": "offensive"
+      },
+      "soul_furnace": {
+        "simc_name": "soul_furnace",
+        "full_name": "Soul Furnace",
+        "abbreviation": "SF",
+        "talent_type": "offensive"
+      },
+      "focused_cleave": {
+        "simc_name": "focused_cleave",
+        "full_name": "Focused Cleave",
+        "abbreviation": "FC",
+        "talent_type": "offensive"
+      },
+      "chains_of_anger": {
+        "simc_name": "chains_of_anger",
+        "full_name": "Chains of Anger",
+        "abbreviation": "CoA",
+        "talent_type": "offensive"
+      },
+      "volatile_flameblood": {
+        "simc_name": "volatile_flameblood",
+        "full_name": "Volatile Flameblood",
+        "abbreviation": "VF",
+        "talent_type": "offensive"
+      },
+      "fiery_demise": {
+        "simc_name": "fiery_demise",
+        "full_name": "Fiery Demise",
+        "abbreviation": "FD",
+        "talent_type": "offensive"
+      },
+      "stoke_the_flames": {
+        "simc_name": "stoke_the_flames",
+        "full_name": "Stoke the Flames",
+        "abbreviation": "StF",
+        "talent_type": "offensive"
+      },
+      "cycle_of_binding": {
+        "simc_name": "cycle_of_binding",
+        "full_name": "Cycle of Binding",
+        "abbreviation": "CoB",
+        "talent_type": "offensive"
+      },
+      "burning_alive": {
+        "simc_name": "burning_alive",
+        "full_name": "Burning Alive",
+        "abbreviation": "BA",
+        "talent_type": "offensive"
+      },
+      "charred_flesh": {
+        "simc_name": "charred_flesh",
+        "full_name": "Charred Flesh",
+        "abbreviation": "CF",
+        "talent_type": "offensive"
+      },
+      "darkglare_boon": {
+        "simc_name": "darkglare_boon",
+        "full_name": "Darkglare Boon",
+        "abbreviation": "DGB",
+        "talent_type": "offensive"
+      },
+      "soul_carver": {
+        "simc_name": "soul_carver",
+        "full_name": "Soul Carver",
+        "abbreviation": "SC",
+        "talent_type": "offensive"
+      },
+      "soulcrush": {
+        "simc_name": "soulcrush",
+        "full_name": "Soulcrush",
+        "abbreviation": "Crush",
+        "talent_type": "offensive"
+      },
+      "illuminated_sigils": {
+        "simc_name": "illuminated_sigils",
+        "full_name": "Illuminated Sigils",
+        "abbreviation": "IS",
+        "talent_type": "offensive"
+      },
+      "down_in_flames": {
+        "simc_name": "down_in_flames",
+        "full_name": "Down in Flames",
+        "abbreviation": "DiF",
+        "talent_type": "offensive"
+      },
+      "calcified_spikes": {
+        "simc_name": "calcified_spikes",
+        "full_name": "Calcified Spikes",
+        "abbreviation": "CS",
+        "talent_type": "defensive"
+      },
+      "extended_spikes": {
+        "simc_name": "extended_spikes",
+        "full_name": "Extended Spikes",
+        "abbreviation": "ES",
+        "talent_type": "defensive"
+      },
+      "fel_flame_fortification": {
+        "simc_name": "fel_flame_fortification",
+        "full_name": "Fel Flame Fortification",
+        "abbreviation": "FFF",
+        "talent_type": "defensive"
+      },
+      "void_reaver": {
+        "simc_name": "void_reaver",
+        "full_name": "Void Reaver",
+        "abbreviation": "VR",
+        "talent_type": "defensive"
+      },
+      "painbringer": {
+        "simc_name": "painbringer",
+        "full_name": "Painbringer",
+        "abbreviation": "PB",
+        "talent_type": "defensive"
+      },
+      "feed_the_demon": {
+        "simc_name": "feed_the_demon",
+        "full_name": "Feed the Demon",
+        "abbreviation": "FtD",
+        "talent_type": "defensive"
+      },
+      "last_resort": {
+        "simc_name": "last_resort",
+        "full_name": "Last Resort",
+        "abbreviation": "LR",
+        "talent_type": "defensive"
+      }
+    }
+  }
+}

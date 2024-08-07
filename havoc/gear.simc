@@ -1,0 +1,16 @@
+head=,id=212065,gem_id=213479,ilevel=639
+neck=,id=212448,gem_id=213743/213491,ilevel=639
+shoulder=,id=212063,ilevel=639
+back=,id=225574,enchant_id=7403,ilevel=639
+chest=,id=212068,enchant_id=7364,ilevel=639
+wrist=,id=221142,bonus_id=8780,enchant_id=7385,gem_id=213743,ilevel=639
+hands=,id=212432,ilevel=639
+waist=,id=225583,bonus_id=1808,enchant_id=6904,gem_id=213458,ilevel=639
+legs=,id=212064,enchant_id=7595,ilevel=639
+feet=,id=221169,enchant_id=7424,ilevel=639
+finger1=,id=225578,bonus_id=1808,enchant_id=7473,gem_id=213458/213458,ilevel=639
+finger2=,id=215135,bonus_id=10222/8781/8791/10520/8960,enchant_id=7473,gem_id=213458/213458,ilevel=636
+trinket1=,id=133282,ilevel=639
+trinket2=,id=159623,ilevel=639
+main_hand=,id=219877,enchant_id=7460,ilevel=639
+off_hand=,id=212391,enchant_id=7460,ilevel=639
