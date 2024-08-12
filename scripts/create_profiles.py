@@ -6,70 +6,82 @@ import sys
 import configparser
 from typing import Dict, List, Any
 
+
 def load_json(file_name: str) -> List[Dict[str, Any]]:
-    with open(file_name, 'r') as f:
+    with open(file_name, "r") as f:
         return json.load(f)
+
 
 def load_gear(file_name: str) -> Dict[str, str]:
     gear = {}
-    with open(file_name, 'r') as f:
+    with open(file_name, "r") as f:
         for line in f:
-            if '=' in line:
-                slot, item = line.strip().split('=', 1)
+            if "=" in line:
+                slot, item = line.strip().split("=", 1)
                 gear[slot] = item
     return gear
 
+
 def clean_name(name: str) -> str:
-    # First, remove apostrophes
-    name_without_apostrophes = name.replace("'", "")
-    # Then, replace other non-alphanumeric characters with underscores
-    return re.sub(r'[^\w]', '_', name_without_apostrophes)
+    # Remove special characters and replace spaces with underscores
+    cleaned = re.sub(r"[^\w\s-]", "", name).strip().replace(" ", "_")
+    # Replace "quality" with an underscore, but keep the number
+    cleaned = re.sub(r"quality_?(\d*)", r"_\1", cleaned, flags=re.IGNORECASE)
+    # Remove any double underscores
+    cleaned = re.sub(r"__+", "_", cleaned)
+    # Remove any trailing underscores
+    cleaned = cleaned.rstrip("_")
+    return cleaned.lower()
+
 
 def generate_trinket_profilesets(trinkets: List[Dict[str, Any]]) -> List[str]:
     profilesets = []
     for trinket in trinkets:
-        if trinket['inventoryType'] == 12 and 'template' not in trinket['name'].lower():
-            name = clean_name(trinket['name'])
+        if trinket["inventoryType"] == 12 and "template" not in trinket["name"].lower():
+            name = clean_name(trinket["name"])
             gear_name = name.lower()
-            item_id = trinket['id']
+            item_id = trinket["id"]
             item_levels = [593, 606, 619, 626, 639]
 
             # Darkmoon Decks only have one ilevel
-            if 'Darkmoon Deck' in trinket['name']:
+            if "Darkmoon Deck" in trinket["name"]:
                 item_levels = [577]
             # Trinkets with unique ilevels
-            elif trinket['name'] == 'Bronzebeard Family Compass':
+            elif trinket["name"] == "Bronzebeard Family Compass":
                 item_levels = [597, 610, 623, 630, 643]
 
             for ilevel in item_levels:
                 profileset = f'profileset."{name}_{ilevel}"=trinket1=\nprofileset."{name}_{ilevel}"+=trinket2={gear_name},id={item_id},ilevel={ilevel}'
                 profilesets.append(profileset)
 
-    profilesets.append('profileset."No_Trinkets"=trinket1=\nprofileset."No_Trinkets"+=trinket2=')
+    profilesets.append(
+        'profileset."No_Trinkets"=trinket1=\nprofileset."No_Trinkets"+=trinket2='
+    )
     return profilesets
 
-def generate_enchant_profilesets(enchants: List[Dict[str, Any]], gear: Dict[str, str]) -> Dict[str, List[str]]:
-    profilesets = {
-        'Legs': [], 'Rings': [], 'Weapons': [], 'Chest': [], 'Other': []
-    }
+
+def generate_enchant_profilesets(
+    enchants: List[Dict[str, Any]], gear: Dict[str, str]
+) -> Dict[str, List[str]]:
+    profilesets = {"Legs": [], "Rings": [], "Weapons": [], "Chest": [], "Other": []}
     slots = {
-        'Weapon Enchantments': ('Weapons', 'main_hand'),
-        'Ring Enchantments': ('Rings', 'finger1'),
-        'Chest Enchantments': ('Chest', 'chest'),
-        'Cloak Enchantments': ('Other', 'back'),
-        'Wrist Enchantments': ('Other', 'wrist'),
-        'Hand Enchantments': ('Other', 'hands'),
-        'Foot Enchantments': ('Other', 'feet'),
+        "Weapon Enchantments": ("Weapons", "main_hand"),
+        "Ring Enchantments": ("Rings", "finger1"),
+        "Chest Enchantments": ("Chest", "chest"),
+        "Cloak Enchantments": ("Other", "back"),
+        "Wrist Enchantments": ("Other", "wrist"),
+        "Hand Enchantments": ("Other", "hands"),
+        "Foot Enchantments": ("Other", "feet"),
     }
 
     for enchant in enchants:
-        if 'template' in enchant.get('displayName', '').lower():
+        if "template" in enchant.get("displayName", "").lower():
             continue
 
-        category_name = enchant.get('categoryName', '')
-        name = enchant.get('displayName', f'Enchant_{enchant.get("id", "Unknown")}')
+        category_name = enchant.get("categoryName", "")
+        name = enchant.get("displayName", f'Enchant_{enchant.get("id", "Unknown")}')
         profileset_name = clean_name(name)
-        enchant_id = enchant.get('id')
+        enchant_id = enchant.get("id")
 
         if not enchant_id:
             continue
@@ -77,40 +89,48 @@ def generate_enchant_profilesets(enchants: List[Dict[str, Any]], gear: Dict[str,
         if category_name in slots:
             slot_category, gear_slot = slots[category_name]
             if gear_slot in gear:
-                if category_name == 'Ring Enchantments':
-                    for finger in ['finger1', 'finger2']:
+                if category_name == "Ring Enchantments":
+                    for finger in ["finger1", "finger2"]:
                         profileset = f'profileset."{slot_category}_{profileset_name}"+={finger}={gear[finger]},enchant_id={enchant_id}'
                         profilesets[slot_category].append(profileset)
-                elif category_name == 'Weapon Enchantments':
+                elif category_name == "Weapon Enchantments":
                     profileset = f'profileset."{slot_category}_{profileset_name}"+=main_hand={gear[gear_slot]},enchant_id={enchant_id}'
                     profilesets[slot_category].append(profileset)
-                    if 'off_hand' in gear:
+                    if "off_hand" in gear:
                         profileset = f'profileset."{slot_category}_{profileset_name}"+=off_hand={gear["off_hand"]},enchant_id={enchant_id}'
                         profilesets[slot_category].append(profileset)
                 else:
                     profileset = f'profileset."{slot_category}_{profileset_name}"+={gear_slot}={gear[gear_slot]},enchant_id={enchant_id}'
                     profilesets[slot_category].append(profileset)
-        elif 'Armor Kit' in enchant.get('itemName', '') and 'legs' in gear:
+        elif "Armor Kit" in enchant.get("itemName", "") and "legs" in gear:
             profileset = f'profileset."Legs_{profileset_name}"+=legs={gear["legs"]},enchant_id={enchant_id}'
-            profilesets['Legs'].append(profileset)
+            profilesets["Legs"].append(profileset)
 
     return profilesets
 
-def generate_gem_profilesets(gems: List[Dict[str, Any]], gear: Dict[str, str]) -> List[str]:
+
+def generate_gem_profilesets(
+    gems: List[Dict[str, Any]], gear: Dict[str, str]
+) -> List[str]:
     profilesets = []
     for gem in gems:
-        if gem.get('slot') == 'socket' and 'template' not in gem.get('itemName', '').lower():
-            name = gem.get('itemName', f'Gem_{gem.get("id", "Unknown")}')
+        if (
+            gem.get("slot") == "socket"
+            and "template" not in gem.get("itemName", "").lower()
+        ):
+            name = gem.get("itemName", f'Gem_{gem.get("id", "Unknown")}')
             profileset_name = clean_name(name)
-            gem_id = gem.get('itemId')
+            gem_id = gem.get("itemId")
 
             if not gem_id:
                 continue
 
-            profilesets.extend([
-                f'profileset."Gem_{profileset_name}"+=finger1={gear["finger1"]},gem_id={gem_id}',
-                f'profileset."Gem_{profileset_name}"+=finger2={gear["finger2"]},gem_id='
-            ])
+            profilesets.extend(
+                [
+                    f'profileset."Gem_{profileset_name}"+=finger1={gear["finger1"]},gem_id={gem_id}',
+                    f'profileset."Gem_{profileset_name}"+=finger2={gear["finger2"]},gem_id=',
+                ]
+            )
 
     return profilesets
 
@@ -118,11 +138,11 @@ def generate_gem_profilesets(gems: List[Dict[str, Any]], gear: Dict[str, str]) -
 def generate_consumable_profilesets(consumables: List[Dict[str, Any]]) -> List[str]:
     profilesets = []
     for consumable in consumables:
-        name = clean_name(consumable['name'])
-        item_id = consumable['itemId']
-        if "potion" in consumable['value']:  # Check if "potion" is anywhere in the value
+        name = clean_name(consumable["name"])
+        item_id = consumable["itemId"]
+        if "potion" in consumable["value"]:
             profileset = f'profileset."{name}"=potion={item_id}'
-        elif "flask" in consumable['value']:  # Check if "flask" is anywhere in the value
+        elif "flask" in consumable["value"]:
             profileset = f'profileset."{name}"=flask={item_id}'
         else:
             continue  # Skip other types of consumables
@@ -130,19 +150,25 @@ def generate_consumable_profilesets(consumables: List[Dict[str, Any]]) -> List[s
         profilesets.append(profileset)
 
     # Add a profile for no consumables
-    profilesets.append('profileset."No_Consumables"=potion=\nprofileset."No_Consumables"+=flask=')
+    profilesets.append(
+        'profileset."no_consumables"=potion=\nprofileset."no_consumables"+=flask='
+    )
 
     return profilesets
 
+
 def write_profilesets(profilesets: List[str], filename: str) -> None:
-    with open(filename, 'w') as f:
-        f.write('\n'.join(profilesets))
+    with open(filename, "w") as f:
+        f.write("\n".join(profilesets))
     print(f"Generated {len(profilesets)} profilesets in {filename}")
 
-def write_enchant_profilesets(profilesets: Dict[str, List[str]], base_path: str) -> None:
+
+def write_enchant_profilesets(
+    profilesets: Dict[str, List[str]], base_path: str
+) -> None:
     for category, profiles in profilesets.items():
         if profiles:
-            filename = f'{base_path}/enchant_profilesets_{category.lower()}.simc'
+            filename = f"{base_path}/enchant_profilesets_{category.lower()}.simc"
             write_profilesets(profiles, filename)
 
 
@@ -157,7 +183,7 @@ def main():
     config = configparser.ConfigParser()
     config.read(config_path)
 
-    apl_folder = config.get('General', 'apl_folder')
+    apl_folder = config.get("General", "apl_folder")
     apl_folder_full_path = os.path.join(config_dir, apl_folder)
 
     print(f"Config file: {config_path}")
@@ -172,14 +198,16 @@ def main():
     filter_script_path = os.path.join(script_dir, "filter_items_enchants.py")
     subprocess.run([sys.executable, filter_script_path], check=True)
 
-    data_dir = os.path.join(config_dir, 'data')
+    data_dir = os.path.join(config_dir, "data")
     required_files = [
-        os.path.join(data_dir, 'filtered_items.json'),
-        os.path.join(data_dir, 'filtered_enchants.json'),
-        os.path.join(data_dir, 'filtered_consumables.json')
+        os.path.join(data_dir, "filtered_items.json"),
+        os.path.join(data_dir, "filtered_enchants.json"),
+        os.path.join(data_dir, "filtered_consumables.json"),
     ]
     if not all(os.path.exists(file) for file in required_files):
-        print("Error: Required JSON files not found in the /data folder. Make sure filter_items_enchants.py created these files.")
+        print(
+            "Error: Required JSON files not found in the /data folder. Make sure filter_items_enchants.py created these files."
+        )
         return
 
     trinkets = load_json(required_files[0])
@@ -187,27 +215,38 @@ def main():
     gems = load_json(required_files[1])
     consumables = load_json(required_files[2])
 
-    gear_file_path = os.path.join(apl_folder_full_path, 'gear.simc')
+    gear_file_path = os.path.join(apl_folder_full_path, "gear.simc")
     print(f"Looking for gear file at: {gear_file_path}")
 
     if not os.path.exists(gear_file_path):
         print(f"Error: gear.simc not found at {gear_file_path}")
-        print("Please make sure the apl_folder in your config.ini is correct and contains a gear.simc file.")
+        print(
+            "Please make sure the apl_folder in your config.ini is correct and contains a gear.simc file."
+        )
         return
 
     gear = load_gear(gear_file_path)
 
     trinket_profilesets = generate_trinket_profilesets(trinkets)
-    write_profilesets(trinket_profilesets, os.path.join(apl_folder_full_path, 'trinket_profilesets.simc'))
+    write_profilesets(
+        trinket_profilesets,
+        os.path.join(apl_folder_full_path, "trinket_profilesets.simc"),
+    )
 
     enchant_profilesets = generate_enchant_profilesets(enchants, gear)
     write_enchant_profilesets(enchant_profilesets, apl_folder_full_path)
 
     gem_profilesets = generate_gem_profilesets(gems, gear)
-    write_profilesets(gem_profilesets, os.path.join(apl_folder_full_path, 'gem_profilesets.simc'))
+    write_profilesets(
+        gem_profilesets, os.path.join(apl_folder_full_path, "gem_profilesets.simc")
+    )
 
     consumable_profilesets = generate_consumable_profilesets(consumables)
-    write_profilesets(consumable_profilesets, os.path.join(apl_folder_full_path, 'consumable_profilesets.simc'))
+    write_profilesets(
+        consumable_profilesets,
+        os.path.join(apl_folder_full_path, "consumable_profilesets.simc"),
+    )
+
 
 if __name__ == "__main__":
     main()

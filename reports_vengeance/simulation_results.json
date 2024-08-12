@@ -1,0 +1,1156 @@
+[
+  {
+    "single_sim": {
+      "dps": 833649.2353998123,
+      "talent_hash": "CUkAEDLOxe3SEPP2R8Hw6bhoSAAGjZmZMMjMzMGDjZbmBjtZMjZMzYMz2MzsNzMMDGAAAAmlZWmlZmZW2mlppZwMzgF"
+    }
+  },
+  {
+    "trinket_profilesets": {
+      "No_Trinkets": {
+        "dps": 723564.9661735651,
+        "name": "No_Trinkets"
+      },
+      "darkmoon_deck_ascension_577": {
+        "dps": 743047.3261905739,
+        "name": "darkmoon_deck_ascension_577"
+      },
+      "darkmoon_deck_vivacity_577": {
+        "dps": 756389.0851262251,
+        "name": "darkmoon_deck_vivacity_577"
+      },
+      "darkmoon_deck_symbiosis_577": {
+        "dps": 741781.219274096,
+        "name": "darkmoon_deck_symbiosis_577"
+      },
+      "treacherous_transmitter_639": {
+        "dps": 775864.5417220893,
+        "name": "treacherous_transmitter_639"
+      },
+      "treacherous_transmitter_606": {
+        "dps": 759227.5668313272,
+        "name": "treacherous_transmitter_606"
+      },
+      "ovinaxs_mercurial_egg_639": {
+        "dps": 770893.3896086481,
+        "name": "ovinaxs_mercurial_egg_639"
+      },
+      "ovinaxs_mercurial_egg_619": {
+        "dps": 762407.0655304675,
+        "name": "ovinaxs_mercurial_egg_619"
+      },
+      "spymasters_web_639": {
+        "dps": 736394.3177521962,
+        "name": "spymasters_web_639"
+      },
+      "spymasters_web_626": {
+        "dps": 733501.262832892,
+        "name": "spymasters_web_626"
+      },
+      "spymasters_web_619": {
+        "dps": 731080.7059924678,
+        "name": "spymasters_web_619"
+      },
+      "spymasters_web_606": {
+        "dps": 731454.4859992901,
+        "name": "spymasters_web_606"
+      },
+      "spymasters_web_593": {
+        "dps": 732592.9913082158,
+        "name": "spymasters_web_593"
+      },
+      "creeping_coagulum_639": {
+        "dps": 723217.5009968926,
+        "name": "creeping_coagulum_639"
+      },
+      "creeping_coagulum_626": {
+        "dps": 721874.560394516,
+        "name": "creeping_coagulum_626"
+      },
+      "creeping_coagulum_619": {
+        "dps": 720690.2456375196,
+        "name": "creeping_coagulum_619"
+      },
+      "creeping_coagulum_593": {
+        "dps": 723333.4488541496,
+        "name": "creeping_coagulum_593"
+      },
+      "bronzebeard_family_compass_643": {
+        "dps": 733541.0691745796,
+        "name": "bronzebeard_family_compass_643"
+      },
+      "bronzebeard_family_compass_623": {
+        "dps": 732652.3658541312,
+        "name": "bronzebeard_family_compass_623"
+      },
+      "bronzebeard_family_compass_610": {
+        "dps": 732579.9270066412,
+        "name": "bronzebeard_family_compass_610"
+      },
+      "foul_behemoths_chelicera_639": {
+        "dps": 768928.3715684161,
+        "name": "foul_behemoths_chelicera_639"
+      },
+      "foul_behemoths_chelicera_626": {
+        "dps": 764040.9614126098,
+        "name": "foul_behemoths_chelicera_626"
+      },
+      "foul_behemoths_chelicera_606": {
+        "dps": 758862.0126147914,
+        "name": "foul_behemoths_chelicera_606"
+      },
+      "cirral_concoctory_639": {
+        "dps": 722467.9009705025,
+        "name": "cirral_concoctory_639"
+      },
+      "cirral_concoctory_626": {
+        "dps": 721259.1609981662,
+        "name": "cirral_concoctory_626"
+      },
+      "cirral_concoctory_619": {
+        "dps": 720399.4572712032,
+        "name": "cirral_concoctory_619"
+      },
+      "gruesome_syringe_639": {
+        "dps": 733185.8228584267,
+        "name": "gruesome_syringe_639"
+      },
+      "cirral_concoctory_606": {
+        "dps": 722889.089702653,
+        "name": "cirral_concoctory_606"
+      },
+      "viscous_coaglam_619": {
+        "dps": 723759.1791958525,
+        "name": "viscous_coaglam_619"
+      },
+      "corrupted_egg_shell_619": {
+        "dps": 725920.4863402577,
+        "name": "corrupted_egg_shell_619"
+      },
+      "ancient_weapon_charm_626": {
+        "dps": 724887.4668422395,
+        "name": "ancient_weapon_charm_626"
+      },
+      "twin_fang_instruments_639": {
+        "dps": 764901.1459418223,
+        "name": "twin_fang_instruments_639"
+      },
+      "twin_fang_instruments_626": {
+        "dps": 759616.0795119134,
+        "name": "twin_fang_instruments_626"
+      },
+      "ara-kara_sacbrood_606": {
+        "dps": 763204.2655351877,
+        "name": "ara-kara_sacbrood_606"
+      },
+      "empowering_crystal_of_anubikkaj_606": {
+        "dps": 758001.7356204208,
+        "name": "empowering_crystal_of_anubikkaj_606"
+      },
+      "refracting_aggression_module_626": {
+        "dps": 754416.1154231335,
+        "name": "refracting_aggression_module_626"
+      },
+      "twin_fang_instruments_619": {
+        "dps": 756196.3752696001,
+        "name": "twin_fang_instruments_619"
+      },
+      "siphoning_phylactery_shard_639": {
+        "dps": 723024.1401107494,
+        "name": "siphoning_phylactery_shard_639"
+      },
+      "twin_fang_instruments_606": {
+        "dps": 753834.8808604417,
+        "name": "twin_fang_instruments_606"
+      },
+      "swarmlords_authority_619": {
+        "dps": 735493.1983641061,
+        "name": "swarmlords_authority_619"
+      },
+      "oppressive_orators_larynx_593": {
+        "dps": 734533.1917807896,
+        "name": "oppressive_orators_larynx_593"
+      },
+      "bygone_armor_charm_626": {
+        "dps": 723197.6474220299,
+        "name": "bygone_armor_charm_626"
+      },
+      "harvesters_edict_619": {
+        "dps": 759010.5710478501,
+        "name": "harvesters_edict_619"
+      },
+      "aberrant_spellforge_626": {
+        "dps": 723427.6823290543,
+        "name": "aberrant_spellforge_626"
+      },
+      "harvesters_edict_593": {
+        "dps": 753679.2608615812,
+        "name": "harvesters_edict_593"
+      },
+      "empowering_crystal_of_anubikkaj_619": {
+        "dps": 762554.3335344872,
+        "name": "empowering_crystal_of_anubikkaj_619"
+      },
+      "spare_meat_hook_619": {
+        "dps": 740920.9087522626,
+        "name": "spare_meat_hook_619"
+      },
+      "ceaseless_swarmgland_626": {
+        "dps": 756740.281659188,
+        "name": "ceaseless_swarmgland_626"
+      },
+      "ceaseless_swarmgland_619": {
+        "dps": 752593.1719916286,
+        "name": "ceaseless_swarmgland_619"
+      },
+      "mistcaller_ocarina_606": {
+        "dps": 753122.9586314961,
+        "name": "mistcaller_ocarina_606"
+      },
+      "ceaseless_swarmgland_593": {
+        "dps": 745521.6452662473,
+        "name": "ceaseless_swarmgland_593"
+      },
+      "refracting_aggression_module_606": {
+        "dps": 750882.045320444,
+        "name": "refracting_aggression_module_606"
+      },
+      "ara-kara_sacbrood_639": {
+        "dps": 775986.917781798,
+        "name": "ara-kara_sacbrood_639"
+      },
+      "mereldars_toll_626": {
+        "dps": 728084.2269743546,
+        "name": "mereldars_toll_626"
+      },
+      "creeping_coagulum_606": {
+        "dps": 721984.5492060923,
+        "name": "creeping_coagulum_606"
+      },
+      "refracting_aggression_module_593": {
+        "dps": 747616.58932028,
+        "name": "refracting_aggression_module_593"
+      },
+      "siphoning_phylactery_shard_593": {
+        "dps": 721944.2928103262,
+        "name": "siphoning_phylactery_shard_593"
+      },
+      "mereldars_toll_619": {
+        "dps": 727837.6207907498,
+        "name": "mereldars_toll_619"
+      },
+      "ara-kara_sacbrood_593": {
+        "dps": 760848.2516963405,
+        "name": "ara-kara_sacbrood_593"
+      },
+      "mereldars_toll_606": {
+        "dps": 726446.9667205242,
+        "name": "mereldars_toll_606"
+      },
+      "refracting_aggression_module_639": {
+        "dps": 758412.2278182473,
+        "name": "refracting_aggression_module_639"
+      },
+      "empowering_crystal_of_anubikkaj_639": {
+        "dps": 772213.4819062,
+        "name": "empowering_crystal_of_anubikkaj_639"
+      },
+      "empowering_crystal_of_anubikkaj_626": {
+        "dps": 766012.340323096,
+        "name": "empowering_crystal_of_anubikkaj_626"
+      },
+      "empowering_crystal_of_anubikkaj_593": {
+        "dps": 756628.9144966794,
+        "name": "empowering_crystal_of_anubikkaj_593"
+      },
+      "void_pactstone_639": {
+        "dps": 732658.0012866675,
+        "name": "void_pactstone_639"
+      },
+      "mark_of_khardros_606": {
+        "dps": 733496.5801081656,
+        "name": "mark_of_khardros_606"
+      },
+      "void_pactstone_626": {
+        "dps": 729503.7765516896,
+        "name": "void_pactstone_626"
+      },
+      "twin_fang_instruments_593": {
+        "dps": 751563.7653048735,
+        "name": "twin_fang_instruments_593"
+      },
+      "void_pactstone_606": {
+        "dps": 728338.2294445474,
+        "name": "void_pactstone_606"
+      },
+      "ara-kara_sacbrood_619": {
+        "dps": 771497.8723921815,
+        "name": "ara-kara_sacbrood_619"
+      },
+      "void_pactstone_593": {
+        "dps": 727889.8650049298,
+        "name": "void_pactstone_593"
+      },
+      "unbound_changeling_626": {
+        "dps": 733990.2289955567,
+        "name": "unbound_changeling_626"
+      },
+      "spare_meat_hook_626": {
+        "dps": 742582.9313802748,
+        "name": "spare_meat_hook_626"
+      },
+      "high_speakers_accretion_619": {
+        "dps": 747467.6076460414,
+        "name": "high_speakers_accretion_619"
+      },
+      "thronguss_finger_606": {
+        "dps": 732215.5261632013,
+        "name": "thronguss_finger_606"
+      },
+      "high_speakers_accretion_593": {
+        "dps": 742263.2626274392,
+        "name": "high_speakers_accretion_593"
+      },
+      "skardyns_grace_619": {
+        "dps": 766224.5102355721,
+        "name": "skardyns_grace_619"
+      },
+      "aberrant_spellforge_593": {
+        "dps": 723352.8911587525,
+        "name": "aberrant_spellforge_593"
+      },
+      "ceaseless_swarmgland_606": {
+        "dps": 752415.2068610351,
+        "name": "ceaseless_swarmgland_606"
+      },
+      "scrapsingers_symphony_619": {
+        "dps": 724071.7746615416,
+        "name": "scrapsingers_symphony_619"
+      },
+      "scrapsingers_symphony_606": {
+        "dps": 721048.0830250967,
+        "name": "scrapsingers_symphony_606"
+      },
+      "treacherous_transmitter_619": {
+        "dps": 765913.7494641071,
+        "name": "treacherous_transmitter_619"
+      },
+      "scrapsingers_symphony_593": {
+        "dps": 722433.4262741067,
+        "name": "scrapsingers_symphony_593"
+      },
+      "skardyns_grace_639": {
+        "dps": 771911.7947176683,
+        "name": "skardyns_grace_639"
+      },
+      "oppressive_orators_larynx_639": {
+        "dps": 737570.9456693138,
+        "name": "oppressive_orators_larynx_639"
+      },
+      "overclocked_gear-a-rang_launcher_606": {
+        "dps": 745398.1901063974,
+        "name": "overclocked_gear-a-rang_launcher_606"
+      },
+      "overclocked_gear-a-rang_launcher_593": {
+        "dps": 743279.9008498319,
+        "name": "overclocked_gear-a-rang_launcher_593"
+      },
+      "ovinaxs_mercurial_egg_626": {
+        "dps": 764262.5686010171,
+        "name": "ovinaxs_mercurial_egg_626"
+      },
+      "mereldars_toll_639": {
+        "dps": 729206.8916686354,
+        "name": "mereldars_toll_639"
+      },
+      "skarmorak_shard_626": {
+        "dps": 732308.8683065808,
+        "name": "skarmorak_shard_626"
+      },
+      "skarmorak_shard_619": {
+        "dps": 733519.8512502344,
+        "name": "skarmorak_shard_619"
+      },
+      "skarmorak_shard_606": {
+        "dps": 734470.2644360538,
+        "name": "skarmorak_shard_606"
+      },
+      "ancient_armor_charm_619": {
+        "dps": 724763.026245047,
+        "name": "ancient_armor_charm_619"
+      },
+      "high_speakers_accretion_639": {
+        "dps": 752996.8697620777,
+        "name": "high_speakers_accretion_639"
+      },
+      "ancient_armor_charm_593": {
+        "dps": 724843.8042678698,
+        "name": "ancient_armor_charm_593"
+      },
+      "bygone_armor_charm_639": {
+        "dps": 724940.2165810617,
+        "name": "bygone_armor_charm_639"
+      },
+      "ovinaxs_mercurial_egg_606": {
+        "dps": 755054.9095594217,
+        "name": "ovinaxs_mercurial_egg_606"
+      },
+      "harvesters_edict_626": {
+        "dps": 762697.4241003866,
+        "name": "harvesters_edict_626"
+      },
+      "mereldars_toll_593": {
+        "dps": 725830.2330652159,
+        "name": "mereldars_toll_593"
+      },
+      "ceaseless_swarmgland_639": {
+        "dps": 761736.18463768,
+        "name": "ceaseless_swarmgland_639"
+      },
+      "dead-eye_spyglass_626": {
+        "dps": 763794.5050190415,
+        "name": "dead-eye_spyglass_626"
+      },
+      "bygone_armor_charm_593": {
+        "dps": 720401.1114476703,
+        "name": "bygone_armor_charm_593"
+      },
+      "algari_alchemist_stone_626": {
+        "dps": 732808.5609863426,
+        "name": "algari_alchemist_stone_626"
+      },
+      "ancient_weapon_charm_639": {
+        "dps": 725779.127079814,
+        "name": "ancient_weapon_charm_639"
+      },
+      "ancient_weapon_charm_619": {
+        "dps": 725158.930764633,
+        "name": "ancient_weapon_charm_619"
+      },
+      "bygone_weapon_charm_593": {
+        "dps": 722270.821813952,
+        "name": "bygone_weapon_charm_593"
+      },
+      "void_reapers_contract_639": {
+        "dps": 773638.6273409949,
+        "name": "void_reapers_contract_639"
+      },
+      "void_reapers_contract_619": {
+        "dps": 762236.6198389572,
+        "name": "void_reapers_contract_619"
+      },
+      "gale_of_shadows_639": {
+        "dps": 732749.8003441868,
+        "name": "gale_of_shadows_639"
+      },
+      "unbound_changeling_619": {
+        "dps": 734740.4940260618,
+        "name": "unbound_changeling_619"
+      },
+      "void_reapers_contract_626": {
+        "dps": 765359.3009260326,
+        "name": "void_reapers_contract_626"
+      },
+      "void_reapers_contract_606": {
+        "dps": 759004.836178192,
+        "name": "void_reapers_contract_606"
+      },
+      "mad_queens_mandate_619": {
+        "dps": 741714.3755076753,
+        "name": "mad_queens_mandate_619"
+      },
+      "foul_behemoths_chelicera_593": {
+        "dps": 756925.2201695855,
+        "name": "foul_behemoths_chelicera_593"
+      },
+      "skyterrors_corrosive_organ_593": {
+        "dps": 732177.6781748877,
+        "name": "skyterrors_corrosive_organ_593"
+      },
+      "sikrans_endless_arsenal_626": {
+        "dps": 768157.8651623814,
+        "name": "sikrans_endless_arsenal_626"
+      },
+      "skyterrors_corrosive_organ_619": {
+        "dps": 732816.069483808,
+        "name": "skyterrors_corrosive_organ_619"
+      },
+      "harvesters_edict_639": {
+        "dps": 766815.2126820184,
+        "name": "harvesters_edict_639"
+      },
+      "oppressive_orators_larynx_619": {
+        "dps": 738667.588611308,
+        "name": "oppressive_orators_larynx_619"
+      },
+      "spare_meat_hook_606": {
+        "dps": 742076.7460149424,
+        "name": "spare_meat_hook_606"
+      },
+      "mad_queens_mandate_606": {
+        "dps": 744081.7814295379,
+        "name": "mad_queens_mandate_606"
+      },
+      "ancient_armor_charm_626": {
+        "dps": 724004.8988110933,
+        "name": "ancient_armor_charm_626"
+      },
+      "overclocked_gear-a-rang_launcher_639": {
+        "dps": 753509.0675339936,
+        "name": "overclocked_gear-a-rang_launcher_639"
+      },
+      "skyterrors_corrosive_organ_626": {
+        "dps": 731591.9024043778,
+        "name": "skyterrors_corrosive_organ_626"
+      },
+      "overclocked_gear-a-rang_launcher_626": {
+        "dps": 750870.1035506194,
+        "name": "overclocked_gear-a-rang_launcher_626"
+      },
+      "gruesome_syringe_619": {
+        "dps": 729669.7053655462,
+        "name": "gruesome_syringe_619"
+      },
+      "skyterrors_corrosive_organ_606": {
+        "dps": 731890.250780645,
+        "name": "skyterrors_corrosive_organ_606"
+      },
+      "overclocked_gear-a-rang_launcher_619": {
+        "dps": 750975.8616165968,
+        "name": "overclocked_gear-a-rang_launcher_619"
+      },
+      "cirral_concoctory_593": {
+        "dps": 722237.345020573,
+        "name": "cirral_concoctory_593"
+      },
+      "scrapsingers_symphony_626": {
+        "dps": 723672.3570274167,
+        "name": "scrapsingers_symphony_626"
+      },
+      "mark_of_khardros_619": {
+        "dps": 733197.3813922297,
+        "name": "mark_of_khardros_619"
+      },
+      "viscous_coaglam_593": {
+        "dps": 724809.9376090764,
+        "name": "viscous_coaglam_593"
+      },
+      "high_speakers_accretion_626": {
+        "dps": 749917.8061061801,
+        "name": "high_speakers_accretion_626"
+      },
+      "satchel_of_misbegotten_minions_639": {
+        "dps": 737778.005341656,
+        "name": "satchel_of_misbegotten_minions_639"
+      },
+      "gruesome_syringe_626": {
+        "dps": 732049.9707639273,
+        "name": "gruesome_syringe_626"
+      },
+      "gruesome_syringe_593": {
+        "dps": 728445.4461756764,
+        "name": "gruesome_syringe_593"
+      },
+      "foul_behemoths_chelicera_619": {
+        "dps": 762447.8934566075,
+        "name": "foul_behemoths_chelicera_619"
+      },
+      "aberrant_spellforge_639": {
+        "dps": 722219.9828935227,
+        "name": "aberrant_spellforge_639"
+      },
+      "void_pactstone_619": {
+        "dps": 727291.7161758771,
+        "name": "void_pactstone_619"
+      },
+      "bottled_flayedwing_toxin_626": {
+        "dps": 772838.3815865511,
+        "name": "bottled_flayedwing_toxin_626"
+      },
+      "satchel_of_misbegotten_minions_593": {
+        "dps": 739234.1400626116,
+        "name": "satchel_of_misbegotten_minions_593"
+      },
+      "bygone_weapon_charm_619": {
+        "dps": 723744.8759077966,
+        "name": "bygone_weapon_charm_619"
+      },
+      "siphoning_phylactery_shard_619": {
+        "dps": 723289.6109563236,
+        "name": "siphoning_phylactery_shard_619"
+      },
+      "aberrant_spellforge_606": {
+        "dps": 722949.5615512033,
+        "name": "aberrant_spellforge_606"
+      },
+      "aberrant_spellforge_619": {
+        "dps": 725529.3961861117,
+        "name": "aberrant_spellforge_619"
+      },
+      "mistcaller_ocarina_619": {
+        "dps": 751390.4209975266,
+        "name": "mistcaller_ocarina_619"
+      },
+      "bottled_flayedwing_toxin_593": {
+        "dps": 763102.7834667194,
+        "name": "bottled_flayedwing_toxin_593"
+      },
+      "swarmlords_authority_606": {
+        "dps": 736029.6187202261,
+        "name": "swarmlords_authority_606"
+      },
+      "viscous_coaglam_606": {
+        "dps": 722663.5535524469,
+        "name": "viscous_coaglam_606"
+      },
+      "swarmlords_authority_626": {
+        "dps": 738121.2153573942,
+        "name": "swarmlords_authority_626"
+      },
+      "sikrans_endless_arsenal_639": {
+        "dps": 768920.8033880694,
+        "name": "sikrans_endless_arsenal_639"
+      },
+      "refracting_aggression_module_619": {
+        "dps": 752363.725188721,
+        "name": "refracting_aggression_module_619"
+      },
+      "swarmlords_authority_593": {
+        "dps": 738759.7607812572,
+        "name": "swarmlords_authority_593"
+      },
+      "sikrans_endless_arsenal_619": {
+        "dps": 766262.844717015,
+        "name": "sikrans_endless_arsenal_619"
+      },
+      "sikrans_endless_arsenal_606": {
+        "dps": 758204.5759234589,
+        "name": "sikrans_endless_arsenal_606"
+      },
+      "oppressive_orators_larynx_626": {
+        "dps": 733422.2844543348,
+        "name": "oppressive_orators_larynx_626"
+      },
+      "bygone_weapon_charm_626": {
+        "dps": 723907.2472832879,
+        "name": "bygone_weapon_charm_626"
+      },
+      "hadals_nautilus_593": {
+        "dps": 740124.1349018884,
+        "name": "hadals_nautilus_593"
+      },
+      "dead-eye_spyglass_619": {
+        "dps": 762256.2612583337,
+        "name": "dead-eye_spyglass_619"
+      },
+      "swarmlords_authority_639": {
+        "dps": 740082.3438857766,
+        "name": "swarmlords_authority_639"
+      },
+      "algari_alchemist_stone_593": {
+        "dps": 732698.0062853202,
+        "name": "algari_alchemist_stone_593"
+      },
+      "mad_queens_mandate_639": {
+        "dps": 746489.7959509875,
+        "name": "mad_queens_mandate_639"
+      },
+      "siphoning_phylactery_shard_626": {
+        "dps": 725006.5119344924,
+        "name": "siphoning_phylactery_shard_626"
+      },
+      "bronzebeard_family_compass_597": {
+        "dps": 732709.6034564655,
+        "name": "bronzebeard_family_compass_597"
+      },
+      "void_reapers_contract_593": {
+        "dps": 754025.5039444411,
+        "name": "void_reapers_contract_593"
+      },
+      "satchel_of_misbegotten_minions_619": {
+        "dps": 735701.677317045,
+        "name": "satchel_of_misbegotten_minions_619"
+      },
+      "satchel_of_misbegotten_minions_626": {
+        "dps": 739490.3214478861,
+        "name": "satchel_of_misbegotten_minions_626"
+      },
+      "mad_queens_mandate_626": {
+        "dps": 740788.8700707863,
+        "name": "mad_queens_mandate_626"
+      },
+      "high_speakers_accretion_606": {
+        "dps": 745737.2042603166,
+        "name": "high_speakers_accretion_606"
+      },
+      "spare_meat_hook_639": {
+        "dps": 741530.2707320867,
+        "name": "spare_meat_hook_639"
+      },
+      "algari_alchemist_stone_619": {
+        "dps": 733068.8445585503,
+        "name": "algari_alchemist_stone_619"
+      },
+      "hadals_nautilus_606": {
+        "dps": 739529.530714706,
+        "name": "hadals_nautilus_606"
+      },
+      "bottled_flayedwing_toxin_639": {
+        "dps": 777609.8609511052,
+        "name": "bottled_flayedwing_toxin_639"
+      },
+      "bygone_weapon_charm_606": {
+        "dps": 720983.2195751386,
+        "name": "bygone_weapon_charm_606"
+      },
+      "bottled_flayedwing_toxin_619": {
+        "dps": 770323.1130721244,
+        "name": "bottled_flayedwing_toxin_619"
+      },
+      "ancient_armor_charm_639": {
+        "dps": 726392.4708935154,
+        "name": "ancient_armor_charm_639"
+      },
+      "gruesome_syringe_606": {
+        "dps": 730670.3648792125,
+        "name": "gruesome_syringe_606"
+      },
+      "scrapsingers_symphony_639": {
+        "dps": 725382.7127844756,
+        "name": "scrapsingers_symphony_639"
+      },
+      "ancient_weapon_charm_593": {
+        "dps": 723186.0586702538,
+        "name": "ancient_weapon_charm_593"
+      },
+      "gale_of_shadows_626": {
+        "dps": 737080.6162216576,
+        "name": "gale_of_shadows_626"
+      },
+      "bronzebeard_family_compass_630": {
+        "dps": 734502.4638902735,
+        "name": "bronzebeard_family_compass_630"
+      },
+      "ancient_weapon_charm_606": {
+        "dps": 724758.9997983561,
+        "name": "ancient_weapon_charm_606"
+      },
+      "ara-kara_sacbrood_626": {
+        "dps": 769012.2797590538,
+        "name": "ara-kara_sacbrood_626"
+      },
+      "mistcaller_ocarina_626": {
+        "dps": 752741.8462838599,
+        "name": "mistcaller_ocarina_626"
+      },
+      "harvesters_edict_606": {
+        "dps": 755035.0619743097,
+        "name": "harvesters_edict_606"
+      },
+      "mistcaller_ocarina_593": {
+        "dps": 745721.6842287366,
+        "name": "mistcaller_ocarina_593"
+      },
+      "hadals_nautilus_626": {
+        "dps": 738059.3177819122,
+        "name": "hadals_nautilus_626"
+      },
+      "sikrans_endless_arsenal_593": {
+        "dps": 758598.5287087084,
+        "name": "sikrans_endless_arsenal_593"
+      },
+      "mistcaller_ocarina_639": {
+        "dps": 759304.6264740864,
+        "name": "mistcaller_ocarina_639"
+      },
+      "spare_meat_hook_593": {
+        "dps": 742433.284473626,
+        "name": "spare_meat_hook_593"
+      },
+      "treacherous_transmitter_593": {
+        "dps": 755508.9217192965,
+        "name": "treacherous_transmitter_593"
+      },
+      "viscous_coaglam_626": {
+        "dps": 725887.6047772937,
+        "name": "viscous_coaglam_626"
+      },
+      "skarmorak_shard_639": {
+        "dps": 733567.8709387828,
+        "name": "skarmorak_shard_639"
+      },
+      "thronguss_finger_626": {
+        "dps": 734924.9620294775,
+        "name": "thronguss_finger_626"
+      },
+      "dead-eye_spyglass_606": {
+        "dps": 759951.212311651,
+        "name": "dead-eye_spyglass_606"
+      },
+      "bottled_flayedwing_toxin_606": {
+        "dps": 765813.018501767,
+        "name": "bottled_flayedwing_toxin_606"
+      },
+      "corrupted_egg_shell_639": {
+        "dps": 721139.2521557779,
+        "name": "corrupted_egg_shell_639"
+      },
+      "hadals_nautilus_619": {
+        "dps": 736677.5919874207,
+        "name": "hadals_nautilus_619"
+      },
+      "satchel_of_misbegotten_minions_606": {
+        "dps": 738035.4799465688,
+        "name": "satchel_of_misbegotten_minions_606"
+      },
+      "bygone_weapon_charm_639": {
+        "dps": 721952.2581706765,
+        "name": "bygone_weapon_charm_639"
+      },
+      "skardyns_grace_593": {
+        "dps": 758215.4742633564,
+        "name": "skardyns_grace_593"
+      },
+      "corrupted_egg_shell_626": {
+        "dps": 720600.7126866506,
+        "name": "corrupted_egg_shell_626"
+      },
+      "ancient_armor_charm_606": {
+        "dps": 724795.0592841476,
+        "name": "ancient_armor_charm_606"
+      },
+      "unbound_changeling_593": {
+        "dps": 730823.0912758665,
+        "name": "unbound_changeling_593"
+      },
+      "siphoning_phylactery_shard_606": {
+        "dps": 720642.5910916842,
+        "name": "siphoning_phylactery_shard_606"
+      },
+      "gale_of_shadows_619": {
+        "dps": 736150.6966703676,
+        "name": "gale_of_shadows_619"
+      },
+      "gale_of_shadows_606": {
+        "dps": 733163.2606022721,
+        "name": "gale_of_shadows_606"
+      },
+      "corrupted_egg_shell_606": {
+        "dps": 723240.9204279943,
+        "name": "corrupted_egg_shell_606"
+      },
+      "bygone_armor_charm_619": {
+        "dps": 724908.5121326725,
+        "name": "bygone_armor_charm_619"
+      },
+      "gale_of_shadows_593": {
+        "dps": 735983.398091553,
+        "name": "gale_of_shadows_593"
+      },
+      "algari_alchemist_stone_606": {
+        "dps": 733042.9983966287,
+        "name": "algari_alchemist_stone_606"
+      },
+      "unbound_changeling_639": {
+        "dps": 734419.3569251827,
+        "name": "unbound_changeling_639"
+      },
+      "viscous_coaglam_639": {
+        "dps": 721426.3595960514,
+        "name": "viscous_coaglam_639"
+      },
+      "mark_of_khardros_626": {
+        "dps": 733499.6409988389,
+        "name": "mark_of_khardros_626"
+      },
+      "skyterrors_corrosive_organ_639": {
+        "dps": 732267.2500760154,
+        "name": "skyterrors_corrosive_organ_639"
+      },
+      "mark_of_khardros_639": {
+        "dps": 732353.1968275002,
+        "name": "mark_of_khardros_639"
+      },
+      "mad_queens_mandate_593": {
+        "dps": 736552.7222955759,
+        "name": "mad_queens_mandate_593"
+      },
+      "algari_alchemist_stone_639": {
+        "dps": 738212.1604832533,
+        "name": "algari_alchemist_stone_639"
+      },
+      "dead-eye_spyglass_639": {
+        "dps": 769571.2169282585,
+        "name": "dead-eye_spyglass_639"
+      },
+      "treacherous_transmitter_626": {
+        "dps": 767915.2663483582,
+        "name": "treacherous_transmitter_626"
+      },
+      "unbound_changeling_606": {
+        "dps": 733868.1865787045,
+        "name": "unbound_changeling_606"
+      },
+      "hadals_nautilus_639": {
+        "dps": 736837.3659377253,
+        "name": "hadals_nautilus_639"
+      },
+      "corrupted_egg_shell_593": {
+        "dps": 719809.8324901023,
+        "name": "corrupted_egg_shell_593"
+      },
+      "dead-eye_spyglass_593": {
+        "dps": 757129.0213978275,
+        "name": "dead-eye_spyglass_593"
+      },
+      "thronguss_finger_593": {
+        "dps": 731734.466578653,
+        "name": "thronguss_finger_593"
+      },
+      "darkmoon_deck_radiance_577": {
+        "dps": 742898.8510688862,
+        "name": "darkmoon_deck_radiance_577"
+      },
+      "mark_of_khardros_593": {
+        "dps": 730718.9862149351,
+        "name": "mark_of_khardros_593"
+      },
+      "ovinaxs_mercurial_egg_593": {
+        "dps": 752905.1673962402,
+        "name": "ovinaxs_mercurial_egg_593"
+      },
+      "skardyns_grace_606": {
+        "dps": 759482.5564133395,
+        "name": "skardyns_grace_606"
+      },
+      "skarmorak_shard_593": {
+        "dps": 728736.3809716058,
+        "name": "skarmorak_shard_593"
+      },
+      "bygone_armor_charm_606": {
+        "dps": 725093.655810393,
+        "name": "bygone_armor_charm_606"
+      },
+      "skardyns_grace_626": {
+        "dps": 767967.2787160578,
+        "name": "skardyns_grace_626"
+      },
+      "thronguss_finger_639": {
+        "dps": 734943.3040471639,
+        "name": "thronguss_finger_639"
+      },
+      "oppressive_orators_larynx_606": {
+        "dps": 736704.7216936215,
+        "name": "oppressive_orators_larynx_606"
+      },
+      "thronguss_finger_619": {
+        "dps": 731967.0585715877,
+        "name": "thronguss_finger_619"
+      }
+    }
+  },
+  {
+    "gem_profilesets": {
+      "Gem_cubic_blasphemia": {
+        "dps": 827572.7071691686,
+        "name": "Gem_cubic_blasphemia"
+      },
+      "Gem_determined_bloodstone": {
+        "dps": 827007.0152780552,
+        "name": "Gem_determined_bloodstone"
+      },
+      "Gem_elusive_blasphemite": {
+        "dps": 828154.8752250081,
+        "name": "Gem_elusive_blasphemite"
+      },
+      "Gem_deadly_sapphire": {
+        "dps": 826947.0247368643,
+        "name": "Gem_deadly_sapphire"
+      },
+      "Gem_culminating_blasphemite": {
+        "dps": 830254.4593269532,
+        "name": "Gem_culminating_blasphemite"
+      },
+      "Gem_enduring_bloodstone": {
+        "dps": 828346.3232208702,
+        "name": "Gem_enduring_bloodstone"
+      },
+      "Gem_quick_ruby": {
+        "dps": 827248.6275092579,
+        "name": "Gem_quick_ruby"
+      },
+      "Gem_masterful_ruby": {
+        "dps": 827975.1285600946,
+        "name": "Gem_masterful_ruby"
+      },
+      "Gem_versatile_amber": {
+        "dps": 826217.5775325919,
+        "name": "Gem_versatile_amber"
+      },
+      "Gem_versatile_onyx": {
+        "dps": 827360.9296222528,
+        "name": "Gem_versatile_onyx"
+      },
+      "Gem_masterful_amber": {
+        "dps": 826592.5263243177,
+        "name": "Gem_masterful_amber"
+      },
+      "Gem_quick_amber": {
+        "dps": 827028.7296616952,
+        "name": "Gem_quick_amber"
+      },
+      "Gem_masterful_emerald": {
+        "dps": 827841.9759492578,
+        "name": "Gem_masterful_emerald"
+      },
+      "Gem_deadly_amber": {
+        "dps": 827604.2423193716,
+        "name": "Gem_deadly_amber"
+      },
+      "Gem_masterful_onyx": {
+        "dps": 827515.6933612054,
+        "name": "Gem_masterful_onyx"
+      },
+      "Gem_versatile_emerald": {
+        "dps": 830878.5702428874,
+        "name": "Gem_versatile_emerald"
+      },
+      "Gem_insightful_blasphemite": {
+        "dps": 828055.2147819318,
+        "name": "Gem_insightful_blasphemite"
+      },
+      "Gem_quick_onyx": {
+        "dps": 828093.5037051878,
+        "name": "Gem_quick_onyx"
+      },
+      "Gem_versatile_ruby": {
+        "dps": 828734.6250178688,
+        "name": "Gem_versatile_ruby"
+      },
+      "Gem_cognitive_bloodstone": {
+        "dps": 828936.5797311098,
+        "name": "Gem_cognitive_bloodstone"
+      },
+      "Gem_deadly_emerald": {
+        "dps": 825875.5372962364,
+        "name": "Gem_deadly_emerald"
+      },
+      "Gem_quick_sapphire": {
+        "dps": 829468.4392833797,
+        "name": "Gem_quick_sapphire"
+      },
+      "Gem_versatile_sapphire": {
+        "dps": 825394.8271294702,
+        "name": "Gem_versatile_sapphire"
+      },
+      "Gem_deadly_ruby": {
+        "dps": 827750.8991071145,
+        "name": "Gem_deadly_ruby"
+      },
+      "Gem_masterful_sapphire": {
+        "dps": 831107.3907757179,
+        "name": "Gem_masterful_sapphire"
+      },
+      "Gem_deadly_onyx": {
+        "dps": 825800.7275312631,
+        "name": "Gem_deadly_onyx"
+      },
+      "Gem_quick_emerald": {
+        "dps": 827571.7611467818,
+        "name": "Gem_quick_emerald"
+      }
+    }
+  },
+  {
+    "enchant_profilesets_chest": {
+      "Chest_Crystalline_Radiance_3": {
+        "dps": 835781.6678324373,
+        "name": "Chest_Crystalline_Radiance_3"
+      },
+      "Chest_Oathsworns_Str_3": {
+        "dps": 823037.2939591536,
+        "name": "Chest_Oathsworns_Str_3"
+      },
+      "Chest_Stormriders_Agi_3": {
+        "dps": 831210.9620824215,
+        "name": "Chest_Stormriders_Agi_3"
+      }
+    }
+  },
+  {
+    "enchant_profilesets_legs": {
+      "Legs_930_agistr_890_sta": {
+        "dps": 840486.6888066458,
+        "name": "Legs_930_agistr_890_sta"
+      },
+      "Legs_705_agistr": {
+        "dps": 839937.5243239937,
+        "name": "Legs_705_agistr"
+      },
+      "Legs_930_agistr_980_armor": {
+        "dps": 841199.4828565893,
+        "name": "Legs_930_agistr_980_armor"
+      }
+    }
+  },
+  {
+    "enchant_profilesets_rings": {
+      "Rings_cursed_mast_3": {
+        "dps": 829524.8945926989,
+        "name": "Rings_cursed_mast_3"
+      },
+      "Rings_cursed_haste_3": {
+        "dps": 833996.9277735706,
+        "name": "Rings_cursed_haste_3"
+      },
+      "Rings_cursed_vers_3": {
+        "dps": 829021.1754434969,
+        "name": "Rings_cursed_vers_3"
+      },
+      "Rings_cursed_crit_3": {
+        "dps": 832466.9202303769,
+        "name": "Rings_cursed_crit_3"
+      },
+      "Rings_190_vers": {
+        "dps": 831127.0557884478,
+        "name": "Rings_190_vers"
+      },
+      "Rings_190_mast": {
+        "dps": 833429.4776385272,
+        "name": "Rings_190_mast"
+      },
+      "Rings_190_haste": {
+        "dps": 829590.5809593586,
+        "name": "Rings_190_haste"
+      },
+      "Rings_190_crit": {
+        "dps": 828775.2527528624,
+        "name": "Rings_190_crit"
+      }
+    }
+  },
+  {
+    "enchant_profilesets_weapons": {
+      "Weapons_authority_of_storms_3": {
+        "dps": 787749.6782540206,
+        "name": "Weapons_authority_of_storms_3"
+      },
+      "Weapons_authority_of_the_depths_3": {
+        "dps": 836180.803698488,
+        "name": "Weapons_authority_of_the_depths_3"
+      },
+      "Weapons_authority_of_fiery_resolve_3": {
+        "dps": 788257.2949251201,
+        "name": "Weapons_authority_of_fiery_resolve_3"
+      },
+      "Weapons_authority_of_radiant_power_3": {
+        "dps": 811214.1820184494,
+        "name": "Weapons_authority_of_radiant_power_3"
+      },
+      "Weapons_authority_of_air_3": {
+        "dps": 785350.9837871374,
+        "name": "Weapons_authority_of_air_3"
+      }
+    }
+  }
+]

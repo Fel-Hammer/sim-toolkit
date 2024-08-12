@@ -8,6 +8,7 @@ venv/
 *.lock
 *.pkl
 __pycache__/
+debug_output/
 
 # Allow
 !website_havoc/*

@@ -715,9 +715,7 @@
       "itemClass": 4,
       "itemSubClassMask": 31,
       "invTypeMask": 2048
-    },
-    "categoryId": 2090,
-    "categoryName": "Ring Enchantments"
+    }
   },
   {
     "id": 7337,
@@ -767,9 +765,7 @@
       "itemClass": 4,
       "itemSubClassMask": 31,
       "invTypeMask": 2048
-    },
-    "categoryId": 2090,
-    "categoryName": "Ring Enchantments"
+    }
   },
   {
     "id": 7343,
@@ -819,9 +815,7 @@
       "itemClass": 4,
       "itemSubClassMask": 31,
       "invTypeMask": 2048
-    },
-    "categoryId": 2090,
-    "categoryName": "Ring Enchantments"
+    }
   },
   {
     "id": 7349,
@@ -871,9 +865,7 @@
       "itemClass": 4,
       "itemSubClassMask": 31,
       "invTypeMask": 2048
-    },
-    "categoryId": 2090,
-    "categoryName": "Ring Enchantments"
+    }
   },
   {
     "id": 7355,
@@ -902,40 +894,7 @@
       "itemClass": 4,
       "itemSubClassMask": 31,
       "invTypeMask": 1048608
-    },
-    "categoryId": 2088,
-    "categoryName": "Chest Enchantments"
-  },
-  {
-    "id": 7361,
-    "baseDisplayName": "Oathsworn's Str",
-    "displayName": "Oathsworn's Str 3",
-    "spellId": 445321,
-    "spellIcon": "ui_profession_enchanting",
-    "itemId": 223689,
-    "itemName": "Oathsworn's Strength",
-    "itemIcon": "inv_misc_enchantedscroll",
-    "quality": 3,
-    "expansion": 10,
-    "craftingQuality": 3,
-    "tokenizedName": "oathsworns_strength_3",
-    "stats": [
-      {
-        "type": "str",
-        "amount": 520
-      },
-      {
-        "type": "sta",
-        "amount": 270
-      }
-    ],
-    "equipRequirements": {
-      "itemClass": 4,
-      "itemSubClassMask": 31,
-      "invTypeMask": 1048608
-    },
-    "categoryId": 2088,
-    "categoryName": "Chest Enchantments"
+    }
   },
   {
     "id": 7364,
@@ -960,93 +919,7 @@
       "itemClass": 4,
       "itemSubClassMask": 31,
       "invTypeMask": 1048608
-    },
-    "categoryId": 2088,
-    "categoryName": "Chest Enchantments"
-  },
-  {
-    "id": 7439,
-    "baseDisplayName": "Council's Guile",
-    "displayName": "Council's Guile 3",
-    "spellId": 445379,
-    "spellIcon": "ui_profession_enchanting",
-    "itemId": 223759,
-    "itemName": "Council's Guile",
-    "itemIcon": "inv_misc_enchantedscroll",
-    "quality": 3,
-    "expansion": 10,
-    "craftingQuality": 3,
-    "tokenizedName": "councils_guile_3",
-    "equipRequirements": {
-      "itemClass": 2,
-      "itemSubClassMask": 966655,
-      "invTypeMask": 0
-    },
-    "categoryId": 2089,
-    "categoryName": "Weapon Enchantments"
-  },
-  {
-    "id": 7442,
-    "baseDisplayName": "Stormrider's Fury",
-    "displayName": "Stormrider's Fury 3",
-    "spellId": 445317,
-    "spellIcon": "ui_profession_enchanting",
-    "itemId": 223762,
-    "itemName": "Stormrider's Fury",
-    "itemIcon": "inv_misc_enchantedscroll",
-    "quality": 3,
-    "expansion": 10,
-    "craftingQuality": 3,
-    "tokenizedName": "stormriders_fury_3",
-    "equipRequirements": {
-      "itemClass": 2,
-      "itemSubClassMask": 966655,
-      "invTypeMask": 0
-    },
-    "categoryId": 2089,
-    "categoryName": "Weapon Enchantments"
-  },
-  {
-    "id": 7445,
-    "baseDisplayName": "Stonebound Artistry",
-    "displayName": "Stonebound Artistry 3",
-    "spellId": 445385,
-    "spellIcon": "ui_profession_enchanting",
-    "itemId": 223765,
-    "itemName": "Stonebound Artistry",
-    "itemIcon": "inv_misc_enchantedscroll",
-    "quality": 3,
-    "expansion": 10,
-    "craftingQuality": 3,
-    "tokenizedName": "stonebound_artistry_3",
-    "equipRequirements": {
-      "itemClass": 2,
-      "itemSubClassMask": 966655,
-      "invTypeMask": 0
-    },
-    "categoryId": 2089,
-    "categoryName": "Weapon Enchantments"
-  },
-  {
-    "id": 7448,
-    "baseDisplayName": "Oathsworn's Tenacity",
-    "displayName": "Oathsworn's Tenacity 3",
-    "spellId": 445351,
-    "spellIcon": "ui_profession_enchanting",
-    "itemId": 223768,
-    "itemName": "Oathsworn's Tenacity",
-    "itemIcon": "inv_misc_enchantedscroll",
-    "quality": 3,
-    "expansion": 10,
-    "craftingQuality": 3,
-    "tokenizedName": "oathsworns_tenacity_3",
-    "equipRequirements": {
-      "itemClass": 2,
-      "itemSubClassMask": 966655,
-      "invTypeMask": 0
-    },
-    "categoryId": 2089,
-    "categoryName": "Weapon Enchantments"
+    }
   },
   {
     "id": 7451,
