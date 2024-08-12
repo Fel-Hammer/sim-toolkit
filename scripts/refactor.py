@@ -12,6 +12,7 @@ import logging
 import pickle
 import shutil
 import glob
+from downloadsimc import download_and_extract_simc
 from abc import ABC, abstractmethod
 from functools import wraps
 from dataclasses import dataclass, field
@@ -322,10 +323,10 @@ class SimConfig:
         def get_path(section: str, option: str) -> str:
             return FileHandler.join_path(project_root, config.get(section, option))
 
-        return cls(
+        instance = cls(
             config_path=config_path,
             spec_name=config.get("General", "spec_name", fallback="Vengeance"),
-            simc_path=config.get("General", "simc"),
+            simc_path=config.get("General", "simc", fallback=""),
             apl_folder=get_path("General", "apl_folder"),
             report_folder=get_path("General", "report_folder"),
             single_sim=config.getboolean("Simulations", "single_sim", fallback=False),
@@ -350,6 +351,40 @@ class SimConfig:
                 "Simulations", "profileset_work_threads", fallback=1
             ),
         )
+
+        instance.check_and_set_simc_path()
+        return instance
+
+    def check_and_set_simc_path(self):
+        if not self.simc_path:
+            # Check if simc exists in the project
+            script_dir = os.path.dirname(os.path.abspath(__file__))
+            project_root = os.path.dirname(script_dir)
+            possible_paths = [
+                os.path.join(project_root, "simc"),
+                os.path.join(script_dir, "simc"),
+            ]
+
+            for path in possible_paths:
+                if os.path.exists(path):
+                    self.simc_path = path
+                    logger.info(f"Found SimC executable at: {self.simc_path}")
+                    return
+
+            # If not found, download it to the scripts folder
+            try:
+                self.simc_path = download_and_extract_simc()
+                logger.info(f"Downloaded SimC executable to: {self.simc_path}")
+            except Exception as e:
+                logger.error(f"Error downloading SimulationCraft: {str(e)}")
+                raise RuntimeError(
+                    "Failed to locate or download SimulationCraft executable"
+                )
+        else:
+            if not os.path.exists(self.simc_path):
+                raise FileNotFoundError(
+                    f"SimC executable not found at specified path: {self.simc_path}"
+                )
 
     def parse_sim_parameters(self) -> List[SimulationParameters]:
         if self.single_sim:
@@ -1169,7 +1204,11 @@ def cleanup_raw_output(config: SimConfig):
 
 
 def main(config_path: str):
-    sim_config = SimConfig.from_file(config_path)
+    try:
+        sim_config = SimConfig.from_file(config_path)
+    except (FileNotFoundError, RuntimeError) as e:
+        logger.error(str(e))
+        return
 
     # Ensure necessary directories exist
     FileHandler.ensure_directory(sim_config.apl_folder)

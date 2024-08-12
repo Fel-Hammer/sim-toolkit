@@ -9,6 +9,7 @@ This toolkit generates and runs SimulationCraft profiles for World of Warcraft c
 - `filter_items_enchants.py`: Fetches and filters data from Raidbots to generate a list of items and enchants for Demon Hunters
 - `create_profiles.py`: Generates profile templates from item data (`filter_items_enchants.py`)
 - `talenthasher.py`: Generates talent hashes from profile templates
+- `download-simc.py`: Download the latest SimulationCraft CLI
 
 ## Usage
 - Create a config.ini file in the root directory, specifying options
@@ -20,25 +21,24 @@ This toolkit generates and runs SimulationCraft profiles for World of Warcraft c
 ## Configuration File (config.ini)
 ```ini
 [General]
-spec_name = Vengeance
-simc = ../simc/engine/simc
-apl_folder = vengeance
-report_folder = reports_vengeance
-timestamp = false
-html_output = false
-json_output = true
-clear_cache = false
-debug = false
+spec_name = Vengeance ; Havoc, Vengeance
+simc = ../simc/engine/simc ; (optional) Path to SimulationCraft CLI, will download latest version if not specified
+apl_folder = vengeance ; Path to APL folder, will create if not specified
+report_folder = reports_vengeance ; Path to report folder, will create if not specified
+timestamp = false ; Add timestamp to report filenames
+html_output = false ; Generate HTML reports
+json_output = true ; Generate JSON reports
+clear_cache = false ; Clear all caches (talents, items, etc.) before simulating
+debug = false ; Enable debug output
 
 [Simulations]
-talents = CUkAEDLOxe3SEPP2R8Hw6bhoSAAGjZmZMMjMzMGDjZbmBjtZMjZMzYMz2MzsNzMMDGAAAAmlZWmlZmZW2mlppZwMzgF
-single_sim = true
-; multi_sim = 1,300 5,120 10,120
-iterations = 5000
-target_error = 0.5
+talents = CUkAEDLOxe3SEPP2R8Hw6bhoSAAGjZmZMMjMzMGDjZbmBjtZMjZMzYMz2MzsNzMMDGAAAAmlZWmlZmZW2mlppZwMzgF ; Specific talent string to use as default
+single_sim = true ; Run a single simulation
+multi_sim = 1,300 5,120 10,120 ; Run multiple simulations with different target,time pairs
+iterations = 5000 ; Number of iterations to run for each simulation
+target_error = 0.5 ; Target error for each simulation
 
 [PostProcessing]
-supplemental_profilesets = false
-generate_combined_apl = true
-generate_website = false
+supplemental_profilesets = false ; Generate supplemental profile sets (trinkets, gems, etc.)
+generate_combined_apl = true ; Generate a combined APL file
 ```
