@@ -307,10 +307,12 @@ class SimConfig:
     html_output: bool = False
     supplemental_profilesets: bool = False
     generate_combined_apl: bool = False
+    generate_website: bool = False
     debug: bool = False
     threads: int = 1
     profileset_work_threads: int = 1
     talent_strings: Dict[str, Dict[str, str]] = None
+    timestamp: bool = False
 
     @classmethod
     def from_file(cls, config_path: str):
@@ -336,6 +338,7 @@ class SimConfig:
             multi_sim=config.get("Simulations", "multi_sim", fallback="").strip(),
             targets=config.getint("Simulations", "targets", fallback=1),
             time=config.getint("Simulations", "time", fallback=300),
+            timestamp=config.getboolean("General", "timestamp", fallback=False),
             clear_cache=config.getboolean("General", "clear_cache", fallback=False),
             json_output=config.getboolean("General", "json_output", fallback=True),
             html_output=config.getboolean("General", "html_output", fallback=False),
@@ -344,6 +347,9 @@ class SimConfig:
             ),
             generate_combined_apl=config.getboolean(
                 "PostProcessing", "generate_combined_apl", fallback=False
+            ),
+            generate_website=config.getboolean(
+                "PostProcessing", "generate_website", fallback=False
             ),
             debug=config.getboolean("General", "debug", fallback=False),
             threads=config.getint("Simulations", "threads", fallback=1),
@@ -387,43 +393,47 @@ class SimConfig:
                 )
 
     def parse_sim_parameters(self) -> List[SimulationParameters]:
-        if self.single_sim:
-            return [
-                SimulationParameters(
-                    iterations=self.iterations,
-                    target_error=self.target_error,
-                    targets=self.targets,
-                    time=self.time,
-                )
-            ]
-
-        if not self.multi_sim:
-            return [
-                SimulationParameters(
-                    iterations=self.iterations,
-                    target_error=self.target_error,
-                    targets=self.targets,
-                    time=self.time,
-                )
-            ]
-
-        return [
-            (
-                SimulationParameters(
-                    iterations=self.iterations,
-                    target_error=self.target_error,
-                    fight_style="DungeonSlice",
-                )
-                if combo.lower() == "dungeonslice"
-                else SimulationParameters(
-                    iterations=self.iterations,
-                    target_error=self.target_error,
-                    targets=int(combo.split(",")[0]),
-                    time=int(combo.split(",")[1]),
-                )
+        if self.single_sim or not self.multi_sim:
+            fight_style = (
+                "DungeonSlice"
+                if str(self.targets).lower() == "dungeonslice"
+                else "Patchwerk"
             )
-            for combo in self.multi_sim.split()
-        ]
+            return [
+                SimulationParameters(
+                    iterations=self.iterations,
+                    target_error=self.target_error,
+                    targets=None if fight_style == "DungeonSlice" else self.targets,
+                    time=self.time,
+                    fight_style=fight_style,
+                )
+            ]
+
+        sim_params = []
+        for combo in self.multi_sim.split():
+            if combo.lower() == "dungeonslice":
+                sim_params.append(
+                    SimulationParameters(
+                        iterations=self.iterations,
+                        target_error=self.target_error,
+                        targets=None,
+                        time=self.time,
+                        fight_style="DungeonSlice",
+                    )
+                )
+            else:
+                targets, time = map(int, combo.split(","))
+                sim_params.append(
+                    SimulationParameters(
+                        iterations=self.iterations,
+                        target_error=self.target_error,
+                        targets=targets,
+                        time=time,
+                        fight_style="Patchwerk",
+                    )
+                )
+
+        return sim_params
 
 
 class CacheManager:
@@ -562,9 +572,16 @@ class SimCContentGenerator:
         self.supplemental_content = ""
         self.talents = config.talents
         self.is_multiple_simulation = False
+        self.use_multi_threading = False
+        logger.debug(f"SimCContentGenerator initialized with talents: {self.talents}")
 
     def set_multiple_simulation(self, is_multiple: bool):
         self.is_multiple_simulation = is_multiple
+        logger.debug(f"Set multiple simulation: {is_multiple}")
+
+    def set_multi_threading(self, use_multi_threading: bool):
+        self.use_multi_threading = use_multi_threading
+        logger.debug(f"Set multi-threading: {use_multi_threading}")
 
     def _load_base_content(self):
         base_file = FileHandler.join_path(self.config.apl_folder, "character.simc")
@@ -631,8 +648,6 @@ class SimCContentGenerator:
             "max_time",
             "json2",
             "html",
-            "threads",
-            "profileset_work_threads",
             "report_details",
             "optimize_expressions",
             "calculate_scale_factors",
@@ -644,10 +659,15 @@ class SimCContentGenerator:
             if param in self.simc_params:
                 config_content += f"{param}={self.simc_params[param]}\n"
 
-        # Always set these parameters for multiple simulations
-        if self.is_multiple_simulation:
+        # Set thread options based on use_multi_threading flag
+        if self.use_multi_threading:
             config_content += "threads=12\n"
             config_content += "profileset_work_threads=3\n"
+        else:
+            config_content += f"threads={self.config.threads}\n"
+            config_content += (
+                f"profileset_work_threads={self.config.profileset_work_threads}\n"
+            )
 
         return config_content
 
@@ -671,14 +691,12 @@ class SimCContentGenerator:
                 else:
                     updated_content.append(line)
             elif line_lower.startswith("talents="):
-                if isinstance(self, MultipleSimulation):
-                    updated_content.append(
-                        "talents="
-                    )  # Empty talents for MultipleSimulation
-                elif self.talents:
-                    updated_content.append(f"talents={self.talents}")
+                if self.is_multiple_simulation:
+                    updated_content.append("talents=")
+                    logger.debug("Added empty talents for multiple simulation")
                 else:
-                    updated_content.append(line)
+                    updated_content.append(f"talents={self.talents}")
+                    logger.debug(f"Added talents: {self.talents}")
             elif not any(line.startswith(f"{param}=") for param in self.simc_params):
                 updated_content.append(line)
 
@@ -697,7 +715,7 @@ class SimCContentGenerator:
         if self.config.debug:
             debug_dir = "debug_output"
             FileHandler.ensure_directory(debug_dir)
-            debug_file = FileHandler.join_path(debug_dir, "content_debug.txt")
+            debug_file = FileHandler.join_path(debug_dir, "content_debug.simc")
             FileHandler.write_file(debug_file, content)
 
         return content
@@ -716,6 +734,7 @@ class Simulation(ABC):
         self.cache_manager = cache_manager
         self.progress_tracker = progress_tracker
         self.content_generator = SimCContentGenerator(config)
+        logger.debug(f"Simulation initialized with talents: {self.config.talents}")
 
     @abstractmethod
     def run(self, params: SimulationParameters) -> Optional[Dict]:
@@ -728,6 +747,7 @@ class Simulation(ABC):
         for profile in profiles:
             self.content_generator.add_profileset(profile)
         simc_content = self.content_generator.generate_content()
+        logger.debug(f"Generated SimC content:\n{simc_content[:500]}")
         temp_input_file = self._create_temp_input_file(simc_content)
         if temp_input_file is None:
             return None
@@ -740,23 +760,27 @@ class Simulation(ABC):
     def _update_simulation_params(self, params: SimulationParameters):
         self.content_generator.update_simc_param("iterations", params.iterations)
         self.content_generator.update_simc_param("target_error", params.target_error)
-        if params.targets:
+        self.content_generator.update_simc_param("fight_style", params.fight_style)
+        self.content_generator.update_simc_param("max_time", params.time)
+        if params.targets is not None:
             self.content_generator.update_simc_param("desired_targets", params.targets)
         if params.time:
             self.content_generator.update_simc_param("max_time", params.time)
         if self.config.json_output:
-            json_output_file = FileHandler.join_path(
-                self.config.report_folder, f"sim_output_{params.sim_id}.json"
-            )
+            json_output_file = self._generate_output_filename(params.sim_id, "json")
             self.content_generator.update_simc_param("json2", json_output_file)
         if self.config.html_output:
-            html_output_file = FileHandler.join_path(
-                self.config.report_folder, f"sim_output_{params.sim_id}.html"
-            )
+            html_output_file = self._generate_output_filename(params.sim_id, "html")
             self.content_generator.update_simc_param("html", html_output_file)
         self.content_generator.update_simc_param("threads", self.config.threads)
         self.content_generator.update_simc_param(
             "profileset_work_threads", self.config.profileset_work_threads
+        )
+
+    def _generate_output_filename(self, sim_id: str, extension: str) -> str:
+        base_name = f"sim_output_{sim_id}" if self.config.timestamp else "sim_output"
+        return FileHandler.join_path(
+            self.config.report_folder, f"{base_name}.{extension}"
         )
 
     def _add_profiles(self, profiles: List[str]):
@@ -801,9 +825,7 @@ class Simulation(ABC):
             logger.debug("Simulation completed successfully")
 
             # Use sim_id in the actual output file name
-            actual_output_file = FileHandler.join_path(
-                self.config.report_folder, f"sim_output_{sim_id}.json"
-            )
+            actual_output_file = self._generate_output_filename(sim_id, "json")
             if FileHandler.check_output_file(actual_output_file):
                 return actual_output_file
 
@@ -825,17 +847,26 @@ class Simulation(ABC):
 
 
 class SingleSimulation(Simulation):
+
     def run(self, params: SimulationParameters) -> Optional[Dict]:
         logger.debug("Starting single simulation")
-        temp_output_file = FileHandler.join_path(
-            self.config.report_folder, f"temp_single_sim_results_{params.sim_id}.json"
+        label = (
+            "DSlice"
+            if params.fight_style == "DungeonSlice"
+            else f"{params.targets}T_{params.time}s"
         )
-
+        temp_output_file = FileHandler.join_path(
+            self.config.report_folder,
+            f"temp_single_sim_results_{label}_{params.sim_id}.json",
+        )
+        self.content_generator.set_multiple_simulation(False)
+        self.content_generator.set_multi_threading(False)
+        logger.debug(f"Single simulation talents: {self.content_generator.talents}")
         actual_output_file = self.execute_simulation(params, [], temp_output_file)
         if actual_output_file:
             content = FileHandler.read_file(actual_output_file)
             if content:
-                return self.create_dataset(content)
+                return {label: self.create_dataset(content)}
         return None
 
     def _process_simulation_data(self, data: Dict, is_supplemental: bool) -> Dict:
@@ -853,17 +884,23 @@ class MultipleSimulation(Simulation):
 
     def run(self, params: SimulationParameters) -> Optional[Dict]:
         logger.debug("Starting multiple simulations")
+        label = (
+            "DSlice"
+            if params.fight_style == "DungeonSlice"
+            else f"{params.targets}T_{params.time}s"
+        )
         temp_output_file = FileHandler.join_path(
             self.config.report_folder,
-            f"temp_sim_results_{params.targets}T_{params.time}s_{params.sim_id}.json",
+            f"temp_sim_results_{label}_{params.sim_id}.json",
         )
         profiles = self.format_profiles()
         self.content_generator.set_multiple_simulation(True)
+        self.content_generator.set_multi_threading(True)
         actual_output_file = self.execute_simulation(params, profiles, temp_output_file)
         if actual_output_file:
             content = FileHandler.read_file(actual_output_file)
             if content:
-                return self.create_dataset(content)
+                return {label: self.create_dataset(content)}
         return None
 
     def format_profiles(self):
@@ -919,6 +956,7 @@ class MultipleSimulation(Simulation):
 
 
 class SupplementalSimulation(Simulation):
+
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.supplemental_files = self._get_supplemental_files()
@@ -931,6 +969,7 @@ class SupplementalSimulation(Simulation):
             "food_profilesets.simc",
             "consumable_profilesets.simc",
             "trinket_profilesets.simc",
+            "embellishment_profilesets.simc",
             "gem_profilesets.simc",
             "enchant_profilesets_chest.simc",
             "enchant_profilesets_legs.simc",
@@ -940,6 +979,10 @@ class SupplementalSimulation(Simulation):
 
     def run(self, params: SimulationParameters) -> List[Optional[Dict]]:
         logger.info("Running supplemental profilesets simulations...")
+        if not self.config.talents:
+            raise ValueError(
+                "Talents configuration is required for supplemental simulations."
+            )
         return [
             self._run_single_supplemental(params, file)
             for file in self.supplemental_files
@@ -962,26 +1005,34 @@ class SupplementalSimulation(Simulation):
 
         # Reset content generator for each supplemental simulation
         self.content_generator = SimCContentGenerator(self.config)
+        self.content_generator.set_multiple_simulation(False)  # Keep talents
 
         # Update simulation parameters
         self._update_simulation_params(params)
+
+        # Set talents for supplemental sims
+        self.content_generator.update_talents(self.config.talents)
 
         # Add supplemental profilesets
         self.content_generator.add_profileset(supplemental_content)
 
         # Check if the number of profilesets is more than 50
         if self._count_profilesets(supplemental_content) > 50:
-            self.content_generator.set_multiple_simulation(True)
+            self.content_generator.set_multi_threading(True)
             logger.info(
-                f"Setting multiple simulation properties for {supplemental_file} due to high number of profilesets"
+                f"Setting multi-threading for {supplemental_file} due to high number of profilesets"
             )
+        else:
+            self.content_generator.set_multi_threading(False)
 
         # Generate unique sim_id for this supplemental simulation
-        sim_id = f"{params.sim_id}_{os.path.splitext(supplemental_file)[0]}"
-
-        output_file = FileHandler.join_path(
-            self.config.report_folder, f"sim_output_{sim_id}.json"
+        sim_id = (
+            f"{params.sim_id}_{os.path.splitext(supplemental_file)[0]}"
+            if self.config.timestamp
+            else "supplemental"
         )
+
+        output_file = self._generate_output_filename(sim_id, "json")
 
         actual_output_file = self.execute_simulation(params, [], output_file)
         if actual_output_file:
@@ -1040,6 +1091,11 @@ class SimulationRunner:
         logger.debug("Starting simulations")
         self.talent_manager.preload_talents(self.config.talent_strings)
 
+        if self.config.supplemental_profilesets and not self.config.talents:
+            raise ValueError(
+                "Talents configuration is required for supplemental simulations."
+            )
+
         sim_params = self.config.parse_sim_parameters()
         results = []
 
@@ -1063,13 +1119,13 @@ class SimulationRunner:
         self, sim_params: List[SimulationParameters]
     ) -> List[Optional[Dict]]:
         logger.debug("Running multiple simulations")
-        results = []
+        results = {}
         for params in sim_params:
             result = self.multiple_simulation.run(params)
             if result:
-                results.append(result)
+                results.update(result)
             self.progress_tracker.start_new_simulation()
-        return results
+        return [results]
 
     def _run_supplemental_simulations(
         self, params: SimulationParameters
@@ -1203,6 +1259,13 @@ def cleanup_raw_output(config: SimConfig):
     logger.info(f"Cleaned up {deleted_files} raw output file(s).")
 
 
+def run_compare_reports(config_path: str):
+    compare_reports_script = FileHandler.join_path(
+        os.path.dirname(__file__), "compare_reports.py"
+    )
+    subprocess.run([sys.executable, compare_reports_script, config_path], check=True)
+
+
 def main(config_path: str):
     try:
         sim_config = SimConfig.from_file(config_path)
@@ -1243,18 +1306,30 @@ def main(config_path: str):
         output_file = FileHandler.join_path(
             sim_config.report_folder, "simulation_results.json"
         )
-        FileHandler.write_file(output_file, json.dumps(results, indent=2))
+
+        # Merge all results into a single dictionary
+        merged_results = {}
+        for result in results:
+            if isinstance(result, dict):
+                merged_results.update(result)
+
+        FileHandler.write_file(output_file, json.dumps(merged_results, indent=2))
 
         logger.info(f"Simulation results saved to {output_file}")
 
         # Cleanup: Delete raw JSON output files
         cleanup_raw_output(sim_config)
 
+        # Run combine.py
         if sim_config.generate_combined_apl:
             apl_combiner = APLCombiner(sim_config)
             apl_combiner.combine_apl()
 
-    logger.info("All simulations and post-processing completed.")
+        # Run compare_reports.py
+        if sim_config.generate_website:
+            run_compare_reports(config_path)
+
+    logger.info("All simulations, post-processing, and report generation completed.")
 
 
 if __name__ == "__main__":

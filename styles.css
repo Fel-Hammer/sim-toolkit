@@ -189,12 +189,12 @@ h1 {
   background-color: var(--class-color);
 }
 .filter-section:nth-child(3) .mdc-checkbox__native-control:checked ~ .mdc-checkbox__background {
-  border-color: var(--offensive-color);
-  background-color: var(--offensive-color);
-}
-.filter-section:nth-child(4) .mdc-checkbox__native-control:checked ~ .mdc-checkbox__background {
   border-color: var(--defensive-color);
   background-color: var(--defensive-color);
+}
+.filter-section:nth-child(4) .mdc-checkbox__native-control:checked ~ .mdc-checkbox__background {
+  border-color: var(--offensive-color);
+  background-color: var(--offensive-color);
 }
 
 .mdc-data-table {
@@ -607,4 +607,94 @@ h1 {
     border: none;
     border-radius: 4px;
     background-color: rgba(0, 0, 0, 0.1);
+}
+
+#dataToggleContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+#dataToggleContainer .mdc-button {
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+.additional-data-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 16px;
+}
+
+.mdc-button {
+    min-width: auto;
+    padding: 0 12px;
+    height: 32px;
+    font-size: 0.8rem;
+    margin: 4px;
+}
+
+.additional-data-content {
+    background-color: var(--surface);
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 24px;
+    max-height: 600px;
+    overflow-y: auto;
+}
+
+.additional-data-title {
+    color: var(--primary);
+    margin-top: 0;
+    text-align: center;
+    text-transform: capitalize;
+    margin-bottom: 16px;
+}
+
+.data-list {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.data-item {
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 4px;
+    padding: 8px 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 24px;
+    overflow: hidden;
+}
+
+.data-bar {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    background-color: rgba(126, 87, 194, 0.3);
+    z-index: 1;
+}
+
+.data-name {
+    font-size: 0.9rem;
+    color: var(--text-primary);
+    z-index: 2;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    flex-grow: 1;
+    margin-right: 8px;
+}
+
+.data-diff {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    z-index: 2;
+    white-space: nowrap;
 }

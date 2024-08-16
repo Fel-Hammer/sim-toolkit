@@ -1,91 +1,3 @@
-const ABBREVIATIONS = {
-    "AF": "Ascending Flame",
-    "SpB": "Spirit Bomb",
-    "NoSpB": "No Spirit Bomb",
-    "BE": "Bulk Extraction",
-    "BB": "Burning Blood",
-    "SF": "Soul Furnace",
-    "FC": "Focused Cleave",
-    "CoA": "Chains of Anger",
-    "VF": "Volatile Flameblood",
-    "FD": "Fiery Demise",
-    "StF": "Stoke the Flames",
-    "CoB": "Cycle of Binding",
-    "BA": "Burning Alive",
-    "CF": "Charred Flesh",
-    "DGB": "Darkglare Boon",
-    "SC": "Soul Carver",
-    "Crush": "Soulcrush",
-    "IS": "Illuminated Sigils",
-    "DiF": "Down in Flames",
-    "Calc": "Calcified Spikes",
-    "ES": "Extended Spikes",
-    "FFF": "Fel Flame Fortification",
-    "VR": "Void Reaver",
-    "PB": "Painbringer",
-    "FtD": "Feed the Demon",
-    "LR": "Last Resort",
-    "aldrachi": "Aldrachi Reaver",
-    "felscarred_flamebound": "Felscarred Flamebound",
-    "felscarred_student": "Felscarred Student",
-    "hunt": "The Hunt",
-    "CA": "Collective Anguish",
-    "CoSp": "Sigil of Spite",
-    "aldrachi_keen": "Aldrachi Keen",
-    "aldrachi_preemptive": "Aldrachi Preemptive",
-    "SoSp": "Sigil of Spite",
-    "CS": "Imp. Chaos Strike",
-    "AFI": "A Fire Inside",
-    "AB": "Accelerated Blade",
-    "Anni": "Annihilation",
-    "AMN": "Any Means Necessary",
-    "BD": "Blade Dance",
-    "BF": "Blind Fury",
-    "BH": "Burning Hatred",
-    "BW": "Burning Wound",
-    "CotG": "Champion of the Glaive",
-    "CT": "Chaos Theory",
-    "CD": "Chaotic Disposition",
-    "CTr": "Chaotic Trans.",
-    "CC": "Critical Chaos",
-    "CoH": "Cycle of Hatred",
-    "DWF": "Dancing with Fate",
-    "DS": "Death Sweep",
-    "DBlades": "Demon Blades",
-    "DA": "Demonic Appetite",
-    "DBite": "Demon's Bite",
-    "EB": "Eye Beam",
-    "FBarr": "Fel Barrage",
-    "FE": "Fel Eruption",
-    "FR": "Fel Rush",
-    "FiB": "First Blood",
-    "FG": "Furious Gaze",
-    "FT": "Furious Throws",
-    "GT": "Glaive Tempest",
-    "GI": "Growing Inferno",
-    "IA": "Immolation Aura",
-    "Init": "Initiative",
-    "ID": "Inner Demon",
-    "IH": "Insatiable Hunger",
-    "IP": "Isolated Prey",
-    "KYE": "Know Your Enemy",
-    "LCK": "Looks Can Kill",
-    "RO": "Relentless Onslaught",
-    "RH": "Restless Hunter",
-    "ROC": "Rush of Chaos",
-    "SG": "Serrated Glaive",
-    "SD": "Shattered Destiny",
-    "Souls": "Shattered Soul",
-    "SR": "Soul Rending",
-    "SSc": "Soulscar",
-    "ToR": "Trail of Ruin",
-    "UBC": "Unbound Chaos",
-    "DD": "Deflecting Dance",
-    "MD": "Mortal Dance",
-    "DI": "Desperate Instincts",
-    "NW": "Netherwalk"
-};
-
 // Global variables
 let globalTopValues = {};
 let globalPercentages = {};
@@ -93,7 +5,7 @@ let currentSortColumn = 1;
 let currentSortDirection = 'asc';
 let bestAldrachi = {};
 let bestFelscarred = {};
-const bestBuilds = {};
+let bestBuilds = {};
 let filteredData = [];
 
 // Constants for virtual scrolling
@@ -105,32 +17,38 @@ let visibleRowsCount;
 let firstVisibleRowIndex;
 let lastVisibleRowIndex;
 
-function findBestBuilds(data, metric) {
-    const aldrachiBuilds = data.filter(row => row.hero_talent.toLowerCase().includes('aldrachi'));
-    const felscarredBuilds = data.filter(row =>
-        row.hero_talent.toLowerCase().includes('felscarred') ||
-        row.hero_talent.toLowerCase().includes('student') ||
-        row.hero_talent.toLowerCase().includes('flamebound')
-    );
+// Additional data variables
+let activeDataSet = null;
 
-    bestAldrachi = aldrachiBuilds.reduce((best, current) =>
-        (current.metrics[metric] > best.metrics[metric]) ? current : best, aldrachiBuilds[0] || null);
+function calculateAverageDPS(build) {
+    const simTypes = Object.keys(build.dps);
+    const totalDPS = simTypes.reduce((sum, simType) => sum + build.dps[simType], 0);
+    return totalDPS / simTypes.length;
+}
 
-    bestFelscarred = felscarredBuilds.reduce((best, current) =>
-        (current.metrics[metric] > best.metrics[metric]) ? current : best, felscarredBuilds[0] || null);
+function findBestBuilds(builds, simType) {
+    const aldrachiBuilds = builds.filter(build => build.hero.toLowerCase().includes('aldrachi'));
+    const felscarredBuilds = builds.filter(build => build.hero.toLowerCase().includes('felscarred'));
+
+    const bestAldrachi = aldrachiBuilds.reduce((best, current) =>
+        (current.dps[simType] > best.dps[simType]) ? current : best, aldrachiBuilds[0] || null);
+
+    const bestFelscarred = felscarredBuilds.reduce((best, current) =>
+        (current.dps[simType] > best.dps[simType]) ? current : best, felscarredBuilds[0] || null);
 
     return { bestAldrachi, bestFelscarred };
 }
 
-function createComparisonViz(metric) {
-    const { bestAldrachi, bestFelscarred } = bestBuilds[metric];
-
-    if (!bestAldrachi || !bestFelscarred) {
+function createComparisonViz(simType) {
+    if (!bestBuilds[simType] || !bestBuilds[simType].bestAldrachi || !bestBuilds[simType].bestFelscarred) {
         return '<div class="comparison-viz"><span>Insufficient data</span></div>';
     }
 
-    const aldrachiValue = bestAldrachi.metrics[metric] || 0;
-    const felscarredValue = bestFelscarred.metrics[metric] || 0;
+    const bestAldrachi = bestBuilds[simType].bestAldrachi;
+    const bestFelscarred = bestBuilds[simType].bestFelscarred;
+
+    const aldrachiValue = bestAldrachi.dps[simType] || 0;
+    const felscarredValue = bestFelscarred.dps[simType] || 0;
 
     if (aldrachiValue === 0 && felscarredValue === 0) {
         return '<div class="comparison-viz"><span>No data</span></div>';
@@ -151,38 +69,26 @@ function createComparisonViz(metric) {
     `;
 }
 
-function calculateGlobalValues(data) {
-    reportTypes.forEach(type => {
-        const values = data.filter(r => r && r.metrics && r.metrics[type]).map(r => r.metrics[type]);
-        globalTopValues[type] = Math.max(...values);
+function calculateGlobalValues(builds) {
+    rawData.sim_types.forEach(simType => {
+        const values = builds.map(build => build.dps[simType]).filter(Boolean);
+        globalTopValues[simType] = Math.max(...values);
     });
 
-    data.forEach(row => {
-        if (row && row.metrics) {
-            row.percentages = {};
-            reportTypes.forEach(type => {
-                const value = row.metrics[type] || 0;
-                row.percentages[type] = globalTopValues[type] > 0
-                    ? ((globalTopValues[type] - value) / globalTopValues[type] * 100).toFixed(2)
-                    : '0.00';
-            });
-        }
+    builds.forEach(build => {
+        build.percentages = {};
+        rawData.sim_types.forEach(simType => {
+            const value = build.dps[simType] || 0;
+            build.percentages[simType] = globalTopValues[simType] > 0
+                ? ((globalTopValues[simType] - value) / globalTopValues[simType] * 100).toFixed(2)
+                : '0.00';
+        });
     });
 }
 
-function createCheckboxLabel(value, filterType, className) {
+function createCheckboxLabel(value, filterType, className, fullName) {
     const label = document.createElement('label');
     label.className = `mdc-checkbox ${className}`;
-
-    // Replace abbreviation with full name for display, case-insensitively
-    let displayValue = value;
-    const lowercaseValue = value.toLowerCase();
-    for (const [abbr, fullName] of Object.entries(ABBREVIATIONS)) {
-        if (abbr.toLowerCase() === lowercaseValue) {
-            displayValue = fullName;
-            break;
-        }
-    }
 
     label.innerHTML = `
         <input type="checkbox" class="mdc-checkbox__native-control" data-filter="${filterType}" value="${value}"/>
@@ -191,17 +97,54 @@ function createCheckboxLabel(value, filterType, className) {
                 <path class="mdc-checkbox__checkmark-path" fill="none" d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
             </svg>
         </div>
-        <span class="mdc-checkbox__label">${displayValue}</span>
+        <span class="mdc-checkbox__label">${fullName}</span>
     `;
     return label;
 }
 
+// Create a reverse mapping for abbreviated codes to full codes
+const talentCodeMapping = {};
+for (const type in talentDictionary) {
+    for (const fullCode in talentDictionary[type]) {
+        const talentInfo = talentDictionary[type][fullCode];
+        if (Array.isArray(talentInfo)) {
+            talentCodeMapping[talentInfo[1]] = fullCode;
+        }
+    }
+}
+
+function getFullTalentName(talent, talentType) {
+    if (talentType === 'hero') {
+        // For hero talents, we need to check if the talent starts with any of the hero talent keys
+        for (const heroTalent in talentDictionary.hero) {
+            if (talent.toLowerCase().startsWith(heroTalent.split('_')[0])) {
+                return talentDictionary.hero[heroTalent];
+            }
+        }
+    } else {
+        // Use the full code if available, otherwise use the original talent code
+        const fullCode = talentCodeMapping[talent] || talent;
+
+        if (talentDictionary[talentType] && talentDictionary[talentType][fullCode]) {
+            const talentInfo = talentDictionary[talentType][fullCode];
+            if (Array.isArray(talentInfo)) {
+                return talentInfo[0]; // Return the full name (first element of the array)
+            } else {
+                return talentInfo; // For cases where it's just a string
+            }
+        }
+    }
+
+    console.log(`Falling back to original talent name: ${talent}`);
+    return talent; // Fallback to the original talent name if not found
+}
+
 function generateFilterHTML() {
     const filterContainers = {
-        heroTalent: document.getElementById('heroTalentFilters'),
-        classTalents: document.getElementById('classTalentFilters'),
-        offensiveTalents: document.getElementById('offensiveTalentFilters'),
-        defensiveTalents: document.getElementById('defensiveTalentFilters')
+        hero: document.getElementById('heroTalentFilters'),
+        class: document.getElementById('classTalentFilters'),
+        offensive: document.getElementById('offensiveTalentFilters'),
+        defensive: document.getElementById('defensiveTalentFilters')
     };
 
     for (const [filterType, container] of Object.entries(filterContainers)) {
@@ -210,23 +153,21 @@ function generateFilterHTML() {
             continue;
         }
 
-        if (Array.isArray(filteredTalents[filterType])) {
-            // Sort the talents based on their order in ABBREVIATIONS
-            const sortedTalents = filteredTalents[filterType].sort((a, b) => {
-                const indexA = Object.keys(ABBREVIATIONS).indexOf(a);
-                const indexB = Object.keys(ABBREVIATIONS).indexOf(b);
-                return indexA - indexB;
-            });
+        const talents = new Set(rawData.builds.flatMap(build =>
+            filterType === 'hero' ? [build.hero] : build[filterType] || []
+        ));
 
-            sortedTalents.forEach(value => {
-                if (value) {
-                    const label = createCheckboxLabel(value, filterType, `${filterType.toLowerCase()}-talent`);
-                    container.appendChild(label);
+        Array.from(talents).sort().forEach(talent => {
+            if (talent) {
+                let talentType = filterType;
+                if (filterType === 'offensive' || filterType === 'defensive') {
+                    talentType = 'spec';
                 }
-            });
-        } else {
-            console.error(`filteredTalents[${filterType}] is not an array`);
-        }
+                const fullName = getFullTalentName(talent, talentType);
+                const label = createCheckboxLabel(talent, filterType, `${filterType}-talent`, fullName);
+                container.appendChild(label);
+            }
+        });
     }
 
     // Add event listeners for checkboxes
@@ -234,6 +175,7 @@ function generateFilterHTML() {
         checkbox.addEventListener('change', updateSelectedFilters);
     });
 }
+
 
 function updateSelectedFilters() {
     applyFilters();
@@ -259,10 +201,10 @@ window.copyTalentHash = function(talentHash, buttonElement) {
 
 function applyFilters() {
     const selectedFilters = {
-        heroTalent: new Set(),
-        classTalents: new Set(),
-        offensiveTalents: new Set(),
-        defensiveTalents: new Set()
+        hero: new Set(),
+        class: new Set(),
+        offensive: new Set(),
+        defensive: new Set()
     };
 
     document.querySelectorAll('input[type="checkbox"]:checked').forEach(checkbox => {
@@ -270,11 +212,11 @@ function applyFilters() {
         selectedFilters[filterType].add(checkbox.value);
     });
 
-    filteredData = rawData.filter(row =>
-        (selectedFilters.heroTalent.size === 0 || selectedFilters.heroTalent.has(row.hero_talent)) &&
-        (selectedFilters.classTalents.size === 0 || Array.from(selectedFilters.classTalents).every(talent => row.class_talents.includes(talent))) &&
-        (selectedFilters.offensiveTalents.size === 0 || Array.from(selectedFilters.offensiveTalents).every(talent => row.offensive_talents.includes(talent))) &&
-        (selectedFilters.defensiveTalents.size === 0 || Array.from(selectedFilters.defensiveTalents).every(talent => row.defensive_talents.includes(talent)))
+    filteredData = rawData.builds.filter(build =>
+        (selectedFilters.hero.size === 0 || selectedFilters.hero.has(build.hero)) &&
+        (selectedFilters.class.size === 0 || build.class.some(talent => selectedFilters.class.has(talent))) &&
+        (selectedFilters.offensive.size === 0 || build.offensive.some(talent => selectedFilters.offensive.has(talent))) &&
+        (selectedFilters.defensive.size === 0 || build.defensive.some(talent => selectedFilters.defensive.has(talent)))
     );
 
     sortData();
@@ -303,17 +245,17 @@ function updateTable() {
     `;
 
     // Add metric headers with comparison viz
-    reportTypes.forEach((type, index) => {
+    rawData.sim_types.forEach((simType, index) => {
         const th = document.createElement('th');
         th.className = 'mdc-data-table__header-cell';
         th.setAttribute('role', 'columnheader');
         th.setAttribute('scope', 'col');
         th.setAttribute('onclick', `sortTable(${index + 2})`);
-        th.setAttribute('data-metric', type);
+        th.setAttribute('data-sim-type', simType);
         th.innerHTML = `
-            ${type}
+            ${simType.replace(/_/g, ' ')}
             <i class="material-icons sort-icon">arrow_downward</i>
-            ${createComparisonViz(type)}
+            ${createComparisonViz(simType)}
         `;
         headerRow.appendChild(th);
     });
@@ -376,10 +318,9 @@ function renderVisibleRows() {
             rankCell.textContent = row.overall_rank || 'N/A';
             tr.appendChild(rankCell);
 
-            // Metric columns
-            reportTypes.forEach(type => {
-                const value = row.metrics && row.metrics[type] ? row.metrics[type] : 0;
-                const percentage = row.percentages[type];
+            rawData.sim_types.forEach(simType => {
+                const value = row.dps[simType] || 0;
+                const percentage = row.percentages[simType];
                 const barColor = getBarColor(parseFloat(percentage));
 
                 const metricCell = document.createElement('td');
@@ -420,43 +361,25 @@ function initializeVirtualScroll() {
     renderVisibleRows();
 }
 
-function formatBuildName(row) {
-    if (!row) return '';
+function formatBuildName(build) {
+    if (!build) return '';
 
-    function getFullTalentName(talent) {
-        const lowercaseTalent = talent.toLowerCase();
-        for (const [abbr, fullName] of Object.entries(ABBREVIATIONS)) {
-            if (abbr.toLowerCase() === lowercaseTalent) {
-                return fullName;
-            }
-        }
-        return talent;
-    }
+    const heroTalent = build.hero ? `<span class="chip chip-hero ${build.hero.toLowerCase().includes('aldrachi') ? 'aldrachi' : 'felscarred'}" title="Hero Talent: ${getFullTalentName(build.hero, 'hero')}">${build.hero}</span>` : '';
 
-    function sortTalents(talents) {
-        return talents.sort((a, b) => {
-            const indexA = Object.keys(ABBREVIATIONS).indexOf(a);
-            const indexB = Object.keys(ABBREVIATIONS).indexOf(b);
-            return indexA - indexB;
-        });
-    }
-
-    const heroTalent = row.hero_talent ? `<span class="chip chip-hero ${row.hero_talent.toLowerCase().includes('aldrachi') ? 'aldrachi' : 'felscarred'}" title="Hero Talent: ${getFullTalentName(row.hero_talent)}">${getFullTalentName(row.hero_talent)}</span>` : '';
-
-    const classTalents = row.class_talents && Array.isArray(row.class_talents) ? sortTalents(row.class_talents).map(talent =>
-        `<span class="chip chip-class" title="Class Talent: ${getFullTalentName(talent)}">${talent}</span>`
+    const classTalents = build.class ? build.class.map(talent =>
+        `<span class="chip chip-class" title="Class Talent: ${getFullTalentName(talent, 'class')}">${talent}</span>`
     ).join('') : '';
 
-    const offensiveTalents = row.offensive_talents && Array.isArray(row.offensive_talents) ? sortTalents(row.offensive_talents).map(talent =>
-        `<span class="chip chip-spec chip-offensive" title="Offensive Talent: ${getFullTalentName(talent)}">${talent}</span>`
+    const offensiveTalents = build.offensive ? build.offensive.map(talent =>
+        `<span class="chip chip-spec chip-offensive" title="Offensive Talent: ${getFullTalentName(talent, 'spec')}">${talent}</span>`
     ).join('') : '';
 
-    const defensiveTalents = row.defensive_talents && Array.isArray(row.defensive_talents) ? sortTalents(row.defensive_talents).map(talent =>
-        `<span class="chip chip-spec chip-defensive" title="Defensive Talent: ${getFullTalentName(talent)}">${talent}</span>`
+    const defensiveTalents = build.defensive ? build.defensive.map(talent =>
+        `<span class="chip chip-spec chip-defensive" title="Defensive Talent: ${getFullTalentName(talent, 'spec')}">${talent}</span>`
     ).join('') : '';
 
     const copyButton = `
-        <button class="copy-hash-btn" onclick="copyTalentHash('${row.talent_hash || 'No hash available'}', this)" title="Copy talent hash">
+        <button class="copy-hash-btn" onclick="copyTalentHash('${build.talent_hash || 'No hash available'}', this)" title="Copy talent hash">
             <i class="material-icons copy-icon">content_copy</i>
             <i class="material-icons success-icon" style="display: none;">check_circle</i>
         </button>
@@ -473,6 +396,7 @@ function formatBuildName(row) {
         </div>
     `;
 }
+
 
 function formatNumber(num) {
     if (num >= 1000000) {
@@ -523,8 +447,6 @@ function interpolateColor(color1, color2, t) {
 
 function sortTable(n) {
     const table = document.getElementById("dataTable");
-    const tbody = table.querySelector('tbody');
-    const rows = Array.from(tbody.querySelectorAll('tr'));
     const th = table.querySelectorAll('th')[n];
     const icon = th.querySelector('.sort-icon');
 
@@ -540,15 +462,15 @@ function sortData() {
     filteredData.sort((a, b) => {
         let aValue, bValue;
         if (currentSortColumn === 0) {
-            aValue = a.full_name;
-            bValue = b.full_name;
+            aValue = a.hero + a.class.join('') + a.offensive.join('') + a.defensive.join('');
+            bValue = b.hero + b.class.join('') + b.offensive.join('') + b.defensive.join('');
         } else if (currentSortColumn === 1) {
             aValue = a.overall_rank || Infinity;
             bValue = b.overall_rank || Infinity;
         } else {
-            const metricType = reportTypes[currentSortColumn - 2];
-            aValue = a.metrics[metricType] || 0;
-            bValue = b.metrics[metricType] || 0;
+            const simType = rawData.sim_types[currentSortColumn - 2];
+            aValue = a.dps[simType] || 0;
+            bValue = b.dps[simType] || 0;
         }
 
         if (aValue < bValue) return currentSortDirection === 'asc' ? -1 : 1;
@@ -577,52 +499,178 @@ function updateTalentTrees(bestBuilds) {
     const baseUrl = 'https://mimiron.raidbots.com/simbot/render/talents/';
     const commonParams = '?width=315&level=80&&hideHeader=1';
 
-  if (bestBuilds['1T 300s'] && bestBuilds['1T 300s'].bestAldrachi) {
-    document.getElementById('aldrachiSingleTarget').src =
-      `${baseUrl}${bestBuilds['1T 300s'].bestAldrachi.talent_hash}${commonParams}`;
-  }
+    // Use the first sim type as default
+    const defaultSimType = rawData.sim_types[0];
 
-  if (bestBuilds['Overall'] && bestBuilds['Overall'].bestAldrachi) {
-    document.getElementById('aldrachiOverall').src =
-      `${baseUrl}${bestBuilds['Overall'].bestAldrachi.talent_hash}${commonParams}`;
-  }
+    if (bestBuilds[defaultSimType] && bestBuilds[defaultSimType].bestAldrachi) {
+        document.getElementById('aldrachiOverall').src =
+            `${baseUrl}${bestBuilds[defaultSimType].bestAldrachi.talent_hash}${commonParams}`;
+    }
 
-  if (bestBuilds['1T 300s'] && bestBuilds['1T 300s'].bestFelscarred) {
-    document.getElementById('felscarredSingleTarget').src =
-      `${baseUrl}${bestBuilds['1T 300s'].bestFelscarred.talent_hash}${commonParams}`;
-  }
+    if (bestBuilds['1T_300s'] && bestBuilds['1T_300s'].bestAldrachi) {
+        document.getElementById('aldrachiSingleTarget').src =
+            `${baseUrl}${bestBuilds['1T_300s'].bestAldrachi.talent_hash}${commonParams}`;
+    }
 
-  if (bestBuilds['Overall'] && bestBuilds['Overall'].bestFelscarred) {
-    document.getElementById('felscarredOverall').src =
-      `${baseUrl}${bestBuilds['Overall'].bestFelscarred.talent_hash}${commonParams}`;
-  }
+    if (bestBuilds[defaultSimType] && bestBuilds[defaultSimType].bestFelscarred) {
+        document.getElementById('felscarredOverall').src =
+            `${baseUrl}${bestBuilds[defaultSimType].bestFelscarred.talent_hash}${commonParams}`;
+    }
+
+    if (bestBuilds['1T_300s'] && bestBuilds['1T_300s'].bestFelscarred) {
+        document.getElementById('felscarredSingleTarget').src =
+            `${baseUrl}${bestBuilds['1T_300s'].bestFelscarred.talent_hash}${commonParams}`;
+    }
 }
 
-function initializeData(rawData) {
-    if (!Array.isArray(rawData) || rawData.length === 0) {
-        console.error("rawData is empty or not an array");
+function generateAdditionalDataButtons() {
+    const buttonContainer = document.getElementById('additionalDataButtons');
+    const buttonNames = {
+        'gem_profilesets': 'Gems',
+        'trinket_profilesets': 'Trinkets',
+        'embellishment_profilesets': 'Embellishments',
+        'food_profilesets': 'Food',
+        'consumable_profilesets': 'Consumables',
+        'enchant_profilesets_weapons': 'Weapon Enchants',
+        'enchant_profilesets_rings': 'Ring Enchants',
+        'enchant_profilesets_legs': 'Leg Enchants',
+        'enchant_profilesets_chest': 'Chest Enchants',
+    };
+
+    for (const dataSetName in additionalData) {
+        console.log(dataSetName);
+        const button = document.createElement('button');
+        button.className = 'mdc-button';
+        button.onclick = () => toggleAdditionalData(dataSetName);
+
+        const buttonText = buttonNames[dataSetName] || dataSetName.replace(/_/g, ' ');
+        button.innerHTML = `<span class="mdc-button__label">${buttonText}</span>`;
+
+        buttonContainer.appendChild(button);
+    }
+}
+
+function toggleAdditionalData(dataSetName) {
+    const contentDiv = document.getElementById('additionalDataContent');
+    const buttons = document.querySelectorAll('#additionalDataButtons button');
+
+    if (activeDataSet === dataSetName) {
+        // Toggling off
+        activeDataSet = null;
+        contentDiv.style.display = 'none';
+        buttons.forEach(btn => btn.classList.remove('mdc-button--raised'));
+    } else {
+        // Toggling on
+        activeDataSet = dataSetName;
+        displayAdditionalData(dataSetName);
+        contentDiv.style.display = 'block';
+        buttons.forEach(btn => {
+            if (btn.textContent.trim() === dataSetName.replace(/_/g, ' ')) {
+                btn.classList.add('mdc-button--raised');
+            } else {
+                btn.classList.remove('mdc-button--raised');
+            }
+        });
+    }
+}
+
+function displayAdditionalData(dataSetName) {
+    const contentDiv = document.getElementById('additionalDataContent');
+    contentDiv.innerHTML = ''; // Clear existing content
+    const data = additionalData[dataSetName];
+
+    if (!data || Object.keys(data).length === 0) {
+        const p = document.createElement('p');
+        p.textContent = 'No data available for this section.';
+        contentDiv.appendChild(p);
         return;
     }
-    calculateGlobalValues(rawData);
 
-    // Find best builds for each metric
-    reportTypes.forEach(metric => {
-        bestBuilds[metric] = findBestBuilds(rawData, metric);
+    const sortedData = Object.values(data).sort((a, b) => b.dps - a.dps);
+    const topDPS = sortedData[0].dps;
+
+    const title = document.createElement('h3');
+    title.className = 'additional-data-title';
+    const buttonNames = {
+        'gem profilesets': 'Gems',
+        'trinket profilesets': 'Trinkets',
+        'enchant profilesets weapons': 'Weapon Enchants',
+        'enchant profilesets rings': 'Ring Enchants',
+        'enchant profilesets legs': 'Leg Enchants',
+        'enchant profilesets chest': 'Chest Enchants'
+    };
+    title.textContent = buttonNames[dataSetName] || dataSetName.replace(/_/g, ' ');
+    contentDiv.appendChild(title);
+
+    const dataList = document.createElement('div');
+    dataList.className = 'data-list';
+
+    sortedData.forEach(item => {
+        const percentDiff = ((item.dps - topDPS) / topDPS * 100).toFixed(2);
+        // Using a logarithmic scale to exaggerate small differences
+        const barWidth = Math.max(0, 100 - Math.log((topDPS - item.dps) / topDPS * 100 + 1) * 20);
+
+        const dataItem = document.createElement('div');
+        dataItem.className = 'data-item';
+
+        const dataBar = document.createElement('div');
+        dataBar.className = 'data-bar';
+        dataBar.style.width = `${barWidth}%`;
+
+        const dataName = document.createElement('span');
+        dataName.className = 'data-name';
+        dataName.textContent = item.name.replace(/_/g, ' ');
+
+        const dataDiff = document.createElement('span');
+        dataDiff.className = 'data-diff';
+        dataDiff.textContent = percentDiff === '0.00' ? '0.00%' : `${percentDiff}%`;
+
+        dataItem.appendChild(dataBar);
+        dataItem.appendChild(dataName);
+        dataItem.appendChild(dataDiff);
+
+        dataList.appendChild(dataItem);
     });
 
-    bestBuilds['Overall'] = findBestBuilds(rawData, 'overall_rank');
+    contentDiv.appendChild(dataList);
+}
+
+function initializeData(data) {
+    if (!Array.isArray(data.builds) || data.builds.length === 0) {
+        console.error("data.builds is empty or not an array");
+        return;
+    }
+
+    calculateGlobalValues(data.builds);
+
+    // Calculate average DPS for each build
+    data.builds.forEach(build => {
+        build.averageDPS = calculateAverageDPS(build);
+    });
+
+    // Sort builds by average DPS and assign overall rank
+    data.builds.sort((a, b) => b.averageDPS - a.averageDPS);
+    data.builds.forEach((build, index) => {
+        build.overall_rank = index + 1;
+    });
+
+    // Find best builds for each sim type
+    data.sim_types.forEach(simType => {
+        bestBuilds[simType] = findBestBuilds(data.builds, simType);
+    });
+
     // Update talent trees
     updateTalentTrees(bestBuilds);
 
-    // Initialize filteredData with all data, including talent_hash
-    filteredData = rawData.map(row => ({
-        ...row,
-        talent_hash: row.talent_hash || ''  // Ensure talent_hash is included
+    // Initialize filteredData with all builds
+    filteredData = data.builds.map(build => ({
+        ...build,
+        talent_hash: build.talent_hash || ''
     }));
 
-    // Sort the data by 1T 300s descending
-    currentSortColumn = reportTypes.indexOf('1T 300s') + 2;
-    currentSortDirection = 'desc';
+    // Sort the data by average DPS descending
+    currentSortColumn = 1; // Overall rank is the second column (index 1)
+    currentSortDirection = 'asc';
     sortData();
 
     updateTable();
@@ -632,20 +680,23 @@ function initializeData(rawData) {
         checkbox.addEventListener('change', updateSelectedFilters);
     });
 
-    // Update sort indicator for 1T 300s
-    updateSortIndicator(reportTypes.indexOf('1T 300s') + 2, 'desc');
+    // Update sort indicator for overall rank
+    updateSortIndicator(1, 'asc');
 }
 
 window.onload = function () {
-    document.getElementById('toggleFilters').addEventListener('click', function() {
+    generateAdditionalDataButtons();
+    document.getElementById('additionalDataContent').style.display = 'none';
+    document.getElementById('toggleFilters').addEventListener('click', function () {
         var filters = document.getElementById('filters');
         filters.style.display = filters.style.display === 'none' ? 'flex' : 'none';
     });
 
-    if (typeof rawData !== 'undefined' && Array.isArray(rawData) && typeof filteredTalents !== 'undefined' && typeof reportTypes !== 'undefined') {
+
+    if (typeof rawData !== 'undefined' && rawData.builds && Array.isArray(rawData.builds) && rawData.sim_types) {
         generateFilterHTML();
         initializeData(rawData);
     } else {
-        console.error('rawData, filteredTalents, or reportTypes is not defined or rawData is not an array');
+        console.error('rawData is not defined correctly or rawData.builds is not an array');
     }
 };

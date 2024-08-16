@@ -1,0 +1,282 @@
+[
+  {
+    "id": 213770,
+    "name": "Elemental Focusing Lens",
+    "icon": "inv_10_jewelcrafting3_rainbowprism_color2",
+    "quality": 3,
+    "itemClass": 7,
+    "itemSubClass": 18,
+    "itemLevel": 72,
+    "itemLimit": {
+      "category": 512,
+      "quantity": 2
+    },
+    "craftingQuality": 3,
+    "craftingBonusIds": [
+      10520,
+      8960
+    ],
+    "craftingCategoryId": 549,
+    "expansion": 10
+  },
+  {
+    "id": 213773,
+    "name": "Prismatic Null Stone",
+    "icon": "inv_enchant_prismaticsphere",
+    "quality": 3,
+    "itemClass": 7,
+    "itemSubClass": 18,
+    "itemLevel": 72,
+    "itemLimit": {
+      "category": 512,
+      "quantity": 2
+    },
+    "craftingQuality": 3,
+    "craftingBonusIds": [
+      10518,
+      8960
+    ],
+    "craftingCategoryId": 550,
+    "expansion": 10
+  },
+  {
+    "id": 213776,
+    "name": "Captured Starlight",
+    "icon": "spell_priest_divinestar_holy",
+    "quality": 3,
+    "itemClass": 7,
+    "itemSubClass": 18,
+    "itemLevel": 72,
+    "itemLimit": {
+      "category": 512,
+      "quantity": 2
+    },
+    "craftingQuality": 3,
+    "craftingBonusIds": [
+      10521,
+      8960
+    ],
+    "craftingCategoryId": 551,
+    "expansion": 10
+  },
+  {
+    "id": 221940,
+    "name": "Concealed Chaos Module",
+    "icon": "inv_misc_bomb_09",
+    "quality": 3,
+    "itemClass": 7,
+    "itemSubClass": 18,
+    "itemLevel": 72,
+    "itemLimit": {
+      "category": 512,
+      "quantity": 2
+    },
+    "craftingQuality": 3,
+    "craftingBonusIds": [
+      11210,
+      8960
+    ],
+    "craftingCategoryId": 609,
+    "expansion": 10
+  },
+  {
+    "id": 221943,
+    "name": "Energy Redistribution Beacon",
+    "icon": "inv_misc_enggizmos_24",
+    "quality": 3,
+    "itemClass": 7,
+    "itemSubClass": 18,
+    "itemLevel": 72,
+    "itemLimit": {
+      "category": 512,
+      "quantity": 2
+    },
+    "craftingQuality": 3,
+    "craftingBonusIds": [
+      11226,
+      8960
+    ],
+    "craftingCategoryId": 610,
+    "expansion": 10
+  },
+  {
+    "id": 222870,
+    "name": "Dawnthread Lining",
+    "icon": "inv_10_tailoring_tailoringconsumable_color2",
+    "quality": 3,
+    "itemClass": 7,
+    "itemSubClass": 18,
+    "itemLevel": 72,
+    "itemLimit": {
+      "category": 512,
+      "quantity": 2
+    },
+    "craftingQuality": 3,
+    "craftingBonusIds": [
+      11303,
+      8960
+    ],
+    "craftingCategoryId": 683,
+    "expansion": 10
+  },
+  {
+    "id": 222873,
+    "name": "Duskthread Lining",
+    "icon": "inv_10_tailoring_tailoringconsumable_color3",
+    "quality": 3,
+    "itemClass": 7,
+    "itemSubClass": 18,
+    "itemLevel": 72,
+    "itemLimit": {
+      "category": 512,
+      "quantity": 2
+    },
+    "craftingQuality": 3,
+    "craftingBonusIds": [
+      11304,
+      8960
+    ],
+    "craftingCategoryId": 684,
+    "expansion": 10
+  },
+  {
+    "id": 219506,
+    "name": "Writhing Armor Banding",
+    "icon": "inv_10_skinning_craftedoptionalreagent_studdedleatherswatch_color2",
+    "quality": 3,
+    "itemClass": 7,
+    "itemSubClass": 18,
+    "itemLevel": 72,
+    "itemLimit": {
+      "category": 512,
+      "quantity": 2
+    },
+    "craftingQuality": 3,
+    "craftingBonusIds": [
+      11109,
+      8960
+    ],
+    "craftingCategoryId": 560,
+    "expansion": 10
+  },
+  {
+    "id": 221937,
+    "name": "Pouch of Pocket Grenades",
+    "icon": "inv_misc_bomb_08",
+    "quality": 3,
+    "itemClass": 7,
+    "itemSubClass": 18,
+    "itemLevel": 72,
+    "itemLimit": {
+      "category": 512,
+      "quantity": 2
+    },
+    "craftingQuality": 3,
+    "craftingBonusIds": [
+      11209,
+      8960
+    ],
+    "craftingCategoryId": 608,
+    "expansion": 10
+  },
+  {
+    "id": 219497,
+    "name": "Blessed Weapon Grip",
+    "icon": "inv_misc_emberweavebandage",
+    "quality": 3,
+    "itemClass": 7,
+    "itemSubClass": 18,
+    "itemLevel": 72,
+    "itemLimit": {
+      "category": 512,
+      "quantity": 2
+    },
+    "craftingQuality": 3,
+    "craftingBonusIds": [
+      11103,
+      8960
+    ],
+    "craftingCategoryId": 559,
+    "expansion": 10
+  },
+  {
+    "id": 226027,
+    "name": "Darkmoon Sigil: Radiance",
+    "icon": "inv_inscriptions_darkmoonsigil_red",
+    "quality": 3,
+    "itemClass": 7,
+    "itemSubClass": 18,
+    "itemLevel": 72,
+    "itemLimit": {
+      "category": 512,
+      "quantity": 2
+    },
+    "craftingQuality": 3,
+    "craftingBonusIds": [
+      11299,
+      8960
+    ],
+    "craftingCategoryId": 587,
+    "expansion": 10
+  },
+  {
+    "id": 226024,
+    "name": "Darkmoon Sigil: Ascension",
+    "icon": "inv_inscriptions_darkmoonsigil_purple",
+    "quality": 3,
+    "itemClass": 7,
+    "itemSubClass": 18,
+    "itemLevel": 72,
+    "itemLimit": {
+      "category": 512,
+      "quantity": 2
+    },
+    "craftingQuality": 3,
+    "craftingBonusIds": [
+      11300,
+      8960
+    ],
+    "craftingCategoryId": 588,
+    "expansion": 10
+  },
+  {
+    "id": 226030,
+    "name": "Darkmoon Sigil: Symbiosis",
+    "icon": "inv_inscriptions_darkmoonsigil_teal",
+    "quality": 3,
+    "itemClass": 7,
+    "itemSubClass": 18,
+    "itemLevel": 72,
+    "itemLimit": {
+      "category": 512,
+      "quantity": 2
+    },
+    "craftingQuality": 3,
+    "craftingBonusIds": [
+      11302,
+      8960
+    ],
+    "craftingCategoryId": 589,
+    "expansion": 10
+  },
+  {
+    "id": 226033,
+    "name": "Darkmoon Sigil: Vivacity",
+    "icon": "inv_inscriptions_darkmoonsigil_blue",
+    "quality": 3,
+    "itemClass": 7,
+    "itemSubClass": 18,
+    "itemLevel": 72,
+    "itemLimit": {
+      "category": 512,
+      "quantity": 2
+    },
+    "craftingQuality": 3,
+    "craftingBonusIds": [
+      11301,
+      8960
+    ],
+    "craftingCategoryId": 590,
+    "expansion": 10
+  }
+]

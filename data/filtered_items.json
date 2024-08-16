@@ -651,20 +651,16 @@
     "uniqueEquipped": true,
     "stats": [
       {
-        "id": 4,
-        "alloc": 5259
-      },
-      {
         "id": 7,
         "alloc": 7889
       },
       {
         "id": 32,
-        "alloc": 1741
+        "alloc": 5250
       },
       {
         "id": 49,
-        "alloc": 5259
+        "alloc": 12250
       }
     ],
     "sources": [
@@ -691,20 +687,16 @@
     "uniqueEquipped": true,
     "stats": [
       {
-        "id": 3,
-        "alloc": 5259
-      },
-      {
         "id": 7,
         "alloc": 7889
       },
       {
         "id": 32,
-        "alloc": 3924
+        "alloc": 6000
       },
       {
-        "id": 36,
-        "alloc": 3076
+        "id": 40,
+        "alloc": 11500
       }
     ],
     "sources": [
@@ -883,20 +875,16 @@
     "uniqueEquipped": true,
     "stats": [
       {
-        "id": 4,
-        "alloc": 5259
-      },
-      {
         "id": 7,
         "alloc": 7889
       },
       {
         "id": 36,
-        "alloc": 3494
+        "alloc": 11000
       },
       {
-        "id": 32,
-        "alloc": 3506
+        "id": 49,
+        "alloc": 6500
       }
     ],
     "sources": [
@@ -1064,46 +1052,6 @@
       }
     ],
     "onUseTrinket": true,
-    "expansion": 3
-  },
-  {
-    "id": 133307,
-    "name": "Abandoned Dark Iron Ring",
-    "icon": "inv_misc_vinering",
-    "quality": 3,
-    "itemClass": 4,
-    "itemSubClass": 0,
-    "inventoryType": 11,
-    "itemLevel": 37,
-    "uniqueEquipped": true,
-    "stats": [
-      {
-        "id": 5,
-        "alloc": 5259
-      },
-      {
-        "id": 7,
-        "alloc": 7889
-      },
-      {
-        "id": 32,
-        "alloc": 3494
-      },
-      {
-        "id": 36,
-        "alloc": 3506
-      }
-    ],
-    "sources": [
-      {
-        "instanceId": 71,
-        "encounterId": 2617
-      },
-      {
-        "instanceId": -1,
-        "encounterId": 71
-      }
-    ],
     "expansion": 3
   },
   {
@@ -10893,38 +10841,6 @@
       {
         "id": 49,
         "alloc": 3000
-      }
-    ],
-    "expansion": 10
-  },
-  {
-    "id": 228157,
-    "name": "Impalers of the Hypogeal Nemesis",
-    "icon": "inv_leather_raiddemonhunternerubian_d_01_helm",
-    "quality": 4,
-    "itemClass": 4,
-    "itemSubClass": 2,
-    "inventoryType": 1,
-    "itemLevel": 571,
-    "allowableClasses": [
-      12
-    ],
-    "stats": [
-      {
-        "id": 73,
-        "alloc": 5259
-      },
-      {
-        "id": 7,
-        "alloc": 7889
-      },
-      {
-        "id": 49,
-        "alloc": 4721
-      },
-      {
-        "id": 36,
-        "alloc": 2279
       }
     ],
     "expansion": 10

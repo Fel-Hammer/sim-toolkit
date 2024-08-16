@@ -172,6 +172,37 @@ def write_enchant_profilesets(
             write_profilesets(profiles, filename)
 
 
+def generate_embellishment_profilesets(
+    embellishments: List[Dict[str, Any]], gear: Dict[str, str]
+) -> List[str]:
+    profilesets = []
+    wrist_item = gear.get("wrist", "")
+
+    if not wrist_item:
+        print("Error: No wrist item found in gear.")
+        return profilesets
+
+    for embellishment in embellishments:
+        name = clean_name(
+            embellishment.get(
+                "name", f'Embellishment_{embellishment.get("id", "Unknown")}'
+            )
+        )
+        bonus_ids = "/".join(map(str, embellishment.get("craftingBonusIds", [])))
+
+        if bonus_ids:
+            new_wrist_item = re.sub(
+                r"bonus_id=\d+(\/\d+)*", f"bonus_id={bonus_ids}", wrist_item
+            )
+            if "bonus_id=" not in new_wrist_item:
+                new_wrist_item += f",bonus_id={bonus_ids}"
+
+            profileset = f'profileset."Embellishment_{name}"=wrist={new_wrist_item}'
+            profilesets.append(profileset)
+
+    return profilesets
+
+
 def main():
     if len(sys.argv) < 2:
         print("Usage: python create_profiles.py <path_to_config.ini>")
@@ -203,6 +234,7 @@ def main():
         os.path.join(data_dir, "filtered_items.json"),
         os.path.join(data_dir, "filtered_enchants.json"),
         os.path.join(data_dir, "filtered_consumables.json"),
+        os.path.join(data_dir, "filtered_embellishments.json"),
     ]
     if not all(os.path.exists(file) for file in required_files):
         print(
@@ -214,6 +246,7 @@ def main():
     enchants = load_json(required_files[1])
     gems = load_json(required_files[1])
     consumables = load_json(required_files[2])
+    embellishments = load_json(required_files[3])
 
     gear_file_path = os.path.join(apl_folder_full_path, "gear.simc")
     print(f"Looking for gear file at: {gear_file_path}")
@@ -245,6 +278,12 @@ def main():
     write_profilesets(
         consumable_profilesets,
         os.path.join(apl_folder_full_path, "consumable_profilesets.simc"),
+    )
+
+    embellishment_profilesets = generate_embellishment_profilesets(embellishments, gear)
+    write_profilesets(
+        embellishment_profilesets,
+        os.path.join(apl_folder_full_path, "embellishment_profilesets.simc"),
     )
 
 

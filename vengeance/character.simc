@@ -22,7 +22,7 @@ potion=tempered_potion_3
 flask=flask_of_alchemical_chaos_3
 food=feast_of_the_divine_day
 augmentation=crystallized_augment_rune
-temporary_enchant=main_hand:algari_mana_oil_3/off_hand:algari_mana_oil_3
+temporary_enchant=main_hand:ironclaw_whetstone_3/off_hand:ironclaw_whetstone_3
 
 # Imports
 input=gear.simc

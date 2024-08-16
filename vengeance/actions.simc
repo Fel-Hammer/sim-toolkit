@@ -1,3 +1,8 @@
+# 2024-08-12 nerfs
+override.spell_data=effect.1153552.base_value=35
+override.spell_data=effect.1154950.base_value=25
+override.spell_data=effect.1153560.ap_coefficient=2.0
+
 # Generic pre-combat actions
 actions.precombat=flask
 actions.precombat+=/augmentation
@@ -44,4 +49,3 @@ actions.externals+=/invoke_external_buff,name=power_infusion
 
 input=actions_aldrachi_reaver.simc
 input=actions_felscarred.simc
-
