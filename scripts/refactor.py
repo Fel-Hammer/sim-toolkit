@@ -961,6 +961,18 @@ class SupplementalSimulation(Simulation):
         super().__init__(*args, **kwargs)
         self.supplemental_files = self._get_supplemental_files()
 
+    def _set_supplemental_params(
+        self, params: SimulationParameters
+    ) -> SimulationParameters:
+        return SimulationParameters(
+            iterations=10000,
+            target_error=0.05,
+            targets=params.targets,
+            time=params.time,
+            fight_style=params.fight_style,
+            sim_id=params.sim_id,
+        )
+
     def _count_profilesets(self, content: str) -> int:
         return content.count("profileset.")
 
@@ -1007,8 +1019,11 @@ class SupplementalSimulation(Simulation):
         self.content_generator = SimCContentGenerator(self.config)
         self.content_generator.set_multiple_simulation(False)  # Keep talents
 
+        # Use supplemental-specific parameters
+        supplemental_params = self._set_supplemental_params(params)
+
         # Update simulation parameters
-        self._update_simulation_params(params)
+        self._update_simulation_params(supplemental_params)
 
         # Set talents for supplemental sims
         self.content_generator.update_talents(self.config.talents)
@@ -1027,14 +1042,16 @@ class SupplementalSimulation(Simulation):
 
         # Generate unique sim_id for this supplemental simulation
         sim_id = (
-            f"{params.sim_id}_{os.path.splitext(supplemental_file)[0]}"
+            f"{supplemental_params.sim_id}_{os.path.splitext(supplemental_file)[0]}"
             if self.config.timestamp
             else "supplemental"
         )
 
         output_file = self._generate_output_filename(sim_id, "json")
 
-        actual_output_file = self.execute_simulation(params, [], output_file)
+        actual_output_file = self.execute_simulation(
+            supplemental_params, [], output_file
+        )
         if actual_output_file:
             content = FileHandler.read_file(actual_output_file)
             if content:
