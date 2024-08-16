@@ -1,0 +1,3 @@
+{
+  "buildCommand": "mkdir public && mv havoc.html public/index.html"
+}
