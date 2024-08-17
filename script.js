@@ -497,7 +497,7 @@ function updateSortIndicator(columnIndex, direction) {
 
 function updateTalentTrees(bestBuilds) {
     const baseUrl = 'https://mimiron.raidbots.com/simbot/render/talents/';
-    const commonParams = '?width=315&level=80&&hideHeader=1';
+    const commonParams = '?width=313&level=80&&hideHeader=1';
 
     // Use the first sim type as default
     const defaultSimType = rawData.sim_types[0];

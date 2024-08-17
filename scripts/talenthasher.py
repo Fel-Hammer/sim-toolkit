@@ -340,10 +340,6 @@ def initialize_talent_data(force_new=False):
     return talent_data
 
 
-# Initialize talent data when the module is imported
-initialize_talent_data()
-
-
 def generate_talent_hash(
     hero_talent_string,
     class_talent_string,

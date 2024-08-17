@@ -291,6 +291,7 @@ class SimulationParameters:
 @dataclass
 class SimConfig:
     config_path: str
+    script_dir: str
     spec_name: str
     simc_path: str
     apl_folder: str
@@ -327,6 +328,7 @@ class SimConfig:
 
         instance = cls(
             config_path=config_path,
+            script_dir=script_dir,
             spec_name=config.get("General", "spec_name", fallback="Vengeance"),
             simc_path=config.get("General", "simc", fallback=""),
             apl_folder=get_path("General", "apl_folder"),
@@ -440,7 +442,7 @@ class CacheManager:
     def __init__(self, config: SimConfig):
         self.config = config
         self.cache_file = FileHandler.join_path(
-            os.path.dirname(config.simc_path), "simulation_cache.pkl"
+            config.script_dir, "simulation_cache.pkl"
         )
         self.cache = self.load_cache()
         self.modified = False
@@ -532,6 +534,7 @@ class TalentManager:
         key = f"{hero_talent}_{class_talent}_{spec_talent}"
         cached_hash = self.cache_manager.get(key)
         if cached_hash is None or self.config.clear_cache:
+            logger.debug(f"Generating new hash for {key}")
             talent_hash = generate_talent_hash(
                 hero_talent,
                 class_talent,
@@ -542,6 +545,7 @@ class TalentManager:
             )
             self.cache_manager.set(key, talent_hash)
             return talent_hash
+        logger.debug(f"Using cached hash for {key}")
         return cached_hash
 
     def get_hashes_batch(self, combinations: List[Tuple[str, str, str]]) -> List[str]:
@@ -847,6 +851,9 @@ class Simulation(ABC):
 
 
 class SingleSimulation(Simulation):
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.talent_combinations = {}
 
     def run(self, params: SimulationParameters) -> Optional[Dict]:
         logger.debug("Starting single simulation")
@@ -905,6 +912,7 @@ class MultipleSimulation(Simulation):
 
     def format_profiles(self):
         profiles = []
+        self.talent_combinations = {}  # New dictionary to store talent combinations
         talent_strings = self.config.talent_strings
         for hero_name, hero_talent in talent_strings["hero_talents"].items():
             for class_name, class_talent in talent_strings["class_talents"].items():
@@ -916,7 +924,11 @@ class MultipleSimulation(Simulation):
                         f'profileset."{profile_name}"+="spec_talents={spec_talent}"\n\n'
                     )
                     profiles.append(profile)
-        return profiles  # Return a list of profile strings
+                    # Store the talent combination separately
+                    self.talent_combinations[profile_name] = (
+                        f"{hero_name}|{class_name}|{spec_name}"
+                    )
+        return profiles
 
     def _process_simulation_data(self, data: Dict, is_supplemental: bool) -> Dict:
         results = {}
@@ -925,11 +937,12 @@ class MultipleSimulation(Simulation):
             and "profilesets" in data["sim"]
             and "results" in data["sim"]["profilesets"]
         ):
-            for index, result in enumerate(data["sim"]["profilesets"]["results"]):
+            for result in data["sim"]["profilesets"]["results"]:
                 name = result["name"]
                 dps = result["mean"]
-                hero_name, class_name, spec_name = self._extract_names_from_index(index)
-                if hero_name and class_name and spec_name:
+                talent_combination = self.talent_combinations.get(name)
+                if talent_combination:
+                    hero_name, class_name, spec_name = talent_combination.split("|")
                     talent_hash = self.talent_manager.get_hash(
                         self.config.talent_strings["hero_talents"].get(hero_name, ""),
                         self.config.talent_strings["class_talents"].get(class_name, ""),

@@ -21,7 +21,8 @@
         "type": "mastery",
         "amount": 414
       }
-    ]
+    ],
+    "algariColor": "ruby"
   },
   {
     "id": 7153,
@@ -45,7 +46,8 @@
         "type": "vers",
         "amount": 414
       }
-    ]
+    ],
+    "algariColor": "ruby"
   },
   {
     "id": 7156,
@@ -65,7 +67,8 @@
         "type": "crit",
         "amount": 1487
       }
-    ]
+    ],
+    "algariColor": "ruby"
   },
   {
     "id": 7159,
@@ -89,7 +92,8 @@
         "type": "crit",
         "amount": 414
       }
-    ]
+    ],
+    "algariColor": "sapphire"
   },
   {
     "id": 7162,
@@ -113,7 +117,8 @@
         "type": "haste",
         "amount": 414
       }
-    ]
+    ],
+    "algariColor": "sapphire"
   },
   {
     "id": 7165,
@@ -137,7 +142,8 @@
         "type": "mastery",
         "amount": 414
       }
-    ]
+    ],
+    "algariColor": "sapphire"
   },
   {
     "id": 7168,
@@ -157,7 +163,8 @@
         "type": "vers",
         "amount": 1487
       }
-    ]
+    ],
+    "algariColor": "sapphire"
   },
   {
     "id": 7171,
@@ -181,7 +188,8 @@
         "type": "crit",
         "amount": 414
       }
-    ]
+    ],
+    "algariColor": "emerald"
   },
   {
     "id": 7174,
@@ -205,7 +213,8 @@
         "type": "mastery",
         "amount": 414
       }
-    ]
+    ],
+    "algariColor": "emerald"
   },
   {
     "id": 7177,
@@ -229,7 +238,8 @@
         "type": "vers",
         "amount": 414
       }
-    ]
+    ],
+    "algariColor": "emerald"
   },
   {
     "id": 7180,
@@ -249,7 +259,8 @@
         "type": "haste",
         "amount": 1487
       }
-    ]
+    ],
+    "algariColor": "emerald"
   },
   {
     "id": 7183,
@@ -273,7 +284,8 @@
         "type": "crit",
         "amount": 414
       }
-    ]
+    ],
+    "algariColor": "onyx"
   },
   {
     "id": 7186,
@@ -297,7 +309,8 @@
         "type": "haste",
         "amount": 414
       }
-    ]
+    ],
+    "algariColor": "onyx"
   },
   {
     "id": 7189,
@@ -321,7 +334,8 @@
         "type": "vers",
         "amount": 414
       }
-    ]
+    ],
+    "algariColor": "onyx"
   },
   {
     "id": 7192,
@@ -341,7 +355,8 @@
         "type": "mastery",
         "amount": 1487
       }
-    ]
+    ],
+    "algariColor": "onyx"
   },
   {
     "id": 7195,
@@ -365,7 +380,8 @@
         "type": "crit",
         "amount": 414
       }
-    ]
+    ],
+    "algariColor": "amber"
   },
   {
     "id": 7198,
@@ -389,7 +405,8 @@
         "type": "haste",
         "amount": 414
       }
-    ]
+    ],
+    "algariColor": "amber"
   },
   {
     "id": 7201,
@@ -413,7 +430,8 @@
         "type": "mastery",
         "amount": 414
       }
-    ]
+    ],
+    "algariColor": "amber"
   },
   {
     "id": 7204,
@@ -437,7 +455,8 @@
         "type": "vers",
         "amount": 414
       }
-    ]
+    ],
+    "algariColor": "amber"
   },
   {
     "id": 7208,
@@ -461,7 +480,8 @@
         "type": "haste",
         "amount": 414
       }
-    ]
+    ],
+    "algariColor": "ruby"
   },
   {
     "id": 7213,
@@ -669,7 +689,7 @@
   },
   {
     "id": 7331,
-    "displayName": "190 Crit",
+    "displayName": "1,605 Crit",
     "spellId": 445358,
     "spellIcon": "ui_profession_enchanting",
     "itemId": 223659,
@@ -682,7 +702,7 @@
     "stats": [
       {
         "type": "crit",
-        "amount": 190
+        "amount": 1605
       }
     ],
     "equipRequirements": {
@@ -695,7 +715,7 @@
   },
   {
     "id": 7334,
-    "displayName": "315 Crit",
+    "displayName": "2,661 Crit",
     "spellId": 445387,
     "spellIcon": "ui_profession_enchanting",
     "itemId": 223662,
@@ -708,7 +728,7 @@
     "stats": [
       {
         "type": "crit",
-        "amount": 315
+        "amount": 2661
       }
     ],
     "equipRequirements": {
@@ -719,7 +739,7 @@
   },
   {
     "id": 7337,
-    "displayName": "190 Haste",
+    "displayName": "1,605 Haste",
     "spellId": 445384,
     "spellIcon": "ui_profession_enchanting",
     "itemId": 223665,
@@ -732,7 +752,7 @@
     "stats": [
       {
         "type": "haste",
-        "amount": 190
+        "amount": 1605
       }
     ],
     "equipRequirements": {
@@ -745,7 +765,7 @@
   },
   {
     "id": 7340,
-    "displayName": "315 Haste",
+    "displayName": "2,661 Haste",
     "spellId": 445320,
     "spellIcon": "ui_profession_enchanting",
     "itemId": 223674,
@@ -758,7 +778,7 @@
     "stats": [
       {
         "type": "haste",
-        "amount": 315
+        "amount": 2661
       }
     ],
     "equipRequirements": {
@@ -769,7 +789,7 @@
   },
   {
     "id": 7343,
-    "displayName": "190 Mast",
+    "displayName": "1,605 Mast",
     "spellId": 445381,
     "spellIcon": "ui_profession_enchanting",
     "itemId": 223668,
@@ -782,7 +802,7 @@
     "stats": [
       {
         "type": "mastery",
-        "amount": 190
+        "amount": 1605
       }
     ],
     "equipRequirements": {
@@ -795,7 +815,7 @@
   },
   {
     "id": 7346,
-    "displayName": "315 Mast",
+    "displayName": "2,661 Mast",
     "spellId": 445375,
     "spellIcon": "ui_profession_enchanting",
     "itemId": 223677,
@@ -808,7 +828,7 @@
     "stats": [
       {
         "type": "mastery",
-        "amount": 315
+        "amount": 2661
       }
     ],
     "equipRequirements": {
@@ -819,7 +839,7 @@
   },
   {
     "id": 7349,
-    "displayName": "190 Vers",
+    "displayName": "1,605 Vers",
     "spellId": 445340,
     "spellIcon": "ui_profession_enchanting",
     "itemId": 223671,
@@ -832,7 +852,7 @@
     "stats": [
       {
         "type": "vers",
-        "amount": 190
+        "amount": 1605
       }
     ],
     "equipRequirements": {
@@ -845,7 +865,7 @@
   },
   {
     "id": 7352,
-    "displayName": "315 Vers",
+    "displayName": "2,661 Vers",
     "spellId": 445349,
     "spellIcon": "ui_profession_enchanting",
     "itemId": 223680,
@@ -858,7 +878,7 @@
     "stats": [
       {
         "type": "vers",
-        "amount": 315
+        "amount": 2661
       }
     ],
     "equipRequirements": {
@@ -883,11 +903,11 @@
     "stats": [
       {
         "type": "agi",
-        "amount": 520
+        "amount": 4392
       },
       {
         "type": "runspeed",
-        "amount": 250
+        "amount": 2112
       }
     ],
     "equipRequirements": {
@@ -912,7 +932,7 @@
     "stats": [
       {
         "type": "stragiint",
-        "amount": 745
+        "amount": 6292
       }
     ],
     "equipRequirements": {
@@ -1124,7 +1144,7 @@
   },
   {
     "id": 7595,
-    "displayName": "930 Agi/Str & 980 Armor",
+    "displayName": "7,855 Agi/Str & 8,277 Armor",
     "spellId": 451828,
     "spellIcon": "inv_10_skinning_consumable_armorkit_color2",
     "itemId": 219908,
@@ -1137,7 +1157,7 @@
     "stats": [
       {
         "type": "stragi",
-        "amount": 930
+        "amount": 7855
       }
     ],
     "equipRequirements": {
@@ -1148,7 +1168,7 @@
   },
   {
     "id": 7598,
-    "displayName": "705 Agi/Str",
+    "displayName": "5,237 Agi/Str",
     "spellId": 451831,
     "spellIcon": "inv_10_skinning_consumable_armorkit_color2",
     "itemId": 219914,
@@ -1161,7 +1181,7 @@
     "stats": [
       {
         "type": "stragi",
-        "amount": 705
+        "amount": 5237
       }
     ],
     "equipRequirements": {
@@ -1172,7 +1192,7 @@
   },
   {
     "id": 7601,
-    "displayName": "930 Agi/Str & 890 Sta",
+    "displayName": "7,855 Agi/Str & 7,559 Sta",
     "spellId": 451825,
     "spellIcon": "inv_10_skinning_consumable_armorkit_color2",
     "itemId": 219911,
@@ -1185,11 +1205,11 @@
     "stats": [
       {
         "type": "sta",
-        "amount": 890
+        "amount": 7559
       },
       {
         "type": "stragi",
-        "amount": 930
+        "amount": 7855
       }
     ],
     "equipRequirements": {
