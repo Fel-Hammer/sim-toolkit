@@ -6,6 +6,10 @@ import sys
 import configparser
 from typing import Dict, List, Any
 
+import logging
+
+logging.basicConfig(level=logging.INFO)
+
 
 def load_json(file_name: str) -> List[Dict[str, Any]]:
     with open(file_name, "r") as f:
@@ -91,16 +95,16 @@ def generate_enchant_profilesets(
             if gear_slot in gear:
                 if category_name == "Ring Enchantments":
                     for finger in ["finger1", "finger2"]:
-                        profileset = f'profileset."{slot_category}_{profileset_name}"+={finger}={gear[finger]},enchant_id={enchant_id}'
+                        profileset = f'profileset."{profileset_name}"+={finger}={gear[finger]},enchant_id={enchant_id}'
                         profilesets[slot_category].append(profileset)
                 elif category_name == "Weapon Enchantments":
-                    profileset = f'profileset."{slot_category}_{profileset_name}"+=main_hand={gear[gear_slot]},enchant_id={enchant_id}'
+                    profileset = f'profileset."{profileset_name}"+=main_hand={gear[gear_slot]},enchant_id={enchant_id}'
                     profilesets[slot_category].append(profileset)
                     if "off_hand" in gear:
-                        profileset = f'profileset."{slot_category}_{profileset_name}"+=off_hand={gear["off_hand"]},enchant_id={enchant_id}'
+                        profileset = f'profileset."{profileset_name}"+=off_hand={gear["off_hand"]},enchant_id={enchant_id}'
                         profilesets[slot_category].append(profileset)
                 else:
-                    profileset = f'profileset."{slot_category}_{profileset_name}"+={gear_slot}={gear[gear_slot]},enchant_id={enchant_id}'
+                    profileset = f'profileset."{profileset_name}"+={gear_slot}={gear[gear_slot]},enchant_id={enchant_id}'
                     profilesets[slot_category].append(profileset)
         elif "Armor Kit" in enchant.get("itemName", "") and "legs" in gear:
             profileset = f'profileset."Legs_{profileset_name}"+=legs={gear["legs"]},enchant_id={enchant_id}'
@@ -127,8 +131,8 @@ def generate_gem_profilesets(
 
             profilesets.extend(
                 [
-                    f'profileset."Gem_{profileset_name}"+=finger1={gear["finger1"]},gem_id={gem_id}',
-                    f'profileset."Gem_{profileset_name}"+=finger2={gear["finger2"]},gem_id=',
+                    f'profileset."{profileset_name}"+=finger1={gear["finger1"]},gem_id={gem_id}',
+                    f'profileset."{profileset_name}"+=finger2={gear["finger2"]},gem_id=',
                 ]
             )
 
@@ -158,9 +162,18 @@ def generate_consumable_profilesets(consumables: List[Dict[str, Any]]) -> List[s
 
 
 def write_profilesets(profilesets: List[str], filename: str) -> None:
+    unique_profilesets = {}
+    for profileset in profilesets:
+        name = profileset.split('"')[1]  # Extract the name between quotes
+        if name not in unique_profilesets:
+            unique_profilesets[name] = []
+        unique_profilesets[name].append(profileset)
+
     with open(filename, "w") as f:
-        f.write("\n".join(profilesets))
-    print(f"Generated {len(profilesets)} profilesets in {filename}")
+        for profileset_lines in unique_profilesets.values():
+            f.write("\n".join(profileset_lines) + "\n\n")
+
+    print(f"Generated {len(unique_profilesets)} unique profilesets in {filename}")
 
 
 def write_enchant_profilesets(
@@ -172,35 +185,171 @@ def write_enchant_profilesets(
             write_profilesets(profiles, filename)
 
 
+inventory_type_to_slot = {
+    1: "head",
+    3: "shoulder",
+    5: "chest",
+    6: "waist",
+    7: "legs",
+    8: "feet",
+    9: "wrist",
+    10: "hands",
+    16: "back",
+    20: "chest",
+}
+
+
+def is_full_item_embellishment(embellishment):
+    return (
+        "profession" in embellishment
+        and "optionalCraftingSlots" in embellishment["profession"]
+    )
+
+
+def get_crafted_items(gear):
+    return {slot: item for slot, item in gear.items() if "crafted_stats" in item}
+
+
+def get_unused_crafted_slot(gear, used_slots):
+    crafted_slots = [slot for slot, item in gear.items() if "crafted_stats" in item]
+    unused_slots = set(crafted_slots) - set(used_slots)
+    return unused_slots.pop() if unused_slots else None
+
+
+def clear_embellishment_from_item(item):
+    parts = item.split(",")
+    new_parts = []
+    for part in parts:
+        if not part.startswith("bonus_id="):
+            new_parts.append(part)
+    return ",".join(new_parts)
+
+
+def clear_embellishment_bonus_ids(item):
+    if "bonus_id=" not in item:
+        return item
+
+    parts = item.split("bonus_id=")
+    prefix = parts[0]
+    bonus_part = parts[1]
+
+    bonus_ids = [
+        bid
+        for bid in bonus_part.split(",")[0].split("/")
+        if int(bid) < 8900 or int(bid) > 9000
+    ]
+
+    if bonus_ids:
+        new_item = f"{prefix}bonus_id={'/'.join(bonus_ids)}"
+        if "," in bonus_part:
+            new_item += "," + ",".join(bonus_part.split(",")[1:])
+    else:
+        new_item = prefix.rstrip(",")
+        if "," in bonus_part:
+            new_item += "," + ",".join(bonus_part.split(",")[1:])
+
+    return new_item.rstrip(",")
+
+
 def generate_embellishment_profilesets(
     embellishments: List[Dict[str, Any]], gear: Dict[str, str]
 ) -> List[str]:
     profilesets = []
-    wrist_item = gear.get("wrist", "")
 
-    if not wrist_item:
-        print("Error: No wrist item found in gear.")
-        return profilesets
+    # Clear existing embellishment bonus_ids
+    gear = {slot: clear_embellishment_bonus_ids(item) for slot, item in gear.items()}
 
-    for embellishment in embellishments:
-        name = clean_name(
-            embellishment.get(
-                "name", f'Embellishment_{embellishment.get("id", "Unknown")}'
+    crafted_items = get_crafted_items(gear)
+
+    for i, emb1 in enumerate(embellishments):
+        for j, emb2 in enumerate(embellishments[i:]):  # Allow same embellishment
+            if i == j and is_full_item_embellishment(emb1):
+                continue  # Skip if it's the same full-item embellishment
+            profileset_pair = generate_embellishment_pair_profileset(
+                emb1, emb2, gear, crafted_items
             )
-        )
-        bonus_ids = "/".join(map(str, embellishment.get("craftingBonusIds", [])))
-
-        if bonus_ids:
-            new_wrist_item = re.sub(
-                r"bonus_id=\d+(\/\d+)*", f"bonus_id={bonus_ids}", wrist_item
-            )
-            if "bonus_id=" not in new_wrist_item:
-                new_wrist_item += f",bonus_id={bonus_ids}"
-
-            profileset = f'profileset."Embellishment_{name}"=wrist={new_wrist_item}'
-            profilesets.append(profileset)
+            if profileset_pair:
+                profilesets.extend(profileset_pair)
 
     return profilesets
+
+
+def generate_embellishment_pair_profileset(emb1, emb2, gear, crafted_items):
+    name1 = clean_name(emb1.get("name", f'{emb1.get("id", "Unknown")}'))
+    name2 = clean_name(emb2.get("name", f'{emb2.get("id", "Unknown")}'))
+
+    gear_copy = gear.copy()
+
+    # Apply first embellishment
+    gear_copy, used_slot1 = apply_embellishment(emb1, gear_copy, crafted_items)
+    if not gear_copy:
+        return None
+
+    # Apply second embellishment, excluding the slot used by the first
+    gear_copy, used_slot2 = apply_embellishment(
+        emb2, gear_copy, crafted_items, exclude_slot=used_slot1
+    )
+    if not gear_copy or used_slot1 == used_slot2:
+        return None
+
+    # Generate profileset strings
+    profileset_name = f'"{name1}_and_{name2}"'
+    profileset1 = f"profileset.{profileset_name}={used_slot1}={gear_copy[used_slot1]}"
+    profileset2 = f"profileset.{profileset_name}+={used_slot2}={gear_copy[used_slot2]}"
+
+    # Handle unused crafted slot
+    unused_slot = get_unused_crafted_slot(gear, [used_slot1, used_slot2])
+    if unused_slot:
+        cleared_item = clear_embellishment_from_item(gear[unused_slot])
+        profileset3 = f"profileset.{profileset_name}+={unused_slot}={cleared_item}"
+        return [profileset1, profileset2, profileset3]
+
+    return [profileset1, profileset2]
+
+
+def apply_embellishment(
+    emb, gear, crafted_items, specific_slot=None, exclude_slot=None
+):
+    if is_full_item_embellishment(emb):
+        slot = specific_slot or inventory_type_to_slot.get(
+            emb.get("inventoryType"), None
+        )
+        if not slot or slot == exclude_slot:
+            return None, None
+        bonus_ids = "/".join(map(str, emb.get("bonusLists", [])))
+        new_item = f"{emb['id']},bonus_id={bonus_ids}"
+        gear[slot] = new_item
+        return gear, slot
+    else:
+        bonus_ids = "/".join(map(str, emb.get("craftingBonusIds", [])))
+        available_slots = [s for s in crafted_items.keys() if s != exclude_slot]
+        if specific_slot and specific_slot in available_slots:
+            slot = specific_slot
+        elif "off_hand" in available_slots:
+            slot = "off_hand"
+        elif available_slots:
+            slot = available_slots[0]
+        else:
+            return None, None
+
+        item = gear[slot]
+        # Preserve the original item ID
+        original_id = re.search(r"id=(\d+)", item)
+        if original_id:
+            original_id = original_id.group(1)
+        else:
+            return None, None  # If we can't find the original ID, we can't proceed
+
+        # Add or update the bonus_id
+        if "bonus_id=" in item:
+            new_item = re.sub(r"bonus_id=[\d/]+", f"bonus_id={bonus_ids}", item)
+        else:
+            new_item = f"{item},bonus_id={bonus_ids}"
+
+        new_item = re.sub(r",crafted_stats=\d+\/\d+", "", new_item)
+        new_item += ",crafted_stats=36/40"
+        gear[slot] = new_item
+        return gear, slot
 
 
 def main():

@@ -45,8 +45,16 @@ def parse_build_name(
 
     for part in parts:
         if part.startswith("[") and part.endswith("]"):
-            talent = part.strip("[]")
-            result["hero"] = talent_dict["hero"].get(talent, talent)
+            talent = part.strip("[]").lower()
+            # Find the matching hero talent in the talent dictionary
+            for key, value in talent_dict["hero"].items():
+                if talent in key.lower() or talent in value.lower():
+                    result["hero"] = key
+                    break
+            else:
+                raise ValueError(
+                    f"Hero talent '{part.strip('[]')}' not found in talent dictionary"
+                )
         elif part.startswith("(") and part.endswith(")"):
             talents = part.strip("()").split("_")
             result["class"] = [talent_dict["class"].get(t, [t, t])[1] for t in talents]
@@ -64,7 +72,6 @@ def parse_build_name(
                         ):
                             result["defensive"].append(t)
                         break
-
     return result
 
 
@@ -81,14 +88,29 @@ def process_data(
         ):
             processed_data[sim_type] = {}
 
-            for build_name, build_data in sim_data.items():
+            # Sort builds by DPS for this sim_type
+            sorted_builds = sorted(
+                sim_data.items(), key=lambda x: x[1]["dps"], reverse=True
+            )
+
+            for rank, (build_name, build_data) in enumerate(sorted_builds, 1):
                 if build_name.startswith("["):
                     build_info = parse_build_name(build_name, talent_dict, spec)
                     processed_data[sim_type][build_name] = {
                         **build_info,
                         "dps": build_data["dps"],
                         "talent_hash": build_data.get("talent_hash", ""),
+                        "rank": rank,  # Add rank for this sim_type
                     }
+
+    overall_ranks = calculate_overall_rank(processed_data)
+
+    # Add overall rank to each build in each sim type
+    for sim_type in processed_data:
+        for build_name in processed_data[sim_type]:
+            processed_data[sim_type][build_name]["overall_rank"] = overall_ranks[
+                build_name
+            ]
 
     total_builds = sum(len(sim_data) for sim_data in processed_data.values())
     print(f"Total processed builds: {total_builds}")
@@ -96,11 +118,39 @@ def process_data(
     return processed_data
 
 
+def calculate_average_dps(build_data: Dict[str, Union[float, str, List[str]]]) -> float:
+    dps_values = [value for key, value in build_data.items() if key.startswith("dps_")]
+    return sum(dps_values) / len(dps_values) if dps_values else 0
+
+
 def calculate_overall_rank(
-    data: Dict[str, Dict[str, Union[float, str, List[str]]]]
+    data: Dict[str, Dict[str, Dict[str, Union[float, str, List[str]]]]]
 ) -> Dict[str, int]:
-    sorted_builds = sorted(data.items(), key=lambda x: x[1]["dps"], reverse=True)
-    return {build: rank + 1 for rank, (build, _) in enumerate(sorted_builds)}
+    builds = list(next(iter(data.values())).keys())
+    sim_types = list(data.keys())
+
+    # Calculate rank for each build within each simulation type
+    ranks = {sim_type: {} for sim_type in sim_types}
+    for sim_type in sim_types:
+        sorted_builds = sorted(
+            builds, key=lambda x: data[sim_type][x]["dps"], reverse=True
+        )
+        for rank, build in enumerate(sorted_builds, 1):
+            ranks[sim_type][build] = rank
+
+    # Calculate average rank across all simulation types
+    average_ranks = {}
+    for build in builds:
+        avg_rank = sum(ranks[sim_type][build] for sim_type in sim_types) / len(
+            sim_types
+        )
+        average_ranks[build] = avg_rank
+
+    # Sort builds based on average rank and assign overall rank
+    sorted_builds = sorted(average_ranks.items(), key=lambda x: x[1])
+    overall_ranks = {build: rank for rank, (build, _) in enumerate(sorted_builds, 1)}
+
+    return overall_ranks
 
 
 def generate_html(
@@ -113,7 +163,6 @@ def generate_html(
     builds = []
 
     for sim_type, sim_data in data.items():
-        overall_ranks = calculate_overall_rank(sim_data)
         for build_name, build_data in sim_data.items():
             existing_build = next(
                 (b for b in builds if b["talent_hash"] == build_data["talent_hash"]),
@@ -128,14 +177,15 @@ def generate_html(
                     "talent_hash": build_data["talent_hash"],
                     "dps": {},
                     "rank": {},
+                    "overall_rank": build_data["overall_rank"],
                 }
                 builds.append(new_build)
                 existing_build = new_build
 
             existing_build["dps"][sim_type] = round(build_data["dps"], 2)
-            existing_build["rank"][sim_type] = overall_ranks[build_name]
+            existing_build["rank"][sim_type] = build_data["rank"]
 
-    builds.sort(key=lambda x: x["rank"][sim_types[0]])
+    builds.sort(key=lambda x: x["overall_rank"])
     for index, build in enumerate(builds, 1):
         build["overall_rank"] = index
 
@@ -178,18 +228,26 @@ def process_additional_data(additional_data: Dict[str, Any]) -> Dict[str, Any]:
     processed_data = {}
     for section, items in additional_data.items():
         if isinstance(items, dict) and all(
-            isinstance(item, dict) and "dps" in item for item in items.values()
+            isinstance(sub_items, dict) for sub_items in items.values()
         ):
-            best_dps = max(item["dps"] for item in items.values())
-            processed_items = {}
-            for name, item in items.items():
-                dps_diff = item["dps"] - best_dps
-                processed_items[name] = {
-                    **item,
-                    "dps_diff": round(dps_diff, 2),
-                    "percent_diff": round((dps_diff / best_dps) * 100, 2),
-                }
-            processed_data[section] = processed_items
+            processed_data[section] = {}
+            for variant, sub_items in items.items():
+                if all(
+                    isinstance(item, dict) and "dps" in item
+                    for item in sub_items.values()
+                ):
+                    best_dps = max(item["dps"] for item in sub_items.values())
+                    processed_items = {}
+                    for name, item in sub_items.items():
+                        dps_diff = item["dps"] - best_dps
+                        processed_items[name] = {
+                            **item,
+                            "dps_diff": round(dps_diff, 2),
+                            "percent_diff": round((dps_diff / best_dps) * 100, 2),
+                        }
+                    processed_data[section][variant] = processed_items
+                else:
+                    processed_data[section][variant] = sub_items
         else:
             processed_data[section] = items
     return processed_data

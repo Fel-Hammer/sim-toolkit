@@ -1,7 +1,7 @@
 [
   {
     "id": 7150,
-    "displayName": "1,242 Crit / 414 Mast",
+    "displayName": "147 Crit / 49 Mast",
     "spellIcon": "",
     "itemId": 213458,
     "itemName": "Masterful Ruby",
@@ -15,18 +15,18 @@
     "stats": [
       {
         "type": "crit",
-        "amount": 1242
+        "amount": 147
       },
       {
         "type": "mastery",
-        "amount": 414
+        "amount": 49
       }
     ],
     "algariColor": "ruby"
   },
   {
     "id": 7153,
-    "displayName": "1,242 Crit / 414 Vers",
+    "displayName": "147 Crit / 49 Vers",
     "spellIcon": "",
     "itemId": 213461,
     "itemName": "Versatile Ruby",
@@ -40,18 +40,18 @@
     "stats": [
       {
         "type": "crit",
-        "amount": 1242
+        "amount": 147
       },
       {
         "type": "vers",
-        "amount": 414
+        "amount": 49
       }
     ],
     "algariColor": "ruby"
   },
   {
     "id": 7156,
-    "displayName": "1,487 Crit",
+    "displayName": "176 Crit",
     "spellIcon": "",
     "itemId": 213464,
     "itemName": "Deadly Ruby",
@@ -65,14 +65,14 @@
     "stats": [
       {
         "type": "crit",
-        "amount": 1487
+        "amount": 176
       }
     ],
     "algariColor": "ruby"
   },
   {
     "id": 7159,
-    "displayName": "1,242 Vers / 414 Crit",
+    "displayName": "147 Vers / 49 Crit",
     "spellIcon": "",
     "itemId": 213467,
     "itemName": "Deadly Sapphire",
@@ -86,18 +86,18 @@
     "stats": [
       {
         "type": "vers",
-        "amount": 1242
+        "amount": 147
       },
       {
         "type": "crit",
-        "amount": 414
+        "amount": 49
       }
     ],
     "algariColor": "sapphire"
   },
   {
     "id": 7162,
-    "displayName": "1,242 Vers / 414 Haste",
+    "displayName": "147 Vers / 49 Haste",
     "spellIcon": "",
     "itemId": 213470,
     "itemName": "Quick Sapphire",
@@ -111,18 +111,18 @@
     "stats": [
       {
         "type": "vers",
-        "amount": 1242
+        "amount": 147
       },
       {
         "type": "haste",
-        "amount": 414
+        "amount": 49
       }
     ],
     "algariColor": "sapphire"
   },
   {
     "id": 7165,
-    "displayName": "1,242 Vers / 414 Mast",
+    "displayName": "147 Vers / 49 Mast",
     "spellIcon": "",
     "itemId": 213473,
     "itemName": "Masterful Sapphire",
@@ -136,18 +136,18 @@
     "stats": [
       {
         "type": "vers",
-        "amount": 1242
+        "amount": 147
       },
       {
         "type": "mastery",
-        "amount": 414
+        "amount": 49
       }
     ],
     "algariColor": "sapphire"
   },
   {
     "id": 7168,
-    "displayName": "1,487 Vers",
+    "displayName": "176 Vers",
     "spellIcon": "",
     "itemId": 213476,
     "itemName": "Versatile Sapphire",
@@ -161,14 +161,14 @@
     "stats": [
       {
         "type": "vers",
-        "amount": 1487
+        "amount": 176
       }
     ],
     "algariColor": "sapphire"
   },
   {
     "id": 7171,
-    "displayName": "1,242 Haste / 414 Crit",
+    "displayName": "147 Haste / 49 Crit",
     "spellIcon": "",
     "itemId": 213479,
     "itemName": "Deadly Emerald",
@@ -182,18 +182,18 @@
     "stats": [
       {
         "type": "haste",
-        "amount": 1242
+        "amount": 147
       },
       {
         "type": "crit",
-        "amount": 414
+        "amount": 49
       }
     ],
     "algariColor": "emerald"
   },
   {
     "id": 7174,
-    "displayName": "1,242 Haste / 414 Mast",
+    "displayName": "147 Haste / 49 Mast",
     "spellIcon": "",
     "itemId": 213482,
     "itemName": "Masterful Emerald",
@@ -207,18 +207,18 @@
     "stats": [
       {
         "type": "haste",
-        "amount": 1242
+        "amount": 147
       },
       {
         "type": "mastery",
-        "amount": 414
+        "amount": 49
       }
     ],
     "algariColor": "emerald"
   },
   {
     "id": 7177,
-    "displayName": "1,242 Haste / 414 Vers",
+    "displayName": "147 Haste / 49 Vers",
     "spellIcon": "",
     "itemId": 213485,
     "itemName": "Versatile Emerald",
@@ -232,18 +232,18 @@
     "stats": [
       {
         "type": "haste",
-        "amount": 1242
+        "amount": 147
       },
       {
         "type": "vers",
-        "amount": 414
+        "amount": 49
       }
     ],
     "algariColor": "emerald"
   },
   {
     "id": 7180,
-    "displayName": "1,487 Haste",
+    "displayName": "176 Haste",
     "spellIcon": "",
     "itemId": 213488,
     "itemName": "Quick Emerald",
@@ -257,14 +257,14 @@
     "stats": [
       {
         "type": "haste",
-        "amount": 1487
+        "amount": 176
       }
     ],
     "algariColor": "emerald"
   },
   {
     "id": 7183,
-    "displayName": "1,242 Mast / 414 Crit",
+    "displayName": "147 Mast / 49 Crit",
     "spellIcon": "",
     "itemId": 213491,
     "itemName": "Deadly Onyx",
@@ -278,18 +278,18 @@
     "stats": [
       {
         "type": "mastery",
-        "amount": 1242
+        "amount": 147
       },
       {
         "type": "crit",
-        "amount": 414
+        "amount": 49
       }
     ],
     "algariColor": "onyx"
   },
   {
     "id": 7186,
-    "displayName": "1,242 Mast / 414 Haste",
+    "displayName": "147 Mast / 49 Haste",
     "spellIcon": "",
     "itemId": 213494,
     "itemName": "Quick Onyx",
@@ -303,18 +303,18 @@
     "stats": [
       {
         "type": "mastery",
-        "amount": 1242
+        "amount": 147
       },
       {
         "type": "haste",
-        "amount": 414
+        "amount": 49
       }
     ],
     "algariColor": "onyx"
   },
   {
     "id": 7189,
-    "displayName": "1,242 Mast / 414 Vers",
+    "displayName": "147 Mast / 49 Vers",
     "spellIcon": "",
     "itemId": 213497,
     "itemName": "Versatile Onyx",
@@ -328,18 +328,18 @@
     "stats": [
       {
         "type": "mastery",
-        "amount": 1242
+        "amount": 147
       },
       {
         "type": "vers",
-        "amount": 414
+        "amount": 49
       }
     ],
     "algariColor": "onyx"
   },
   {
     "id": 7192,
-    "displayName": "1,487 Mast",
+    "displayName": "176 Mast",
     "spellIcon": "",
     "itemId": 213500,
     "itemName": "Masterful Onyx",
@@ -353,14 +353,14 @@
     "stats": [
       {
         "type": "mastery",
-        "amount": 1487
+        "amount": 176
       }
     ],
     "algariColor": "onyx"
   },
   {
     "id": 7195,
-    "displayName": "1,731 Sta / 414 Crit",
+    "displayName": "205 Sta / 49 Crit",
     "spellIcon": "",
     "itemId": 213503,
     "itemName": "Deadly Amber",
@@ -374,18 +374,18 @@
     "stats": [
       {
         "type": "sta",
-        "amount": 1731
+        "amount": 205
       },
       {
         "type": "crit",
-        "amount": 414
+        "amount": 49
       }
     ],
     "algariColor": "amber"
   },
   {
     "id": 7198,
-    "displayName": "1,731 Sta / 414 Haste",
+    "displayName": "205 Sta / 49 Haste",
     "spellIcon": "",
     "itemId": 213506,
     "itemName": "Quick Amber",
@@ -399,18 +399,18 @@
     "stats": [
       {
         "type": "sta",
-        "amount": 1731
+        "amount": 205
       },
       {
         "type": "haste",
-        "amount": 414
+        "amount": 49
       }
     ],
     "algariColor": "amber"
   },
   {
     "id": 7201,
-    "displayName": "1,731 Sta / 414 Mast",
+    "displayName": "205 Sta / 49 Mast",
     "spellIcon": "",
     "itemId": 213509,
     "itemName": "Masterful Amber",
@@ -424,18 +424,18 @@
     "stats": [
       {
         "type": "sta",
-        "amount": 1731
+        "amount": 205
       },
       {
         "type": "mastery",
-        "amount": 414
+        "amount": 49
       }
     ],
     "algariColor": "amber"
   },
   {
     "id": 7204,
-    "displayName": "1,731 Sta / 414 Vers",
+    "displayName": "205 Sta / 49 Vers",
     "spellIcon": "",
     "itemId": 213512,
     "itemName": "Versatile Amber",
@@ -449,18 +449,18 @@
     "stats": [
       {
         "type": "sta",
-        "amount": 1731
+        "amount": 205
       },
       {
         "type": "vers",
-        "amount": 414
+        "amount": 49
       }
     ],
     "algariColor": "amber"
   },
   {
     "id": 7208,
-    "displayName": "1,242 Crit / 414 Haste",
+    "displayName": "147 Crit / 49 Haste",
     "spellIcon": "",
     "itemId": 213455,
     "itemName": "Quick Ruby",
@@ -474,18 +474,18 @@
     "stats": [
       {
         "type": "crit",
-        "amount": 1242
+        "amount": 147
       },
       {
         "type": "haste",
-        "amount": 414
+        "amount": 49
       }
     ],
     "algariColor": "ruby"
   },
   {
     "id": 7213,
-    "displayName": "1,532 Primary / +1% Maximum Mana per unique Algari gem color",
+    "displayName": "181 Primary / +1% Maximum Mana per unique Algari gem color",
     "spellIcon": "",
     "itemId": 213740,
     "itemName": "Insightful Blasphemite",
@@ -506,7 +506,7 @@
     "stats": [
       {
         "type": "stragiint",
-        "amount": 1532
+        "amount": 181
       }
     ],
     "spellEffects": [
@@ -515,7 +515,7 @@
   },
   {
     "id": 7216,
-    "displayName": "1,532 Primary / +0.15% Critical Effect per unique Algari gem color",
+    "displayName": "181 Primary / +0.15% Critical Effect per unique Algari gem color",
     "spellIcon": "",
     "itemId": 213743,
     "itemName": "Culminating Blasphemite",
@@ -536,7 +536,7 @@
     "stats": [
       {
         "type": "stragiint",
-        "amount": 1532
+        "amount": 181
       }
     ],
     "spellEffects": [
@@ -545,7 +545,7 @@
   },
   {
     "id": 7219,
-    "displayName": "1,532 Primary / +2% Movement Speed per unique Algari gem color",
+    "displayName": "181 Primary / +2% Movement Speed per unique Algari gem color",
     "spellIcon": "",
     "itemId": 213746,
     "itemName": "Elusive Blasphemite",
@@ -566,7 +566,7 @@
     "stats": [
       {
         "type": "stragiint",
-        "amount": 1532
+        "amount": 181
       }
     ],
     "spellEffects": [
@@ -575,7 +575,7 @@
   },
   {
     "id": 7220,
-    "displayName": "1,532 Primary / +5% Damage Reduction when affected by Crowd Control",
+    "displayName": "181 Primary / +5% Damage Reduction when affected by Crowd Control",
     "spellIcon": "",
     "itemId": 213747,
     "itemName": "Enduring Bloodstone",
@@ -595,7 +595,7 @@
     "stats": [
       {
         "type": "stragiint",
-        "amount": 1532
+        "amount": 181
       }
     ],
     "spellEffects": [
@@ -604,7 +604,7 @@
   },
   {
     "id": 7221,
-    "displayName": "1,532 Primary / opponent's failed interrupt attempts grant Precognition",
+    "displayName": "181 Primary / opponent's failed interrupt attempts grant Precognition",
     "spellIcon": "",
     "itemId": 213748,
     "itemName": "Cognitive Bloodstone",
@@ -624,7 +624,7 @@
     "stats": [
       {
         "type": "stragiint",
-        "amount": 1532
+        "amount": 181
       }
     ],
     "spellEffects": [
@@ -633,7 +633,7 @@
   },
   {
     "id": 7222,
-    "displayName": "1,532 Primary / getting snared increases damage of your next attack by $411132s1 per stack",
+    "displayName": "181 Primary / getting snared increases damage of your next attack by  per stack",
     "spellIcon": "",
     "itemId": 213749,
     "itemName": "Determined Bloodstone",
@@ -653,7 +653,7 @@
     "stats": [
       {
         "type": "stragiint",
-        "amount": 1532
+        "amount": 181
       }
     ],
     "spellEffects": [
@@ -662,7 +662,7 @@
   },
   {
     "id": 7253,
-    "displayName": "1,532 Primary",
+    "displayName": "181 Primary",
     "spellIcon": "",
     "itemId": 217115,
     "itemName": "Cubic Blasphemia",
@@ -683,13 +683,13 @@
     "stats": [
       {
         "type": "stragiint",
-        "amount": 1532
+        "amount": 181
       }
     ]
   },
   {
     "id": 7331,
-    "displayName": "1,605 Crit",
+    "displayName": "190 Crit",
     "spellId": 445358,
     "spellIcon": "ui_profession_enchanting",
     "itemId": 223659,
@@ -702,7 +702,7 @@
     "stats": [
       {
         "type": "crit",
-        "amount": 1605
+        "amount": 190
       }
     ],
     "equipRequirements": {
@@ -715,7 +715,7 @@
   },
   {
     "id": 7334,
-    "displayName": "2,661 Crit",
+    "displayName": "315 Crit",
     "spellId": 445387,
     "spellIcon": "ui_profession_enchanting",
     "itemId": 223662,
@@ -728,7 +728,7 @@
     "stats": [
       {
         "type": "crit",
-        "amount": 2661
+        "amount": 315
       }
     ],
     "equipRequirements": {
@@ -739,7 +739,7 @@
   },
   {
     "id": 7337,
-    "displayName": "1,605 Haste",
+    "displayName": "190 Haste",
     "spellId": 445384,
     "spellIcon": "ui_profession_enchanting",
     "itemId": 223665,
@@ -752,7 +752,7 @@
     "stats": [
       {
         "type": "haste",
-        "amount": 1605
+        "amount": 190
       }
     ],
     "equipRequirements": {
@@ -765,7 +765,7 @@
   },
   {
     "id": 7340,
-    "displayName": "2,661 Haste",
+    "displayName": "315 Haste",
     "spellId": 445320,
     "spellIcon": "ui_profession_enchanting",
     "itemId": 223674,
@@ -778,7 +778,7 @@
     "stats": [
       {
         "type": "haste",
-        "amount": 2661
+        "amount": 315
       }
     ],
     "equipRequirements": {
@@ -789,7 +789,7 @@
   },
   {
     "id": 7343,
-    "displayName": "1,605 Mast",
+    "displayName": "190 Mast",
     "spellId": 445381,
     "spellIcon": "ui_profession_enchanting",
     "itemId": 223668,
@@ -802,7 +802,7 @@
     "stats": [
       {
         "type": "mastery",
-        "amount": 1605
+        "amount": 190
       }
     ],
     "equipRequirements": {
@@ -815,7 +815,7 @@
   },
   {
     "id": 7346,
-    "displayName": "2,661 Mast",
+    "displayName": "315 Mast",
     "spellId": 445375,
     "spellIcon": "ui_profession_enchanting",
     "itemId": 223677,
@@ -828,7 +828,7 @@
     "stats": [
       {
         "type": "mastery",
-        "amount": 2661
+        "amount": 315
       }
     ],
     "equipRequirements": {
@@ -839,7 +839,7 @@
   },
   {
     "id": 7349,
-    "displayName": "1,605 Vers",
+    "displayName": "190 Vers",
     "spellId": 445340,
     "spellIcon": "ui_profession_enchanting",
     "itemId": 223671,
@@ -852,7 +852,7 @@
     "stats": [
       {
         "type": "vers",
-        "amount": 1605
+        "amount": 190
       }
     ],
     "equipRequirements": {
@@ -865,7 +865,7 @@
   },
   {
     "id": 7352,
-    "displayName": "2,661 Vers",
+    "displayName": "315 Vers",
     "spellId": 445349,
     "spellIcon": "ui_profession_enchanting",
     "itemId": 223680,
@@ -878,7 +878,7 @@
     "stats": [
       {
         "type": "vers",
-        "amount": 2661
+        "amount": 315
       }
     ],
     "equipRequirements": {
@@ -903,11 +903,11 @@
     "stats": [
       {
         "type": "agi",
-        "amount": 4392
+        "amount": 520
       },
       {
         "type": "runspeed",
-        "amount": 2112
+        "amount": 250
       }
     ],
     "equipRequirements": {
@@ -932,7 +932,7 @@
     "stats": [
       {
         "type": "stragiint",
-        "amount": 6292
+        "amount": 745
       }
     ],
     "equipRequirements": {
@@ -1144,7 +1144,7 @@
   },
   {
     "id": 7595,
-    "displayName": "7,855 Agi/Str & 8,277 Armor",
+    "displayName": "930 Agi/Str & 980 Armor",
     "spellId": 451828,
     "spellIcon": "inv_10_skinning_consumable_armorkit_color2",
     "itemId": 219908,
@@ -1157,7 +1157,7 @@
     "stats": [
       {
         "type": "stragi",
-        "amount": 7855
+        "amount": 930
       }
     ],
     "equipRequirements": {
@@ -1168,7 +1168,7 @@
   },
   {
     "id": 7598,
-    "displayName": "5,237 Agi/Str",
+    "displayName": "620 Agi/Str",
     "spellId": 451831,
     "spellIcon": "inv_10_skinning_consumable_armorkit_color2",
     "itemId": 219914,
@@ -1181,7 +1181,7 @@
     "stats": [
       {
         "type": "stragi",
-        "amount": 5237
+        "amount": 620
       }
     ],
     "equipRequirements": {
@@ -1192,7 +1192,7 @@
   },
   {
     "id": 7601,
-    "displayName": "7,855 Agi/Str & 7,559 Sta",
+    "displayName": "930 Agi/Str & 895 Sta",
     "spellId": 451825,
     "spellIcon": "inv_10_skinning_consumable_armorkit_color2",
     "itemId": 219911,
@@ -1205,11 +1205,11 @@
     "stats": [
       {
         "type": "sta",
-        "amount": 7559
+        "amount": 895
       },
       {
         "type": "stragi",
-        "amount": 7855
+        "amount": 930
       }
     ],
     "equipRequirements": {

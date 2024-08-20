@@ -1,7 +1,7 @@
 {
   "hero": {
     "aldrachi_keen": "Aldrachi Keen",
-    "aldrachi_preemptive": ["Aldrachi Preemptive", "Aldrachi Pre"],
+    "aldrachi_preemptive": "Aldrachi Preemptive",
     "felscarred_student": "Felscarred Student",
     "felscarred_flamebound": "Felscarred Flamebound"
   },

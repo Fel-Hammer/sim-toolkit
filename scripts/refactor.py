@@ -969,28 +969,9 @@ class MultipleSimulation(Simulation):
 
 
 class SupplementalSimulation(Simulation):
-
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        self.supplemental_files = self._get_supplemental_files()
-
-    def _set_supplemental_params(
-        self, params: SimulationParameters
-    ) -> SimulationParameters:
-        return SimulationParameters(
-            iterations=10000,
-            target_error=0.05,
-            targets=params.targets,
-            time=params.time,
-            fight_style=params.fight_style,
-            sim_id=params.sim_id,
-        )
-
-    def _count_profilesets(self, content: str) -> int:
-        return content.count("profileset.")
-
-    def _get_supplemental_files(self):
-        return [
+        self.supplemental_files = [
             "food_profilesets.simc",
             "consumable_profilesets.simc",
             "trinket_profilesets.simc",
@@ -1008,17 +989,34 @@ class SupplementalSimulation(Simulation):
             raise ValueError(
                 "Talents configuration is required for supplemental simulations."
             )
-        return [
-            self._run_single_supplemental(params, file)
-            for file in self.supplemental_files
+
+        sim_configs = [
+            (params, f"{params.targets}T_{params.time}s"),
+            (
+                SimulationParameters(**{**params.__dict__, "targets": 5, "time": 120}),
+                "5T_120s",
+            ),
         ]
 
+        results = []
+        for i, supplemental_file in enumerate(self.supplemental_files):
+            self.progress_tracker.current_simulation = (
+                i + 2
+            )  # +2 because we start at 1 and have already run the main sim
+            result = self._run_single_supplemental(supplemental_file, sim_configs)
+            if result:
+                results.append(result)
+            self.progress_tracker.start_new_simulation()
+
+        return results
+
     def _run_single_supplemental(
-        self, params: SimulationParameters, supplemental_file: str
+        self,
+        supplemental_file: str,
+        sim_configs: List[Tuple[SimulationParameters, str]],
     ) -> Optional[Dict]:
         logger.debug(f"Starting supplemental simulation for {supplemental_file}")
         file_path = FileHandler.join_path(self.config.apl_folder, supplemental_file)
-
         if not FileHandler.file_exists(file_path):
             logger.warning(f"Supplemental file not found: {supplemental_file}")
             return None
@@ -1028,38 +1026,46 @@ class SupplementalSimulation(Simulation):
             logger.error(f"Failed to read supplemental file: {supplemental_file}")
             return None
 
-        # Reset content generator for each supplemental simulation
+        results = {os.path.splitext(supplemental_file)[0]: {}}
+
+        for params, label in sim_configs:
+            result = self._run_supplemental_with_params(
+                params, supplemental_file, supplemental_content
+            )
+            if result:
+                results[os.path.splitext(supplemental_file)[0]][label] = result
+            self.progress_tracker.start_new_simulation()
+
+        return results
+
+    def _run_supplemental_with_params(
+        self,
+        params: SimulationParameters,
+        supplemental_file: str,
+        supplemental_content: str,
+    ) -> Optional[Dict]:
         self.content_generator = SimCContentGenerator(self.config)
-        self.content_generator.set_multiple_simulation(False)  # Keep talents
+        self.content_generator.set_multiple_simulation(False)
 
-        # Use supplemental-specific parameters
+        profileset_count = self._count_profilesets(supplemental_content)
+        use_multi_threading = profileset_count > 10
+        self.content_generator.set_multi_threading(use_multi_threading)
+
+        if use_multi_threading:
+            logger.info(
+                f"Setting multi-threading for {supplemental_file} due to high number of profilesets ({profileset_count})"
+            )
+
         supplemental_params = self._set_supplemental_params(params)
-
-        # Update simulation parameters
         self._update_simulation_params(supplemental_params)
-
-        # Set talents for supplemental sims
         self.content_generator.update_talents(self.config.talents)
-
-        # Add supplemental profilesets
         self.content_generator.add_profileset(supplemental_content)
 
-        # Check if the number of profilesets is more than 50
-        if self._count_profilesets(supplemental_content) > 50:
-            self.content_generator.set_multi_threading(True)
-            logger.info(
-                f"Setting multi-threading for {supplemental_file} due to high number of profilesets"
-            )
-        else:
-            self.content_generator.set_multi_threading(False)
-
-        # Generate unique sim_id for this supplemental simulation
         sim_id = (
             f"{supplemental_params.sim_id}_{os.path.splitext(supplemental_file)[0]}"
             if self.config.timestamp
             else "supplemental"
         )
-
         output_file = self._generate_output_filename(sim_id, "json")
 
         actual_output_file = self.execute_simulation(
@@ -1071,19 +1077,27 @@ class SupplementalSimulation(Simulation):
                 return self.create_dataset(content, supplemental_file)
         return None
 
+    def _set_supplemental_params(
+        self, params: SimulationParameters
+    ) -> SimulationParameters:
+        return SimulationParameters(
+            iterations=10000,
+            target_error=0.2,
+            targets=params.targets,
+            time=params.time,
+            fight_style=params.fight_style,
+            sim_id=params.sim_id,
+        )
+
+    @staticmethod
+    def _count_profilesets(content: str) -> int:
+        return content.count("profileset.")
+
     def _process_simulation_data(self, data: Dict, supplemental_file: str) -> Dict:
-        results = {}
-        if (
-            "sim" in data
-            and "profilesets" in data["sim"]
-            and "results" in data["sim"]["profilesets"]
-        ):
-            for result in data["sim"]["profilesets"]["results"]:
-                results[result["name"]] = {
-                    "dps": result["mean"],
-                    "name": result["name"],
-                }
-        return {os.path.splitext(supplemental_file)[0]: results}
+        return {
+            result["name"]: {"dps": result["mean"], "name": result["name"]}
+            for result in data.get("sim", {}).get("profilesets", {}).get("results", [])
+        }
 
 
 class SimulationRunner:
@@ -1160,20 +1174,7 @@ class SimulationRunner:
     def _run_supplemental_simulations(
         self, params: SimulationParameters
     ) -> List[Optional[Dict]]:
-        supplemental_results = []
-        for i, supplemental_file in enumerate(
-            self.supplemental_simulation.supplemental_files
-        ):
-            self.progress_tracker.current_simulation = (
-                i + 2
-            )  # +2 because we start at 1 and have already run the main sim
-            result = self.supplemental_simulation._run_single_supplemental(
-                params, supplemental_file
-            )
-            if result:
-                supplemental_results.append(result)
-            self.progress_tracker.start_new_simulation()
-        return supplemental_results
+        return self.supplemental_simulation.run(params)
 
 
 class APLCombiner:

@@ -348,12 +348,30 @@ def filter_consumables(data, current_expansion, data_type):
 def is_embellishment(item, current_expansion):
     if item is None:
         return False
-    return (
+
+    # Check for crafting embellishments
+    if (
         item.get("craftingQuality") == 3
         and item.get("expansion") == current_expansion
         and item.get("craftingBonusIds")
         and item.get("itemLimit", {}).get("quantity") == 2
-    )
+    ):
+        return True
+
+    # Check for item embellishments
+    if (
+        item.get("expansion") == current_expansion
+        and item.get("itemLimit", {}).get("quantity") == 2
+        and item.get("bonusLists")
+        and item.get("profession", {}).get("optionalCraftingSlots")
+    ):
+        return True
+
+    return False
+
+
+def filter_item_embellishments(items, current_expansion):
+    return [item for item in items if is_embellishment(item, current_expansion)]
 
 
 def filter_embellishments(crafting_data, current_expansion):
@@ -411,7 +429,16 @@ def main():
     all_filtered_consumables = filtered_potions + filtered_flasks
 
     print("Filtering embellishments...")
-    filtered_embellishments = filter_embellishments(all_crafting, current_expansion)
+    crafting_embellishments = filter_embellishments(all_crafting, current_expansion)
+    item_embellishments = filter_item_embellishments(all_items, current_expansion)
+
+    # Combine both lists of embellishments
+    all_embellishments = crafting_embellishments + item_embellishments
+
+    # Remove duplicates based on item ID
+    unique_embellishments = {emb["id"]: emb for emb in all_embellishments}.values()
+    filtered_embellishments = list(unique_embellishments)
+
     # Save filtered embellishments
     with open(get_data_file_path("filtered_embellishments.json"), "w") as file:
         json.dump(filtered_embellishments, file, indent=2)

@@ -20,12 +20,6 @@ let lastVisibleRowIndex;
 // Additional data variables
 let activeDataSet = null;
 
-function calculateAverageDPS(build) {
-    const simTypes = Object.keys(build.dps);
-    const totalDPS = simTypes.reduce((sum, simType) => sum + build.dps[simType], 0);
-    return totalDPS / simTypes.length;
-}
-
 function findBestBuilds(builds, simType) {
     const aldrachiBuilds = builds.filter(build => build.hero.toLowerCase().includes('aldrachi'));
     const felscarredBuilds = builds.filter(build => build.hero.toLowerCase().includes('felscarred'));
@@ -115,27 +109,22 @@ for (const type in talentDictionary) {
 
 function getFullTalentName(talent, talentType) {
     if (talentType === 'hero') {
-        // For hero talents, we need to check if the talent starts with any of the hero talent keys
-        for (const heroTalent in talentDictionary.hero) {
-            if (talent.toLowerCase().startsWith(heroTalent.split('_')[0])) {
-                return talentDictionary.hero[heroTalent];
-            }
-        }
+        return talentDictionary.hero[talent];
     } else {
-        // Use the full code if available, otherwise use the original talent code
-        const fullCode = talentCodeMapping[talent] || talent;
-
-        if (talentDictionary[talentType] && talentDictionary[talentType][fullCode]) {
+        // For other talent types
+        for (const fullCode in talentDictionary[talentType]) {
             const talentInfo = talentDictionary[talentType][fullCode];
             if (Array.isArray(talentInfo)) {
-                return talentInfo[0]; // Return the full name (first element of the array)
-            } else {
+                // Check if the talent matches the full name or the abbreviated version
+                if (talent === fullCode || talent === talentInfo[1]) {
+                    return talentInfo[0]; // Return the full name
+                }
+            } else if (talent === fullCode) {
                 return talentInfo; // For cases where it's just a string
             }
         }
     }
 
-    console.log(`Falling back to original talent name: ${talent}`);
     return talent; // Fallback to the original talent name if not found
 }
 
@@ -254,11 +243,12 @@ function updateTable() {
         th.setAttribute('data-sim-type', simType);
         th.innerHTML = `
             ${simType.replace(/_/g, ' ')}
-            <i class="material-icons sort-icon">arrow_downward</i>
+            <i class="material-icons sort-icon" style="display: none;">arrow_downward</i>
             ${createComparisonViz(simType)}
         `;
         headerRow.appendChild(th);
     });
+
 
     thead.appendChild(headerRow);
 
@@ -486,41 +476,53 @@ function updateSortIndicator(columnIndex, direction) {
         if (icon) {
             if (index === columnIndex) {
                 icon.textContent = direction === 'asc' ? 'arrow_upward' : 'arrow_downward';
-                icon.classList.add('active');
+                icon.style.display = 'inline-block';
             } else {
-                icon.textContent = 'arrow_downward';
-                icon.classList.remove('active');
+                icon.style.display = 'none';
             }
         }
     });
 }
 
-function updateTalentTrees(bestBuilds) {
+function updateTalentTrees(builds) {
     const baseUrl = 'https://mimiron.raidbots.com/simbot/render/talents/';
     const commonParams = '?width=313&level=80&&hideHeader=1';
 
-    // Use the first sim type as default
-    const defaultSimType = rawData.sim_types[0];
+    // Find the best overall Aldrachi and Felscarred builds
+    const bestOverallAldrachi = builds.find(build =>
+        build.hero.toLowerCase().includes('aldrachi') &&
+        build.overall_rank === builds.filter(b => b.hero.toLowerCase().includes('aldrachi'))
+            .reduce((min, b) => Math.min(min, b.overall_rank), Infinity)
+    );
 
-    if (bestBuilds[defaultSimType] && bestBuilds[defaultSimType].bestAldrachi) {
-        document.getElementById('aldrachiOverall').src =
-            `${baseUrl}${bestBuilds[defaultSimType].bestAldrachi.talent_hash}${commonParams}`;
+    const bestOverallFelscarred = builds.find(build =>
+        build.hero.toLowerCase().includes('felscarred') &&
+        build.overall_rank === builds.filter(b => b.hero.toLowerCase().includes('felscarred'))
+            .reduce((min, b) => Math.min(min, b.overall_rank), Infinity)
+    );
+
+    // Find the best single target (1T_300s) Aldrachi and Felscarred builds
+    const aldrachiBuilds = builds.filter(build => build.hero.toLowerCase().includes('aldrachi'));
+    const felscarredBuilds = builds.filter(build => build.hero.toLowerCase().includes('felscarred'));
+
+    const bestSingleTargetAldrachi = aldrachiBuilds.reduce((best, current) =>
+        (current.dps['1T_300s'] > best.dps['1T_300s']) ? current : best, aldrachiBuilds[0]);
+    const bestSingleTargetFelscarred = felscarredBuilds.reduce((best, current) =>
+        (current.dps['1T_300s'] > best.dps['1T_300s']) ? current : best, felscarredBuilds[0]);
+
+    function updateImage(id, build) {
+        if (build && build.talent_hash) {
+            document.getElementById(id).src = `${baseUrl}${build.talent_hash}${commonParams}`;
+        } else {
+            console.error(`No valid build found for ${id}`);
+            document.getElementById(id).style.display = 'none';
+        }
     }
 
-    if (bestBuilds['1T_300s'] && bestBuilds['1T_300s'].bestAldrachi) {
-        document.getElementById('aldrachiSingleTarget').src =
-            `${baseUrl}${bestBuilds['1T_300s'].bestAldrachi.talent_hash}${commonParams}`;
-    }
-
-    if (bestBuilds[defaultSimType] && bestBuilds[defaultSimType].bestFelscarred) {
-        document.getElementById('felscarredOverall').src =
-            `${baseUrl}${bestBuilds[defaultSimType].bestFelscarred.talent_hash}${commonParams}`;
-    }
-
-    if (bestBuilds['1T_300s'] && bestBuilds['1T_300s'].bestFelscarred) {
-        document.getElementById('felscarredSingleTarget').src =
-            `${baseUrl}${bestBuilds['1T_300s'].bestFelscarred.talent_hash}${commonParams}`;
-    }
+    updateImage('aldrachiOverall', bestOverallAldrachi);
+    updateImage('aldrachiSingleTarget', bestSingleTargetAldrachi);
+    updateImage('felscarredOverall', bestOverallFelscarred);
+    updateImage('felscarredSingleTarget', bestSingleTargetFelscarred);
 }
 
 function generateAdditionalDataButtons() {
@@ -538,7 +540,6 @@ function generateAdditionalDataButtons() {
     };
 
     for (const dataSetName in additionalData) {
-        console.log(dataSetName);
         const button = document.createElement('button');
         button.className = 'mdc-button';
         button.onclick = () => toggleAdditionalData(dataSetName);
@@ -586,53 +587,59 @@ function displayAdditionalData(dataSetName) {
         return;
     }
 
-    const sortedData = Object.values(data).sort((a, b) => b.dps - a.dps);
-    const topDPS = sortedData[0].dps;
-
     const title = document.createElement('h3');
     title.className = 'additional-data-title';
-    const buttonNames = {
-        'gem profilesets': 'Gems',
-        'trinket profilesets': 'Trinkets',
-        'enchant profilesets weapons': 'Weapon Enchants',
-        'enchant profilesets rings': 'Ring Enchants',
-        'enchant profilesets legs': 'Leg Enchants',
-        'enchant profilesets chest': 'Chest Enchants'
-    };
-    title.textContent = buttonNames[dataSetName] || dataSetName.replace(/_/g, ' ');
+    title.textContent = dataSetName.replace(/_/g, ' ');
     contentDiv.appendChild(title);
 
-    const dataList = document.createElement('div');
-    dataList.className = 'data-list';
+    const variantsContainer = document.createElement('div');
+    variantsContainer.className = 'variants-container';
+    contentDiv.appendChild(variantsContainer);
 
-    sortedData.forEach(item => {
-        const percentDiff = ((item.dps - topDPS) / topDPS * 100).toFixed(2);
-        // Using a logarithmic scale to exaggerate small differences
-        const barWidth = Math.max(0, 100 - Math.log((topDPS - item.dps) / topDPS * 100 + 1) * 20);
+    Object.keys(data).forEach(variant => {
+        const variantSection = document.createElement('div');
+        variantSection.className = 'variant-section';
 
-        const dataItem = document.createElement('div');
-        dataItem.className = 'data-item';
+        const variantTitle = document.createElement('h4');
+        variantTitle.className = 'variant-title';
+        variantTitle.textContent = variant;
+        variantSection.appendChild(variantTitle);
 
-        const dataBar = document.createElement('div');
-        dataBar.className = 'data-bar';
-        dataBar.style.width = `${barWidth}%`;
+        const dataList = document.createElement('div');
+        dataList.className = 'data-list';
 
-        const dataName = document.createElement('span');
-        dataName.className = 'data-name';
-        dataName.textContent = item.name.replace(/_/g, ' ');
+        const sortedData = Object.values(data[variant]).sort((a, b) => b.dps - a.dps);
+        const topDPS = sortedData[0].dps;
 
-        const dataDiff = document.createElement('span');
-        dataDiff.className = 'data-diff';
-        dataDiff.textContent = percentDiff === '0.00' ? '0.00%' : `${percentDiff}%`;
+        sortedData.forEach(item => {
+            const percentDiff = ((item.dps - topDPS) / topDPS * 100).toFixed(2);
+            const barWidth = Math.max(0, 100 - Math.log((topDPS - item.dps) / topDPS * 100 + 1) * 20);
 
-        dataItem.appendChild(dataBar);
-        dataItem.appendChild(dataName);
-        dataItem.appendChild(dataDiff);
+            const dataItem = document.createElement('div');
+            dataItem.className = 'data-item';
 
-        dataList.appendChild(dataItem);
+            const dataBar = document.createElement('div');
+            dataBar.className = 'data-bar';
+            dataBar.style.width = `${barWidth}%`;
+
+            const dataName = document.createElement('span');
+            dataName.className = 'data-name';
+            dataName.textContent = item.name.replace(/_/g, ' ');
+
+            const dataDiff = document.createElement('span');
+            dataDiff.className = 'data-diff';
+            dataDiff.textContent = percentDiff === '0.00' ? '0.00%' : `${percentDiff}%`;
+
+            dataItem.appendChild(dataBar);
+            dataItem.appendChild(dataName);
+            dataItem.appendChild(dataDiff);
+
+            dataList.appendChild(dataItem);
+        });
+
+        variantSection.appendChild(dataList);
+        variantsContainer.appendChild(variantSection);
     });
-
-    contentDiv.appendChild(dataList);
 }
 
 function initializeData(data) {
@@ -643,35 +650,22 @@ function initializeData(data) {
 
     calculateGlobalValues(data.builds);
 
-    // Calculate average DPS for each build
-    data.builds.forEach(build => {
-        build.averageDPS = calculateAverageDPS(build);
-    });
-
-    // Sort builds by average DPS and assign overall rank
-    data.builds.sort((a, b) => b.averageDPS - a.averageDPS);
-    data.builds.forEach((build, index) => {
-        build.overall_rank = index + 1;
-    });
-
-    // Find best builds for each sim type
-    data.sim_types.forEach(simType => {
-        bestBuilds[simType] = findBestBuilds(data.builds, simType);
-    });
-
-    // Update talent trees
-    updateTalentTrees(bestBuilds);
-
     // Initialize filteredData with all builds
     filteredData = data.builds.map(build => ({
         ...build,
         talent_hash: build.talent_hash || ''
     }));
 
-    // Sort the data by average DPS descending
-    currentSortColumn = 1; // Overall rank is the second column (index 1)
-    currentSortDirection = 'asc';
-    sortData();
+    // Sort the data by overall rank ascending
+    filteredData.sort((a, b) => a.overall_rank - b.overall_rank);
+
+    // Find best builds for each sim type
+    data.sim_types.forEach(simType => {
+        bestBuilds[simType] = findBestBuilds(filteredData, simType);
+    });
+
+    // Update talent trees with the sorted data
+    updateTalentTrees(filteredData);
 
     updateTable();
 

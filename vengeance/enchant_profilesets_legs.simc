@@ -1,3 +1,6 @@
-profileset."Legs_7855_agistr_8277_armor"+=legs=,id=212064,enchant_id=7601,ilevel=639,enchant_id=7595
-profileset."Legs_5237_agistr"+=legs=,id=212064,enchant_id=7601,ilevel=639,enchant_id=7598
-profileset."Legs_7855_agistr_7559_sta"+=legs=,id=212064,enchant_id=7601,ilevel=639,enchant_id=7601
+profileset."Legs_930_agistr_980_armor"+=legs=,id=212064,enchant_id=7601,ilevel=639,enchant_id=7595
+
+profileset."Legs_620_agistr"+=legs=,id=212064,enchant_id=7601,ilevel=639,enchant_id=7598
+
+profileset."Legs_930_agistr_895_sta"+=legs=,id=212064,enchant_id=7601,ilevel=639,enchant_id=7601
+

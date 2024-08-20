@@ -278,5 +278,1579 @@
     ],
     "craftingCategoryId": 590,
     "expansion": 10
+  },
+  {
+    "id": 215133,
+    "name": "Binding of Binding",
+    "icon": "inv_11_0_jewelcrafting_ring_color1",
+    "quality": 4,
+    "itemClass": 4,
+    "itemSubClass": 0,
+    "inventoryType": 11,
+    "itemLevel": 593,
+    "socketInfo": {
+      "sockets": [
+        {
+          "type": "PRISMATIC"
+        }
+      ]
+    },
+    "uniqueEquipped": true,
+    "itemLimit": {
+      "category": 512,
+      "quantity": 2
+    },
+    "stats": [
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 24,
+        "alloc": 8750
+      },
+      {
+        "id": 25,
+        "alloc": 8750
+      }
+    ],
+    "bonusLists": [
+      8960,
+      10421,
+      9633,
+      8902,
+      10878
+    ],
+    "sources": [
+      {
+        "instanceId": -66,
+        "encounterId": -37
+      }
+    ],
+    "profession": {
+      "id": 755,
+      "recipeSpellId": 435382,
+      "optionalCraftingSlots": [
+        {
+          "id": 256,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 275,
+          "count": 25,
+          "recraftCount": 14
+        },
+        {
+          "id": 283,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 284,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 367,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 346,
+          "count": 1,
+          "recraftCount": 1
+        }
+      ]
+    },
+    "expansion": 10
+  },
+  {
+    "id": 215134,
+    "name": "Fractured Gemstone Locket",
+    "icon": "inv_11_0_arathor_necklace_02_color5",
+    "quality": 4,
+    "itemClass": 4,
+    "itemSubClass": 0,
+    "inventoryType": 2,
+    "itemLevel": 593,
+    "socketInfo": {
+      "sockets": [
+        {
+          "type": "PRISMATIC"
+        }
+      ]
+    },
+    "itemLimit": {
+      "category": 512,
+      "quantity": 2
+    },
+    "stats": [
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 24,
+        "alloc": 8750
+      },
+      {
+        "id": 25,
+        "alloc": 8750
+      }
+    ],
+    "bonusLists": [
+      8960,
+      10421,
+      9633,
+      8902,
+      10878
+    ],
+    "sources": [
+      {
+        "instanceId": -66,
+        "encounterId": -37
+      }
+    ],
+    "profession": {
+      "id": 755,
+      "recipeSpellId": 435383,
+      "optionalCraftingSlots": [
+        {
+          "id": 256,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 275,
+          "count": 25,
+          "recraftCount": 14
+        },
+        {
+          "id": 283,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 284,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 367,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 346,
+          "count": 1,
+          "recraftCount": 1
+        }
+      ]
+    },
+    "expansion": 10
+  },
+  {
+    "id": 219489,
+    "name": "Waders of the Unifying Flame",
+    "icon": "inv_leather_outdoorarathor_d_01_boot",
+    "quality": 4,
+    "itemClass": 4,
+    "itemSubClass": 2,
+    "inventoryType": 8,
+    "itemLevel": 593,
+    "itemLimit": {
+      "category": 512,
+      "quantity": 2
+    },
+    "stats": [
+      {
+        "id": 73,
+        "alloc": 5259
+      },
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 36,
+        "alloc": 4000
+      },
+      {
+        "id": 49,
+        "alloc": 3000
+      }
+    ],
+    "bonusLists": [
+      8960,
+      10421,
+      9633,
+      8902
+    ],
+    "sources": [
+      {
+        "instanceId": -66,
+        "encounterId": -38
+      }
+    ],
+    "profession": {
+      "id": 165,
+      "recipeSpellId": 444071,
+      "optionalCraftingSlots": [
+        {
+          "id": 294,
+          "count": 3,
+          "recraftCount": 1
+        },
+        {
+          "id": 269,
+          "count": 150,
+          "recraftCount": 75
+        },
+        {
+          "id": 300,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 284,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 256,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 286,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 346,
+          "count": 1,
+          "recraftCount": 1
+        }
+      ]
+    },
+    "expansion": 10
+  },
+  {
+    "id": 219492,
+    "name": "Sanctified Torchbearer's Grips",
+    "icon": "inv_mail_outdoorarathor_d_01_glove",
+    "quality": 4,
+    "itemClass": 4,
+    "itemSubClass": 3,
+    "inventoryType": 10,
+    "itemLevel": 593,
+    "itemLimit": {
+      "category": 512,
+      "quantity": 2
+    },
+    "stats": [
+      {
+        "id": 73,
+        "alloc": 5259
+      },
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 32,
+        "alloc": 4000
+      },
+      {
+        "id": 49,
+        "alloc": 3000
+      }
+    ],
+    "bonusLists": [
+      8960,
+      10421,
+      9633,
+      8902
+    ],
+    "sources": [
+      {
+        "instanceId": -66,
+        "encounterId": -38
+      }
+    ],
+    "profession": {
+      "id": 165,
+      "recipeSpellId": 444073,
+      "optionalCraftingSlots": [
+        {
+          "id": 294,
+          "count": 3,
+          "recraftCount": 1
+        },
+        {
+          "id": 270,
+          "count": 150,
+          "recraftCount": 75
+        },
+        {
+          "id": 300,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 284,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 287,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 256,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 346,
+          "count": 1,
+          "recraftCount": 1
+        }
+      ]
+    },
+    "expansion": 10
+  },
+  {
+    "id": 219501,
+    "name": "Vambraces of Deepening Darkness",
+    "icon": "inv_mail_outdoorarathor_d_01_bracer",
+    "quality": 4,
+    "itemClass": 4,
+    "itemSubClass": 3,
+    "inventoryType": 9,
+    "itemLevel": 593,
+    "itemLimit": {
+      "category": 512,
+      "quantity": 2
+    },
+    "stats": [
+      {
+        "id": 73,
+        "alloc": 5259
+      },
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 40,
+        "alloc": 3000
+      },
+      {
+        "id": 49,
+        "alloc": 4000
+      }
+    ],
+    "bonusLists": [
+      8960,
+      10421,
+      9633,
+      8902
+    ],
+    "sources": [
+      {
+        "instanceId": -66,
+        "encounterId": -38
+      }
+    ],
+    "profession": {
+      "id": 165,
+      "recipeSpellId": 444068,
+      "optionalCraftingSlots": [
+        {
+          "id": 295,
+          "count": 2,
+          "recraftCount": 1
+        },
+        {
+          "id": 300,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 284,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 287,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 256,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 346,
+          "count": 1,
+          "recraftCount": 1
+        }
+      ]
+    },
+    "expansion": 10
+  },
+  {
+    "id": 219502,
+    "name": "Adrenal Surge Clasp",
+    "icon": "inv_belt_leather_undergroundquest_b_01",
+    "quality": 4,
+    "itemClass": 4,
+    "itemSubClass": 2,
+    "inventoryType": 6,
+    "itemLevel": 593,
+    "itemLimit": {
+      "category": 512,
+      "quantity": 2
+    },
+    "stats": [
+      {
+        "id": 73,
+        "alloc": 5259
+      },
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 32,
+        "alloc": 4000
+      },
+      {
+        "id": 40,
+        "alloc": 3000
+      }
+    ],
+    "bonusLists": [
+      8960,
+      10421,
+      9633,
+      8902
+    ],
+    "sources": [
+      {
+        "instanceId": -66,
+        "encounterId": -38
+      }
+    ],
+    "profession": {
+      "id": 165,
+      "recipeSpellId": 444070,
+      "optionalCraftingSlots": [
+        {
+          "id": 295,
+          "count": 2,
+          "recraftCount": 1
+        },
+        {
+          "id": 300,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 284,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 256,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 286,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 346,
+          "count": 1,
+          "recraftCount": 1
+        }
+      ]
+    },
+    "expansion": 10
+  },
+  {
+    "id": 219507,
+    "name": "Smoldering Pollen Hauberk",
+    "icon": "inv_mail_outdoorarathor_d_01_robe",
+    "quality": 4,
+    "itemClass": 4,
+    "itemSubClass": 3,
+    "inventoryType": 5,
+    "itemLevel": 593,
+    "itemSetId": 1611,
+    "itemLimit": {
+      "category": 512,
+      "quantity": 2
+    },
+    "stats": [
+      {
+        "id": 73,
+        "alloc": 5259
+      },
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 32,
+        "alloc": 3000
+      },
+      {
+        "id": 36,
+        "alloc": 4000
+      }
+    ],
+    "bonusLists": [
+      8960,
+      10421,
+      9633,
+      8902
+    ],
+    "sources": [
+      {
+        "instanceId": -66,
+        "encounterId": -38
+      }
+    ],
+    "profession": {
+      "id": 165,
+      "recipeSpellId": 443961,
+      "optionalCraftingSlots": [
+        {
+          "id": 296,
+          "count": 3,
+          "recraftCount": 2
+        },
+        {
+          "id": 300,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 284,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 287,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 256,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 346,
+          "count": 1,
+          "recraftCount": 1
+        }
+      ]
+    },
+    "expansion": 10
+  },
+  {
+    "id": 219508,
+    "name": "Reinforced Setae Flyers",
+    "icon": "inv_mail_outdoorarathor_d_01_boot",
+    "quality": 4,
+    "itemClass": 4,
+    "itemSubClass": 3,
+    "inventoryType": 8,
+    "itemLevel": 593,
+    "itemSetId": 1611,
+    "itemLimit": {
+      "category": 512,
+      "quantity": 2
+    },
+    "stats": [
+      {
+        "id": 73,
+        "alloc": 5259
+      },
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 40,
+        "alloc": 3000
+      },
+      {
+        "id": 32,
+        "alloc": 4000
+      }
+    ],
+    "bonusLists": [
+      8960,
+      10421,
+      9633,
+      8902
+    ],
+    "sources": [
+      {
+        "instanceId": -66,
+        "encounterId": -38
+      }
+    ],
+    "profession": {
+      "id": 165,
+      "recipeSpellId": 443960,
+      "optionalCraftingSlots": [
+        {
+          "id": 296,
+          "count": 2,
+          "recraftCount": 1
+        },
+        {
+          "id": 300,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 284,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 287,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 256,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 346,
+          "count": 1,
+          "recraftCount": 1
+        }
+      ]
+    },
+    "expansion": 10
+  },
+  {
+    "id": 219509,
+    "name": "Busy Bee's Buckle",
+    "icon": "inv_mail_outdoorarathor_d_01_belt",
+    "quality": 4,
+    "itemClass": 4,
+    "itemSubClass": 3,
+    "inventoryType": 6,
+    "itemLevel": 593,
+    "itemSetId": 1611,
+    "itemLimit": {
+      "category": 512,
+      "quantity": 2
+    },
+    "stats": [
+      {
+        "id": 73,
+        "alloc": 5259
+      },
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 36,
+        "alloc": 3000
+      },
+      {
+        "id": 49,
+        "alloc": 4000
+      }
+    ],
+    "bonusLists": [
+      8960,
+      10421,
+      9633,
+      8902
+    ],
+    "sources": [
+      {
+        "instanceId": -66,
+        "encounterId": -38
+      }
+    ],
+    "profession": {
+      "id": 165,
+      "recipeSpellId": 443958,
+      "optionalCraftingSlots": [
+        {
+          "id": 296,
+          "count": 2,
+          "recraftCount": 1
+        },
+        {
+          "id": 300,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 284,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 287,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 256,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 346,
+          "count": 1,
+          "recraftCount": 1
+        }
+      ]
+    },
+    "expansion": 10
+  },
+  {
+    "id": 219511,
+    "name": "Rook Feather Wristwraps",
+    "icon": "inv_leather_outdoorarathor_d_01_bracer",
+    "quality": 4,
+    "itemClass": 4,
+    "itemSubClass": 2,
+    "inventoryType": 9,
+    "itemLevel": 593,
+    "itemSetId": 1612,
+    "itemLimit": {
+      "category": 512,
+      "quantity": 2
+    },
+    "stats": [
+      {
+        "id": 73,
+        "alloc": 5259
+      },
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 49,
+        "alloc": 3000
+      },
+      {
+        "id": 40,
+        "alloc": 4000
+      }
+    ],
+    "bonusLists": [
+      8960,
+      10421,
+      9633,
+      8902
+    ],
+    "sources": [
+      {
+        "instanceId": -66,
+        "encounterId": -38
+      }
+    ],
+    "profession": {
+      "id": 165,
+      "recipeSpellId": 443949,
+      "optionalCraftingSlots": [
+        {
+          "id": 296,
+          "count": 2,
+          "recraftCount": 1
+        },
+        {
+          "id": 300,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 284,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 256,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 286,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 346,
+          "count": 1,
+          "recraftCount": 1
+        }
+      ]
+    },
+    "expansion": 10
+  },
+  {
+    "id": 219512,
+    "name": "Weathered Stormfront Vest",
+    "icon": "inv_leather_outdoorarathor_d_01_robe",
+    "quality": 4,
+    "itemClass": 4,
+    "itemSubClass": 2,
+    "inventoryType": 5,
+    "itemLevel": 593,
+    "itemSetId": 1612,
+    "itemLimit": {
+      "category": 512,
+      "quantity": 2
+    },
+    "stats": [
+      {
+        "id": 73,
+        "alloc": 5259
+      },
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 32,
+        "alloc": 4000
+      },
+      {
+        "id": 49,
+        "alloc": 3000
+      }
+    ],
+    "bonusLists": [
+      8960,
+      10421,
+      9633,
+      8902
+    ],
+    "sources": [
+      {
+        "instanceId": -66,
+        "encounterId": -38
+      }
+    ],
+    "profession": {
+      "id": 165,
+      "recipeSpellId": 443951,
+      "optionalCraftingSlots": [
+        {
+          "id": 296,
+          "count": 3,
+          "recraftCount": 2
+        },
+        {
+          "id": 300,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 284,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 256,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 286,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 346,
+          "count": 1,
+          "recraftCount": 1
+        }
+      ]
+    },
+    "expansion": 10
+  },
+  {
+    "id": 219513,
+    "name": "Roiling Thunderstrike Talons",
+    "icon": "inv_leather_outdoorarathor_d_01_glove",
+    "quality": 4,
+    "itemClass": 4,
+    "itemSubClass": 2,
+    "inventoryType": 10,
+    "itemLevel": 593,
+    "itemSetId": 1612,
+    "itemLimit": {
+      "category": 512,
+      "quantity": 2
+    },
+    "stats": [
+      {
+        "id": 73,
+        "alloc": 5259
+      },
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 36,
+        "alloc": 4000
+      },
+      {
+        "id": 40,
+        "alloc": 3000
+      }
+    ],
+    "bonusLists": [
+      8960,
+      10421,
+      9633,
+      8902
+    ],
+    "sources": [
+      {
+        "instanceId": -66,
+        "encounterId": -38
+      }
+    ],
+    "profession": {
+      "id": 165,
+      "recipeSpellId": 443950,
+      "optionalCraftingSlots": [
+        {
+          "id": 296,
+          "count": 2,
+          "recraftCount": 1
+        },
+        {
+          "id": 300,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 284,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 256,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 286,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 346,
+          "count": 1,
+          "recraftCount": 1
+        }
+      ]
+    },
+    "expansion": 10
+  },
+  {
+    "id": 222458,
+    "name": "Sanctified Steps",
+    "icon": "inv_plate_outdoorarathor_d_01_boot",
+    "quality": 4,
+    "itemClass": 4,
+    "itemSubClass": 4,
+    "inventoryType": 8,
+    "itemLevel": 593,
+    "itemLimit": {
+      "category": 512,
+      "quantity": 2
+    },
+    "stats": [
+      {
+        "id": 74,
+        "alloc": 5259
+      },
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 40,
+        "alloc": 3500
+      },
+      {
+        "id": 49,
+        "alloc": 3500
+      }
+    ],
+    "bonusLists": [
+      10421,
+      9633,
+      8902
+    ],
+    "sources": [
+      {
+        "instanceId": -66,
+        "encounterId": -33
+      }
+    ],
+    "profession": {
+      "id": 164,
+      "recipeSpellId": 450245,
+      "optionalCraftingSlots": [
+        {
+          "id": 256,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 315,
+          "count": 8,
+          "recraftCount": 4
+        },
+        {
+          "id": 317,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 284,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 346,
+          "count": 1,
+          "recraftCount": 1
+        }
+      ]
+    },
+    "expansion": 10
+  },
+  {
+    "id": 222459,
+    "name": "Beledar's Bulwark",
+    "icon": "inv_shield_1h_arathoroutdoor_d_01",
+    "quality": 4,
+    "itemClass": 4,
+    "itemSubClass": 6,
+    "inventoryType": 14,
+    "itemLevel": 593,
+    "itemLimit": {
+      "category": 512,
+      "quantity": 2
+    },
+    "stats": [
+      {
+        "id": 4,
+        "alloc": 5259
+      },
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 40,
+        "alloc": 4300
+      },
+      {
+        "id": 32,
+        "alloc": 2700
+      },
+      {
+        "id": 5,
+        "alloc": 16132
+      }
+    ],
+    "bonusLists": [
+      10421,
+      9633,
+      8902
+    ],
+    "sources": [
+      {
+        "instanceId": -66,
+        "encounterId": -33
+      }
+    ],
+    "profession": {
+      "id": 164,
+      "recipeSpellId": 450246,
+      "optionalCraftingSlots": [
+        {
+          "id": 256,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 315,
+          "count": 8,
+          "recraftCount": 4
+        },
+        {
+          "id": 317,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 284,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 346,
+          "count": 1,
+          "recraftCount": 1
+        }
+      ]
+    },
+    "expansion": 10
+  },
+  {
+    "id": 222463,
+    "name": "Siphoning Stiletto",
+    "icon": "inv_knife_1h_arathoroutdoor_d_01",
+    "quality": 4,
+    "itemClass": 2,
+    "itemSubClass": 15,
+    "inventoryType": 13,
+    "itemLevel": 593,
+    "itemLimit": {
+      "category": 512,
+      "quantity": 2
+    },
+    "stats": [
+      {
+        "id": 3,
+        "alloc": 5259
+      },
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 32,
+        "alloc": 3500
+      },
+      {
+        "id": 49,
+        "alloc": 3500
+      }
+    ],
+    "bonusLists": [
+      10421,
+      9633,
+      8902
+    ],
+    "sources": [
+      {
+        "instanceId": -66,
+        "encounterId": -33
+      }
+    ],
+    "profession": {
+      "id": 164,
+      "recipeSpellId": 450250,
+      "optionalCraftingSlots": [
+        {
+          "id": 256,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 315,
+          "count": 8,
+          "recraftCount": 4
+        },
+        {
+          "id": 317,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 284,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 346,
+          "count": 1,
+          "recraftCount": 1
+        }
+      ]
+    },
+    "expansion": 10
+  },
+  {
+    "id": 222807,
+    "name": "Grips of the Woven Dawn",
+    "icon": "inv_cloth_outdoorarathor_d_01_glove",
+    "quality": 4,
+    "itemClass": 4,
+    "itemSubClass": 1,
+    "inventoryType": 10,
+    "itemLevel": 593,
+    "itemSetId": 1683,
+    "itemLimit": {
+      "category": 512,
+      "quantity": 2
+    },
+    "stats": [
+      {
+        "id": 5,
+        "alloc": 5259
+      },
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 24,
+        "alloc": 3500
+      },
+      {
+        "id": 25,
+        "alloc": 3500
+      }
+    ],
+    "bonusLists": [
+      8960,
+      10421,
+      9633,
+      8902
+    ],
+    "sources": [
+      {
+        "instanceId": -66,
+        "encounterId": -39
+      }
+    ],
+    "profession": {
+      "id": 197,
+      "recipeSpellId": 446930,
+      "optionalCraftingSlots": [
+        {
+          "id": 331,
+          "count": 8,
+          "recraftCount": 4
+        },
+        {
+          "id": 302,
+          "count": 6,
+          "recraftCount": 3
+        },
+        {
+          "id": 377,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 256,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 284,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 346,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 328,
+          "count": 15,
+          "recraftCount": 0
+        }
+      ]
+    },
+    "expansion": 10
+  },
+  {
+    "id": 222808,
+    "name": "Treads of the Woven Dawn",
+    "icon": "inv_cloth_outdoorarathor_d_01_boot",
+    "quality": 4,
+    "itemClass": 4,
+    "itemSubClass": 1,
+    "inventoryType": 8,
+    "itemLevel": 593,
+    "itemSetId": 1683,
+    "itemLimit": {
+      "category": 512,
+      "quantity": 2
+    },
+    "stats": [
+      {
+        "id": 5,
+        "alloc": 5259
+      },
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 24,
+        "alloc": 3500
+      },
+      {
+        "id": 25,
+        "alloc": 3500
+      }
+    ],
+    "bonusLists": [
+      8960,
+      10421,
+      9633,
+      8902
+    ],
+    "sources": [
+      {
+        "instanceId": -66,
+        "encounterId": -39
+      }
+    ],
+    "profession": {
+      "id": 197,
+      "recipeSpellId": 446931,
+      "optionalCraftingSlots": [
+        {
+          "id": 331,
+          "count": 10,
+          "recraftCount": 5
+        },
+        {
+          "id": 302,
+          "count": 6,
+          "recraftCount": 3
+        },
+        {
+          "id": 377,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 256,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 284,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 346,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 328,
+          "count": 10,
+          "recraftCount": 0
+        }
+      ]
+    },
+    "expansion": 10
+  },
+  {
+    "id": 222809,
+    "name": "Gloves of the Woven Dusk",
+    "icon": "inv_cloth_outdoorarathor_d_01_glove",
+    "quality": 4,
+    "itemClass": 4,
+    "itemSubClass": 1,
+    "inventoryType": 10,
+    "itemLevel": 593,
+    "itemSetId": 1697,
+    "itemLimit": {
+      "category": 512,
+      "quantity": 2
+    },
+    "stats": [
+      {
+        "id": 5,
+        "alloc": 5259
+      },
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 24,
+        "alloc": 3500
+      },
+      {
+        "id": 25,
+        "alloc": 3500
+      }
+    ],
+    "bonusLists": [
+      8960,
+      10421,
+      9633,
+      8902
+    ],
+    "sources": [
+      {
+        "instanceId": -66,
+        "encounterId": -39
+      }
+    ],
+    "profession": {
+      "id": 197,
+      "recipeSpellId": 446932,
+      "optionalCraftingSlots": [
+        {
+          "id": 330,
+          "count": 8,
+          "recraftCount": 4
+        },
+        {
+          "id": 302,
+          "count": 6,
+          "recraftCount": 3
+        },
+        {
+          "id": 377,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 256,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 284,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 346,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 327,
+          "count": 15,
+          "recraftCount": 0
+        }
+      ]
+    },
+    "expansion": 10
+  },
+  {
+    "id": 222810,
+    "name": "Slippers of the Woven Dusk",
+    "icon": "inv_cloth_outdoorarathor_d_01_boot",
+    "quality": 4,
+    "itemClass": 4,
+    "itemSubClass": 1,
+    "inventoryType": 8,
+    "itemLevel": 593,
+    "itemSetId": 1697,
+    "itemLimit": {
+      "category": 512,
+      "quantity": 2
+    },
+    "stats": [
+      {
+        "id": 5,
+        "alloc": 5259
+      },
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 24,
+        "alloc": 3500
+      },
+      {
+        "id": 25,
+        "alloc": 3500
+      }
+    ],
+    "bonusLists": [
+      8960,
+      10421,
+      9633,
+      8902
+    ],
+    "sources": [
+      {
+        "instanceId": -66,
+        "encounterId": -39
+      }
+    ],
+    "profession": {
+      "id": 197,
+      "recipeSpellId": 446933,
+      "optionalCraftingSlots": [
+        {
+          "id": 330,
+          "count": 10,
+          "recraftCount": 5
+        },
+        {
+          "id": 302,
+          "count": 6,
+          "recraftCount": 3
+        },
+        {
+          "id": 377,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 256,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 284,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 346,
+          "count": 1,
+          "recraftCount": 1
+        },
+        {
+          "id": 327,
+          "count": 10,
+          "recraftCount": 0
+        }
+      ]
+    },
+    "expansion": 10
   }
 ]
