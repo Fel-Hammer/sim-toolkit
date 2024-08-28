@@ -6,12 +6,13 @@ import re
 import subprocess
 import sys
 import time
-import itertools
 import tempfile
 import logging
 import pickle
 import shutil
 import glob
+import select
+import signal
 from downloadsimc import download_and_extract_simc
 from abc import ABC, abstractmethod
 from functools import wraps
@@ -696,7 +697,7 @@ class SimCContentGenerator:
                     updated_content.append(line)
             elif line_lower.startswith("talents="):
                 if self.is_multiple_simulation:
-                    updated_content.append(f"talents={self.talents}")
+                    updated_content.append("talents=")
                     logger.debug("Added empty talents for multiple simulation")
                 else:
                     updated_content.append(f"talents={self.talents}")
@@ -801,42 +802,62 @@ class Simulation(ABC):
         self, input_file: str, output_file: str, sim_id: str
     ) -> Optional[str]:
         try:
-            process = subprocess.Popen(
+            with subprocess.Popen(
                 [self.config.simc_path, input_file],
                 stdout=subprocess.PIPE,
                 stderr=subprocess.PIPE,
                 universal_newlines=True,
                 bufsize=1,
-            )
+                preexec_fn=os.setsid,  # Use this on Unix-like systems
+            ) as process:
+                stdout_data = []
+                stderr_data = []
 
-            while True:
-                line = process.stdout.readline()
-                if not line and process.poll() is not None:
-                    break
-                if line:
-                    logger.debug(line.strip())
-                    self.progress_tracker.update(line.strip())
+                while True:
+                    reads = [process.stdout.fileno(), process.stderr.fileno()]
+                    ret = select.select(reads, [], [], 0.1)
 
-            rc = process.wait()
-            stderr_output = process.stderr.read()
-            if stderr_output:
-                logger.error(f"SimC stderr: {stderr_output}")
+                    for fd in ret[0]:
+                        if fd == process.stdout.fileno():
+                            read = process.stdout.readline()
+                            if read:
+                                stdout_data.append(read)
+                                logger.debug(read.strip())
+                                self.progress_tracker.update(read.strip())
+                        if fd == process.stderr.fileno():
+                            read = process.stderr.readline()
+                            if read:
+                                stderr_data.append(read)
+                                logger.error(f"SimC stderr: {read.strip()}")
 
-            if rc != 0:
-                logger.error(f"Simulation failed with return code {rc}")
+                    if process.poll() is not None:
+                        break
+
+                rc = process.wait(timeout=5)  # Short timeout as process should be done
+
+                if rc != 0:
+                    logger.error(f"Simulation failed with return code {rc}")
+                    logger.error("Last 10 lines of stdout:")
+                    for line in stdout_data[-10:]:
+                        logger.error(line.strip())
+                    logger.error("Full stderr output:")
+                    for line in stderr_data:
+                        logger.error(line.strip())
+                    return None
+
+                logger.info("Simulation completed successfully")
+
+                actual_output_file = self._generate_output_filename(sim_id, "json")
+                if FileHandler.check_output_file(actual_output_file):
+                    return actual_output_file
+
+                logger.error(f"Expected output file not found: {actual_output_file}")
                 return None
 
-            logger.debug("Simulation completed successfully")
-
-            # Use sim_id in the actual output file name
-            actual_output_file = self._generate_output_filename(sim_id, "json")
-            if FileHandler.check_output_file(actual_output_file):
-                return actual_output_file
-
-            # If the file doesn't exist, log an error and return None
-            logger.error(f"Expected output file not found: {actual_output_file}")
+        except subprocess.TimeoutExpired:
+            os.killpg(os.getpgid(process.pid), signal.SIGTERM)
+            logger.error("SimC process timed out")
             return None
-
         except Exception as e:
             logger.error(f"Error running simulation: {e}")
             return None
