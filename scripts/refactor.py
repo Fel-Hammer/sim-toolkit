@@ -696,7 +696,7 @@ class SimCContentGenerator:
                     updated_content.append(line)
             elif line_lower.startswith("talents="):
                 if self.is_multiple_simulation:
-                    updated_content.append("talents=")
+                    updated_content.append(f"talents={self.talents}")
                     logger.debug("Added empty talents for multiple simulation")
                 else:
                     updated_content.append(f"talents={self.talents}")

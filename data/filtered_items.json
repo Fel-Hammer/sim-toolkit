@@ -4256,6 +4256,34 @@
     "inventoryType": 12,
     "itemLevel": 571,
     "uniqueEquipped": true,
+    "specs": [
+      62,
+      63,
+      64,
+      70,
+      71,
+      72,
+      102,
+      103,
+      251,
+      252,
+      253,
+      254,
+      255,
+      258,
+      259,
+      260,
+      261,
+      262,
+      263,
+      265,
+      266,
+      267,
+      269,
+      577,
+      1467,
+      1473
+    ],
     "stats": [
       {
         "id": 32,
@@ -6409,6 +6437,11 @@
           "id": 346,
           "count": 1,
           "recraftCount": 1
+        },
+        {
+          "id": 363,
+          "count": 1,
+          "recraftCount": 0
         }
       ]
     },
@@ -6591,6 +6624,11 @@
           "id": 346,
           "count": 1,
           "recraftCount": 1
+        },
+        {
+          "id": 363,
+          "count": 1,
+          "recraftCount": 0
         }
       ]
     },
@@ -6864,6 +6902,11 @@
           "id": 346,
           "count": 1,
           "recraftCount": 1
+        },
+        {
+          "id": 363,
+          "count": 1,
+          "recraftCount": 0
         }
       ]
     },
@@ -7056,6 +7099,11 @@
           "id": 346,
           "count": 1,
           "recraftCount": 1
+        },
+        {
+          "id": 363,
+          "count": 1,
+          "recraftCount": 0
         }
       ]
     },
@@ -7138,6 +7186,11 @@
           "id": 346,
           "count": 1,
           "recraftCount": 1
+        },
+        {
+          "id": 363,
+          "count": 1,
+          "recraftCount": 0
         }
       ]
     },
@@ -9117,6 +9170,11 @@
           "id": 346,
           "count": 1,
           "recraftCount": 1
+        },
+        {
+          "id": 363,
+          "count": 1,
+          "recraftCount": 0
         }
       ]
     },
@@ -9217,6 +9275,11 @@
           "id": 346,
           "count": 1,
           "recraftCount": 1
+        },
+        {
+          "id": 363,
+          "count": 1,
+          "recraftCount": 0
         }
       ]
     },
@@ -9696,7 +9759,7 @@
     "itemLevel": 593,
     "stats": [
       {
-        "id": 72,
+        "id": 5,
         "alloc": 5259
       },
       {
@@ -9971,6 +10034,13 @@
       "category": 512,
       "quantity": 2
     },
+    "specs": [
+      103,
+      104,
+      259,
+      260,
+      1453
+    ],
     "stats": [
       {
         "id": 3,

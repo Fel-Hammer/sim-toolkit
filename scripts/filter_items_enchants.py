@@ -384,11 +384,11 @@ def filter_embellishments(crafting_data, current_expansion):
 
 
 def main():
-    items_url = "https://www.raidbots.com/static/data/beta/equippable-items.json"
-    enchants_url = "https://www.raidbots.com/static/data/beta/enchantments.json"
-    crafting_url = "https://www.raidbots.com/static/data/beta/crafting.json"
-    potions_url = "https://www.raidbots.com/static/data/beta/potions.json"
-    flasks_url = "https://www.raidbots.com/static/data/beta/flasks.json"
+    items_url = "https://www.raidbots.com/static/data/live/equippable-items.json"
+    enchants_url = "https://www.raidbots.com/static/data/live/enchantments.json"
+    crafting_url = "https://www.raidbots.com/static/data/live/crafting.json"
+    potions_url = "https://www.raidbots.com/static/data/live/potions.json"
+    flasks_url = "https://www.raidbots.com/static/data/live/flasks.json"
     current_expansion = 10  # Dragonflight
 
     print("Fetching items data...")

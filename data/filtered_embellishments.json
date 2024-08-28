@@ -698,6 +698,11 @@
           "id": 346,
           "count": 1,
           "recraftCount": 1
+        },
+        {
+          "id": 363,
+          "count": 1,
+          "recraftCount": 0
         }
       ]
     },
@@ -779,6 +784,11 @@
           "id": 346,
           "count": 1,
           "recraftCount": 1
+        },
+        {
+          "id": 363,
+          "count": 1,
+          "recraftCount": 0
         }
       ]
     },
@@ -1025,6 +1035,11 @@
           "id": 346,
           "count": 1,
           "recraftCount": 1
+        },
+        {
+          "id": 363,
+          "count": 1,
+          "recraftCount": 0
         }
       ]
     },
@@ -1107,6 +1122,11 @@
           "id": 346,
           "count": 1,
           "recraftCount": 1
+        },
+        {
+          "id": 363,
+          "count": 1,
+          "recraftCount": 0
         }
       ]
     },
@@ -1443,6 +1463,13 @@
       "category": 512,
       "quantity": 2
     },
+    "specs": [
+      103,
+      104,
+      259,
+      260,
+      1453
+    ],
     "stats": [
       {
         "id": 3,

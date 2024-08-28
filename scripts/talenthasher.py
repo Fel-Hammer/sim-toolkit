@@ -20,7 +20,7 @@ SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 ROOT_DIR = os.path.dirname(SCRIPT_DIR)
 
 # Configuration constants
-TALENTS_URL = "https://www.raidbots.com/static/data/beta/talents.json"
+TALENTS_URL = "https://www.raidbots.com/static/data/live/talents.json"
 DATA_DIR = os.path.join(ROOT_DIR, "data")
 TALENTS_CACHE_FILE = os.path.join(DATA_DIR, "talents_cache.json")
 TALENTS_CACHE_LOCK = os.path.join(SCRIPT_DIR, "talents_cache.lock")
