@@ -1562,7 +1562,6 @@
         "encounterId": 1023
       }
     ],
-    "faction": "horde",
     "expansion": 7
   },
   {
@@ -1722,7 +1721,6 @@
         "encounterId": 1023
       }
     ],
-    "faction": "horde",
     "expansion": 7
   },
   {
@@ -1809,7 +1807,6 @@
         "encounterId": 1023
       }
     ],
-    "faction": "alliance",
     "expansion": 7
   },
   {
@@ -1857,7 +1854,6 @@
         "encounterId": 1023
       }
     ],
-    "faction": "alliance",
     "expansion": 7
   },
   {
@@ -1902,7 +1898,6 @@
         "encounterId": 1023
       }
     ],
-    "faction": "alliance",
     "expansion": 7
   },
   {
@@ -1939,7 +1934,6 @@
         "encounterId": 1023
       }
     ],
-    "faction": "horde",
     "expansion": 7
   },
   {
@@ -9773,6 +9767,10 @@
       {
         "id": 25,
         "alloc": 3500
+      },
+      {
+        "id": 5,
+        "alloc": 25370
       }
     ],
     "bonusLists": [
