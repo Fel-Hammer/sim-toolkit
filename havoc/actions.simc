@@ -163,5 +163,3 @@ actions.opener+=/essence_break,if=talent.restless_hunter&buff.metamorphosis.up&b
 actions.opener+=/death_sweep
 actions.opener+=/annihilation
 actions.opener+=/demons_bite
-actions.opener+=/annihilation
-actions.opener+=/demons_bite
