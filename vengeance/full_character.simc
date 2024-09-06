@@ -34,7 +34,6 @@ actions+=/variable,name=num_spawnable_souls,op=max,value=2,if=talent.fracture&co
 actions+=/variable,name=num_spawnable_souls,op=max,value=3,if=talent.fracture&cooldown.fracture.charges_fractional>=1&buff.metamorphosis.up
 actions+=/variable,name=num_spawnable_souls,op=add,value=1,if=talent.soul_carver&(cooldown.soul_carver.remains>(cooldown.soul_carver.duration-3))
 actions+=/auto_attack
-actions+=/retarget_auto_attack,line_cd=1,target_if=min:debuff.reavers_mark.remains,if=hero_tree.aldrachi_reaver
 actions+=/disrupt,if=target.debuff.casting.react
 actions+=/infernal_strike,use_off_gcd=1
 actions+=/demon_spikes,use_off_gcd=1,if=!buff.demon_spikes.up&!cooldown.pause_action.remains
@@ -52,7 +51,7 @@ actions.ar+=/variable,name=double_rm_remains,op=print
 actions.ar+=/variable,name=rg_sequence_duration,op=set,value=action.fracture.execute_time+action.soul_cleave.execute_time+action.reavers_glaive.execute_time
 actions.ar+=/variable,name=rg_sequence_duration,op=add,value=gcd.max,if=!talent.keen_engagement
 actions.ar+=/variable,name=trigger_overflow,op=set,value=0,if=!buff.glaive_flurry.up&!buff.rending_strike.up
-actions.ar+=/variable,name=rg_enhance_cleave,op=setif,condition=variable.big_aoe|fight_remains<8|variable.trigger_overflow,value=1,value_else=0
+actions.ar+=/variable,name=rg_enhance_cleave,op=setif,condition=spell_targets.spirit_bomb>4|fight_remains<8|variable.trigger_overflow,value=1,value_else=0
 actions.ar+=/variable,name=cooldown_sync,value=(debuff.reavers_mark.remains>gcd.max&debuff.reavers_mark.stack=2&buff.thrill_of_the_fight_damage.remains>gcd.max)|fight_remains<20
 actions.ar+=/potion,use_off_gcd=1,if=gcd.remains=0&(variable.cooldown_sync|(buff.rending_strike.up&buff.glaive_flurry.up))
 actions.ar+=/use_items,use_off_gcd=1,if=variable.cooldown_sync
@@ -63,12 +62,12 @@ actions.ar+=/vengeful_retreat,use_off_gcd=1,if=talent.unhindered_assault&!cooldo
 actions.ar+=/the_hunt,if=!buff.reavers_glaive.up&(buff.art_of_the_glaive.stack+soul_fragments.total)<20
 actions.ar+=/immolation_aura,if=!(buff.glaive_flurry.up|buff.rending_strike.up)
 actions.ar+=/sigil_of_flame,if=!(buff.glaive_flurry.up|buff.rending_strike.up)&(talent.ascending_flame|(!talent.ascending_flame&!prev_gcd.1.sigil_of_flame&(dot.sigil_of_flame.remains<(1+talent.quickened_sigils))))
-actions.ar+=/call_action_list,name=rg_overflow,if=buff.reavers_glaive.up&buff.thrill_of_the_fight_damage.up&buff.thrill_of_the_fight_damage.remains<variable.rg_sequence_duration&(((((1.2+(1*raw_haste_pct))*(variable.double_rm_remains-variable.rg_sequence_duration))+soul_fragments.total+buff.art_of_the_glaive.stack)>=20)|((cooldown.the_hunt.remains)<(variable.double_rm_remains-(variable.rg_sequence_duration+action.the_hunt.execute_time))))
+actions.ar+=/call_action_list,name=rg_overflow,if=buff.reavers_glaive.up&buff.thrill_of_the_fight_damage.up&buff.thrill_of_the_fight_damage.remains<variable.rg_sequence_duration&(((((1.2*(1+raw_haste_pct))*(variable.double_rm_remains-variable.rg_sequence_duration))+soul_fragments.total+buff.art_of_the_glaive.stack)>=20)|((cooldown.the_hunt.remains)<(variable.double_rm_remains-(variable.rg_sequence_duration+action.the_hunt.execute_time))))
 actions.ar+=/call_action_list,name=ar_execute,if=fight_remains<20
 actions.ar+=/soul_cleave,if=(variable.double_rm_remains<=(execute_time+variable.rg_sequence_duration))&(soul_fragments.total>=2&buff.art_of_the_glaive.stack>=(20-2))&(fury<40|!variable.can_spb)
 actions.ar+=/spirit_bomb,if=(variable.double_rm_remains<=(execute_time+variable.rg_sequence_duration))&(buff.art_of_the_glaive.stack+soul_fragments.total>=20)
 actions.ar+=/bulk_extraction,if=(variable.double_rm_remains<=(execute_time+variable.rg_sequence_duration))&(buff.art_of_the_glaive.stack+(spell_targets>?5)>=20)
-actions.ar+=/reavers_glaive,if=buff.thrill_of_the_fight_damage.remains<variable.rg_sequence_duration&(!buff.thrill_of_the_fight_attack_speed.up|(variable.double_rm_remains<=variable.rg_sequence_duration)|variable.rg_enhance_cleave)
+actions.ar+=/reavers_glaive,if=(variable.rg_enhance_cleave&fury>=5|!variable.rg_enhance_cleave&fury>=30)&buff.thrill_of_the_fight_damage.remains<variable.rg_sequence_duration&(!buff.thrill_of_the_fight_attack_speed.up|(variable.double_rm_remains<=variable.rg_sequence_duration)|variable.rg_enhance_cleave)
 actions.ar+=/fiery_brand,if=!talent.fiery_demise|(talent.fiery_demise&((talent.down_in_flames&charges>=max_charges)|(active_dot.fiery_brand=0)))
 actions.ar+=/sigil_of_spite,if=!talent.spirit_bomb|(talent.spirit_bomb&fury>=40&(variable.can_spb|variable.can_spb_soon|soul_fragments.total<=(2-talent.soul_sigils.rank)))
 actions.ar+=/spirit_bomb,if=variable.can_spb
@@ -86,7 +85,7 @@ actions.ar+=/felblade
 actions.ar+=/throw_glaive
 
 actions.ar_execute=metamorphosis,use_off_gcd=1
-actions.ar_execute+=/reavers_glaive
+actions.ar_execute+=/reavers_glaive,if=fury>=30
 actions.ar_execute+=/the_hunt,if=!buff.reavers_glaive.up
 actions.ar_execute+=/bulk_extraction,if=spell_targets>=3&buff.art_of_the_glaive.stack>=20
 actions.ar_execute+=/sigil_of_flame
@@ -204,17 +203,22 @@ actions.metamorphosis+=/felblade
 actions.metamorphosis+=/fracture
 
 actions.rg_overflow=variable,name=trigger_overflow,op=set,value=1
-actions.rg_overflow+=/reavers_glaive,if=!buff.rending_strike.up&!buff.glaive_flurry.up
+actions.rg_overflow+=/variable,name=rg_enhance_cleave,op=set,value=1
+actions.rg_overflow+=/reavers_glaive,if=(variable.rg_enhance_cleave&fury>=5|!variable.rg_enhance_cleave&fury>=30)&!buff.rending_strike.up&!buff.glaive_flurry.up
 
 actions.rg_sequence=call_action_list,name=rg_sequence_filler,if=(fury<30&(!variable.rg_enhance_cleave&buff.glaive_flurry.up&buff.rending_strike.up|variable.rg_enhance_cleave&!buff.rending_strike.up))|(action.fracture.charges_fractional<1&(variable.rg_enhance_cleave&buff.rending_strike.up&buff.glaive_flurry.up|!variable.rg_enhance_cleave&!buff.glaive_flurry.up))
 actions.rg_sequence+=/fracture,if=(variable.rg_enhance_cleave&buff.rending_strike.up&buff.glaive_flurry.up|!variable.rg_enhance_cleave&!buff.glaive_flurry.up)
 actions.rg_sequence+=/shear,if=(variable.rg_enhance_cleave&buff.rending_strike.up&buff.glaive_flurry.up|!variable.rg_enhance_cleave&!buff.glaive_flurry.up)
 actions.rg_sequence+=/soul_cleave,if=(!variable.rg_enhance_cleave&buff.glaive_flurry.up&buff.rending_strike.up|variable.rg_enhance_cleave&!buff.rending_strike.up)
 
-actions.rg_sequence_filler=sigil_of_flame
-actions.rg_sequence_filler+=/felblade,if=fury.deficit>30
-actions.rg_sequence_filler+=/wait,sec=0.1,if=action.fracture.charges_fractional<0.8&(variable.rg_enhance_cleave&buff.rending_strike.up&buff.glaive_flurry.up|!variable.rg_enhance_cleave&!buff.glaive_flurry.up)
+actions.rg_sequence_filler=felblade,if=fury.deficit>30
 actions.rg_sequence_filler+=/fracture,if=!buff.rending_strike.up
+actions.rg_sequence_filler+=/wait,sec=0.1,if=action.fracture.charges_fractional>=0.8&(variable.rg_enhance_cleave&buff.rending_strike.up&buff.glaive_flurry.up|!variable.rg_enhance_cleave&!buff.glaive_flurry.up)
+actions.rg_sequence_filler+=/sigil_of_flame
+actions.rg_sequence_filler+=/sigil_of_spite
+actions.rg_sequence_filler+=/soul_carver
+actions.rg_sequence_filler+=/fel_devastation
+actions.rg_sequence_filler+=/throw_glaive
 
 head=impalers_of_the_hypogeal_nemesis,id=212065,bonus_id=8780,ilevel=639,gem_id=213470
 neck=sureki_zealots_insignia,id=225577,ilevel=639,gem_id=213485/213743

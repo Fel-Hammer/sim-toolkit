@@ -485,7 +485,7 @@ function updateSortIndicator(columnIndex, direction) {
 }
 
 function updateTalentTrees(builds) {
-    const baseUrl = 'https://mimiron.raidbots.com/simbot/render/talents/';
+    const baseUrl = 'https://www.raidbots.com/simbot/render/talents/';
     const commonParams = '?width=313&level=80&&hideHeader=1';
 
     // Find the best overall Aldrachi and Felscarred builds

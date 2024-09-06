@@ -14,7 +14,7 @@ $(should_felblade_ar)=(((talent.spirit_bomb&(fury<40&(variable.can_spb|variable.
 $(rg_souls)=20
 
 # Estimate of how many souls we can generate per second
-$(souls_per_second)=(1.2+(1*raw_haste_pct))
+$(souls_per_second)=(1.2*(1+raw_haste_pct))
 
 # Spirit Bomb threshold for how many souls we need to use it
 actions.ar+=/variable,name=spb_threshold,op=setif,condition=$(fd_active),value=(variable.single_target*$(st_spb_thresh_fd))+(variable.small_aoe*$(small_aoe_spb_thresh_fd))+(variable.big_aoe*$(big_aoe_spb_thresh_fd)),value_else=(variable.single_target*$(st_spb_thresh))+(variable.small_aoe*$(small_aoe_spb_thresh))+(variable.big_aoe*$(big_aoe_spb_thresh))
@@ -34,7 +34,7 @@ actions.ar+=/variable,name=rg_sequence_duration,op=set,value=action.fracture.exe
 actions.ar+=/variable,name=rg_sequence_duration,op=add,value=gcd.max,if=!talent.keen_engagement
 # During Reaver's Glaive, enhance our soul cleave (1) or shear (0)
 actions.ar+=/variable,name=trigger_overflow,op=set,value=0,if=!buff.glaive_flurry.up&!buff.rending_strike.up
-actions.ar+=/variable,name=rg_enhance_cleave,op=setif,condition=variable.big_aoe|fight_remains<8|variable.trigger_overflow,value=1,value_else=0
+actions.ar+=/variable,name=rg_enhance_cleave,op=setif,condition=spell_targets.spirit_bomb>4|fight_remains<8|variable.trigger_overflow,value=1,value_else=0
 # Externals, potions, trinkets when reaver's mark is up and we have thrill of the fight damage up
 actions.ar+=/variable,name=cooldown_sync,value=(debuff.reavers_mark.remains>gcd.max&debuff.reavers_mark.stack=2&buff.thrill_of_the_fight_damage.remains>gcd.max)|fight_remains<20
 
@@ -62,7 +62,7 @@ actions.ar+=/soul_cleave,if=(variable.double_rm_remains<=(execute_time+variable.
 actions.ar+=/spirit_bomb,if=(variable.double_rm_remains<=(execute_time+variable.rg_sequence_duration))&(buff.art_of_the_glaive.stack+soul_fragments.total>=$(rg_souls))
 actions.ar+=/bulk_extraction,if=(variable.double_rm_remains<=(execute_time+variable.rg_sequence_duration))&(buff.art_of_the_glaive.stack+(spell_targets>?5)>=$(rg_souls))
 # Time reaver's glaive such that our empowered abilities are cast while the previous reaver's glaive is still active. We usually have about 2-3 GCDs worth of actions to take for this sequence. If we are enhancing cleave, we just want to send this ASAP. If we are enhancing fracture, we want to delay until the end of previous reavers mark to ensure full reavers mark uptime.
-actions.ar+=/reavers_glaive,if=buff.thrill_of_the_fight_damage.remains<variable.rg_sequence_duration&(!buff.thrill_of_the_fight_attack_speed.up|(variable.double_rm_remains<=variable.rg_sequence_duration)|variable.rg_enhance_cleave)
+actions.ar+=/reavers_glaive,if=(variable.rg_enhance_cleave&fury>=5|!variable.rg_enhance_cleave&fury>=30)&buff.thrill_of_the_fight_damage.remains<variable.rg_sequence_duration&(!buff.thrill_of_the_fight_attack_speed.up|(variable.double_rm_remains<=variable.rg_sequence_duration)|variable.rg_enhance_cleave)
 # Fiery Brand if we're going to overcap or it's not currently active.
 actions.ar+=/fiery_brand,if=!talent.fiery_demise|(talent.fiery_demise&((talent.down_in_flames&charges>=max_charges)|(active_dot.fiery_brand=0)))
 # Sigil of Spite right before a spirit bomb (at 4-5 soul fragments) so that the new soul fragments arrive just after we spend the current ones with a spirit bomb. We can also use this if we happen to be at a single soul fragment and don't have any incoming.
@@ -92,7 +92,8 @@ actions.ar+=/throw_glaive
 
 # Overflow Reaver's Glaive
 actions.rg_overflow=variable,name=trigger_overflow,op=set,value=1
-actions.rg_overflow+=/reavers_glaive,if=!buff.rending_strike.up&!buff.glaive_flurry.up
+actions.rg_overflow+=/variable,name=rg_enhance_cleave,op=set,value=1
+actions.rg_overflow+=/reavers_glaive,if=(variable.rg_enhance_cleave&fury>=5|!variable.rg_enhance_cleave&fury>=30)&!buff.rending_strike.up&!buff.glaive_flurry.up
 
 # Reaver's Glaive sequence
 $(should_fracture_rg)=(variable.rg_enhance_cleave&buff.rending_strike.up&buff.glaive_flurry.up|!variable.rg_enhance_cleave&!buff.glaive_flurry.up)
@@ -105,16 +106,19 @@ actions.rg_sequence+=/fracture,if=$(should_fracture_rg)
 actions.rg_sequence+=/shear,if=$(should_fracture_rg)
 actions.rg_sequence+=/soul_cleave,if=$(should_cleave_rg)
 
-actions.rg_sequence_filler+=/sigil_of_flame
 actions.rg_sequence_filler+=/felblade,if=fury.deficit>30
-# Wait a very short period of time if fracture needs to be used and will be back shortly
-actions.rg_sequence_filler+=/wait,sec=0.1,if=action.fracture.charges_fractional<0.8&$(should_fracture_rg)
-# Wait a very short period of time if fracture needs to be used and will be back shortly
 actions.rg_sequence_filler+=/fracture,if=!buff.rending_strike.up
+# Wait a very short period of time if fracture needs to be used and will be back shortly
+actions.rg_sequence_filler+=/wait,sec=0.1,if=action.fracture.charges_fractional>=0.8&$(should_fracture_rg)
+actions.rg_sequence_filler+=/sigil_of_flame
+actions.rg_sequence_filler+=/sigil_of_spite
+actions.rg_sequence_filler+=/soul_carver
+actions.rg_sequence_filler+=/fel_devastation
+actions.rg_sequence_filler+=/throw_glaive
 
 # During the last few seconds of a fight, send whatever cooldowns we have left.
 actions.ar_execute=metamorphosis,use_off_gcd=1
-actions.ar_execute+=/reavers_glaive
+actions.ar_execute+=/reavers_glaive,if=fury>=30
 actions.ar_execute+=/the_hunt,if=!buff.reavers_glaive.up
 actions.ar_execute+=/bulk_extraction,if=spell_targets>=3&buff.art_of_the_glaive.stack>=$(rg_souls)
 actions.ar_execute+=/sigil_of_flame
