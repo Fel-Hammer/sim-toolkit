@@ -15,7 +15,7 @@ $(big_aoe_spbomb_thresh)=4
 $(big_aoe_spburst_thresh)=4
 
 # Need to be able to cast Spirit Burst (40) + Soul Sunder (30) + Fel Devastation (50) in a row (120). This sequence takes 2+(2*gcd.max) seconds. So we need to have fury + fury_per_second*sequence_time fury before starting Fel Devastation. Also, account for darkglare boon.
-$(enough_fury_to_fel_dev)=((fury+variable.fel_dev_passive_fury_gen)>=115)
+$(enough_fury_to_fel_dev)=((fury+variable.fel_dev_passive_fury_gen)>=120)
 # Be able to immediately use a spirit bomb after fel dev
 $(enough_souls_to_fel_dev)=(variable.can_spburst|variable.can_spburst_soon|soul_fragments.total>=4)
 
@@ -36,8 +36,15 @@ actions.fs+=/variable,name=can_spburst,op=setif,condition=talent.spirit_bomb,val
 actions.fs+=/variable,name=can_spburst_soon,op=setif,condition=talent.spirit_bomb,value=soul_fragments.total>=variable.spburst_threshold,value_else=0
 # Can Spirit Burst next GCD if we generate souls with this GCD
 actions.fs+=/variable,name=can_spburst_one_gcd,op=setif,condition=talent.spirit_bomb,value=(soul_fragments.total+variable.num_spawnable_souls)>=variable.spburst_threshold,value_else=0
+
+actions.fs+=/variable,name=meta_prep_time,op=set,value=0
+actions.fs+=/variable,name=meta_prep_time,op=add,value=action.fiery_brand.execute_time,if=talent.fiery_demise&cooldown.fiery_brand.up
+actions.fs+=/variable,name=meta_prep_time,op=add,value=action.sigil_of_flame.execute_time*action.sigil_of_flame.charges
+
+$(fel_dev_prep_time)=(gcd.max*3)
+
 # Hold Soul Cleave
-actions.fs+=/variable,name=dont_soul_cleave,op=setif,condition=buff.metamorphosis.up&buff.demonsurge_hardcast.up,value=(buff.metamorphosis.remains<(gcd.max*2)&(!$(enough_fury_to_fel_dev)|!$(enough_souls_to_fel_dev))),value_else=(cooldown.fel_devastation.remains<(gcd.max*4)&(!$(enough_fury_to_fel_dev)|!$(enough_souls_to_fel_dev)))
+actions.fs+=/variable,name=dont_soul_cleave,op=setif,condition=buff.metamorphosis.up&buff.demonsurge_hardcast.up,value=buff.demonsurge_spirit_burst.up|(buff.metamorphosis.remains<(gcd.max*2)&(!$(enough_fury_to_fel_dev)|!$(enough_souls_to_fel_dev))),value_else=(cooldown.fel_devastation.remains<$(fel_dev_prep_time)&(!$(enough_fury_to_fel_dev)|!$(enough_souls_to_fel_dev)))
 
 # If we use Fiery Brand now, will it be back before meta?
 actions.fs+=/variable,name=fiery_brand_back_before_meta,op=setif,condition=talent.down_in_flames,value=charges>=max_charges|(charges_fractional>=1&cooldown.fiery_brand.full_recharge_time<=$(this_action))|(charges_fractional>=1&((max_charges-(charges_fractional-1))*cooldown.fiery_brand.duration)<=cooldown.metamorphosis.remains),value_else=cooldown.fiery_brand.duration<=cooldown.metamorphosis.remains
@@ -83,8 +90,8 @@ actions.fs+=/fiery_brand,if=!talent.fiery_demise|talent.fiery_demise&((talent.do
 actions.fs+=/call_action_list,name=fs_execute,if=fight_remains<20
 actions.fs+=/run_action_list,name=fel_dev,if=buff.metamorphosis.up&!buff.demonsurge_hardcast.up&(buff.demonsurge_soul_sunder.up|buff.demonsurge_spirit_burst.up)
 actions.fs+=/run_action_list,name=metamorphosis,if=buff.metamorphosis.up&buff.demonsurge_hardcast.up
-actions.fs+=/run_action_list,name=fel_dev_prep,if=!buff.demonsurge_hardcast.up&(cooldown.fel_devastation.up|(cooldown.fel_devastation.remains<=(gcd.max*2)))
-actions.fs+=/run_action_list,name=meta_prep,if=(cooldown.metamorphosis.remains<=(gcd.max*2))&!cooldown.fel_devastation.up&!buff.demonsurge_soul_sunder.up&!buff.demonsurge_spirit_burst.up
+actions.fs+=/run_action_list,name=fel_dev_prep,if=!buff.demonsurge_hardcast.up&(cooldown.fel_devastation.up|(cooldown.fel_devastation.remains<=$(fel_dev_prep_time)))
+actions.fs+=/run_action_list,name=meta_prep,if=(cooldown.metamorphosis.remains<=variable.meta_prep_time)&!cooldown.fel_devastation.up&!cooldown.fel_devastation.remains<10&!buff.demonsurge_soul_sunder.up&!buff.demonsurge_spirit_burst.up
 
 # We fiery brand before fel dev if meta is ready to go afterward
 actions.fel_dev_prep+=/potion,use_off_gcd=1,if=prev_gcd.1.fiery_brand
@@ -97,8 +104,11 @@ actions.fel_dev_prep+=/felblade,if=!$(enough_fury_to_fel_dev)
 actions.fel_dev_prep+=/fracture,if=!$(enough_souls_to_fel_dev)|!$(enough_fury_to_fel_dev)
 actions.fel_dev_prep+=/felblade
 actions.fel_dev_prep+=/fracture
+actions.fel_dev_prep+=/wait,sec=0.1,if=(!$(enough_souls_to_fel_dev)|!$(enough_fury_to_fel_dev))&action.fracture.charges_fractional>=0.7
 # If we get here, something has gone wrong and there are no buttons available to press
 actions.fel_dev_prep+=/fel_devastation
+actions.fel_dev_prep+=/soul_cleave,if=((fury+variable.fel_dev_passive_fury_gen)>=150)
+actions.fel_dev_prep+=/throw_glaive
 
 # Preparing for Meta, we want to dump Sigil of Flame and then meta while SoF is activating but not yet active. It then has the damage of Sigil of Doom, because Meta activated before SoF did.
 actions.meta_prep+=/metamorphosis,use_off_gcd=1,if=cooldown.sigil_of_flame.charges<1
@@ -143,10 +153,11 @@ actions.metamorphosis+=/soul_carver,if=(!talent.spirit_bomb|variable.single_targ
 actions.metamorphosis+=/sigil_of_spite,if=soul_fragments.total<=(2-talent.soul_sigils.rank)
 # Fel Desolation if we didn't find a better time to use it
 actions.metamorphosis+=/fel_desolation
+actions.metamorphosis+=/the_hunt
 # Soul Sunder a little earlier if its demonsurge is active
 actions.metamorphosis+=/soul_sunder,if=buff.demonsurge_soul_sunder.up|(variable.single_target&!variable.dont_soul_cleave)
 # Lower priority Spirit Burst at good soul counts
-actions.metamorphosis+=/spirit_burst,if=variable.can_spburst
+actions.metamorphosis+=/spirit_burst,if=variable.can_spburst&buff.metamorphosis.remains>(gcd.max*2)
 # Felblade if we need fury to spirit burst
 actions.metamorphosis+=/felblade,if=fury<40&(variable.can_spburst|variable.can_spburst_soon)
 # In big AOE during meta only, we want to spirit burst above 4 souls
@@ -168,11 +179,11 @@ actions.fs+=/the_hunt
 # Felblade so that we can immediately use fel devastation after a soul generator, so the souls spawn while we are channeling
 actions.fs+=/felblade,if=((cooldown.sigil_of_spite.remains<execute_time|cooldown.soul_carver.remains<execute_time)&cooldown.fel_devastation.remains<(execute_time+gcd.max)&fury<50)
 actions.fs+=/soul_carver,if=(!talent.fiery_demise|$(fd_active))&((!talent.spirit_bomb|variable.single_target)|(talent.spirit_bomb&!prev_gcd.1.sigil_of_spite&((soul_fragments.total+3<=5&fury>=40)|(soul_fragments.total=0&fury>=15))))
-actions.fs+=/sigil_of_spite,if=(!talent.spirit_bomb|variable.single_target)|(talent.spirit_bomb&soul_fragments<=1)|(fury>=40&(variable.can_spbomb|(buff.metamorphosis.up&variable.can_spburst)|variable.can_spbomb_soon|(buff.metamorphosis.up&variable.can_spburst_soon)))
+actions.fs+=/sigil_of_spite,if=(!talent.spirit_bomb|variable.single_target)|cooldown.fel_devastation.remains>$(fel_dev_prep_time)&((fury>=75&talent.spirit_bomb&(variable.can_spbomb|variable.can_spbomb_soon|(buff.metamorphosis.up&(variable.can_spburst|variable.can_spburst_soon))))|soul_fragments<=1)
 actions.fs+=/soul_sunder,if=variable.single_target&!variable.dont_soul_cleave
 actions.fs+=/soul_cleave,if=variable.single_target&!variable.dont_soul_cleave
-actions.fs+=/spirit_burst,if=variable.can_spburst
-actions.fs+=/spirit_bomb,if=variable.can_spbomb
+actions.fs+=/spirit_burst,if=variable.can_spburst&!cooldown.fel_devastation.remains<$(fel_dev_prep_time)
+actions.fs+=/spirit_bomb,if=variable.can_spbomb&!cooldown.fel_devastation.remains<$(fel_dev_prep_time)
 actions.fs+=/soul_sunder,if=fury.deficit<25&!variable.dont_soul_cleave
 actions.fs+=/soul_cleave,if=fury.deficit<25&!variable.dont_soul_cleave
 actions.fs+=/felblade,if=(fury<40&((buff.metamorphosis.up&(variable.can_spburst|variable.can_spburst_soon))|(!buff.metamorphosis.up&(variable.can_spbomb|variable.can_spbomb_soon))))|fury<30
