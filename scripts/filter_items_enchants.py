@@ -389,7 +389,7 @@ def main():
     crafting_url = "https://www.raidbots.com/static/data/live/crafting.json"
     potions_url = "https://www.raidbots.com/static/data/live/potions.json"
     flasks_url = "https://www.raidbots.com/static/data/live/flasks.json"
-    current_expansion = 10  # Dragonflight
+    current_expansion = 10  # The War Within
 
     print("Fetching items data...")
     all_items = load_data_from_url(items_url)
