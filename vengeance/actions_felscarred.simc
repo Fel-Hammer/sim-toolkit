@@ -14,43 +14,6 @@ $(small_aoe_spburst_thresh)=4
 $(big_aoe_spbomb_thresh)=4
 $(big_aoe_spburst_thresh)=4
 
-# Need to be able to cast Spirit Burst (40) + Soul Sunder (30) + Fel Devastation (50) in a row (120). This sequence takes 2+(2*gcd.max) seconds. So we need to have fury + fury_per_second*sequence_time fury before starting Fel Devastation. Also, account for darkglare boon.
-$(enough_fury_to_fel_dev)=((fury+variable.fel_dev_passive_fury_gen)>=120)
-# Be able to immediately use a spirit bomb after fel dev
-$(enough_souls_to_fel_dev)=(variable.can_spburst|variable.can_spburst_soon|soul_fragments.total>=4)
-
-# Spirit Bomb threshold for how many souls we need to use it
-actions.fs+=/variable,name=spbomb_threshold,op=setif,condition=$(fd_active),value=(variable.single_target*$(st_spbomb_thresh_fd))+(variable.small_aoe*$(small_aoe_spbomb_thresh_fd))+(variable.big_aoe*$(big_aoe_spbomb_thresh_fd)),value_else=(variable.single_target*$(st_spbomb_thresh))+(variable.small_aoe*$(small_aoe_spbomb_thresh))+(variable.big_aoe*$(big_aoe_spbomb_thresh))
-# Can Spirit Bomb this GCD
-actions.fs+=/variable,name=can_spbomb,op=setif,condition=talent.spirit_bomb,value=soul_fragments>=variable.spbomb_threshold,value_else=0
-# Can Spirit Bomb as soon as souls stop spawning
-actions.fs+=/variable,name=can_spbomb_soon,op=setif,condition=talent.spirit_bomb,value=soul_fragments.total>=variable.spbomb_threshold,value_else=0
-# Can Spirit Bomb next GCD if we generate souls with this GCD
-actions.fs+=/variable,name=can_spbomb_one_gcd,op=setif,condition=talent.spirit_bomb,value=(soul_fragments.total+variable.num_spawnable_souls)>=variable.spbomb_threshold,value_else=0
-
-# Spirit Burst threshold for how many souls we need to use it
-actions.fs+=/variable,name=spburst_threshold,op=setif,condition=$(fd_active),value=(variable.single_target*$(st_spburst_thresh_fd))+(variable.small_aoe*$(small_aoe_spburst_thresh_fd))+(variable.big_aoe*$(big_aoe_spburst_thresh_fd)),value_else=(variable.single_target*$(st_spburst_thresh))+(variable.small_aoe*$(small_aoe_spburst_thresh))+(variable.big_aoe*$(big_aoe_spburst_thresh))
-# Can Spirit Burst this GCD
-actions.fs+=/variable,name=can_spburst,op=setif,condition=talent.spirit_bomb,value=soul_fragments>=variable.spburst_threshold,value_else=0
-# Can Spirit Burst as soon as souls stop spawning
-actions.fs+=/variable,name=can_spburst_soon,op=setif,condition=talent.spirit_bomb,value=soul_fragments.total>=variable.spburst_threshold,value_else=0
-# Can Spirit Burst next GCD if we generate souls with this GCD
-actions.fs+=/variable,name=can_spburst_one_gcd,op=setif,condition=talent.spirit_bomb,value=(soul_fragments.total+variable.num_spawnable_souls)>=variable.spburst_threshold,value_else=0
-
-actions.fs+=/variable,name=meta_prep_time,op=set,value=0
-actions.fs+=/variable,name=meta_prep_time,op=add,value=action.fiery_brand.execute_time,if=talent.fiery_demise&cooldown.fiery_brand.up
-actions.fs+=/variable,name=meta_prep_time,op=add,value=action.sigil_of_flame.execute_time*action.sigil_of_flame.charges
-
-$(fel_dev_prep_time)=(gcd.max*3)
-
-# Hold Soul Cleave
-actions.fs+=/variable,name=dont_soul_cleave,op=setif,condition=buff.metamorphosis.up&buff.demonsurge_hardcast.up,value=buff.demonsurge_spirit_burst.up|(buff.metamorphosis.remains<(gcd.max*2)&(!$(enough_fury_to_fel_dev)|!$(enough_souls_to_fel_dev))),value_else=(cooldown.fel_devastation.remains<$(fel_dev_prep_time)&(!$(enough_fury_to_fel_dev)|!$(enough_souls_to_fel_dev)))
-
-# If we use Fiery Brand now, will it be back before meta?
-actions.fs+=/variable,name=fiery_brand_back_before_meta,op=setif,condition=talent.down_in_flames,value=charges>=max_charges|(charges_fractional>=1&cooldown.fiery_brand.full_recharge_time<=$(this_action))|(charges_fractional>=1&((max_charges-(charges_fractional-1))*cooldown.fiery_brand.duration)<=cooldown.metamorphosis.remains),value_else=cooldown.fiery_brand.duration<=cooldown.metamorphosis.remains
-
-# Conditions for determining whether we hold Sigil of Flame
-actions.fs+=/variable,name=hold_sof,op=setif,condition=talent.student_of_suffering,value=(buff.student_of_suffering.remains>(4-talent.quickened_sigils))|(!talent.ascending_flame&(dot.sigil_of_flame.remains>(4-talent.quickened_sigils)))|prev_gcd.1.sigil_of_flame|(talent.illuminated_sigils&charges=1&time<(2-talent.quickened_sigils))|cooldown.metamorphosis.up,value_else=(cooldown.metamorphosis.up&(talent.ascending_flame|(!talent.ascending_flame&cooldown.sigil_of_flame.charges_fractional<2)))|(cooldown.sigil_of_flame.max_charges>1&talent.ascending_flame&((cooldown.sigil_of_flame.max_charges-(cooldown.sigil_of_flame.charges_fractional-1))*cooldown.sigil_of_flame.duration)>cooldown.metamorphosis.remains)
 
 # Estimate current crit chance for use with volatile flameblood fury gen estimates
 actions.fs+=/variable,name=crit_pct,op=set,value=(dot.sigil_of_flame.crit_pct+(talent.aura_of_pain*6))%100,if=active_dot.sigil_of_flame>0&talent.volatile_flameblood
@@ -75,6 +38,44 @@ actions.fs+=/variable,name=fel_dev_passive_fury_gen,op=add,value=2*floor((buff.i
 actions.fs+=/variable,name=fel_dev_passive_fury_gen,op=add,value=7.5*variable.crit_pct*floor((buff.immolation_aura.remains>?variable.fel_dev_sequence_time)),if=talent.volatile_flameblood&buff.immolation_aura.remains>1
 # Darkglare Boon refund
 actions.fs+=/variable,name=fel_dev_passive_fury_gen,op=add,value=22,if=talent.darkglare_boon.enabled
+
+# Spirit Bomb threshold for how many souls we need to use it
+actions.fs+=/variable,name=spbomb_threshold,op=setif,condition=$(fd_active),value=(variable.single_target*$(st_spbomb_thresh_fd))+(variable.small_aoe*$(small_aoe_spbomb_thresh_fd))+(variable.big_aoe*$(big_aoe_spbomb_thresh_fd)),value_else=(variable.single_target*$(st_spbomb_thresh))+(variable.small_aoe*$(small_aoe_spbomb_thresh))+(variable.big_aoe*$(big_aoe_spbomb_thresh))
+# Can Spirit Bomb this GCD
+actions.fs+=/variable,name=can_spbomb,op=setif,condition=talent.spirit_bomb,value=soul_fragments>=variable.spbomb_threshold,value_else=0
+# Can Spirit Bomb as soon as souls stop spawning
+actions.fs+=/variable,name=can_spbomb_soon,op=setif,condition=talent.spirit_bomb,value=soul_fragments.total>=variable.spbomb_threshold,value_else=0
+# Can Spirit Bomb next GCD if we generate souls with this GCD
+actions.fs+=/variable,name=can_spbomb_one_gcd,op=setif,condition=talent.spirit_bomb,value=(soul_fragments.total+variable.num_spawnable_souls)>=variable.spbomb_threshold,value_else=0
+
+# Spirit Burst threshold for how many souls we need to use it
+actions.fs+=/variable,name=spburst_threshold,op=setif,condition=$(fd_active),value=(variable.single_target*$(st_spburst_thresh_fd))+(variable.small_aoe*$(small_aoe_spburst_thresh_fd))+(variable.big_aoe*$(big_aoe_spburst_thresh_fd)),value_else=(variable.single_target*$(st_spburst_thresh))+(variable.small_aoe*$(small_aoe_spburst_thresh))+(variable.big_aoe*$(big_aoe_spburst_thresh))
+# Can Spirit Burst this GCD
+actions.fs+=/variable,name=can_spburst,op=setif,condition=talent.spirit_bomb,value=soul_fragments>=variable.spburst_threshold,value_else=0
+# Can Spirit Burst as soon as souls stop spawning
+actions.fs+=/variable,name=can_spburst_soon,op=setif,condition=talent.spirit_bomb,value=soul_fragments.total>=variable.spburst_threshold,value_else=0
+# Can Spirit Burst next GCD if we generate souls with this GCD
+actions.fs+=/variable,name=can_spburst_one_gcd,op=setif,condition=talent.spirit_bomb,value=(soul_fragments.total+variable.num_spawnable_souls)>=variable.spburst_threshold,value_else=0
+
+actions.fs+=/variable,name=meta_prep_time,op=set,value=0
+actions.fs+=/variable,name=meta_prep_time,op=add,value=action.fiery_brand.execute_time,if=talent.fiery_demise&cooldown.fiery_brand.up
+actions.fs+=/variable,name=meta_prep_time,op=add,value=action.sigil_of_flame.execute_time*action.sigil_of_flame.charges
+
+# Need to be able to cast Spirit Burst (40) + Soul Sunder (30) + Fel Devastation (50) in a row (120). This sequence takes 2+(2*gcd.max) seconds. So we need to have fury + fury_per_second*sequence_time fury before starting Fel Devastation. Also, account for darkglare boon.
+$(enough_fury_to_fel_dev)=((fury+variable.fel_dev_passive_fury_gen)>=120)
+# Be able to immediately use a spirit bomb after fel dev
+$(enough_souls_to_fel_dev)=(variable.can_spburst|variable.can_spburst_soon|soul_fragments.total>=4)
+# How many GCDs should we optimistically allow for fel_dev_prep
+$(fel_dev_prep_time)=(gcd.max*3)
+
+# Hold Soul Cleave
+actions.fs+=/variable,name=dont_soul_cleave,op=setif,condition=buff.metamorphosis.up&buff.demonsurge_hardcast.up,value=buff.demonsurge_spirit_burst.up|(buff.metamorphosis.remains<(gcd.max*2)&(!$(enough_fury_to_fel_dev)|!$(enough_souls_to_fel_dev))),value_else=(cooldown.fel_devastation.remains<$(fel_dev_prep_time)&(!$(enough_fury_to_fel_dev)|!$(enough_souls_to_fel_dev)))
+
+# If we use Fiery Brand now, will it be back before meta?
+actions.fs+=/variable,name=fiery_brand_back_before_meta,op=setif,condition=talent.down_in_flames,value=charges>=max_charges|(charges_fractional>=1&cooldown.fiery_brand.full_recharge_time<=$(this_action))|(charges_fractional>=1&((max_charges-(charges_fractional-1))*cooldown.fiery_brand.duration)<=cooldown.metamorphosis.remains),value_else=cooldown.fiery_brand.duration<=cooldown.metamorphosis.remains
+
+# Conditions for determining whether we hold Sigil of Flame
+actions.fs+=/variable,name=hold_sof,op=setif,condition=talent.student_of_suffering,value=(buff.student_of_suffering.remains>(4-talent.quickened_sigils))|(!talent.ascending_flame&(dot.sigil_of_flame.remains>(4-talent.quickened_sigils)))|prev_gcd.1.sigil_of_flame|(talent.illuminated_sigils&charges=1&time<(2-talent.quickened_sigils))|cooldown.metamorphosis.up,value_else=(cooldown.metamorphosis.up&(talent.ascending_flame|(!talent.ascending_flame&cooldown.sigil_of_flame.charges_fractional<2)))|(cooldown.sigil_of_flame.max_charges>1&talent.ascending_flame&((cooldown.sigil_of_flame.max_charges-(cooldown.sigil_of_flame.charges_fractional-1))*cooldown.sigil_of_flame.duration)>cooldown.metamorphosis.remains)
 
 # Use items if we're not metamorphosing because we don't want to waste meta time on items
 actions.fs+=/use_items,use_off_gcd=1,if=!buff.metamorphosis.up
