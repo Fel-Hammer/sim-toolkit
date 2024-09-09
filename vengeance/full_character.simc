@@ -109,8 +109,8 @@ actions.fel_dev_prep=potion,use_off_gcd=1,if=prev_gcd.1.fiery_brand
 actions.fel_dev_prep+=/sigil_of_flame,if=cooldown.metamorphosis.remains>recharge_time
 actions.fel_dev_prep+=/fiery_brand,if=talent.fiery_demise&((fury+variable.fel_dev_passive_fury_gen)>=120)&(variable.can_spburst|variable.can_spburst_soon|soul_fragments.total>=4)&active_dot.fiery_brand=0&(cooldown.metamorphosis.remains<(execute_time+action.fel_devastation.execute_time+(gcd.max*2)))
 actions.fel_dev_prep+=/fel_devastation,if=((fury+variable.fel_dev_passive_fury_gen)>=120)&(variable.can_spburst|variable.can_spburst_soon|soul_fragments.total>=4)
-actions.fel_dev_prep+=/sigil_of_spite,if=soul_fragments.total<=1|(!(variable.can_spburst|variable.can_spburst_soon|soul_fragments.total>=4)&action.fracture.charges_fractional<1)
-actions.fel_dev_prep+=/soul_carver,if=(soul_fragments.total<=1|(!(variable.can_spburst|variable.can_spburst_soon|soul_fragments.total>=4)&action.fracture.charges_fractional<1))&!prev_gcd.1.sigil_of_spite&!prev_gcd.2.sigil_of_spite
+actions.fel_dev_prep+=/sigil_of_spite,if=(!talent.cycle_of_binding|cooldown.metamorphosis.remains>20)&(soul_fragments.total<=1|(!(variable.can_spburst|variable.can_spburst_soon|soul_fragments.total>=4)&action.fracture.charges_fractional<1))
+actions.fel_dev_prep+=/soul_carver,if=(!talent.cycle_of_binding|cooldown.metamorphosis.remains>20)&(soul_fragments.total<=1|(!(variable.can_spburst|variable.can_spburst_soon|soul_fragments.total>=4)&action.fracture.charges_fractional<1))&!prev_gcd.1.sigil_of_spite&!prev_gcd.2.sigil_of_spite
 actions.fel_dev_prep+=/felblade,if=!((fury+variable.fel_dev_passive_fury_gen)>=120)
 actions.fel_dev_prep+=/fracture,if=!(variable.can_spburst|variable.can_spburst_soon|soul_fragments.total>=4)|!((fury+variable.fel_dev_passive_fury_gen)>=120)
 actions.fel_dev_prep+=/felblade
@@ -197,9 +197,9 @@ actions.metamorphosis+=/sigil_of_doom,if=talent.student_of_suffering&!prev_gcd.1
 actions.metamorphosis+=/sigil_of_doom,if=buff.metamorphosis.remains<((2-talent.quickened_sigils)+(charges*gcd.max))
 actions.metamorphosis+=/fel_desolation,if=soul_fragments<=3&(soul_fragments.inactive>=2|prev_gcd.1.sigil_of_spite)
 actions.metamorphosis+=/felblade,if=((cooldown.sigil_of_spite.remains<execute_time|cooldown.soul_carver.remains<execute_time)&cooldown.fel_desolation.remains<(execute_time+gcd.max)&fury<50)
-actions.metamorphosis+=/sigil_of_spite,if=!talent.spirit_bomb|(fury>=40&(variable.can_spburst|variable.can_spburst_soon|soul_fragments.total<=(2-talent.soul_sigils.rank)))
-actions.metamorphosis+=/spirit_burst,if=variable.can_spburst&buff.demonsurge_spirit_burst.up
-actions.metamorphosis+=/soul_carver,if=(!talent.spirit_bomb|variable.single_target)|(((soul_fragments.total+3)<=5)&fury>=40&!prev_gcd.1.sigil_of_spite)
+actions.metamorphosis+=/soul_carver,if=(!talent.spirit_bomb|(variable.single_target&!buff.demonsurge_spirit_burst.up))|(((soul_fragments.total+3)<=6)&fury>=40&!prev_gcd.1.sigil_of_spite)
+actions.metamorphosis+=/sigil_of_spite,if=!talent.spirit_bomb|(fury>=80&(variable.can_spburst|variable.can_spburst_soon|soul_fragments.total<=(2-talent.soul_sigils.rank)))|(soul_fragments.total<=2&buff.demonsurge_fel_desolation.up&fury>=50)
+actions.metamorphosis+=/spirit_burst,if=variable.can_spburst&(buff.demonsurge_spirit_burst.up|talent.fiery_demise&dot.fiery_brand.ticking&soul_fragments>=4)
 actions.metamorphosis+=/sigil_of_spite,if=soul_fragments.total<=(2-talent.soul_sigils.rank)
 actions.metamorphosis+=/fel_desolation
 actions.metamorphosis+=/the_hunt

@@ -103,8 +103,8 @@ actions.fel_dev_prep+=/potion,use_off_gcd=1,if=prev_gcd.1.fiery_brand
 actions.fel_dev_prep+=/sigil_of_flame,if=cooldown.metamorphosis.remains>recharge_time
 actions.fel_dev_prep+=/fiery_brand,if=talent.fiery_demise&$(enough_fury_to_fel_dev)&$(enough_souls_to_fel_dev)&active_dot.fiery_brand=0&(cooldown.metamorphosis.remains<(execute_time+action.fel_devastation.execute_time+(gcd.max*2)))
 actions.fel_dev_prep+=/fel_devastation,if=$(enough_fury_to_fel_dev)&$(enough_souls_to_fel_dev)
-actions.fel_dev_prep+=/sigil_of_spite,if=soul_fragments.total<=1|(!$(enough_souls_to_fel_dev)&action.fracture.charges_fractional<1)
-actions.fel_dev_prep+=/soul_carver,if=(soul_fragments.total<=1|(!$(enough_souls_to_fel_dev)&action.fracture.charges_fractional<1))&!prev_gcd.1.sigil_of_spite&!prev_gcd.2.sigil_of_spite
+actions.fel_dev_prep+=/sigil_of_spite,if=(!talent.cycle_of_binding|cooldown.metamorphosis.remains>20)&(soul_fragments.total<=1|(!$(enough_souls_to_fel_dev)&action.fracture.charges_fractional<1))
+actions.fel_dev_prep+=/soul_carver,if=(!talent.cycle_of_binding|cooldown.metamorphosis.remains>20)&(soul_fragments.total<=1|(!$(enough_souls_to_fel_dev)&action.fracture.charges_fractional<1))&!prev_gcd.1.sigil_of_spite&!prev_gcd.2.sigil_of_spite
 actions.fel_dev_prep+=/felblade,if=!$(enough_fury_to_fel_dev)
 actions.fel_dev_prep+=/fracture,if=!$(enough_souls_to_fel_dev)|!$(enough_fury_to_fel_dev)
 actions.fel_dev_prep+=/felblade
@@ -152,13 +152,12 @@ actions.metamorphosis+=/sigil_of_doom,if=buff.metamorphosis.remains<((2-talent.q
 actions.metamorphosis+=/fel_desolation,if=soul_fragments<=3&(soul_fragments.inactive>=2|prev_gcd.1.sigil_of_spite)
 # Felblade if we can combo a soul generator with fel dev, but dont have enough fury
 actions.metamorphosis+=/felblade,if=((cooldown.sigil_of_spite.remains<execute_time|cooldown.soul_carver.remains<execute_time)&cooldown.fel_desolation.remains<(execute_time+gcd.max)&fury<50)
-# Use Sigil of Spite if we are able to Spirit Burst now or soon, so that we can double burst one after the other (use one SpB while the souls from Sigil of Spite are still spawning)
-actions.metamorphosis+=/sigil_of_spite,if=!talent.spirit_bomb|(fury>=40&(variable.can_spburst|variable.can_spburst_soon|soul_fragments.total<=(2-talent.soul_sigils.rank)))
-# High priority Spirit Burst to consume demonsurge to avoid overcapping souls
-# Spirit Burst to consume demonsurge
-actions.metamorphosis+=/spirit_burst,if=variable.can_spburst&buff.demonsurge_spirit_burst.up
 # Soul Carver if we won't overcap on soul fragments
-actions.metamorphosis+=/soul_carver,if=(!talent.spirit_bomb|variable.single_target)|(((soul_fragments.total+3)<=5)&fury>=40&!prev_gcd.1.sigil_of_spite)
+actions.metamorphosis+=/soul_carver,if=(!talent.spirit_bomb|(variable.single_target&!buff.demonsurge_spirit_burst.up))|(((soul_fragments.total+3)<=6)&fury>=40&!prev_gcd.1.sigil_of_spite)
+# Use Sigil of Spite if we are able to Spirit Burst now or soon, so that we can double burst one after the other (use one SpB while the souls from Sigil of Spite are still spawning)
+actions.metamorphosis+=/sigil_of_spite,if=!talent.spirit_bomb|(fury>=80&(variable.can_spburst|variable.can_spburst_soon|soul_fragments.total<=(2-talent.soul_sigils.rank)))|(soul_fragments.total<=2&buff.demonsurge_fel_desolation.up&fury>=50)
+# High priority Spirit Burst to consume demonsurge and to avoid overcapping souls when FD is up
+actions.metamorphosis+=/spirit_burst,if=variable.can_spburst&(buff.demonsurge_spirit_burst.up|$(fd_active)&soul_fragments>=4)
 # Sigil of Spite if we're empty on soul fragments
 actions.metamorphosis+=/sigil_of_spite,if=soul_fragments.total<=(2-talent.soul_sigils.rank)
 # Fel Desolation if we didn't find a better time to use it
