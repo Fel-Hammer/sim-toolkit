@@ -1127,7 +1127,7 @@ profileset."darkmoon_sigil_vivacity_and_slippers_of_the_woven_dusk"+=wrist=,id=2
 
 profileset."waders_of_the_unifying_flame_and_sanctified_torchbearers_grips"=feet=219489,bonus_id=8960/10421/9633/8902
 profileset."waders_of_the_unifying_flame_and_sanctified_torchbearers_grips"+=hands=219492,bonus_id=8960/10421/9633/8902
-profileset."waders_of_the_unifying_flame_and_sanctified_torchbearers_grips"+=wrist=,id=219334,enchant_id=7391,gem_id=213485,ilevel=636,crafted_stats=36/40
+profileset."waders_of_the_unifying_flame_and_sanctified_torchbearers_grips"+=off_hand=,id=222441,enchant_id=7460,crafted_stats=36/40
 
 profileset."waders_of_the_unifying_flame_and_vambraces_of_deepening_darkness"=feet=219489,bonus_id=8960/10421/9633/8902
 profileset."waders_of_the_unifying_flame_and_vambraces_of_deepening_darkness"+=wrist=219501,bonus_id=8960/10421/9633/8902
@@ -1135,15 +1135,15 @@ profileset."waders_of_the_unifying_flame_and_vambraces_of_deepening_darkness"+=o
 
 profileset."waders_of_the_unifying_flame_and_adrenal_surge_clasp"=feet=219489,bonus_id=8960/10421/9633/8902
 profileset."waders_of_the_unifying_flame_and_adrenal_surge_clasp"+=waist=219502,bonus_id=8960/10421/9633/8902
-profileset."waders_of_the_unifying_flame_and_adrenal_surge_clasp"+=wrist=,id=219334,enchant_id=7391,gem_id=213485,ilevel=636,crafted_stats=36/40
+profileset."waders_of_the_unifying_flame_and_adrenal_surge_clasp"+=off_hand=,id=222441,enchant_id=7460,crafted_stats=36/40
 
 profileset."waders_of_the_unifying_flame_and_smoldering_pollen_hauberk"=feet=219489,bonus_id=8960/10421/9633/8902
 profileset."waders_of_the_unifying_flame_and_smoldering_pollen_hauberk"+=chest=219507,bonus_id=8960/10421/9633/8902
-profileset."waders_of_the_unifying_flame_and_smoldering_pollen_hauberk"+=wrist=,id=219334,enchant_id=7391,gem_id=213485,ilevel=636,crafted_stats=36/40
+profileset."waders_of_the_unifying_flame_and_smoldering_pollen_hauberk"+=off_hand=,id=222441,enchant_id=7460,crafted_stats=36/40
 
 profileset."waders_of_the_unifying_flame_and_busy_bees_buckle"=feet=219489,bonus_id=8960/10421/9633/8902
 profileset."waders_of_the_unifying_flame_and_busy_bees_buckle"+=waist=219509,bonus_id=8960/10421/9633/8902
-profileset."waders_of_the_unifying_flame_and_busy_bees_buckle"+=wrist=,id=219334,enchant_id=7391,gem_id=213485,ilevel=636,crafted_stats=36/40
+profileset."waders_of_the_unifying_flame_and_busy_bees_buckle"+=off_hand=,id=222441,enchant_id=7460,crafted_stats=36/40
 
 profileset."waders_of_the_unifying_flame_and_rook_feather_wristwraps"=feet=219489,bonus_id=8960/10421/9633/8902
 profileset."waders_of_the_unifying_flame_and_rook_feather_wristwraps"+=wrist=219511,bonus_id=8960/10421/9633/8902
@@ -1151,19 +1151,19 @@ profileset."waders_of_the_unifying_flame_and_rook_feather_wristwraps"+=off_hand=
 
 profileset."waders_of_the_unifying_flame_and_weathered_stormfront_vest"=feet=219489,bonus_id=8960/10421/9633/8902
 profileset."waders_of_the_unifying_flame_and_weathered_stormfront_vest"+=chest=219512,bonus_id=8960/10421/9633/8902
-profileset."waders_of_the_unifying_flame_and_weathered_stormfront_vest"+=wrist=,id=219334,enchant_id=7391,gem_id=213485,ilevel=636,crafted_stats=36/40
+profileset."waders_of_the_unifying_flame_and_weathered_stormfront_vest"+=off_hand=,id=222441,enchant_id=7460,crafted_stats=36/40
 
 profileset."waders_of_the_unifying_flame_and_roiling_thunderstrike_talons"=feet=219489,bonus_id=8960/10421/9633/8902
 profileset."waders_of_the_unifying_flame_and_roiling_thunderstrike_talons"+=hands=219513,bonus_id=8960/10421/9633/8902
-profileset."waders_of_the_unifying_flame_and_roiling_thunderstrike_talons"+=wrist=,id=219334,enchant_id=7391,gem_id=213485,ilevel=636,crafted_stats=36/40
+profileset."waders_of_the_unifying_flame_and_roiling_thunderstrike_talons"+=off_hand=,id=222441,enchant_id=7460,crafted_stats=36/40
 
 profileset."waders_of_the_unifying_flame_and_grips_of_the_woven_dawn"=feet=219489,bonus_id=8960/10421/9633/8902
 profileset."waders_of_the_unifying_flame_and_grips_of_the_woven_dawn"+=hands=222807,bonus_id=8960/10421/9633/8902
-profileset."waders_of_the_unifying_flame_and_grips_of_the_woven_dawn"+=wrist=,id=219334,enchant_id=7391,gem_id=213485,ilevel=636,crafted_stats=36/40
+profileset."waders_of_the_unifying_flame_and_grips_of_the_woven_dawn"+=off_hand=,id=222441,enchant_id=7460,crafted_stats=36/40
 
 profileset."waders_of_the_unifying_flame_and_gloves_of_the_woven_dusk"=feet=219489,bonus_id=8960/10421/9633/8902
 profileset."waders_of_the_unifying_flame_and_gloves_of_the_woven_dusk"+=hands=222809,bonus_id=8960/10421/9633/8902
-profileset."waders_of_the_unifying_flame_and_gloves_of_the_woven_dusk"+=wrist=,id=219334,enchant_id=7391,gem_id=213485,ilevel=636,crafted_stats=36/40
+profileset."waders_of_the_unifying_flame_and_gloves_of_the_woven_dusk"+=off_hand=,id=222441,enchant_id=7460,crafted_stats=36/40
 
 profileset."sanctified_torchbearers_grips_and_vambraces_of_deepening_darkness"=hands=219492,bonus_id=8960/10421/9633/8902
 profileset."sanctified_torchbearers_grips_and_vambraces_of_deepening_darkness"+=wrist=219501,bonus_id=8960/10421/9633/8902
@@ -1171,19 +1171,19 @@ profileset."sanctified_torchbearers_grips_and_vambraces_of_deepening_darkness"+=
 
 profileset."sanctified_torchbearers_grips_and_adrenal_surge_clasp"=hands=219492,bonus_id=8960/10421/9633/8902
 profileset."sanctified_torchbearers_grips_and_adrenal_surge_clasp"+=waist=219502,bonus_id=8960/10421/9633/8902
-profileset."sanctified_torchbearers_grips_and_adrenal_surge_clasp"+=wrist=,id=219334,enchant_id=7391,gem_id=213485,ilevel=636,crafted_stats=36/40
+profileset."sanctified_torchbearers_grips_and_adrenal_surge_clasp"+=off_hand=,id=222441,enchant_id=7460,crafted_stats=36/40
 
 profileset."sanctified_torchbearers_grips_and_smoldering_pollen_hauberk"=hands=219492,bonus_id=8960/10421/9633/8902
 profileset."sanctified_torchbearers_grips_and_smoldering_pollen_hauberk"+=chest=219507,bonus_id=8960/10421/9633/8902
-profileset."sanctified_torchbearers_grips_and_smoldering_pollen_hauberk"+=wrist=,id=219334,enchant_id=7391,gem_id=213485,ilevel=636,crafted_stats=36/40
+profileset."sanctified_torchbearers_grips_and_smoldering_pollen_hauberk"+=off_hand=,id=222441,enchant_id=7460,crafted_stats=36/40
 
 profileset."sanctified_torchbearers_grips_and_reinforced_setae_flyers"=hands=219492,bonus_id=8960/10421/9633/8902
 profileset."sanctified_torchbearers_grips_and_reinforced_setae_flyers"+=feet=219508,bonus_id=8960/10421/9633/8902
-profileset."sanctified_torchbearers_grips_and_reinforced_setae_flyers"+=wrist=,id=219334,enchant_id=7391,gem_id=213485,ilevel=636,crafted_stats=36/40
+profileset."sanctified_torchbearers_grips_and_reinforced_setae_flyers"+=off_hand=,id=222441,enchant_id=7460,crafted_stats=36/40
 
 profileset."sanctified_torchbearers_grips_and_busy_bees_buckle"=hands=219492,bonus_id=8960/10421/9633/8902
 profileset."sanctified_torchbearers_grips_and_busy_bees_buckle"+=waist=219509,bonus_id=8960/10421/9633/8902
-profileset."sanctified_torchbearers_grips_and_busy_bees_buckle"+=wrist=,id=219334,enchant_id=7391,gem_id=213485,ilevel=636,crafted_stats=36/40
+profileset."sanctified_torchbearers_grips_and_busy_bees_buckle"+=off_hand=,id=222441,enchant_id=7460,crafted_stats=36/40
 
 profileset."sanctified_torchbearers_grips_and_rook_feather_wristwraps"=hands=219492,bonus_id=8960/10421/9633/8902
 profileset."sanctified_torchbearers_grips_and_rook_feather_wristwraps"+=wrist=219511,bonus_id=8960/10421/9633/8902
@@ -1191,19 +1191,19 @@ profileset."sanctified_torchbearers_grips_and_rook_feather_wristwraps"+=off_hand
 
 profileset."sanctified_torchbearers_grips_and_weathered_stormfront_vest"=hands=219492,bonus_id=8960/10421/9633/8902
 profileset."sanctified_torchbearers_grips_and_weathered_stormfront_vest"+=chest=219512,bonus_id=8960/10421/9633/8902
-profileset."sanctified_torchbearers_grips_and_weathered_stormfront_vest"+=wrist=,id=219334,enchant_id=7391,gem_id=213485,ilevel=636,crafted_stats=36/40
+profileset."sanctified_torchbearers_grips_and_weathered_stormfront_vest"+=off_hand=,id=222441,enchant_id=7460,crafted_stats=36/40
 
 profileset."sanctified_torchbearers_grips_and_sanctified_steps"=hands=219492,bonus_id=8960/10421/9633/8902
 profileset."sanctified_torchbearers_grips_and_sanctified_steps"+=feet=222458,bonus_id=10421/9633/8902
-profileset."sanctified_torchbearers_grips_and_sanctified_steps"+=wrist=,id=219334,enchant_id=7391,gem_id=213485,ilevel=636,crafted_stats=36/40
+profileset."sanctified_torchbearers_grips_and_sanctified_steps"+=off_hand=,id=222441,enchant_id=7460,crafted_stats=36/40
 
 profileset."sanctified_torchbearers_grips_and_treads_of_the_woven_dawn"=hands=219492,bonus_id=8960/10421/9633/8902
 profileset."sanctified_torchbearers_grips_and_treads_of_the_woven_dawn"+=feet=222808,bonus_id=8960/10421/9633/8902
-profileset."sanctified_torchbearers_grips_and_treads_of_the_woven_dawn"+=wrist=,id=219334,enchant_id=7391,gem_id=213485,ilevel=636,crafted_stats=36/40
+profileset."sanctified_torchbearers_grips_and_treads_of_the_woven_dawn"+=off_hand=,id=222441,enchant_id=7460,crafted_stats=36/40
 
 profileset."sanctified_torchbearers_grips_and_slippers_of_the_woven_dusk"=hands=219492,bonus_id=8960/10421/9633/8902
 profileset."sanctified_torchbearers_grips_and_slippers_of_the_woven_dusk"+=feet=222810,bonus_id=8960/10421/9633/8902
-profileset."sanctified_torchbearers_grips_and_slippers_of_the_woven_dusk"+=wrist=,id=219334,enchant_id=7391,gem_id=213485,ilevel=636,crafted_stats=36/40
+profileset."sanctified_torchbearers_grips_and_slippers_of_the_woven_dusk"+=off_hand=,id=222441,enchant_id=7460,crafted_stats=36/40
 
 profileset."vambraces_of_deepening_darkness_and_adrenal_surge_clasp"=wrist=219501,bonus_id=8960/10421/9633/8902
 profileset."vambraces_of_deepening_darkness_and_adrenal_surge_clasp"+=waist=219502,bonus_id=8960/10421/9633/8902
@@ -1251,11 +1251,11 @@ profileset."vambraces_of_deepening_darkness_and_slippers_of_the_woven_dusk"+=off
 
 profileset."adrenal_surge_clasp_and_smoldering_pollen_hauberk"=waist=219502,bonus_id=8960/10421/9633/8902
 profileset."adrenal_surge_clasp_and_smoldering_pollen_hauberk"+=chest=219507,bonus_id=8960/10421/9633/8902
-profileset."adrenal_surge_clasp_and_smoldering_pollen_hauberk"+=wrist=,id=219334,enchant_id=7391,gem_id=213485,ilevel=636,crafted_stats=36/40
+profileset."adrenal_surge_clasp_and_smoldering_pollen_hauberk"+=off_hand=,id=222441,enchant_id=7460,crafted_stats=36/40
 
 profileset."adrenal_surge_clasp_and_reinforced_setae_flyers"=waist=219502,bonus_id=8960/10421/9633/8902
 profileset."adrenal_surge_clasp_and_reinforced_setae_flyers"+=feet=219508,bonus_id=8960/10421/9633/8902
-profileset."adrenal_surge_clasp_and_reinforced_setae_flyers"+=wrist=,id=219334,enchant_id=7391,gem_id=213485,ilevel=636,crafted_stats=36/40
+profileset."adrenal_surge_clasp_and_reinforced_setae_flyers"+=off_hand=,id=222441,enchant_id=7460,crafted_stats=36/40
 
 profileset."adrenal_surge_clasp_and_rook_feather_wristwraps"=waist=219502,bonus_id=8960/10421/9633/8902
 profileset."adrenal_surge_clasp_and_rook_feather_wristwraps"+=wrist=219511,bonus_id=8960/10421/9633/8902
@@ -1263,39 +1263,39 @@ profileset."adrenal_surge_clasp_and_rook_feather_wristwraps"+=off_hand=,id=22244
 
 profileset."adrenal_surge_clasp_and_weathered_stormfront_vest"=waist=219502,bonus_id=8960/10421/9633/8902
 profileset."adrenal_surge_clasp_and_weathered_stormfront_vest"+=chest=219512,bonus_id=8960/10421/9633/8902
-profileset."adrenal_surge_clasp_and_weathered_stormfront_vest"+=wrist=,id=219334,enchant_id=7391,gem_id=213485,ilevel=636,crafted_stats=36/40
+profileset."adrenal_surge_clasp_and_weathered_stormfront_vest"+=off_hand=,id=222441,enchant_id=7460,crafted_stats=36/40
 
 profileset."adrenal_surge_clasp_and_roiling_thunderstrike_talons"=waist=219502,bonus_id=8960/10421/9633/8902
 profileset."adrenal_surge_clasp_and_roiling_thunderstrike_talons"+=hands=219513,bonus_id=8960/10421/9633/8902
-profileset."adrenal_surge_clasp_and_roiling_thunderstrike_talons"+=wrist=,id=219334,enchant_id=7391,gem_id=213485,ilevel=636,crafted_stats=36/40
+profileset."adrenal_surge_clasp_and_roiling_thunderstrike_talons"+=off_hand=,id=222441,enchant_id=7460,crafted_stats=36/40
 
 profileset."adrenal_surge_clasp_and_sanctified_steps"=waist=219502,bonus_id=8960/10421/9633/8902
 profileset."adrenal_surge_clasp_and_sanctified_steps"+=feet=222458,bonus_id=10421/9633/8902
-profileset."adrenal_surge_clasp_and_sanctified_steps"+=wrist=,id=219334,enchant_id=7391,gem_id=213485,ilevel=636,crafted_stats=36/40
+profileset."adrenal_surge_clasp_and_sanctified_steps"+=off_hand=,id=222441,enchant_id=7460,crafted_stats=36/40
 
 profileset."adrenal_surge_clasp_and_grips_of_the_woven_dawn"=waist=219502,bonus_id=8960/10421/9633/8902
 profileset."adrenal_surge_clasp_and_grips_of_the_woven_dawn"+=hands=222807,bonus_id=8960/10421/9633/8902
-profileset."adrenal_surge_clasp_and_grips_of_the_woven_dawn"+=wrist=,id=219334,enchant_id=7391,gem_id=213485,ilevel=636,crafted_stats=36/40
+profileset."adrenal_surge_clasp_and_grips_of_the_woven_dawn"+=off_hand=,id=222441,enchant_id=7460,crafted_stats=36/40
 
 profileset."adrenal_surge_clasp_and_treads_of_the_woven_dawn"=waist=219502,bonus_id=8960/10421/9633/8902
 profileset."adrenal_surge_clasp_and_treads_of_the_woven_dawn"+=feet=222808,bonus_id=8960/10421/9633/8902
-profileset."adrenal_surge_clasp_and_treads_of_the_woven_dawn"+=wrist=,id=219334,enchant_id=7391,gem_id=213485,ilevel=636,crafted_stats=36/40
+profileset."adrenal_surge_clasp_and_treads_of_the_woven_dawn"+=off_hand=,id=222441,enchant_id=7460,crafted_stats=36/40
 
 profileset."adrenal_surge_clasp_and_gloves_of_the_woven_dusk"=waist=219502,bonus_id=8960/10421/9633/8902
 profileset."adrenal_surge_clasp_and_gloves_of_the_woven_dusk"+=hands=222809,bonus_id=8960/10421/9633/8902
-profileset."adrenal_surge_clasp_and_gloves_of_the_woven_dusk"+=wrist=,id=219334,enchant_id=7391,gem_id=213485,ilevel=636,crafted_stats=36/40
+profileset."adrenal_surge_clasp_and_gloves_of_the_woven_dusk"+=off_hand=,id=222441,enchant_id=7460,crafted_stats=36/40
 
 profileset."adrenal_surge_clasp_and_slippers_of_the_woven_dusk"=waist=219502,bonus_id=8960/10421/9633/8902
 profileset."adrenal_surge_clasp_and_slippers_of_the_woven_dusk"+=feet=222810,bonus_id=8960/10421/9633/8902
-profileset."adrenal_surge_clasp_and_slippers_of_the_woven_dusk"+=wrist=,id=219334,enchant_id=7391,gem_id=213485,ilevel=636,crafted_stats=36/40
+profileset."adrenal_surge_clasp_and_slippers_of_the_woven_dusk"+=off_hand=,id=222441,enchant_id=7460,crafted_stats=36/40
 
 profileset."smoldering_pollen_hauberk_and_reinforced_setae_flyers"=chest=219507,bonus_id=8960/10421/9633/8902
 profileset."smoldering_pollen_hauberk_and_reinforced_setae_flyers"+=feet=219508,bonus_id=8960/10421/9633/8902
-profileset."smoldering_pollen_hauberk_and_reinforced_setae_flyers"+=wrist=,id=219334,enchant_id=7391,gem_id=213485,ilevel=636,crafted_stats=36/40
+profileset."smoldering_pollen_hauberk_and_reinforced_setae_flyers"+=off_hand=,id=222441,enchant_id=7460,crafted_stats=36/40
 
 profileset."smoldering_pollen_hauberk_and_busy_bees_buckle"=chest=219507,bonus_id=8960/10421/9633/8902
 profileset."smoldering_pollen_hauberk_and_busy_bees_buckle"+=waist=219509,bonus_id=8960/10421/9633/8902
-profileset."smoldering_pollen_hauberk_and_busy_bees_buckle"+=wrist=,id=219334,enchant_id=7391,gem_id=213485,ilevel=636,crafted_stats=36/40
+profileset."smoldering_pollen_hauberk_and_busy_bees_buckle"+=off_hand=,id=222441,enchant_id=7460,crafted_stats=36/40
 
 profileset."smoldering_pollen_hauberk_and_rook_feather_wristwraps"=chest=219507,bonus_id=8960/10421/9633/8902
 profileset."smoldering_pollen_hauberk_and_rook_feather_wristwraps"+=wrist=219511,bonus_id=8960/10421/9633/8902
@@ -1303,31 +1303,31 @@ profileset."smoldering_pollen_hauberk_and_rook_feather_wristwraps"+=off_hand=,id
 
 profileset."smoldering_pollen_hauberk_and_roiling_thunderstrike_talons"=chest=219507,bonus_id=8960/10421/9633/8902
 profileset."smoldering_pollen_hauberk_and_roiling_thunderstrike_talons"+=hands=219513,bonus_id=8960/10421/9633/8902
-profileset."smoldering_pollen_hauberk_and_roiling_thunderstrike_talons"+=wrist=,id=219334,enchant_id=7391,gem_id=213485,ilevel=636,crafted_stats=36/40
+profileset."smoldering_pollen_hauberk_and_roiling_thunderstrike_talons"+=off_hand=,id=222441,enchant_id=7460,crafted_stats=36/40
 
 profileset."smoldering_pollen_hauberk_and_sanctified_steps"=chest=219507,bonus_id=8960/10421/9633/8902
 profileset."smoldering_pollen_hauberk_and_sanctified_steps"+=feet=222458,bonus_id=10421/9633/8902
-profileset."smoldering_pollen_hauberk_and_sanctified_steps"+=wrist=,id=219334,enchant_id=7391,gem_id=213485,ilevel=636,crafted_stats=36/40
+profileset."smoldering_pollen_hauberk_and_sanctified_steps"+=off_hand=,id=222441,enchant_id=7460,crafted_stats=36/40
 
 profileset."smoldering_pollen_hauberk_and_grips_of_the_woven_dawn"=chest=219507,bonus_id=8960/10421/9633/8902
 profileset."smoldering_pollen_hauberk_and_grips_of_the_woven_dawn"+=hands=222807,bonus_id=8960/10421/9633/8902
-profileset."smoldering_pollen_hauberk_and_grips_of_the_woven_dawn"+=wrist=,id=219334,enchant_id=7391,gem_id=213485,ilevel=636,crafted_stats=36/40
+profileset."smoldering_pollen_hauberk_and_grips_of_the_woven_dawn"+=off_hand=,id=222441,enchant_id=7460,crafted_stats=36/40
 
 profileset."smoldering_pollen_hauberk_and_treads_of_the_woven_dawn"=chest=219507,bonus_id=8960/10421/9633/8902
 profileset."smoldering_pollen_hauberk_and_treads_of_the_woven_dawn"+=feet=222808,bonus_id=8960/10421/9633/8902
-profileset."smoldering_pollen_hauberk_and_treads_of_the_woven_dawn"+=wrist=,id=219334,enchant_id=7391,gem_id=213485,ilevel=636,crafted_stats=36/40
+profileset."smoldering_pollen_hauberk_and_treads_of_the_woven_dawn"+=off_hand=,id=222441,enchant_id=7460,crafted_stats=36/40
 
 profileset."smoldering_pollen_hauberk_and_gloves_of_the_woven_dusk"=chest=219507,bonus_id=8960/10421/9633/8902
 profileset."smoldering_pollen_hauberk_and_gloves_of_the_woven_dusk"+=hands=222809,bonus_id=8960/10421/9633/8902
-profileset."smoldering_pollen_hauberk_and_gloves_of_the_woven_dusk"+=wrist=,id=219334,enchant_id=7391,gem_id=213485,ilevel=636,crafted_stats=36/40
+profileset."smoldering_pollen_hauberk_and_gloves_of_the_woven_dusk"+=off_hand=,id=222441,enchant_id=7460,crafted_stats=36/40
 
 profileset."smoldering_pollen_hauberk_and_slippers_of_the_woven_dusk"=chest=219507,bonus_id=8960/10421/9633/8902
 profileset."smoldering_pollen_hauberk_and_slippers_of_the_woven_dusk"+=feet=222810,bonus_id=8960/10421/9633/8902
-profileset."smoldering_pollen_hauberk_and_slippers_of_the_woven_dusk"+=wrist=,id=219334,enchant_id=7391,gem_id=213485,ilevel=636,crafted_stats=36/40
+profileset."smoldering_pollen_hauberk_and_slippers_of_the_woven_dusk"+=off_hand=,id=222441,enchant_id=7460,crafted_stats=36/40
 
 profileset."reinforced_setae_flyers_and_busy_bees_buckle"=feet=219508,bonus_id=8960/10421/9633/8902
 profileset."reinforced_setae_flyers_and_busy_bees_buckle"+=waist=219509,bonus_id=8960/10421/9633/8902
-profileset."reinforced_setae_flyers_and_busy_bees_buckle"+=wrist=,id=219334,enchant_id=7391,gem_id=213485,ilevel=636,crafted_stats=36/40
+profileset."reinforced_setae_flyers_and_busy_bees_buckle"+=off_hand=,id=222441,enchant_id=7460,crafted_stats=36/40
 
 profileset."reinforced_setae_flyers_and_rook_feather_wristwraps"=feet=219508,bonus_id=8960/10421/9633/8902
 profileset."reinforced_setae_flyers_and_rook_feather_wristwraps"+=wrist=219511,bonus_id=8960/10421/9633/8902
@@ -1335,19 +1335,19 @@ profileset."reinforced_setae_flyers_and_rook_feather_wristwraps"+=off_hand=,id=2
 
 profileset."reinforced_setae_flyers_and_weathered_stormfront_vest"=feet=219508,bonus_id=8960/10421/9633/8902
 profileset."reinforced_setae_flyers_and_weathered_stormfront_vest"+=chest=219512,bonus_id=8960/10421/9633/8902
-profileset."reinforced_setae_flyers_and_weathered_stormfront_vest"+=wrist=,id=219334,enchant_id=7391,gem_id=213485,ilevel=636,crafted_stats=36/40
+profileset."reinforced_setae_flyers_and_weathered_stormfront_vest"+=off_hand=,id=222441,enchant_id=7460,crafted_stats=36/40
 
 profileset."reinforced_setae_flyers_and_roiling_thunderstrike_talons"=feet=219508,bonus_id=8960/10421/9633/8902
 profileset."reinforced_setae_flyers_and_roiling_thunderstrike_talons"+=hands=219513,bonus_id=8960/10421/9633/8902
-profileset."reinforced_setae_flyers_and_roiling_thunderstrike_talons"+=wrist=,id=219334,enchant_id=7391,gem_id=213485,ilevel=636,crafted_stats=36/40
+profileset."reinforced_setae_flyers_and_roiling_thunderstrike_talons"+=off_hand=,id=222441,enchant_id=7460,crafted_stats=36/40
 
 profileset."reinforced_setae_flyers_and_grips_of_the_woven_dawn"=feet=219508,bonus_id=8960/10421/9633/8902
 profileset."reinforced_setae_flyers_and_grips_of_the_woven_dawn"+=hands=222807,bonus_id=8960/10421/9633/8902
-profileset."reinforced_setae_flyers_and_grips_of_the_woven_dawn"+=wrist=,id=219334,enchant_id=7391,gem_id=213485,ilevel=636,crafted_stats=36/40
+profileset."reinforced_setae_flyers_and_grips_of_the_woven_dawn"+=off_hand=,id=222441,enchant_id=7460,crafted_stats=36/40
 
 profileset."reinforced_setae_flyers_and_gloves_of_the_woven_dusk"=feet=219508,bonus_id=8960/10421/9633/8902
 profileset."reinforced_setae_flyers_and_gloves_of_the_woven_dusk"+=hands=222809,bonus_id=8960/10421/9633/8902
-profileset."reinforced_setae_flyers_and_gloves_of_the_woven_dusk"+=wrist=,id=219334,enchant_id=7391,gem_id=213485,ilevel=636,crafted_stats=36/40
+profileset."reinforced_setae_flyers_and_gloves_of_the_woven_dusk"+=off_hand=,id=222441,enchant_id=7460,crafted_stats=36/40
 
 profileset."busy_bees_buckle_and_rook_feather_wristwraps"=waist=219509,bonus_id=8960/10421/9633/8902
 profileset."busy_bees_buckle_and_rook_feather_wristwraps"+=wrist=219511,bonus_id=8960/10421/9633/8902
@@ -1355,31 +1355,31 @@ profileset."busy_bees_buckle_and_rook_feather_wristwraps"+=off_hand=,id=222441,e
 
 profileset."busy_bees_buckle_and_weathered_stormfront_vest"=waist=219509,bonus_id=8960/10421/9633/8902
 profileset."busy_bees_buckle_and_weathered_stormfront_vest"+=chest=219512,bonus_id=8960/10421/9633/8902
-profileset."busy_bees_buckle_and_weathered_stormfront_vest"+=wrist=,id=219334,enchant_id=7391,gem_id=213485,ilevel=636,crafted_stats=36/40
+profileset."busy_bees_buckle_and_weathered_stormfront_vest"+=off_hand=,id=222441,enchant_id=7460,crafted_stats=36/40
 
 profileset."busy_bees_buckle_and_roiling_thunderstrike_talons"=waist=219509,bonus_id=8960/10421/9633/8902
 profileset."busy_bees_buckle_and_roiling_thunderstrike_talons"+=hands=219513,bonus_id=8960/10421/9633/8902
-profileset."busy_bees_buckle_and_roiling_thunderstrike_talons"+=wrist=,id=219334,enchant_id=7391,gem_id=213485,ilevel=636,crafted_stats=36/40
+profileset."busy_bees_buckle_and_roiling_thunderstrike_talons"+=off_hand=,id=222441,enchant_id=7460,crafted_stats=36/40
 
 profileset."busy_bees_buckle_and_sanctified_steps"=waist=219509,bonus_id=8960/10421/9633/8902
 profileset."busy_bees_buckle_and_sanctified_steps"+=feet=222458,bonus_id=10421/9633/8902
-profileset."busy_bees_buckle_and_sanctified_steps"+=wrist=,id=219334,enchant_id=7391,gem_id=213485,ilevel=636,crafted_stats=36/40
+profileset."busy_bees_buckle_and_sanctified_steps"+=off_hand=,id=222441,enchant_id=7460,crafted_stats=36/40
 
 profileset."busy_bees_buckle_and_grips_of_the_woven_dawn"=waist=219509,bonus_id=8960/10421/9633/8902
 profileset."busy_bees_buckle_and_grips_of_the_woven_dawn"+=hands=222807,bonus_id=8960/10421/9633/8902
-profileset."busy_bees_buckle_and_grips_of_the_woven_dawn"+=wrist=,id=219334,enchant_id=7391,gem_id=213485,ilevel=636,crafted_stats=36/40
+profileset."busy_bees_buckle_and_grips_of_the_woven_dawn"+=off_hand=,id=222441,enchant_id=7460,crafted_stats=36/40
 
 profileset."busy_bees_buckle_and_treads_of_the_woven_dawn"=waist=219509,bonus_id=8960/10421/9633/8902
 profileset."busy_bees_buckle_and_treads_of_the_woven_dawn"+=feet=222808,bonus_id=8960/10421/9633/8902
-profileset."busy_bees_buckle_and_treads_of_the_woven_dawn"+=wrist=,id=219334,enchant_id=7391,gem_id=213485,ilevel=636,crafted_stats=36/40
+profileset."busy_bees_buckle_and_treads_of_the_woven_dawn"+=off_hand=,id=222441,enchant_id=7460,crafted_stats=36/40
 
 profileset."busy_bees_buckle_and_gloves_of_the_woven_dusk"=waist=219509,bonus_id=8960/10421/9633/8902
 profileset."busy_bees_buckle_and_gloves_of_the_woven_dusk"+=hands=222809,bonus_id=8960/10421/9633/8902
-profileset."busy_bees_buckle_and_gloves_of_the_woven_dusk"+=wrist=,id=219334,enchant_id=7391,gem_id=213485,ilevel=636,crafted_stats=36/40
+profileset."busy_bees_buckle_and_gloves_of_the_woven_dusk"+=off_hand=,id=222441,enchant_id=7460,crafted_stats=36/40
 
 profileset."busy_bees_buckle_and_slippers_of_the_woven_dusk"=waist=219509,bonus_id=8960/10421/9633/8902
 profileset."busy_bees_buckle_and_slippers_of_the_woven_dusk"+=feet=222810,bonus_id=8960/10421/9633/8902
-profileset."busy_bees_buckle_and_slippers_of_the_woven_dusk"+=wrist=,id=219334,enchant_id=7391,gem_id=213485,ilevel=636,crafted_stats=36/40
+profileset."busy_bees_buckle_and_slippers_of_the_woven_dusk"+=off_hand=,id=222441,enchant_id=7460,crafted_stats=36/40
 
 profileset."rook_feather_wristwraps_and_weathered_stormfront_vest"=wrist=219511,bonus_id=8960/10421/9633/8902
 profileset."rook_feather_wristwraps_and_weathered_stormfront_vest"+=chest=219512,bonus_id=8960/10421/9633/8902
@@ -1411,61 +1411,61 @@ profileset."rook_feather_wristwraps_and_slippers_of_the_woven_dusk"+=off_hand=,i
 
 profileset."weathered_stormfront_vest_and_roiling_thunderstrike_talons"=chest=219512,bonus_id=8960/10421/9633/8902
 profileset."weathered_stormfront_vest_and_roiling_thunderstrike_talons"+=hands=219513,bonus_id=8960/10421/9633/8902
-profileset."weathered_stormfront_vest_and_roiling_thunderstrike_talons"+=wrist=,id=219334,enchant_id=7391,gem_id=213485,ilevel=636,crafted_stats=36/40
+profileset."weathered_stormfront_vest_and_roiling_thunderstrike_talons"+=off_hand=,id=222441,enchant_id=7460,crafted_stats=36/40
 
 profileset."weathered_stormfront_vest_and_sanctified_steps"=chest=219512,bonus_id=8960/10421/9633/8902
 profileset."weathered_stormfront_vest_and_sanctified_steps"+=feet=222458,bonus_id=10421/9633/8902
-profileset."weathered_stormfront_vest_and_sanctified_steps"+=wrist=,id=219334,enchant_id=7391,gem_id=213485,ilevel=636,crafted_stats=36/40
+profileset."weathered_stormfront_vest_and_sanctified_steps"+=off_hand=,id=222441,enchant_id=7460,crafted_stats=36/40
 
 profileset."weathered_stormfront_vest_and_grips_of_the_woven_dawn"=chest=219512,bonus_id=8960/10421/9633/8902
 profileset."weathered_stormfront_vest_and_grips_of_the_woven_dawn"+=hands=222807,bonus_id=8960/10421/9633/8902
-profileset."weathered_stormfront_vest_and_grips_of_the_woven_dawn"+=wrist=,id=219334,enchant_id=7391,gem_id=213485,ilevel=636,crafted_stats=36/40
+profileset."weathered_stormfront_vest_and_grips_of_the_woven_dawn"+=off_hand=,id=222441,enchant_id=7460,crafted_stats=36/40
 
 profileset."weathered_stormfront_vest_and_treads_of_the_woven_dawn"=chest=219512,bonus_id=8960/10421/9633/8902
 profileset."weathered_stormfront_vest_and_treads_of_the_woven_dawn"+=feet=222808,bonus_id=8960/10421/9633/8902
-profileset."weathered_stormfront_vest_and_treads_of_the_woven_dawn"+=wrist=,id=219334,enchant_id=7391,gem_id=213485,ilevel=636,crafted_stats=36/40
+profileset."weathered_stormfront_vest_and_treads_of_the_woven_dawn"+=off_hand=,id=222441,enchant_id=7460,crafted_stats=36/40
 
 profileset."weathered_stormfront_vest_and_gloves_of_the_woven_dusk"=chest=219512,bonus_id=8960/10421/9633/8902
 profileset."weathered_stormfront_vest_and_gloves_of_the_woven_dusk"+=hands=222809,bonus_id=8960/10421/9633/8902
-profileset."weathered_stormfront_vest_and_gloves_of_the_woven_dusk"+=wrist=,id=219334,enchant_id=7391,gem_id=213485,ilevel=636,crafted_stats=36/40
+profileset."weathered_stormfront_vest_and_gloves_of_the_woven_dusk"+=off_hand=,id=222441,enchant_id=7460,crafted_stats=36/40
 
 profileset."weathered_stormfront_vest_and_slippers_of_the_woven_dusk"=chest=219512,bonus_id=8960/10421/9633/8902
 profileset."weathered_stormfront_vest_and_slippers_of_the_woven_dusk"+=feet=222810,bonus_id=8960/10421/9633/8902
-profileset."weathered_stormfront_vest_and_slippers_of_the_woven_dusk"+=wrist=,id=219334,enchant_id=7391,gem_id=213485,ilevel=636,crafted_stats=36/40
+profileset."weathered_stormfront_vest_and_slippers_of_the_woven_dusk"+=off_hand=,id=222441,enchant_id=7460,crafted_stats=36/40
 
 profileset."roiling_thunderstrike_talons_and_sanctified_steps"=hands=219513,bonus_id=8960/10421/9633/8902
 profileset."roiling_thunderstrike_talons_and_sanctified_steps"+=feet=222458,bonus_id=10421/9633/8902
-profileset."roiling_thunderstrike_talons_and_sanctified_steps"+=wrist=,id=219334,enchant_id=7391,gem_id=213485,ilevel=636,crafted_stats=36/40
+profileset."roiling_thunderstrike_talons_and_sanctified_steps"+=off_hand=,id=222441,enchant_id=7460,crafted_stats=36/40
 
 profileset."roiling_thunderstrike_talons_and_treads_of_the_woven_dawn"=hands=219513,bonus_id=8960/10421/9633/8902
 profileset."roiling_thunderstrike_talons_and_treads_of_the_woven_dawn"+=feet=222808,bonus_id=8960/10421/9633/8902
-profileset."roiling_thunderstrike_talons_and_treads_of_the_woven_dawn"+=wrist=,id=219334,enchant_id=7391,gem_id=213485,ilevel=636,crafted_stats=36/40
+profileset."roiling_thunderstrike_talons_and_treads_of_the_woven_dawn"+=off_hand=,id=222441,enchant_id=7460,crafted_stats=36/40
 
 profileset."roiling_thunderstrike_talons_and_slippers_of_the_woven_dusk"=hands=219513,bonus_id=8960/10421/9633/8902
 profileset."roiling_thunderstrike_talons_and_slippers_of_the_woven_dusk"+=feet=222810,bonus_id=8960/10421/9633/8902
-profileset."roiling_thunderstrike_talons_and_slippers_of_the_woven_dusk"+=wrist=,id=219334,enchant_id=7391,gem_id=213485,ilevel=636,crafted_stats=36/40
+profileset."roiling_thunderstrike_talons_and_slippers_of_the_woven_dusk"+=off_hand=,id=222441,enchant_id=7460,crafted_stats=36/40
 
 profileset."sanctified_steps_and_grips_of_the_woven_dawn"=feet=222458,bonus_id=10421/9633/8902
 profileset."sanctified_steps_and_grips_of_the_woven_dawn"+=hands=222807,bonus_id=8960/10421/9633/8902
-profileset."sanctified_steps_and_grips_of_the_woven_dawn"+=wrist=,id=219334,enchant_id=7391,gem_id=213485,ilevel=636,crafted_stats=36/40
+profileset."sanctified_steps_and_grips_of_the_woven_dawn"+=off_hand=,id=222441,enchant_id=7460,crafted_stats=36/40
 
 profileset."sanctified_steps_and_gloves_of_the_woven_dusk"=feet=222458,bonus_id=10421/9633/8902
 profileset."sanctified_steps_and_gloves_of_the_woven_dusk"+=hands=222809,bonus_id=8960/10421/9633/8902
-profileset."sanctified_steps_and_gloves_of_the_woven_dusk"+=wrist=,id=219334,enchant_id=7391,gem_id=213485,ilevel=636,crafted_stats=36/40
+profileset."sanctified_steps_and_gloves_of_the_woven_dusk"+=off_hand=,id=222441,enchant_id=7460,crafted_stats=36/40
 
 profileset."grips_of_the_woven_dawn_and_treads_of_the_woven_dawn"=hands=222807,bonus_id=8960/10421/9633/8902
 profileset."grips_of_the_woven_dawn_and_treads_of_the_woven_dawn"+=feet=222808,bonus_id=8960/10421/9633/8902
-profileset."grips_of_the_woven_dawn_and_treads_of_the_woven_dawn"+=wrist=,id=219334,enchant_id=7391,gem_id=213485,ilevel=636,crafted_stats=36/40
+profileset."grips_of_the_woven_dawn_and_treads_of_the_woven_dawn"+=off_hand=,id=222441,enchant_id=7460,crafted_stats=36/40
 
 profileset."grips_of_the_woven_dawn_and_slippers_of_the_woven_dusk"=hands=222807,bonus_id=8960/10421/9633/8902
 profileset."grips_of_the_woven_dawn_and_slippers_of_the_woven_dusk"+=feet=222810,bonus_id=8960/10421/9633/8902
-profileset."grips_of_the_woven_dawn_and_slippers_of_the_woven_dusk"+=wrist=,id=219334,enchant_id=7391,gem_id=213485,ilevel=636,crafted_stats=36/40
+profileset."grips_of_the_woven_dawn_and_slippers_of_the_woven_dusk"+=off_hand=,id=222441,enchant_id=7460,crafted_stats=36/40
 
 profileset."treads_of_the_woven_dawn_and_gloves_of_the_woven_dusk"=feet=222808,bonus_id=8960/10421/9633/8902
 profileset."treads_of_the_woven_dawn_and_gloves_of_the_woven_dusk"+=hands=222809,bonus_id=8960/10421/9633/8902
-profileset."treads_of_the_woven_dawn_and_gloves_of_the_woven_dusk"+=wrist=,id=219334,enchant_id=7391,gem_id=213485,ilevel=636,crafted_stats=36/40
+profileset."treads_of_the_woven_dawn_and_gloves_of_the_woven_dusk"+=off_hand=,id=222441,enchant_id=7460,crafted_stats=36/40
 
 profileset."gloves_of_the_woven_dusk_and_slippers_of_the_woven_dusk"=hands=222809,bonus_id=8960/10421/9633/8902
 profileset."gloves_of_the_woven_dusk_and_slippers_of_the_woven_dusk"+=feet=222810,bonus_id=8960/10421/9633/8902
-profileset."gloves_of_the_woven_dusk_and_slippers_of_the_woven_dusk"+=wrist=,id=219334,enchant_id=7391,gem_id=213485,ilevel=636,crafted_stats=36/40
+profileset."gloves_of_the_woven_dusk_and_slippers_of_the_woven_dusk"+=off_hand=,id=222441,enchant_id=7460,crafted_stats=36/40
 
