@@ -82,8 +82,9 @@ actions.fs+=/variable,name=hold_sof,op=setif,condition=talent.student_of_sufferi
 # Use items if we're not metamorphosing because we don't want to waste meta time on items
 actions.fs+=/use_items,use_off_gcd=1,if=!buff.metamorphosis.up
 
-# Use Immolation Aura if it won't interrupt our pre-meta SoF or if we're in aoe, have fallout talented, and are able to use a Spirit Bomb and would overflow our soul fragments
-actions.fs+=/immolation_aura,if=!(cooldown.metamorphosis.up&prev_gcd.1.sigil_of_flame)&!(talent.fallout&talent.spirit_bomb&spell_targets.spirit_bomb>=3&$(can_bomb_or_burst_now_or_soon))
+# Use Immolation Aura if it won't interrupt our pre-meta SoF or if we're in aoe, have fallout talented, and are able to use a Spirit Bomb and would overflow our soul fragments.
+# Note that immolation aura is handled inside of metamorphosis action list during meta
+actions.fs+=/immolation_aura,if=!(cooldown.metamorphosis.up&prev_gcd.1.sigil_of_flame)&!(talent.fallout&talent.spirit_bomb&spell_targets.spirit_bomb>=3&$(can_bomb_or_burst_now_or_soon))&!(buff.metamorphosis.up&buff.demonsurge_hardcast.up)
 # Use Sigil of Flame if we need to
 actions.fs+=/sigil_of_flame,if=!variable.hold_sof
 # Use Fiery Brand if we're going to overcap, if it's not currently active, or if we don't have fiery demise and the debuff doesn't matter
