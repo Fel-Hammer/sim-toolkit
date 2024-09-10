@@ -19,17 +19,17 @@
     "craftingCategoryId": 549,
     "expansion": 10,
     "eligible_slots": [
-      "feet",
-      "wrists",
-      "neck",
-      "waist",
-      "chest",
-      "weapon",
-      "head",
-      "hands",
       "finger",
+      "legs",
+      "head",
+      "wrists",
       "shoulder",
-      "legs"
+      "neck",
+      "hands",
+      "weapon",
+      "waist",
+      "feet",
+      "chest"
     ]
   },
   {
@@ -52,17 +52,17 @@
     "craftingCategoryId": 550,
     "expansion": 10,
     "eligible_slots": [
-      "feet",
-      "wrists",
-      "neck",
-      "waist",
-      "chest",
-      "weapon",
-      "head",
-      "hands",
       "finger",
+      "legs",
+      "head",
+      "wrists",
       "shoulder",
-      "legs"
+      "neck",
+      "hands",
+      "weapon",
+      "waist",
+      "feet",
+      "chest"
     ]
   },
   {
@@ -85,17 +85,17 @@
     "craftingCategoryId": 551,
     "expansion": 10,
     "eligible_slots": [
-      "feet",
-      "wrists",
-      "neck",
-      "waist",
-      "chest",
-      "weapon",
-      "head",
-      "hands",
       "finger",
+      "legs",
+      "head",
+      "wrists",
       "shoulder",
-      "legs"
+      "neck",
+      "hands",
+      "weapon",
+      "waist",
+      "feet",
+      "chest"
     ]
   },
   {
@@ -118,17 +118,17 @@
     "craftingCategoryId": 609,
     "expansion": 10,
     "eligible_slots": [
-      "feet",
-      "wrists",
-      "neck",
-      "waist",
-      "chest",
-      "weapon",
-      "head",
-      "hands",
       "finger",
+      "legs",
+      "head",
+      "wrists",
       "shoulder",
-      "legs"
+      "neck",
+      "hands",
+      "weapon",
+      "waist",
+      "feet",
+      "chest"
     ]
   },
   {
@@ -151,17 +151,17 @@
     "craftingCategoryId": 610,
     "expansion": 10,
     "eligible_slots": [
-      "feet",
-      "wrists",
-      "neck",
-      "waist",
-      "chest",
-      "weapon",
-      "head",
-      "hands",
       "finger",
+      "legs",
+      "head",
+      "wrists",
       "shoulder",
-      "legs"
+      "neck",
+      "hands",
+      "weapon",
+      "waist",
+      "feet",
+      "chest"
     ]
   },
   {
@@ -184,14 +184,14 @@
     "craftingCategoryId": 683,
     "expansion": 10,
     "eligible_slots": [
-      "feet",
+      "legs",
       "wrists",
-      "chest",
       "head",
+      "shoulder",
       "hands",
       "waist",
-      "shoulder",
-      "legs"
+      "feet",
+      "chest"
     ]
   },
   {
@@ -214,14 +214,14 @@
     "craftingCategoryId": 684,
     "expansion": 10,
     "eligible_slots": [
-      "feet",
+      "legs",
       "wrists",
-      "chest",
       "head",
+      "shoulder",
       "hands",
       "waist",
-      "shoulder",
-      "legs"
+      "feet",
+      "chest"
     ]
   },
   {
@@ -244,14 +244,14 @@
     "craftingCategoryId": 560,
     "expansion": 10,
     "eligible_slots": [
-      "feet",
+      "legs",
       "wrists",
-      "chest",
       "head",
+      "shoulder",
       "hands",
       "waist",
-      "shoulder",
-      "legs"
+      "feet",
+      "chest"
     ]
   },
   {
@@ -274,14 +274,14 @@
     "craftingCategoryId": 608,
     "expansion": 10,
     "eligible_slots": [
-      "feet",
+      "legs",
       "wrists",
-      "chest",
       "head",
+      "shoulder",
       "hands",
       "waist",
-      "shoulder",
-      "legs"
+      "feet",
+      "chest"
     ]
   },
   {
