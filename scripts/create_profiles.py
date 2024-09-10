@@ -5,10 +5,54 @@ import re
 import sys
 import configparser
 from typing import Dict, List, Any
-
 import logging
 
 logging.basicConfig(level=logging.INFO)
+
+# Configuration constants
+CRAFTED_ITEM_IDS = {
+    "wrists": 219334,
+    "feet": 219327,
+    "waist": 219331,
+    "finger1": 435384,
+    "finger2": 435384,
+    "neck": 435385,
+    "off_hand": 222441,  # We don't replace the off_hand item ID for weapon embellishments
+}
+
+DEFAULT_SLOTS = ["wrist", "off_hand"]
+
+INVENTORY_TYPE_TO_SLOT = {
+    0: "non_equipable",
+    1: "head",
+    2: "neck",
+    3: "shoulder",
+    4: "shirt",
+    5: "chest",
+    6: "waist",
+    7: "legs",
+    8: "feet",
+    9: "wrists",
+    10: "hands",
+    11: "finger",
+    12: "trinket",
+    13: "main_hand",
+    14: "shield",
+    15: "ranged",
+    16: "back",
+    17: "main_hand",
+    18: "bag",
+    19: "tabard",
+    20: "robe",
+    21: "main_hand",
+    22: "off_hand",
+    23: "off_hand",
+    24: "ammo",
+    25: "thrown",
+    26: "ranged_right",
+    27: "quiver",
+    28: "relic",
+}
 
 
 def load_json(file_name: str) -> List[Dict[str, Any]]:
@@ -27,15 +71,10 @@ def load_gear(file_name: str) -> Dict[str, str]:
 
 
 def clean_name(name: str) -> str:
-    # Remove special characters and replace spaces with underscores
     cleaned = re.sub(r"[^\w\s-]", "", name).strip().replace(" ", "_")
-    # Replace "quality" with an underscore, but keep the number
     cleaned = re.sub(r"quality_?(\d*)", r"_\1", cleaned, flags=re.IGNORECASE)
-    # Remove any double underscores
     cleaned = re.sub(r"__+", "_", cleaned)
-    # Remove any trailing underscores
-    cleaned = cleaned.rstrip("_")
-    return cleaned.lower()
+    return cleaned.rstrip("_").lower()
 
 
 def generate_trinket_profilesets(trinkets: List[Dict[str, Any]]) -> List[str]:
@@ -43,19 +82,16 @@ def generate_trinket_profilesets(trinkets: List[Dict[str, Any]]) -> List[str]:
     for trinket in trinkets:
         if trinket["inventoryType"] == 12 and "template" not in trinket["name"].lower():
             name = clean_name(trinket["name"])
-            gear_name = name.lower()
             item_id = trinket["id"]
             item_levels = [593, 606, 619, 626, 639]
 
-            # Darkmoon Decks only have one ilevel
             if "Darkmoon Deck" in trinket["name"]:
                 item_levels = [577]
-            # Trinkets with unique ilevels
             elif trinket["name"] == "Bronzebeard Family Compass":
                 item_levels = [597, 610, 623, 630, 643]
 
             for ilevel in item_levels:
-                profileset = f'profileset."{name}_{ilevel}"=trinket1=\nprofileset."{name}_{ilevel}"+=trinket2={gear_name},id={item_id},ilevel={ilevel}'
+                profileset = f'profileset."{name}_{ilevel}"=trinket1=\nprofileset."{name}_{ilevel}"+=trinket2={name},id={item_id},ilevel={ilevel}'
                 profilesets.append(profileset)
 
     profilesets.append(
@@ -149,22 +185,19 @@ def generate_consumable_profilesets(consumables: List[Dict[str, Any]]) -> List[s
         elif "flask" in consumable["value"]:
             profileset = f'profileset."{name}"=flask={item_id}'
         else:
-            continue  # Skip other types of consumables
-
+            continue
         profilesets.append(profileset)
 
-    # Add a profile for no consumables
     profilesets.append(
         'profileset."no_consumables"=potion=\nprofileset."no_consumables"+=flask='
     )
-
     return profilesets
 
 
 def write_profilesets(profilesets: List[str], filename: str) -> None:
     unique_profilesets = {}
     for profileset in profilesets:
-        name = profileset.split('"')[1]  # Extract the name between quotes
+        name = profileset.split('"')[1]
         if name not in unique_profilesets:
             unique_profilesets[name] = []
         unique_profilesets[name].append(profileset)
@@ -185,171 +218,145 @@ def write_enchant_profilesets(
             write_profilesets(profiles, filename)
 
 
-inventory_type_to_slot = {
-    1: "head",
-    3: "shoulder",
-    5: "chest",
-    6: "waist",
-    7: "legs",
-    8: "feet",
-    9: "wrist",
-    10: "hands",
-    16: "back",
-    20: "chest",
-}
+def is_full_item_embellishment(emb):
+    return "id" in emb and "bonusLists" in emb
 
 
-def is_full_item_embellishment(embellishment):
-    return (
-        "profession" in embellishment
-        and "optionalCraftingSlots" in embellishment["profession"]
-    )
+def get_valid_slots_for_embellishment(emb):
+    if is_full_item_embellishment(emb):
+        if "weapon" in emb.get("eligible_slots", []) or emb["name"].startswith(
+            "Darkmoon Sigil"
+        ):
+            return ["off_hand"]
+        return [INVENTORY_TYPE_TO_SLOT.get(emb.get("inventoryType"))]
+    valid_slots = []
+    for slot in emb.get("eligible_slots", []):
+        if slot == "weapon":
+            valid_slots.append("off_hand")
+        elif slot == "finger":
+            valid_slots.extend(["finger1", "finger2"])
+        elif slot in CRAFTED_ITEM_IDS:
+            valid_slots.append(slot)
+    return valid_slots
 
 
-def get_crafted_items(gear):
-    return {slot: item for slot, item in gear.items() if "crafted_stats" in item}
+def apply_embellishment(emb, gear, exclude_slot=None):
+    valid_slots = get_valid_slots_for_embellishment(emb)
+
+    if is_full_item_embellishment(emb):
+        slot = valid_slots[0] if valid_slots else None
+    else:
+        slot = next((s for s in valid_slots if s in gear and s != exclude_slot), None)
+
+    if not slot:
+        reason = f"No valid slot found. Valid slots: {valid_slots}"
+    elif slot not in gear:
+        reason = f"Slot {slot} not found in gear"
+    elif exclude_slot == slot:
+        reason = f"Slot {slot} is excluded (already used by another embellishment)"
+    else:
+        reason = None
+
+    if reason:
+        logging.warning(
+            f"No valid slots available for {emb['name']}. Reason: {reason}."
+        )
+        return None, None
+
+    item = gear[slot]
+    if is_full_item_embellishment(emb):
+        new_item = f"{emb['id']},bonus_id={'/'.join(map(str, emb['bonusLists']))}"
+        # Preserve enchant_id and gem_id
+        for part in item.split(","):
+            if part.startswith("enchant_id=") or part.startswith("gem_id="):
+                new_item += f",{part}"
+    else:
+        bonus_ids = "/".join(map(str, emb.get("craftingBonusIds", [])))
+        new_item = f"{CRAFTED_ITEM_IDS[slot]},bonus_id={bonus_ids}"
+        # Preserve other properties
+        for part in item.split(","):
+            if not part.startswith("id=") and not part.startswith("bonus_id="):
+                new_item += f",{part}"
+
+    gear[slot] = new_item
+    return gear, slot
 
 
-def get_unused_crafted_slot(gear, used_slots):
-    crafted_slots = [slot for slot, item in gear.items() if "crafted_stats" in item]
-    unused_slots = set(crafted_slots) - set(used_slots)
-    return unused_slots.pop() if unused_slots else None
-
-
-def clear_embellishment_from_item(item):
+def remove_bonus_ids(item):
     parts = item.split(",")
-    new_parts = []
-    for part in parts:
-        if not part.startswith("bonus_id="):
-            new_parts.append(part)
-    return ",".join(new_parts)
+    return ",".join([part for part in parts if not part.startswith("bonus_id=")])
 
 
-def clear_embellishment_bonus_ids(item):
-    if "bonus_id=" not in item:
-        return item
+def generate_embellishment_pair_profileset(emb1, emb2, gear):
+    gear_copy = gear.copy()
 
-    parts = item.split("bonus_id=")
-    prefix = parts[0]
-    bonus_part = parts[1]
+    # Try to apply emb1 first
+    gear_copy, slot1 = apply_embellishment(emb1, gear_copy)
+    if not gear_copy:
+        return None
 
-    bonus_ids = [
-        bid
-        for bid in bonus_part.split(",")[0].split("/")
-        if int(bid) < 8900 or int(bid) > 9000
+    # Try to apply emb2
+    gear_copy, slot2 = apply_embellishment(emb2, gear_copy, exclude_slot=slot1)
+
+    # If emb2 failed, try to apply emb1 to a different slot
+    if not gear_copy:
+        gear_copy = gear.copy()
+        gear_copy, slot2 = apply_embellishment(emb2, gear_copy)
+        if not gear_copy:
+            return None
+        gear_copy, slot1 = apply_embellishment(emb1, gear_copy, exclude_slot=slot2)
+        if not gear_copy or slot1 == slot2:
+            return None
+
+    name1, name2 = clean_name(emb1["name"]), clean_name(emb2["name"])
+    profileset_name = f'"{name1}_and_{name2}"'
+
+    profilesets = [
+        f"profileset.{profileset_name}={slot1}={gear_copy[slot1]}",
+        f"profileset.{profileset_name}+={slot2}={gear_copy[slot2]}",
     ]
 
-    if bonus_ids:
-        new_item = f"{prefix}bonus_id={'/'.join(bonus_ids)}"
-        if "," in bonus_part:
-            new_item += "," + ",".join(bonus_part.split(",")[1:])
-    else:
-        new_item = prefix.rstrip(",")
-        if "," in bonus_part:
-            new_item += "," + ",".join(bonus_part.split(",")[1:])
-
-    return new_item.rstrip(",")
-
-
-def generate_embellishment_profilesets(
-    embellishments: List[Dict[str, Any]], gear: Dict[str, str]
-) -> List[str]:
-    profilesets = []
-
-    # Clear existing embellishment bonus_ids
-    gear = {slot: clear_embellishment_bonus_ids(item) for slot, item in gear.items()}
-
-    crafted_items = get_crafted_items(gear)
-
-    for i, emb1 in enumerate(embellishments):
-        for j, emb2 in enumerate(embellishments[i:]):  # Allow same embellishment
-            if i == j and is_full_item_embellishment(emb1):
-                continue  # Skip if it's the same full-item embellishment
-            profileset_pair = generate_embellishment_pair_profileset(
-                emb1, emb2, gear, crafted_items
+    # Remove bonus_ids from unused default slots
+    for default_slot in DEFAULT_SLOTS:
+        if default_slot not in [slot1, slot2] and default_slot in gear_copy:
+            gear_copy[default_slot] = remove_bonus_ids(gear_copy[default_slot])
+            profilesets.append(
+                f"profileset.{profileset_name}+={default_slot}={gear_copy[default_slot]}"
             )
-            if profileset_pair:
-                profilesets.extend(profileset_pair)
 
     return profilesets
 
 
-def generate_embellishment_pair_profileset(emb1, emb2, gear, crafted_items):
-    name1 = clean_name(emb1.get("name", f'{emb1.get("id", "Unknown")}'))
-    name2 = clean_name(emb2.get("name", f'{emb2.get("id", "Unknown")}'))
-
-    gear_copy = gear.copy()
-
-    # Apply first embellishment
-    gear_copy, used_slot1 = apply_embellishment(emb1, gear_copy, crafted_items)
-    if not gear_copy:
-        return None
-
-    # Apply second embellishment, excluding the slot used by the first
-    gear_copy, used_slot2 = apply_embellishment(
-        emb2, gear_copy, crafted_items, exclude_slot=used_slot1
-    )
-    if not gear_copy or used_slot1 == used_slot2:
-        return None
-
-    # Generate profileset strings
-    profileset_name = f'"{name1}_and_{name2}"'
-    profileset1 = f"profileset.{profileset_name}={used_slot1}={gear_copy[used_slot1]}"
-    profileset2 = f"profileset.{profileset_name}+={used_slot2}={gear_copy[used_slot2]}"
-
-    # Handle unused crafted slot
-    unused_slot = get_unused_crafted_slot(gear, [used_slot1, used_slot2])
-    if unused_slot:
-        cleared_item = clear_embellishment_from_item(gear[unused_slot])
-        profileset3 = f"profileset.{profileset_name}+={unused_slot}={cleared_item}"
-        return [profileset1, profileset2, profileset3]
-
-    return [profileset1, profileset2]
+def generate_embellishment_profilesets(embellishments, gear):
+    profilesets = []
+    for i, emb1 in enumerate(embellishments):
+        for j, emb2 in enumerate(embellishments[i:], i):
+            profileset_pair = generate_embellishment_pair_profileset(emb1, emb2, gear)
+            if profileset_pair:
+                profilesets.extend(profileset_pair)
+    return profilesets
 
 
-def apply_embellishment(
-    emb, gear, crafted_items, specific_slot=None, exclude_slot=None
-):
-    if is_full_item_embellishment(emb):
-        slot = specific_slot or inventory_type_to_slot.get(
-            emb.get("inventoryType"), None
-        )
-        if not slot or slot == exclude_slot:
-            return None, None
-        bonus_ids = "/".join(map(str, emb.get("bonusLists", [])))
-        new_item = f"{emb['id']},bonus_id={bonus_ids}"
-        gear[slot] = new_item
-        return gear, slot
-    else:
-        bonus_ids = "/".join(map(str, emb.get("craftingBonusIds", [])))
-        available_slots = [s for s in crafted_items.keys() if s != exclude_slot]
-        if specific_slot and specific_slot in available_slots:
-            slot = specific_slot
-        elif "off_hand" in available_slots:
-            slot = "off_hand"
-        elif available_slots:
-            slot = available_slots[0]
+def update_item_with_embellishment(item, bonus_ids):
+    parts = item.split(",")
+    new_parts = []
+    for part in parts:
+        if part.startswith("bonus_id="):
+            existing_ids = part.split("=")[1].split("/")
+            all_ids = list(set(existing_ids + bonus_ids.split("/")))
+            new_parts.append(f"bonus_id={'/'.join(all_ids)}")
         else:
-            return None, None
+            new_parts.append(part)
 
-        item = gear[slot]
-        # Preserve the original item ID
-        original_id = re.search(r"id=(\d+)", item)
-        if original_id:
-            original_id = original_id.group(1)
-        else:
-            return None, None  # If we can't find the original ID, we can't proceed
+    if "crafted_stats=" not in item:
+        new_parts.append("crafted_stats=36/40")
+    return ",".join(new_parts)
 
-        # Add or update the bonus_id
-        if "bonus_id=" in item:
-            new_item = re.sub(r"bonus_id=[\d/]+", f"bonus_id={bonus_ids}", item)
-        else:
-            new_item = f"{item},bonus_id={bonus_ids}"
 
-        new_item = re.sub(r",crafted_stats=\d+\/\d+", "", new_item)
-        new_item += ",crafted_stats=36/40"
-        gear[slot] = new_item
-        return gear, slot
+def clear_embellishment_from_item(item):
+    parts = item.split(",")
+    new_parts = [part for part in parts if not part.startswith("bonus_id=")]
+    return ",".join(new_parts)
 
 
 def main():
@@ -371,10 +378,7 @@ def main():
 
     print("Fetching and filtering items and enchants...")
 
-    # Get the directory of the current script
     script_dir = os.path.dirname(os.path.abspath(__file__))
-
-    # Run the filter_items_enchants.py script with the full path
     filter_script_path = os.path.join(script_dir, "filter_items_enchants.py")
     subprocess.run([sys.executable, filter_script_path], check=True)
 

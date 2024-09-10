@@ -3,162 +3,164 @@ import re
 from collections import defaultdict
 import requests
 import os
+import logging
+
+logging.basicConfig(level=logging.DEBUG, format="%(message)s")
+
+
+SLOT_MAP = {
+    0: "non_equipable",
+    1: "head",
+    2: "neck",
+    3: "shoulder",
+    4: "shirt",
+    5: "chest",
+    6: "waist",
+    7: "legs",
+    8: "feet",
+    9: "wrists",
+    10: "hands",
+    11: "finger",
+    12: "trinket",
+    13: "weapon",
+    14: "shield",
+    15: "ranged",
+    16: "back",
+    17: "two_hand",
+    18: "bag",
+    19: "tabard",
+    20: "robe",
+    21: "main_hand",
+    22: "off_hand",
+    23: "holdable",
+    24: "ammo",
+    25: "thrown",
+    26: "ranged_right",
+    27: "quiver",
+    28: "relic",
+}
+
+DH_USABLE_SLOTS = {
+    "head",
+    "neck",
+    "shoulder",
+    "back",
+    "chest",
+    "wrists",
+    "hands",
+    "waist",
+    "legs",
+    "feet",
+    "finger",
+    "trinket",
+    "main_hand",
+    "off_hand",
+}
 
 
 def get_data_file_path(filename):
     script_dir = os.path.dirname(os.path.abspath(__file__))
     data_dir = os.path.join(os.path.dirname(script_dir), "data")
-    if not os.path.exists(data_dir):
-        os.makedirs(data_dir)
+    os.makedirs(data_dir, exist_ok=True)
     return os.path.join(data_dir, filename)
 
 
 def load_data_from_url(url):
     response = requests.get(url)
-    response.raise_for_status()  # This will raise an exception for HTTP errors
+    response.raise_for_status()
     return response.json()
 
 
-def load_items(file_path):
-    with open(file_path, "r") as file:
-        return json.load(file)
+def is_embellishment(item):
+    if item is None:
+        return False
+    item_limit = item.get("itemLimit", {})
+    return item_limit.get("category") == 512 and item_limit.get("quantity") == 2
 
 
-def has_agility(item):
-    if "stats" in item:
-        return any(stat["id"] == 3 for stat in item["stats"])
+def is_usable_by_demon_hunter(item):
+    DH_CLASS_ID = 12
+    if "allowableClasses" in item and DH_CLASS_ID not in item["allowableClasses"]:
+        return False
+
+    item_class = item.get("itemClass")
+    item_subclass = item.get("itemSubClass")
+    inventory_type = item.get("inventoryType")
+
+    if item_class == 4:  # Armor
+        if item_subclass == 2:  # Leather
+            return True
+        if item_subclass == 0 and inventory_type in [2, 11, 12]:  # Misc accessories
+            return inventory_type != 12 or is_valid_trinket_for_demon_hunter(item)
+    elif item_class == 2:  # Weapon
+        dh_weapon_types = [
+            0,
+            4,
+            7,
+            13,
+        ]  # One-handed axes, Fist weapons, One-handed swords, Warglaives
+        return item_subclass in dh_weapon_types and inventory_type in [
+            13,
+            21,
+            22,
+        ]  # One-Hand, Main Hand, Off Hand
     return False
 
 
 def is_valid_trinket_for_demon_hunter(item):
-    if (
-        item["itemClass"] == 4
-        and item["itemSubClass"] == 0
-        and item["inventoryType"] == 12
-    ):
-        if "stats" not in item:
-            return True  # Trinkets with no stats are allowed
-
-        has_primary_stat = False
-        has_agility = False
-        has_stamina = False
-
-        for stat in item["stats"]:
-            if stat["id"] in [3, 7]:  # Agility, Stamina
-                has_primary_stat = True
-                if stat["id"] == 3:  # Agility
-                    has_agility = True
-                elif stat["id"] == 7:  # Stamina
-                    has_stamina = True
-
-        # Allow trinkets with no primary stats, or with Agility or Stamina
-        return not has_primary_stat or has_agility or has_stamina
-
-    return True  # Not a trinket, so it passes this check
+    if "stats" not in item:
+        return True
+    has_primary_stat = False
+    for stat in item["stats"]:
+        if stat["id"] in [3, 7]:  # Agility, Stamina
+            has_primary_stat = True
+            if stat["id"] == 3:  # Agility
+                return True
+    return not has_primary_stat
 
 
 def is_pvp_item(item):
-    # Check for PvP-specific prefixes in the name
     pvp_prefixes = ["Gladiator", "Combatant", "Aspirant", "Veteran"]
-    if any(prefix in item["name"] for prefix in pvp_prefixes):
-        return True
-
-    # Check for PvP season indicator in the name
-    if re.search(r"S\d+", item["name"]):
-        return True
-
-    # Check for PvP-specific fields (this might vary depending on the data structure)
-    if "pvp" in item and item["pvp"]:
-        return True
-
-    return False
-
-
-def is_usable_by_demon_hunter(item):
-    # Demon Hunter class ID
-    DH_CLASS_ID = 12
-    # Demon Hunter spec IDs
-    DH_SPECS = [577, 581]  # Havoc and Vengeance
-
-    # Check if the item is explicitly restricted to certain classes
-    if "allowableClasses" in item and DH_CLASS_ID not in item["allowableClasses"]:
-        return False
-
-    # Check for leather armor
-    if item["itemClass"] == 4 and item["itemSubClass"] == 2:
-        return True
-
-    # Check for cloaks (back slot items)
-    if (
-        item["itemClass"] == 4
-        and item["itemSubClass"] == 1
-        and item["inventoryType"] == 16
-    ):
-        return True
-
-    # Check for jewelry and trinkets
-    if item["itemClass"] == 4 and item["itemSubClass"] == 0:
-        if item["inventoryType"] in [2, 11, 12]:  # Neck, Finger, Trinket
-            if item["inventoryType"] == 12:  # Trinket
-                return is_valid_trinket_for_demon_hunter(item)
-            # If specs are specified, check for Demon Hunter specs
-            if "specs" in item:
-                return any(spec in DH_SPECS for spec in item["specs"])
-            return True  # If no specs are specified, assume it's usable
-
-    # Check for weapons Demon Hunters can use
-    if item["itemClass"] == 2:  # Weapon
-        usable_weapon_types = [0, 4, 7, 13, 15]  # Axe, Fist, Sword, Warglaive, Dagger
-        if item["itemSubClass"] in usable_weapon_types:
-            # Exclude all two-handed weapons
-            if item["inventoryType"] not in [17, 21]:  # Two-Hand, Main Hand
-                return True
-
-    return False
+    return (
+        any(prefix in item["name"] for prefix in pvp_prefixes)
+        or re.search(r"S\d+", item["name"])
+        or item.get("pvp", False)
+    )
 
 
 def is_from_specific_dungeon(item):
-    specific_dungeon_ids = [
-        1271,  # Ara-Kara, City of Echoes
-        1274,  # City of Threads
-        1269,  # The Stonevault
-        1270,  # The Dawnbreaker
-        1184,  # Mists of Tirna Scithe
-        1182,  # The Necrotic Wake
-        1023,  # Siege of Boralus
-        71,  # Grim Batol
-    ]
-
-    if "sources" in item:
-        return any(
-            source["instanceId"] in specific_dungeon_ids for source in item["sources"]
-        )
-
-    return False
+    specific_dungeon_ids = {1271, 1274, 1269, 1270, 1184, 1182, 1023, 71}
+    return any(
+        source["instanceId"] in specific_dungeon_ids
+        for source in item.get("sources", [])
+    )
 
 
 def filter_items(items, current_expansion):
-    filtered_items = []
-    for item in items:
-        if is_usable_by_demon_hunter(item) and not is_pvp_item(item):
-            if is_from_specific_dungeon(item):
-                # Specific dungeons (current or older): rare (3) and epic (4) quality
-                if item["quality"] >= 3:
-                    filtered_items.append(item)
-            elif item["expansion"] == current_expansion:
-                # Current expansion items not from specific dungeons: only epic quality (4)
-                if item["quality"] >= 4:
-                    filtered_items.append(item)
-    return filtered_items
-
-
-def load_enchants(file_path):
-    with open(file_path, "r") as file:
-        return json.load(file)
+    return [
+        item
+        for item in items
+        if all(
+            key in item
+            for key in [
+                "itemClass",
+                "itemSubClass",
+                "inventoryType",
+                "quality",
+                "expansion",
+            ]
+        )
+        and is_usable_by_demon_hunter(item)
+        and not is_pvp_item(item)
+        and (
+            (is_from_specific_dungeon(item) and item["quality"] >= 3)
+            or (item["expansion"] == current_expansion and item["quality"] >= 4)
+        )
+    ]
 
 
 def affects_damage(enchant):
-    damage_stats = [
+    damage_stats = {
         "agi",
         "agility",
         "stragi",
@@ -170,16 +172,12 @@ def affects_damage(enchant):
         "vers",
         "damage",
         "stamina",
-    ]
+    }
+    if any(stat["type"].lower() in damage_stats for stat in enchant.get("stats", [])):
+        return True
 
-    # Check stats if present
-    if "stats" in enchant:
-        for stat in enchant["stats"]:
-            if stat["type"].lower() in damage_stats:
-                return True
-
-    # Check displayName for damage-related keywords
-    damage_keywords = [
+    display_name = enchant["displayName"].lower()
+    damage_keywords = {
         "damage",
         "agility",
         "strength",
@@ -190,14 +188,11 @@ def affects_damage(enchant):
         "crit",
         "versatility",
         "stamina",
-    ]
-    if any(
-        keyword.lower() in enchant["displayName"].lower() for keyword in damage_keywords
-    ):
+    }
+    if any(keyword in display_name for keyword in damage_keywords):
         return True
 
-    # Check for specific enchants that might not have clear stat indicators
-    special_damage_enchants = [
+    special_damage_enchants = {
         "Accelerated",
         "Deadly",
         "Quick",
@@ -209,83 +204,58 @@ def affects_damage(enchant):
         "Instinctive",
         "Illuminated",
         "Armor Kit",
-    ]
+    }
     if any(keyword in enchant["displayName"] for keyword in special_damage_enchants):
         return True
 
-    # Check categoryName for damage-related categories
-    damage_categories = [
+    damage_categories = {
         "Chest Enchantments",
         "Weapon Enchantments",
         "Ring Enchantments",
-    ]
-    if "categoryName" in enchant and enchant["categoryName"] in damage_categories:
-        return True
-
-    return False
+    }
+    return enchant.get("categoryName") in damage_categories
 
 
 def is_usable_by_demon_hunter_enchant(enchant):
-    # Exclude Runes (Death Knight specific)
-    if "categoryName" in enchant and enchant["categoryName"] == "Runes":
+    if enchant.get("categoryName") == "Runes":
         return False
 
-    # Exclude Intellect-only enchants
     if "stats" in enchant:
-        stat_types = [stat["type"].lower() for stat in enchant["stats"]]
+        stat_types = {stat["type"].lower() for stat in enchant["stats"]}
         if "int" in stat_types or "intellect" in stat_types:
-            if not any(
-                stat in stat_types
-                for stat in ["agi", "agility", "str", "strength", "stragi", "stragiint"]
-            ):
+            if not stat_types & {
+                "agi",
+                "agility",
+                "str",
+                "strength",
+                "stragi",
+                "stragiint",
+            }:
                 return False
 
-    # Check if the enchant affects damage-related stats
     if not affects_damage(enchant):
         return False
 
-    # Check if the enchant is for items demon hunters can use
     if "equipRequirements" in enchant:
         req = enchant["equipRequirements"]
-
-        # Weapon enchants
         if req["itemClass"] == 2:
-            # Check if it's for weapons demon hunters can use
             dh_weapon_mask = 0b1000000000000011110001  # Warglaives, Swords, Axes, Fist Weapons, Daggers
             if req["itemSubClassMask"] & dh_weapon_mask:
                 return True
-
-        # Armor enchants
         elif req["itemClass"] == 4:
-            # Check if it's for armor types demon hunters can use
             dh_armor_mask = 0b110  # Leather and Cloth
             if req["itemSubClassMask"] & dh_armor_mask:
                 return True
 
-    # Gems and other enchants without specific class restrictions
-    if "slot" in enchant and enchant["slot"] == "socket":
-        return True
-
-    # Default to False if no matching criteria
-    return False
-
-
-def get_base_name(enchant):
-    # Remove rank indicators and quality indicators from the name
-    name = enchant.get("baseDisplayName", enchant["displayName"])
-    return re.sub(r"(\s+\d+|\s+[IVX]+)$", "", name)
+    return enchant.get("slot") == "socket"
 
 
 def get_rank(enchant):
-    # Extract the rank number from the name or use craftingQuality
     name = enchant["displayName"]
     rank_match = re.search(r"\s+(\d+)$", name)
     if rank_match:
         return int(rank_match.group(1))
-    elif "craftingQuality" in enchant:
-        return enchant["craftingQuality"]
-    else:
-        return 1  # Default rank if no rank information is found
+    return enchant.get("craftingQuality", 1)
 
 
 def filter_enchants(enchants, current_expansion):
@@ -293,166 +263,202 @@ def filter_enchants(enchants, current_expansion):
     grouped_enchants = defaultdict(list)
 
     for enchant in enchants:
-        if enchant.get(
-            "expansion"
-        ) == current_expansion and is_usable_by_demon_hunter_enchant(enchant):
-            # Only consider enchants with craftingQuality 3 or those without craftingQuality
-            if "craftingQuality" not in enchant or enchant["craftingQuality"] == 3:
-                base_name = enchant.get("baseDisplayName", enchant["displayName"])
-                grouped_enchants[base_name].append(enchant)
+        if (
+            enchant.get("expansion") == current_expansion
+            and is_usable_by_demon_hunter_enchant(enchant)
+            and (
+                enchant.get("craftingQuality", 1) == 3
+                or "craftingQuality" not in enchant
+            )
+        ):
+            base_name = enchant.get("baseDisplayName", enchant["displayName"])
+            grouped_enchants[base_name].append(enchant)
 
-    for base_name, group in grouped_enchants.items():
-        # If there's only one enchant in the group, add it
+    for group in grouped_enchants.values():
         if len(group) == 1:
             filtered_enchants.append(group[0])
         else:
-            # If there are multiple enchants, prefer the one with craftingQuality 3
             crafted_enchants = [e for e in group if e.get("craftingQuality") == 3]
-            if crafted_enchants:
-                filtered_enchants.append(crafted_enchants[0])
-            else:
-                # If no craftingQuality 3, just take the first one (should not happen with our filtering)
-                filtered_enchants.append(group[0])
+            filtered_enchants.append(
+                crafted_enchants[0] if crafted_enchants else group[0]
+            )
 
     return filtered_enchants
 
 
 def is_relevant_consumable(item, current_expansion):
-    if item is None:
-        return False
-
-    # Check if it's a current expansion item
-    if item.get("expansion") != current_expansion:
-        return False
-
-    # Include only rank 3 consumables
-    if item.get("craftingQuality") != 3:
-        return False
-
-    return True
+    return (
+        item is not None
+        and item.get("expansion") == current_expansion
+        and item.get("craftingQuality") == 3
+    )
 
 
 def filter_consumables(data, current_expansion, data_type):
-    filtered_consumables = []
-    if data_type == "crafting":
-        items = data["reagents"]
-    else:  # potions or flasks
-        items = data
-
-    for item in items:
-        if is_relevant_consumable(item, current_expansion):
-            filtered_consumables.append(item)
-    return filtered_consumables
+    items = data["reagents"] if data_type == "crafting" else data
+    return [item for item in items if is_relevant_consumable(item, current_expansion)]
 
 
-def is_embellishment(item, current_expansion):
-    if item is None:
-        return False
+def get_eligible_slots(embellishment_id, crafting_data, items_data):
+    eligible_slots = set()
+    reagent_slots = set()
 
-    # Check for crafting embellishments
-    if (
-        item.get("craftingQuality") == 3
-        and item.get("expansion") == current_expansion
-        and item.get("craftingBonusIds")
-        and item.get("itemLimit", {}).get("quantity") == 2
-    ):
-        return True
+    slots = crafting_data.get("slots", {})
+    for slot_id, slot_data in slots.items():
+        if embellishment_id in slot_data.get("itemIds", []):
+            reagent_slots.add(int(slot_id))
 
-    # Check for item embellishments
-    if (
-        item.get("expansion") == current_expansion
-        and item.get("itemLimit", {}).get("quantity") == 2
-        and item.get("bonusLists")
-        and item.get("profession", {}).get("optionalCraftingSlots")
-    ):
-        return True
+    for item in items_data:
+        if "profession" in item and "optionalCraftingSlots" in item["profession"]:
+            optional_slots = {
+                opt_slot["id"]
+                for opt_slot in item["profession"]["optionalCraftingSlots"]
+            }
+            if reagent_slots & optional_slots:
+                inv_type = item.get("inventoryType")
+                if inv_type in SLOT_MAP and is_usable_by_demon_hunter(item):
+                    eligible_slots.add(SLOT_MAP[inv_type])
 
-    return False
+    return list(eligible_slots)
 
 
-def filter_item_embellishments(items, current_expansion):
-    return [item for item in items if is_embellishment(item, current_expansion)]
+def filter_embellishments(crafting_data, items_data, current_expansion):
+    crafted_embellishments = []
+    item_embellishments = []
+
+    # Crafting category IDs for Darkmoon Sigils
+    darkmoon_sigil_categories = {587, 588, 589, 590}
+
+    # Process craftable embellishments from crafting_data
+    for item in crafting_data.get("reagents", []):
+        if (
+            item is not None
+            and is_embellishment(item)
+            and item.get("expansion") == current_expansion
+        ):
+
+            category_id = item.get("craftingCategoryId")
+
+            if category_id in darkmoon_sigil_categories:
+                item["eligible_slots"] = ["weapon"]
+                crafted_embellishments.append(item)
+            else:
+                eligible_slots = get_eligible_slots(
+                    item["id"], crafting_data, items_data
+                )
+                if eligible_slots:
+                    item["eligible_slots"] = eligible_slots
+                    crafted_embellishments.append(item)
+
+    # Process full item embellishments from items_data
+    for item in items_data:
+        if (
+            item is not None
+            and is_embellishment(item)
+            and item.get("expansion") == current_expansion
+            and is_usable_by_demon_hunter(item)
+        ):
+            inv_type = item.get("inventoryType")
+            if inv_type in SLOT_MAP:
+                item["eligible_slots"] = [SLOT_MAP[inv_type]]
+                item_embellishments.append(item)
+
+    all_embellishments = crafted_embellishments + item_embellishments
+    filtered_embellishments = filter_highest_quality_embellishments(all_embellishments)
+
+    return (
+        filtered_embellishments,
+        len(crafted_embellishments),
+        len(item_embellishments),
+    )
 
 
-def filter_embellishments(crafting_data, current_expansion):
-    filtered_embellishments = []
-    reagents = crafting_data.get("reagents", [])
-    for item in reagents:
-        if item is not None and is_embellishment(item, current_expansion):
-            filtered_embellishments.append(item)
-    return filtered_embellishments
+def filter_highest_quality_embellishments(embellishments):
+    highest_quality = {}
+    for emb in embellishments:
+        if "Darkmoon Sigil" in emb["name"]:
+            # Use the full name for Darkmoon Sigils
+            key = emb["name"]
+        else:
+            # For other embellishments, use the base name
+            key = emb["name"].split(":")[0] if ":" in emb["name"] else emb["name"]
+
+        quality = emb.get("craftingQuality", 1)
+
+        if (
+            key not in highest_quality
+            or quality > highest_quality[key]["craftingQuality"]
+        ):
+            highest_quality[key] = emb
+
+    return list(highest_quality.values())
 
 
 def main():
-    items_url = "https://www.raidbots.com/static/data/live/equippable-items.json"
-    enchants_url = "https://www.raidbots.com/static/data/live/enchantments.json"
-    crafting_url = "https://www.raidbots.com/static/data/live/crafting.json"
-    potions_url = "https://www.raidbots.com/static/data/live/potions.json"
-    flasks_url = "https://www.raidbots.com/static/data/live/flasks.json"
+    urls = {
+        "items": "https://www.raidbots.com/static/data/live/equippable-items.json?cb=123456789",
+        "enchants": "https://www.raidbots.com/static/data/live/enchantments.json?cb=123456789",
+        "crafting": "https://www.raidbots.com/static/data/live/crafting.json?cb=123456789",
+        "potions": "https://www.raidbots.com/static/data/live/potions.json?cb=123456789",
+        "flasks": "https://www.raidbots.com/static/data/live/flasks.json?cb=123456789",
+    }
     current_expansion = 10  # The War Within
 
-    print("Fetching items data...")
-    all_items = load_data_from_url(items_url)
-    print("Fetching enchants data...")
-    all_enchants = load_data_from_url(enchants_url)
-    print("Fetching crafting data...")
-    all_crafting = load_data_from_url(crafting_url)
-    print("Fetching potions data...")
-    all_potions = load_data_from_url(potions_url)
-    print("Fetching flasks data...")
-    all_flasks = load_data_from_url(flasks_url)
+    print("Fetching data...")
+    data = {key: load_data_from_url(url) for key, url in urls.items()}
 
     print("Filtering items...")
-    filtered_items = filter_items(all_items, current_expansion)
-
-    print(f"Total items: {len(all_items)}")
+    filtered_items = filter_items(data["items"], current_expansion)
+    print(f"Total items: {len(data['items'])}")
     print(f"Filtered items for Demon Hunters: {len(filtered_items)}")
 
-    # Save filtered items
-    with open(get_data_file_path("filtered_items.json"), "w") as file:
-        json.dump(filtered_items, file, indent=2)
-
     print("Filtering enchants...")
-    filtered_enchants = filter_enchants(all_enchants, current_expansion)
-
-    print(f"\nTotal enchants: {len(all_enchants)}")
+    filtered_enchants = filter_enchants(data["enchants"], current_expansion)
+    print(f"Total enchants: {len(data['enchants'])}")
     print(f"Filtered enchants for Demon Hunters: {len(filtered_enchants)}")
 
-    # Save filtered enchants
-    with open(get_data_file_path("filtered_enchants.json"), "w") as file:
-        json.dump(filtered_enchants, file, indent=2)
-
     print("Filtering consumables...")
-    filtered_potions = filter_consumables(all_potions, current_expansion, "potions")
-    filtered_flasks = filter_consumables(all_flasks, current_expansion, "flasks")
-
+    filtered_potions = filter_consumables(data["potions"], current_expansion, "potions")
+    filtered_flasks = filter_consumables(data["flasks"], current_expansion, "flasks")
     all_filtered_consumables = filtered_potions + filtered_flasks
 
     print("Filtering embellishments...")
-    crafting_embellishments = filter_embellishments(all_crafting, current_expansion)
-    item_embellishments = filter_item_embellishments(all_items, current_expansion)
+    filtered_embellishments, crafted_count, item_count = filter_embellishments(
+        data["crafting"], data["items"], current_expansion
+    )
 
-    # Combine both lists of embellishments
-    all_embellishments = crafting_embellishments + item_embellishments
+    # Separate Darkmoon Sigils and other embellishments
+    darkmoon_sigils = [
+        emb for emb in filtered_embellishments if "Darkmoon Sigil" in emb["name"]
+    ]
+    other_embellishments = [
+        emb for emb in filtered_embellishments if "Darkmoon Sigil" not in emb["name"]
+    ]
 
-    # Remove duplicates based on item ID
-    unique_embellishments = {emb["id"]: emb for emb in all_embellishments}.values()
-    filtered_embellishments = list(unique_embellishments)
+    # Log concise summary of embellishments
+    print(f"Embellishment Summary:")
+    print(f"  Total Unique Embellishments: {len(filtered_embellishments)}")
+    print(f"    - Darkmoon Sigils: {len(darkmoon_sigils)}")
+    print(f"    - Other Embellishments: {len(other_embellishments)}")
+    print(f"  Breakdown by Source:")
+    print(f"    - Crafted Embellishments: {crafted_count}")
+    print(f"    - Item Embellishments: {item_count}")
 
-    # Save filtered embellishments
-    with open(get_data_file_path("filtered_embellishments.json"), "w") as file:
-        json.dump(filtered_embellishments, file, indent=2)
-
-    # Save filtered consumables
-    with open(get_data_file_path("filtered_consumables.json"), "w") as file:
-        json.dump(all_filtered_consumables, file, indent=2)
+    # Save filtered data
+    for name, filtered_data in [
+        ("items", filtered_items),
+        ("enchants", filtered_enchants),
+        ("embellishments", filtered_embellishments),
+        ("consumables", all_filtered_consumables),
+    ]:
+        with open(get_data_file_path(f"filtered_{name}.json"), "w") as file:
+            json.dump(filtered_data, file, indent=2)
 
     print("Filtering complete. Results saved in the /data folder.")
-    print(f"\nTotal crafting categories: {len(all_crafting)}")
-    print(f"Filtered potions: {len(all_potions)}")
-    print(f"Filtered flasks: {len(all_flasks)}")
+    print(f"Total crafting categories: {len(data['crafting'].get('reagents', []))}")
+    print(f"Filtered potions: {len(filtered_potions)}")
+    print(f"Filtered flasks: {len(filtered_flasks)}")
     print(f"Filtered consumables: {len(all_filtered_consumables)}")
-    print(f"Filtered embellishments: {len(filtered_embellishments)}")
 
 
 if __name__ == "__main__":
