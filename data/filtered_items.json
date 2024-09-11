@@ -23,48 +23,13 @@
       {
         "instanceId": 71,
         "encounterId": 2617
-      }
-    ],
-    "onUseTrinket": true,
-    "expansion": 3
-  },
-  {
-    "id": 56441,
-    "name": "Modgud's Blade",
-    "icon": "inv_knife_1h_cataclysm_c_01",
-    "quality": 3,
-    "itemClass": 2,
-    "itemSubClass": 15,
-    "inventoryType": 13,
-    "itemLevel": 37,
-    "stats": [
-      {
-        "id": 5,
-        "alloc": 5259
       },
-      {
-        "id": 7,
-        "alloc": 7889
-      },
-      {
-        "id": 32,
-        "alloc": 3711
-      },
-      {
-        "id": 36,
-        "alloc": 3161
-      },
-      {
-        "id": 5,
-        "alloc": 25370
-      }
-    ],
-    "sources": [
       {
         "instanceId": 71,
         "encounterId": 2617
       }
     ],
+    "onUseTrinket": true,
     "expansion": 3
   },
   {
@@ -109,6 +74,10 @@
       {
         "instanceId": 71,
         "encounterId": 2617
+      },
+      {
+        "instanceId": 71,
+        "encounterId": 2617
       }
     ],
     "expansion": 3
@@ -142,6 +111,10 @@
       }
     ],
     "sources": [
+      {
+        "instanceId": 71,
+        "encounterId": 2617
+      },
       {
         "instanceId": 71,
         "encounterId": 2617
@@ -181,6 +154,10 @@
       {
         "instanceId": 71,
         "encounterId": 2627
+      },
+      {
+        "instanceId": 71,
+        "encounterId": 2627
       }
     ],
     "expansion": 3
@@ -216,76 +193,10 @@
       {
         "instanceId": 71,
         "encounterId": 2627
-      }
-    ],
-    "expansion": 3
-  },
-  {
-    "id": 56450,
-    "name": "Azureborne Cloak",
-    "icon": "inv_misc_cape_naxxramas_01",
-    "quality": 3,
-    "itemClass": 4,
-    "itemSubClass": 1,
-    "inventoryType": 16,
-    "itemLevel": 37,
-    "stats": [
-      {
-        "id": 5,
-        "alloc": 5259
       },
-      {
-        "id": 7,
-        "alloc": 7889
-      },
-      {
-        "id": 40,
-        "alloc": 3761
-      },
-      {
-        "id": 32,
-        "alloc": 3076
-      }
-    ],
-    "sources": [
       {
         "instanceId": 71,
-        "encounterId": 2618
-      }
-    ],
-    "expansion": 3
-  },
-  {
-    "id": 56454,
-    "name": "Windwalker Blade",
-    "icon": "inv_knife_1h_cataclysm_c_05",
-    "quality": 3,
-    "itemClass": 2,
-    "itemSubClass": 15,
-    "inventoryType": 13,
-    "itemLevel": 37,
-    "stats": [
-      {
-        "id": 3,
-        "alloc": 5259
-      },
-      {
-        "id": 7,
-        "alloc": 7889
-      },
-      {
-        "id": 32,
-        "alloc": 3506
-      },
-      {
-        "id": 36,
-        "alloc": 3506
-      }
-    ],
-    "sources": [
-      {
-        "instanceId": 71,
-        "encounterId": 2618
+        "encounterId": 2627
       }
     ],
     "expansion": 3
@@ -332,6 +243,10 @@
       {
         "instanceId": 71,
         "encounterId": 2619
+      },
+      {
+        "instanceId": 71,
+        "encounterId": 2619
       }
     ],
     "expansion": 3
@@ -365,6 +280,10 @@
       }
     ],
     "sources": [
+      {
+        "instanceId": 71,
+        "encounterId": 2619
+      },
       {
         "instanceId": 71,
         "encounterId": 2619
@@ -432,6 +351,10 @@
       {
         "instanceId": 71,
         "encounterId": 2619
+      },
+      {
+        "instanceId": 71,
+        "encounterId": 2619
       }
     ],
     "expansion": 3
@@ -480,6 +403,10 @@
       {
         "instanceId": 71,
         "encounterId": 2619
+      },
+      {
+        "instanceId": 71,
+        "encounterId": 2619
       }
     ],
     "expansion": 3
@@ -508,6 +435,10 @@
       1468
     ],
     "sources": [
+      {
+        "instanceId": 71,
+        "encounterId": 2619
+      },
       {
         "instanceId": 71,
         "encounterId": 2619
@@ -555,49 +486,6 @@
       }
     ],
     "onUseTrinket": true,
-    "expansion": 3
-  },
-  {
-    "id": 133283,
-    "name": "Modgud's Blade",
-    "icon": "inv_knife_1h_cataclysm_c_01",
-    "quality": 3,
-    "itemClass": 2,
-    "itemSubClass": 15,
-    "inventoryType": 13,
-    "itemLevel": 37,
-    "stats": [
-      {
-        "id": 5,
-        "alloc": 5259
-      },
-      {
-        "id": 7,
-        "alloc": 7889
-      },
-      {
-        "id": 32,
-        "alloc": 3839
-      },
-      {
-        "id": 36,
-        "alloc": 3161
-      },
-      {
-        "id": 5,
-        "alloc": 25370
-      }
-    ],
-    "sources": [
-      {
-        "instanceId": 71,
-        "encounterId": 2617
-      },
-      {
-        "instanceId": -1,
-        "encounterId": 71
-      }
-    ],
     "expansion": 3
   },
   {
@@ -738,84 +626,6 @@
       {
         "instanceId": 71,
         "encounterId": 2627
-      },
-      {
-        "instanceId": -1,
-        "encounterId": 71
-      }
-    ],
-    "expansion": 3
-  },
-  {
-    "id": 133292,
-    "name": "Azureborne Cloak",
-    "icon": "inv_misc_cape_naxxramas_01",
-    "quality": 3,
-    "itemClass": 4,
-    "itemSubClass": 1,
-    "inventoryType": 16,
-    "itemLevel": 37,
-    "stats": [
-      {
-        "id": 71,
-        "alloc": 5259
-      },
-      {
-        "id": 7,
-        "alloc": 7889
-      },
-      {
-        "id": 40,
-        "alloc": 3924
-      },
-      {
-        "id": 32,
-        "alloc": 3076
-      }
-    ],
-    "sources": [
-      {
-        "instanceId": 71,
-        "encounterId": 2618
-      },
-      {
-        "instanceId": -1,
-        "encounterId": 71
-      }
-    ],
-    "expansion": 3
-  },
-  {
-    "id": 133296,
-    "name": "Windwalker Blade",
-    "icon": "inv_knife_1h_cataclysm_c_05",
-    "quality": 3,
-    "itemClass": 2,
-    "itemSubClass": 15,
-    "inventoryType": 13,
-    "itemLevel": 37,
-    "stats": [
-      {
-        "id": 3,
-        "alloc": 5259
-      },
-      {
-        "id": 7,
-        "alloc": 7889
-      },
-      {
-        "id": 32,
-        "alloc": 3494
-      },
-      {
-        "id": 36,
-        "alloc": 3506
-      }
-    ],
-    "sources": [
-      {
-        "instanceId": 71,
-        "encounterId": 2618
       },
       {
         "instanceId": -1,
@@ -1013,7 +823,7 @@
     "sources": [
       {
         "instanceId": 71,
-        "encounterId": 2627
+        "encounterId": 2619
       },
       {
         "instanceId": -1,
@@ -1055,84 +865,6 @@
     "expansion": 3
   },
   {
-    "id": 133309,
-    "name": "Shroud of Dark Memories",
-    "icon": "inv_misc_cape_cataclysm_tank_c_01",
-    "quality": 3,
-    "itemClass": 4,
-    "itemSubClass": 1,
-    "inventoryType": 16,
-    "itemLevel": 37,
-    "stats": [
-      {
-        "id": 71,
-        "alloc": 5259
-      },
-      {
-        "id": 7,
-        "alloc": 7889
-      },
-      {
-        "id": 40,
-        "alloc": 4336
-      },
-      {
-        "id": 32,
-        "alloc": 2664
-      }
-    ],
-    "sources": [
-      {
-        "instanceId": 71,
-        "encounterId": 2619
-      },
-      {
-        "instanceId": -1,
-        "encounterId": 71
-      }
-    ],
-    "expansion": 3
-  },
-  {
-    "id": 133353,
-    "name": "Troggbone Cinch",
-    "icon": "inv_belt_103",
-    "quality": 3,
-    "itemClass": 4,
-    "itemSubClass": 2,
-    "inventoryType": 6,
-    "itemLevel": 37,
-    "stats": [
-      {
-        "id": 73,
-        "alloc": 5259
-      },
-      {
-        "id": 7,
-        "alloc": 7889
-      },
-      {
-        "id": 32,
-        "alloc": 3924
-      },
-      {
-        "id": 36,
-        "alloc": 3076
-      }
-    ],
-    "sources": [
-      {
-        "instanceId": 71,
-        "encounterId": 2627
-      },
-      {
-        "instanceId": -1,
-        "encounterId": 71
-      }
-    ],
-    "expansion": 3
-  },
-  {
     "id": 133354,
     "name": "Glimmerthread Pantaloons",
     "icon": "inv_pants_leather_dungeonleather_c_05",
@@ -1162,46 +894,7 @@
     "sources": [
       {
         "instanceId": 71,
-        "encounterId": 2618
-      },
-      {
-        "instanceId": -1,
-        "encounterId": 71
-      }
-    ],
-    "expansion": 3
-  },
-  {
-    "id": 133363,
-    "name": "Troggstitched Drape",
-    "icon": "inv_misc_cape_cataclysm_caster_b_01",
-    "quality": 3,
-    "itemClass": 4,
-    "itemSubClass": 1,
-    "inventoryType": 16,
-    "itemLevel": 37,
-    "stats": [
-      {
-        "id": 71,
-        "alloc": 5259
-      },
-      {
-        "id": 7,
-        "alloc": 7889
-      },
-      {
-        "id": 32,
-        "alloc": 3506
-      },
-      {
-        "id": 49,
-        "alloc": 3494
-      }
-    ],
-    "sources": [
-      {
-        "instanceId": 71,
-        "encounterId": 2618
+        "encounterId": 2617
       },
       {
         "instanceId": -1,
@@ -1241,41 +934,10 @@
       {
         "instanceId": 71,
         "encounterId": 2617
-      }
-    ],
-    "expansion": 3
-  },
-  {
-    "id": 157597,
-    "name": "Troggstitched Drape",
-    "icon": "inv_misc_cape_cataclysm_caster_b_01",
-    "quality": 3,
-    "itemClass": 4,
-    "itemSubClass": 1,
-    "inventoryType": 16,
-    "itemLevel": 37,
-    "stats": [
-      {
-        "id": 71,
-        "alloc": 5259
       },
-      {
-        "id": 7,
-        "alloc": 7889
-      },
-      {
-        "id": 32,
-        "alloc": 3506
-      },
-      {
-        "id": 49,
-        "alloc": 3494
-      }
-    ],
-    "sources": [
       {
         "instanceId": 71,
-        "encounterId": 2627
+        "encounterId": 2617
       }
     ],
     "expansion": 3
@@ -1315,6 +977,10 @@
       {
         "instanceId": 71,
         "encounterId": 2627
+      },
+      {
+        "instanceId": -1,
+        "encounterId": 71
       }
     ],
     "expansion": 3
@@ -1350,6 +1016,10 @@
       {
         "instanceId": 71,
         "encounterId": 2618
+      },
+      {
+        "instanceId": -1,
+        "encounterId": 71
       }
     ],
     "expansion": 3
@@ -1416,6 +1086,10 @@
       {
         "instanceId": 1023,
         "encounterId": 2140
+      },
+      {
+        "instanceId": 1023,
+        "encounterId": 2140
       }
     ],
     "expansion": 7
@@ -1440,6 +1114,10 @@
       }
     ],
     "sources": [
+      {
+        "instanceId": 1023,
+        "encounterId": 2140
+      },
       {
         "instanceId": 1023,
         "encounterId": 2140
@@ -1556,10 +1234,6 @@
       {
         "instanceId": 1023,
         "encounterId": 2133
-      },
-      {
-        "instanceId": -1,
-        "encounterId": 1023
       }
     ],
     "expansion": 7
@@ -1715,10 +1389,6 @@
       {
         "instanceId": 1023,
         "encounterId": 2133
-      },
-      {
-        "instanceId": -1,
-        "encounterId": 1023
       }
     ],
     "expansion": 7
@@ -1801,10 +1471,6 @@
       {
         "instanceId": -1,
         "encounterId": 1023
-      },
-      {
-        "instanceId": -1,
-        "encounterId": 1023
       }
     ],
     "expansion": 7
@@ -1844,10 +1510,6 @@
       {
         "instanceId": 1023,
         "encounterId": 2654
-      },
-      {
-        "instanceId": -1,
-        "encounterId": 1023
       },
       {
         "instanceId": -1,
@@ -1892,10 +1554,6 @@
       {
         "instanceId": -1,
         "encounterId": 1023
-      },
-      {
-        "instanceId": -1,
-        "encounterId": 1023
       }
     ],
     "expansion": 7
@@ -1928,10 +1586,6 @@
       {
         "instanceId": 1023,
         "encounterId": 2133
-      },
-      {
-        "instanceId": -1,
-        "encounterId": 1023
       }
     ],
     "expansion": 7
@@ -2228,50 +1882,6 @@
       {
         "instanceId": 1184,
         "encounterId": 2400
-      },
-      {
-        "instanceId": -1,
-        "encounterId": 1184
-      }
-    ],
-    "expansion": 8
-  },
-  {
-    "id": 178710,
-    "name": "Tanglewood Thorn",
-    "icon": "inv_knife_1h_oribosdungeon_c_01",
-    "quality": 3,
-    "itemClass": 2,
-    "itemSubClass": 15,
-    "inventoryType": 13,
-    "itemLevel": 158,
-    "contextLevels": {
-      "25": 134,
-      "26": 139,
-      "27": 144
-    },
-    "stats": [
-      {
-        "id": 3,
-        "alloc": 5259
-      },
-      {
-        "id": 7,
-        "alloc": 7889
-      },
-      {
-        "id": 36,
-        "alloc": 4400
-      },
-      {
-        "id": 40,
-        "alloc": 2600
-      }
-    ],
-    "sources": [
-      {
-        "instanceId": 1184,
-        "encounterId": 2402
       },
       {
         "instanceId": -1,
@@ -2612,50 +2222,6 @@
     "expansion": 8
   },
   {
-    "id": 178743,
-    "name": "Stitchflesh's Scalpel",
-    "icon": "inv_knife_1h_oribosdungeon_c_01",
-    "quality": 3,
-    "itemClass": 2,
-    "itemSubClass": 15,
-    "inventoryType": 13,
-    "itemLevel": 158,
-    "contextLevels": {
-      "25": 134,
-      "26": 139,
-      "27": 144
-    },
-    "stats": [
-      {
-        "id": 3,
-        "alloc": 5259
-      },
-      {
-        "id": 7,
-        "alloc": 7889
-      },
-      {
-        "id": 49,
-        "alloc": 4250
-      },
-      {
-        "id": 32,
-        "alloc": 2750
-      }
-    ],
-    "sources": [
-      {
-        "instanceId": 1182,
-        "encounterId": 2392
-      },
-      {
-        "instanceId": -1,
-        "encounterId": 1182
-      }
-    ],
-    "expansion": 8
-  },
-  {
     "id": 178744,
     "name": "Freshly Embalmed Jerkin",
     "icon": "inv_chest_leather_oribosdungeon_c_01",
@@ -2980,38 +2546,6 @@
     "expansion": 10
   },
   {
-    "id": 212060,
-    "name": "Drape of the Hypogeal Nemesis",
-    "icon": "inv_leather_raiddemonhunternerubian_d_01_cape",
-    "quality": 4,
-    "itemClass": 4,
-    "itemSubClass": 1,
-    "inventoryType": 16,
-    "itemLevel": 571,
-    "allowableClasses": [
-      12
-    ],
-    "stats": [
-      {
-        "id": 71,
-        "alloc": 5259
-      },
-      {
-        "id": 7,
-        "alloc": 7889
-      },
-      {
-        "id": 40,
-        "alloc": 4930
-      },
-      {
-        "id": 32,
-        "alloc": 2070
-      }
-    ],
-    "expansion": 10
-  },
-  {
     "id": 212061,
     "name": "Armguards of the Hypogeal Nemesis",
     "icon": "inv_leather_raiddemonhunternerubian_d_01_bracer",
@@ -3303,80 +2837,6 @@
       {
         "instanceId": 1273,
         "encounterId": 2599
-      }
-    ],
-    "expansion": 10
-  },
-  {
-    "id": 212394,
-    "name": "Sovereign's Disdain",
-    "icon": "inv_knife_1h_nerubianraid_d_02",
-    "quality": 4,
-    "itemClass": 2,
-    "itemSubClass": 15,
-    "inventoryType": 13,
-    "itemLevel": 571,
-    "stats": [
-      {
-        "id": 5,
-        "alloc": 5259
-      },
-      {
-        "id": 7,
-        "alloc": 7889
-      },
-      {
-        "id": 36,
-        "alloc": 4873
-      },
-      {
-        "id": 32,
-        "alloc": 2127
-      },
-      {
-        "id": 5,
-        "alloc": 25370
-      }
-    ],
-    "sources": [
-      {
-        "instanceId": 1273,
-        "encounterId": 2602
-      }
-    ],
-    "expansion": 10
-  },
-  {
-    "id": 212395,
-    "name": "Blood-Kissed Kukri",
-    "icon": "inv_knife_1h_nerubianraid_d_02",
-    "quality": 4,
-    "itemClass": 2,
-    "itemSubClass": 15,
-    "inventoryType": 13,
-    "itemLevel": 571,
-    "stats": [
-      {
-        "id": 3,
-        "alloc": 5259
-      },
-      {
-        "id": 7,
-        "alloc": 7889
-      },
-      {
-        "id": 32,
-        "alloc": 4999
-      },
-      {
-        "id": 40,
-        "alloc": 2001
-      }
-    ],
-    "sources": [
-      {
-        "instanceId": 1273,
-        "encounterId": 2611
       }
     ],
     "expansion": 10
@@ -3965,41 +3425,6 @@
     "expansion": 10
   },
   {
-    "id": 212446,
-    "name": "Royal Emblem of Nerub-ar",
-    "icon": "inv_cape_special_nerubian_d_02",
-    "quality": 4,
-    "itemClass": 4,
-    "itemSubClass": 1,
-    "inventoryType": 16,
-    "itemLevel": 571,
-    "stats": [
-      {
-        "id": 71,
-        "alloc": 5259
-      },
-      {
-        "id": 7,
-        "alloc": 7889
-      },
-      {
-        "id": 49,
-        "alloc": 4800
-      },
-      {
-        "id": 32,
-        "alloc": 2200
-      }
-    ],
-    "sources": [
-      {
-        "instanceId": 1273,
-        "encounterId": 2607
-      }
-    ],
-    "expansion": 10
-  },
-  {
     "id": 212447,
     "name": "Key to the Unseeming",
     "icon": "inv_nerubian_ring_02_color5",
@@ -4407,122 +3832,6 @@
     "expansion": 10
   },
   {
-    "id": 213423,
-    "name": "Bygone Weapon Charm",
-    "icon": "inv_archaeology_70_highborne_inertleystonecharm",
-    "quality": 4,
-    "itemClass": 4,
-    "itemSubClass": 0,
-    "inventoryType": 12,
-    "itemLevel": 1,
-    "stats": [
-      {
-        "id": 38,
-        "alloc": 200
-      },
-      {
-        "id": 41,
-        "alloc": 200
-      },
-      {
-        "id": 7,
-        "alloc": 400
-      },
-      {
-        "id": 36,
-        "alloc": 50
-      }
-    ],
-    "expansion": 10
-  },
-  {
-    "id": 213533,
-    "name": "Ancient Weapon Charm",
-    "icon": "inv_archaeology_70_highborne_inertleystonecharm",
-    "quality": 5,
-    "itemClass": 4,
-    "itemSubClass": 0,
-    "inventoryType": 12,
-    "itemLevel": 1,
-    "stats": [
-      {
-        "id": 38,
-        "alloc": 400
-      },
-      {
-        "id": 41,
-        "alloc": 400
-      },
-      {
-        "id": 7,
-        "alloc": 800
-      },
-      {
-        "id": 36,
-        "alloc": 100
-      }
-    ],
-    "expansion": 10
-  },
-  {
-    "id": 213534,
-    "name": "Bygone Armor Charm",
-    "icon": "inv_jewelry_ring_13",
-    "quality": 4,
-    "itemClass": 4,
-    "itemSubClass": 0,
-    "inventoryType": 12,
-    "itemLevel": 1,
-    "stats": [
-      {
-        "id": 38,
-        "alloc": 200
-      },
-      {
-        "id": 41,
-        "alloc": 200
-      },
-      {
-        "id": 7,
-        "alloc": 400
-      },
-      {
-        "id": 36,
-        "alloc": 50
-      }
-    ],
-    "expansion": 10
-  },
-  {
-    "id": 213535,
-    "name": "Ancient Armor Charm",
-    "icon": "inv_jewelry_ring_13",
-    "quality": 5,
-    "itemClass": 4,
-    "itemSubClass": 0,
-    "inventoryType": 12,
-    "itemLevel": 1,
-    "stats": [
-      {
-        "id": 38,
-        "alloc": 400
-      },
-      {
-        "id": 41,
-        "alloc": 400
-      },
-      {
-        "id": 7,
-        "alloc": 800
-      },
-      {
-        "id": 36,
-        "alloc": 100
-      }
-    ],
-    "expansion": 10
-  },
-  {
     "id": 215133,
     "name": "Binding of Binding",
     "icon": "inv_11_0_jewelcrafting_ring_color1",
@@ -4606,7 +3915,10 @@
         }
       ]
     },
-    "expansion": 10
+    "expansion": 10,
+    "eligible_slots": [
+      "finger"
+    ]
   },
   {
     "id": 215134,
@@ -4691,7 +4003,10 @@
         }
       ]
     },
-    "expansion": 10
+    "expansion": 10,
+    "eligible_slots": [
+      "neck"
+    ]
   },
   {
     "id": 215135,
@@ -4861,108 +4176,6 @@
         }
       ]
     },
-    "expansion": 10
-  },
-  {
-    "id": 217857,
-    "name": "Charged Mace",
-    "icon": "spell_misc_emotionsad",
-    "quality": 4,
-    "itemClass": 2,
-    "itemSubClass": 15,
-    "inventoryType": 13,
-    "itemLevel": 593,
-    "stats": [
-      {
-        "id": 3,
-        "alloc": 5259
-      },
-      {
-        "id": 7,
-        "alloc": 7889
-      },
-      {
-        "id": 24,
-        "alloc": 3500
-      },
-      {
-        "id": 25,
-        "alloc": 3500
-      }
-    ],
-    "bonusLists": [
-      10421,
-      9633,
-      8902
-    ],
-    "expansion": 10
-  },
-  {
-    "id": 217858,
-    "name": "Charged Shiv",
-    "icon": "spell_misc_emotionsad",
-    "quality": 4,
-    "itemClass": 2,
-    "itemSubClass": 15,
-    "inventoryType": 13,
-    "itemLevel": 593,
-    "stats": [
-      {
-        "id": 72,
-        "alloc": 5259
-      },
-      {
-        "id": 7,
-        "alloc": 7889
-      },
-      {
-        "id": 24,
-        "alloc": 3500
-      },
-      {
-        "id": 25,
-        "alloc": 3500
-      }
-    ],
-    "bonusLists": [
-      10421,
-      9633,
-      8902
-    ],
-    "expansion": 10
-  },
-  {
-    "id": 217861,
-    "name": "Charged Glaive",
-    "icon": "spell_misc_emotionsad",
-    "quality": 4,
-    "itemClass": 2,
-    "itemSubClass": 15,
-    "inventoryType": 13,
-    "itemLevel": 593,
-    "stats": [
-      {
-        "id": 3,
-        "alloc": 5259
-      },
-      {
-        "id": 7,
-        "alloc": 7889
-      },
-      {
-        "id": 24,
-        "alloc": 3500
-      },
-      {
-        "id": 25,
-        "alloc": 3500
-      }
-    ],
-    "bonusLists": [
-      10421,
-      9633,
-      8902
-    ],
     "expansion": 10
   },
   {
@@ -5198,35 +4411,6 @@
     "expansion": 10
   },
   {
-    "id": 219183,
-    "name": "Amice of Hidden Stars",
-    "icon": "inv_plate_outdoorarathor_d_01_cape",
-    "quality": 4,
-    "itemClass": 4,
-    "itemSubClass": 1,
-    "inventoryType": 16,
-    "itemLevel": 350,
-    "stats": [
-      {
-        "id": 71,
-        "alloc": 5259
-      },
-      {
-        "id": 7,
-        "alloc": 7889
-      },
-      {
-        "id": 40,
-        "alloc": 4400
-      },
-      {
-        "id": 36,
-        "alloc": 2600
-      }
-    ],
-    "expansion": 10
-  },
-  {
     "id": 219184,
     "name": "Enkindled Locket",
     "icon": "inv_11_0_arathor_necklace_01_color1",
@@ -5247,64 +4431,6 @@
       {
         "id": 49,
         "alloc": 7250
-      }
-    ],
-    "expansion": 10
-  },
-  {
-    "id": 219185,
-    "name": "Serape of the Stygian Sea",
-    "icon": "inv_mail_outdoorarathor_d_01_cape",
-    "quality": 4,
-    "itemClass": 4,
-    "itemSubClass": 1,
-    "inventoryType": 16,
-    "itemLevel": 350,
-    "stats": [
-      {
-        "id": 71,
-        "alloc": 5259
-      },
-      {
-        "id": 7,
-        "alloc": 7889
-      },
-      {
-        "id": 49,
-        "alloc": 4400
-      },
-      {
-        "id": 40,
-        "alloc": 2600
-      }
-    ],
-    "expansion": 10
-  },
-  {
-    "id": 219186,
-    "name": "Myconic Wrap",
-    "icon": "inv_leather_outdoorarathor_d_01_cape",
-    "quality": 4,
-    "itemClass": 4,
-    "itemSubClass": 1,
-    "inventoryType": 16,
-    "itemLevel": 350,
-    "stats": [
-      {
-        "id": 71,
-        "alloc": 5259
-      },
-      {
-        "id": 7,
-        "alloc": 7889
-      },
-      {
-        "id": 32,
-        "alloc": 4400
-      },
-      {
-        "id": 49,
-        "alloc": 2600
       }
     ],
     "expansion": 10
@@ -5388,35 +4514,6 @@
     "expansion": 10
   },
   {
-    "id": 219190,
-    "name": "Unkindled Waxweave Mozzetta",
-    "icon": "inv_cloth_outdoorarathor_d_01_cape",
-    "quality": 4,
-    "itemClass": 4,
-    "itemSubClass": 1,
-    "inventoryType": 16,
-    "itemLevel": 350,
-    "stats": [
-      {
-        "id": 71,
-        "alloc": 5259
-      },
-      {
-        "id": 7,
-        "alloc": 7889
-      },
-      {
-        "id": 36,
-        "alloc": 4400
-      },
-      {
-        "id": 32,
-        "alloc": 2600
-      }
-    ],
-    "expansion": 10
-  },
-  {
     "id": 219207,
     "name": "Flame-Bearing Crozier",
     "icon": "inv_mace_1h_arathoroutdoor_d_02",
@@ -5473,35 +4570,6 @@
       },
       {
         "id": 40,
-        "alloc": 2600
-      }
-    ],
-    "expansion": 10
-  },
-  {
-    "id": 219209,
-    "name": "Worshipper's Poniard",
-    "icon": "inv_knife_1h_arathoroutdoor_d_01",
-    "quality": 4,
-    "itemClass": 2,
-    "itemSubClass": 15,
-    "inventoryType": 13,
-    "itemLevel": 350,
-    "stats": [
-      {
-        "id": 3,
-        "alloc": 5259
-      },
-      {
-        "id": 7,
-        "alloc": 7889
-      },
-      {
-        "id": 32,
-        "alloc": 4400
-      },
-      {
-        "id": 49,
         "alloc": 2600
       }
     ],
@@ -6907,31 +5975,6 @@
     "expansion": 10
   },
   {
-    "id": 219382,
-    "name": "Fateweaved Needle",
-    "icon": "inv_knife_1h_nerubianraid_d_02",
-    "quality": 4,
-    "itemClass": 2,
-    "itemSubClass": 15,
-    "inventoryType": 13,
-    "itemLevel": 350,
-    "stats": [
-      {
-        "id": 5,
-        "alloc": 5259
-      },
-      {
-        "id": 7,
-        "alloc": 7889
-      },
-      {
-        "id": 5,
-        "alloc": 25370
-      }
-    ],
-    "expansion": 10
-  },
-  {
     "id": 219489,
     "name": "Waders of the Unifying Flame",
     "icon": "inv_leather_outdoorarathor_d_01_boot",
@@ -7015,7 +6058,10 @@
         }
       ]
     },
-    "expansion": 10
+    "expansion": 10,
+    "eligible_slots": [
+      "feet"
+    ]
   },
   {
     "id": 219502,
@@ -7101,7 +6147,10 @@
         }
       ]
     },
-    "expansion": 10
+    "expansion": 10,
+    "eligible_slots": [
+      "waist"
+    ]
   },
   {
     "id": 219511,
@@ -7188,7 +6237,10 @@
         }
       ]
     },
-    "expansion": 10
+    "expansion": 10,
+    "eligible_slots": [
+      "wrists"
+    ]
   },
   {
     "id": 219512,
@@ -7270,7 +6322,10 @@
         }
       ]
     },
-    "expansion": 10
+    "expansion": 10,
+    "eligible_slots": [
+      "chest"
+    ]
   },
   {
     "id": 219513,
@@ -7352,7 +6407,10 @@
         }
       ]
     },
-    "expansion": 10
+    "expansion": 10,
+    "eligible_slots": [
+      "hands"
+    ]
   },
   {
     "id": 219672,
@@ -7535,13 +6593,20 @@
       62,
       63,
       64,
+      65,
       102,
+      105,
+      256,
+      257,
       258,
       262,
+      264,
       265,
       266,
       267,
+      270,
       1467,
+      1468,
       1473
     ],
     "stats": [
@@ -7817,49 +6882,6 @@
     "expansion": 10
   },
   {
-    "id": 221088,
-    "name": "Anvilhide Cape",
-    "icon": "inv_cape_plate_earthendungeon_c_01",
-    "quality": 3,
-    "itemClass": 4,
-    "itemSubClass": 1,
-    "inventoryType": 16,
-    "itemLevel": 437,
-    "stats": [
-      {
-        "id": 71,
-        "alloc": 5259
-      },
-      {
-        "id": 7,
-        "alloc": 7889
-      },
-      {
-        "id": 49,
-        "alloc": 4400
-      },
-      {
-        "id": 36,
-        "alloc": 2600
-      }
-    ],
-    "sources": [
-      {
-        "instanceId": 1269,
-        "encounterId": 2590
-      },
-      {
-        "instanceId": -1,
-        "encounterId": 1269
-      },
-      {
-        "instanceId": -32,
-        "encounterId": 1269
-      }
-    ],
-    "expansion": 10
-  },
-  {
     "id": 221090,
     "name": "Eirich's Fist of Deception",
     "icon": "inv_hand_1h_earthendungeon_c_01",
@@ -8059,49 +7081,6 @@
       {
         "instanceId": 1270,
         "encounterId": 2580
-      },
-      {
-        "instanceId": -1,
-        "encounterId": 1270
-      },
-      {
-        "instanceId": -32,
-        "encounterId": 1270
-      }
-    ],
-    "expansion": 10
-  },
-  {
-    "id": 221138,
-    "name": "Parson's Ornamented Blade",
-    "icon": "inv_knife_1h_earthendungeon_c_02",
-    "quality": 3,
-    "itemClass": 2,
-    "itemSubClass": 15,
-    "inventoryType": 13,
-    "itemLevel": 437,
-    "stats": [
-      {
-        "id": 3,
-        "alloc": 5259
-      },
-      {
-        "id": 7,
-        "alloc": 7889
-      },
-      {
-        "id": 32,
-        "alloc": 4250
-      },
-      {
-        "id": 40,
-        "alloc": 2750
-      }
-    ],
-    "sources": [
-      {
-        "instanceId": 1270,
-        "encounterId": 2581
       },
       {
         "instanceId": -1,
@@ -8417,49 +7396,6 @@
     "expansion": 10
   },
   {
-    "id": 221154,
-    "name": "Swarmcaller's Shroud",
-    "icon": "inv_cape_mail_earthendungeon_c_01",
-    "quality": 3,
-    "itemClass": 4,
-    "itemSubClass": 1,
-    "inventoryType": 16,
-    "itemLevel": 437,
-    "stats": [
-      {
-        "id": 71,
-        "alloc": 5259
-      },
-      {
-        "id": 7,
-        "alloc": 7889
-      },
-      {
-        "id": 40,
-        "alloc": 4400
-      },
-      {
-        "id": 32,
-        "alloc": 2600
-      }
-    ],
-    "sources": [
-      {
-        "instanceId": 1271,
-        "encounterId": 2584
-      },
-      {
-        "instanceId": -1,
-        "encounterId": 1271
-      },
-      {
-        "instanceId": -32,
-        "encounterId": 1271
-      }
-    ],
-    "expansion": 10
-  },
-  {
     "id": 221157,
     "name": "Unbreakable Beetlebane Bindings",
     "icon": "inv_leather_earthendungeon_c_01_bracer",
@@ -8546,53 +7482,6 @@
     "expansion": 10
   },
   {
-    "id": 221165,
-    "name": "Unceremonious Bloodletter",
-    "icon": "inv_knife_1h_earthendungeon_c_01",
-    "quality": 3,
-    "itemClass": 2,
-    "itemSubClass": 15,
-    "inventoryType": 13,
-    "itemLevel": 437,
-    "stats": [
-      {
-        "id": 5,
-        "alloc": 5259
-      },
-      {
-        "id": 7,
-        "alloc": 7889
-      },
-      {
-        "id": 36,
-        "alloc": 4400
-      },
-      {
-        "id": 32,
-        "alloc": 2600
-      },
-      {
-        "id": 5,
-        "alloc": 25370
-      }
-    ],
-    "sources": [
-      {
-        "instanceId": 1271,
-        "encounterId": 2585
-      },
-      {
-        "instanceId": -1,
-        "encounterId": 1271
-      },
-      {
-        "instanceId": -32,
-        "encounterId": 1271
-      }
-    ],
-    "expansion": 10
-  },
-  {
     "id": 221169,
     "name": "Whisperer's Echoing Steps",
     "icon": "inv_leather_earthendungeon_c_01_boot",
@@ -8623,53 +7512,6 @@
       {
         "instanceId": 1274,
         "encounterId": 2594
-      },
-      {
-        "instanceId": -1,
-        "encounterId": 1274
-      },
-      {
-        "instanceId": -32,
-        "encounterId": 1274
-      }
-    ],
-    "expansion": 10
-  },
-  {
-    "id": 221171,
-    "name": "Kingslayer's Frostfang",
-    "icon": "inv_knife_1h_earthendungeon_c_01",
-    "quality": 3,
-    "itemClass": 2,
-    "itemSubClass": 15,
-    "inventoryType": 13,
-    "itemLevel": 437,
-    "stats": [
-      {
-        "id": 5,
-        "alloc": 5259
-      },
-      {
-        "id": 7,
-        "alloc": 7889
-      },
-      {
-        "id": 49,
-        "alloc": 4100
-      },
-      {
-        "id": 40,
-        "alloc": 2900
-      },
-      {
-        "id": 5,
-        "alloc": 25370
-      }
-    ],
-    "sources": [
-      {
-        "instanceId": 1274,
-        "encounterId": 2595
       },
       {
         "instanceId": -1,
@@ -8808,49 +7650,6 @@
     "expansion": 10
   },
   {
-    "id": 221183,
-    "name": "Splice 'n Dice",
-    "icon": "inv_knife_1h_earthendungeon_c_01",
-    "quality": 3,
-    "itemClass": 2,
-    "itemSubClass": 15,
-    "inventoryType": 13,
-    "itemLevel": 437,
-    "stats": [
-      {
-        "id": 3,
-        "alloc": 5259
-      },
-      {
-        "id": 7,
-        "alloc": 7889
-      },
-      {
-        "id": 36,
-        "alloc": 4550
-      },
-      {
-        "id": 32,
-        "alloc": 2450
-      }
-    ],
-    "sources": [
-      {
-        "instanceId": 1274,
-        "encounterId": 2596
-      },
-      {
-        "instanceId": -1,
-        "encounterId": 1274
-      },
-      {
-        "instanceId": -32,
-        "encounterId": 1274
-      }
-    ],
-    "expansion": 10
-  },
-  {
     "id": 221188,
     "name": "Viscera-Lathered Coat",
     "icon": "inv_leather_earthendungeon_c_01_chest",
@@ -8930,142 +7729,6 @@
         "instanceId": -32,
         "encounterId": 1274
       }
-    ],
-    "expansion": 10
-  },
-  {
-    "id": 221575,
-    "name": "Adaptive Delver's Shawl",
-    "icon": "inv_cloth_dragonpvp_d_01_cape",
-    "quality": 4,
-    "itemClass": 4,
-    "itemSubClass": 1,
-    "inventoryType": 16,
-    "itemLevel": 382,
-    "stats": [
-      {
-        "id": 71,
-        "alloc": 5259
-      },
-      {
-        "id": 7,
-        "alloc": 7889
-      },
-      {
-        "id": 24,
-        "alloc": 3500
-      },
-      {
-        "id": 25,
-        "alloc": 3500
-      }
-    ],
-    "bonusLists": [
-      8840,
-      8836,
-      8902
-    ],
-    "expansion": 10
-  },
-  {
-    "id": 221579,
-    "name": "Consecrated Cloak",
-    "icon": "inv_cloth_dragonpvp_d_01_cape",
-    "quality": 4,
-    "itemClass": 4,
-    "itemSubClass": 1,
-    "inventoryType": 16,
-    "itemLevel": 382,
-    "stats": [
-      {
-        "id": 71,
-        "alloc": 5259
-      },
-      {
-        "id": 7,
-        "alloc": 7889
-      },
-      {
-        "id": 24,
-        "alloc": 3500
-      },
-      {
-        "id": 25,
-        "alloc": 3500
-      }
-    ],
-    "bonusLists": [
-      8840,
-      8836,
-      8902
-    ],
-    "expansion": 10
-  },
-  {
-    "id": 221663,
-    "name": "Adaptive Delver's Shawl",
-    "icon": "inv_cloth_dragonpvp_d_01_cape",
-    "quality": 4,
-    "itemClass": 4,
-    "itemSubClass": 1,
-    "inventoryType": 16,
-    "itemLevel": 593,
-    "stats": [
-      {
-        "id": 71,
-        "alloc": 5259
-      },
-      {
-        "id": 7,
-        "alloc": 7889
-      },
-      {
-        "id": 24,
-        "alloc": 3500
-      },
-      {
-        "id": 25,
-        "alloc": 3500
-      }
-    ],
-    "bonusLists": [
-      10421,
-      9633,
-      8902
-    ],
-    "expansion": 10
-  },
-  {
-    "id": 221667,
-    "name": "Consecrated Cloak",
-    "icon": "inv_cloth_dragonpvp_d_01_cape",
-    "quality": 4,
-    "itemClass": 4,
-    "itemSubClass": 1,
-    "inventoryType": 16,
-    "itemLevel": 593,
-    "stats": [
-      {
-        "id": 71,
-        "alloc": 5259
-      },
-      {
-        "id": 7,
-        "alloc": 7889
-      },
-      {
-        "id": 24,
-        "alloc": 3500
-      },
-      {
-        "id": 25,
-        "alloc": 3500
-      }
-    ],
-    "bonusLists": [
-      10421,
-      9633,
-      8902
     ],
     "expansion": 10
   },
@@ -9274,192 +7937,6 @@
           "id": 363,
           "count": 1,
           "recraftCount": 0
-        }
-      ]
-    },
-    "expansion": 10
-  },
-  {
-    "id": 222438,
-    "name": "Everforged Stabber",
-    "icon": "inv_knife_1h_arathoroutdoor_d_01",
-    "quality": 4,
-    "itemClass": 2,
-    "itemSubClass": 15,
-    "inventoryType": 13,
-    "itemLevel": 593,
-    "stats": [
-      {
-        "id": 3,
-        "alloc": 5259
-      },
-      {
-        "id": 7,
-        "alloc": 7889
-      },
-      {
-        "id": 24,
-        "alloc": 3500
-      },
-      {
-        "id": 25,
-        "alloc": 3500
-      }
-    ],
-    "bonusLists": [
-      10421,
-      9633,
-      8902
-    ],
-    "sources": [
-      {
-        "instanceId": -66,
-        "encounterId": -33
-      }
-    ],
-    "profession": {
-      "id": 164,
-      "recipeSpellId": 450229,
-      "optionalCraftingSlots": [
-        {
-          "id": 299,
-          "count": 1,
-          "recraftCount": 0
-        },
-        {
-          "id": 317,
-          "count": 1,
-          "recraftCount": 1
-        },
-        {
-          "id": 283,
-          "count": 1,
-          "recraftCount": 1
-        },
-        {
-          "id": 256,
-          "count": 1,
-          "recraftCount": 1
-        },
-        {
-          "id": 284,
-          "count": 1,
-          "recraftCount": 1
-        },
-        {
-          "id": 340,
-          "count": 1,
-          "recraftCount": 1
-        },
-        {
-          "id": 346,
-          "count": 1,
-          "recraftCount": 1
-        },
-        {
-          "id": 315,
-          "count": 8,
-          "recraftCount": 4
-        },
-        {
-          "id": 316,
-          "count": 6,
-          "recraftCount": 3
-        }
-      ]
-    },
-    "expansion": 10
-  },
-  {
-    "id": 222439,
-    "name": "Everforged Dagger",
-    "icon": "inv_knife_1h_arathoroutdoor_d_01",
-    "quality": 4,
-    "itemClass": 2,
-    "itemSubClass": 15,
-    "inventoryType": 13,
-    "itemLevel": 593,
-    "stats": [
-      {
-        "id": 5,
-        "alloc": 5259
-      },
-      {
-        "id": 7,
-        "alloc": 7889
-      },
-      {
-        "id": 24,
-        "alloc": 3500
-      },
-      {
-        "id": 25,
-        "alloc": 3500
-      },
-      {
-        "id": 5,
-        "alloc": 25370
-      }
-    ],
-    "bonusLists": [
-      10421,
-      9633,
-      8902
-    ],
-    "sources": [
-      {
-        "instanceId": -66,
-        "encounterId": -33
-      }
-    ],
-    "profession": {
-      "id": 164,
-      "recipeSpellId": 450230,
-      "optionalCraftingSlots": [
-        {
-          "id": 299,
-          "count": 1,
-          "recraftCount": 0
-        },
-        {
-          "id": 317,
-          "count": 1,
-          "recraftCount": 1
-        },
-        {
-          "id": 283,
-          "count": 1,
-          "recraftCount": 1
-        },
-        {
-          "id": 256,
-          "count": 1,
-          "recraftCount": 1
-        },
-        {
-          "id": 284,
-          "count": 1,
-          "recraftCount": 1
-        },
-        {
-          "id": 340,
-          "count": 1,
-          "recraftCount": 1
-        },
-        {
-          "id": 346,
-          "count": 1,
-          "recraftCount": 1
-        },
-        {
-          "id": 315,
-          "count": 6,
-          "recraftCount": 3
-        },
-        {
-          "id": 316,
-          "count": 8,
-          "recraftCount": 4
         }
       ]
     },
@@ -10020,88 +8497,6 @@
     "expansion": 10
   },
   {
-    "id": 222463,
-    "name": "Siphoning Stiletto",
-    "icon": "inv_knife_1h_arathoroutdoor_d_01",
-    "quality": 4,
-    "itemClass": 2,
-    "itemSubClass": 15,
-    "inventoryType": 13,
-    "itemLevel": 593,
-    "itemLimit": {
-      "category": 512,
-      "quantity": 2
-    },
-    "specs": [
-      103,
-      104,
-      259,
-      260,
-      1453
-    ],
-    "stats": [
-      {
-        "id": 3,
-        "alloc": 5259
-      },
-      {
-        "id": 7,
-        "alloc": 7889
-      },
-      {
-        "id": 32,
-        "alloc": 3500
-      },
-      {
-        "id": 49,
-        "alloc": 3500
-      }
-    ],
-    "bonusLists": [
-      10421,
-      9633,
-      8902
-    ],
-    "sources": [
-      {
-        "instanceId": -66,
-        "encounterId": -33
-      }
-    ],
-    "profession": {
-      "id": 164,
-      "recipeSpellId": 450250,
-      "optionalCraftingSlots": [
-        {
-          "id": 256,
-          "count": 1,
-          "recraftCount": 1
-        },
-        {
-          "id": 315,
-          "count": 8,
-          "recraftCount": 4
-        },
-        {
-          "id": 317,
-          "count": 1,
-          "recraftCount": 1
-        },
-        {
-          "id": 284,
-          "count": 1,
-          "recraftCount": 1
-        },
-        {
-          "id": 346,
-          "count": 1,
-          "recraftCount": 1
-        }
-      ]
-    },
-    "expansion": 10
-  },
-  {
     "id": 222653,
     "name": "Darkmoon Deck: Symbiosis",
     "icon": "inv_10_inscription_darkmooncards_spore_blank",
@@ -10151,128 +8546,6 @@
       {
         "id": 71,
         "alloc": 6666
-      }
-    ],
-    "expansion": 10
-  },
-  {
-    "id": 222817,
-    "name": "Consecrated Cloak",
-    "icon": "inv_cloth_outdoorarathor_d_01_cape",
-    "quality": 4,
-    "itemClass": 4,
-    "itemSubClass": 1,
-    "inventoryType": 16,
-    "itemLevel": 593,
-    "stats": [
-      {
-        "id": 71,
-        "alloc": 5259
-      },
-      {
-        "id": 7,
-        "alloc": 7889
-      },
-      {
-        "id": 24,
-        "alloc": 3500
-      },
-      {
-        "id": 25,
-        "alloc": 3500
-      }
-    ],
-    "bonusLists": [
-      10421,
-      9633,
-      8902
-    ],
-    "sources": [
-      {
-        "instanceId": -66,
-        "encounterId": -39
-      }
-    ],
-    "profession": {
-      "id": 197,
-      "recipeSpellId": 446940,
-      "optionalCraftingSlots": [
-        {
-          "id": 357,
-          "count": 10,
-          "recraftCount": 5
-        },
-        {
-          "id": 302,
-          "count": 2,
-          "recraftCount": 1
-        },
-        {
-          "id": 377,
-          "count": 1,
-          "recraftCount": 1
-        },
-        {
-          "id": 256,
-          "count": 1,
-          "recraftCount": 1
-        },
-        {
-          "id": 312,
-          "count": 1,
-          "recraftCount": 1
-        },
-        {
-          "id": 283,
-          "count": 1,
-          "recraftCount": 1
-        },
-        {
-          "id": 284,
-          "count": 1,
-          "recraftCount": 1
-        },
-        {
-          "id": 346,
-          "count": 1,
-          "recraftCount": 1
-        }
-      ]
-    },
-    "expansion": 10
-  },
-  {
-    "id": 225574,
-    "name": "Wings of Shattered Sorrow",
-    "icon": "inv_leather_raiddemonhunternerubian_d_01_cape",
-    "quality": 4,
-    "itemClass": 4,
-    "itemSubClass": 1,
-    "inventoryType": 16,
-    "itemLevel": 571,
-    "stats": [
-      {
-        "id": 71,
-        "alloc": 5259
-      },
-      {
-        "id": 7,
-        "alloc": 7889
-      },
-      {
-        "id": 32,
-        "alloc": 5000
-      },
-      {
-        "id": 36,
-        "alloc": 2000
-      }
-    ],
-    "sources": [
-      {
-        "instanceId": 1273,
-        "encounterId": 2609,
-        "veryRare": true
       }
     ],
     "expansion": 10
@@ -10511,41 +8784,6 @@
     "expansion": 10
   },
   {
-    "id": 225636,
-    "name": "Regicide",
-    "icon": "inv_knife_1h_nerubianraid_d_01",
-    "quality": 4,
-    "itemClass": 2,
-    "itemSubClass": 15,
-    "inventoryType": 13,
-    "itemLevel": 571,
-    "stats": [
-      {
-        "id": 3,
-        "alloc": 5259
-      },
-      {
-        "id": 7,
-        "alloc": 7889
-      },
-      {
-        "id": 36,
-        "alloc": 4722
-      },
-      {
-        "id": 49,
-        "alloc": 2278
-      }
-    ],
-    "sources": [
-      {
-        "instanceId": 1273,
-        "encounterId": 2601
-      }
-    ],
-    "expansion": 10
-  },
-  {
     "id": 225722,
     "name": "Adorned Lynxborne Pauldrons",
     "icon": "inv_shoulder_leather_raiddruidnerubian_d_01",
@@ -10570,6 +8808,12 @@
       {
         "id": 32,
         "alloc": 2300
+      }
+    ],
+    "sources": [
+      {
+        "instanceId": 1273,
+        "encounterId": -67
       }
     ],
     "expansion": 10
@@ -10601,6 +8845,12 @@
         "alloc": 2350
       }
     ],
+    "sources": [
+      {
+        "instanceId": 1273,
+        "encounterId": -67
+      }
+    ],
     "expansion": 10
   },
   {
@@ -10625,6 +8875,12 @@
       {
         "id": 49,
         "alloc": 4750
+      }
+    ],
+    "sources": [
+      {
+        "instanceId": 1273,
+        "encounterId": -67
       }
     ],
     "expansion": 10
@@ -10852,18 +9108,6 @@
     "expansion": 10
   },
   {
-    "id": 226218,
-    "name": "Machine-Warden's Cloak",
-    "icon": "inv_armor_earthenisle_c_01_cape",
-    "quality": 4,
-    "itemClass": 4,
-    "itemSubClass": 1,
-    "inventoryType": 16,
-    "itemLevel": 1,
-    "cosmetic": true,
-    "expansion": 10
-  },
-  {
     "id": 226695,
     "name": "Cunning Advisor's Favor",
     "icon": "inv_11_0_nerubian_necklace_02_color5",
@@ -10914,15 +9158,81 @@
     "expansion": 10
   },
   {
-    "id": 229000,
-    "name": "Machine-Warden's Cog",
-    "icon": "inv_cape_armor_earthencivilian_d_02_dark",
-    "quality": 4,
+    "id": 231822,
+    "name": "Cephalohide Jacket",
+    "icon": "inv_chest_leather_kultirasdungeon_c_01",
+    "quality": 3,
     "itemClass": 4,
-    "itemSubClass": 1,
-    "inventoryType": 16,
-    "itemLevel": 1,
-    "cosmetic": true,
+    "itemSubClass": 2,
+    "inventoryType": 5,
+    "itemLevel": 437,
+    "stats": [
+      {
+        "id": 73,
+        "alloc": 5259
+      },
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 32,
+        "alloc": 4100
+      },
+      {
+        "id": 36,
+        "alloc": 2900
+      }
+    ],
+    "sources": [
+      {
+        "instanceId": 1023,
+        "encounterId": 2140
+      },
+      {
+        "instanceId": -1,
+        "encounterId": 1023
+      }
+    ],
+    "expansion": 10
+  },
+  {
+    "id": 231824,
+    "name": "Circlet of the Enveloping Leviathan",
+    "icon": "inv_helm_leather_kultirasdungeon_c_01",
+    "quality": 3,
+    "itemClass": 4,
+    "itemSubClass": 2,
+    "inventoryType": 1,
+    "itemLevel": 437,
+    "stats": [
+      {
+        "id": 73,
+        "alloc": 5259
+      },
+      {
+        "id": 7,
+        "alloc": 7889
+      },
+      {
+        "id": 40,
+        "alloc": 4400
+      },
+      {
+        "id": 49,
+        "alloc": 2600
+      }
+    ],
+    "sources": [
+      {
+        "instanceId": 1023,
+        "encounterId": 2140
+      },
+      {
+        "instanceId": -1,
+        "encounterId": 1023
+      }
+    ],
     "expansion": 10
   }
 ]
