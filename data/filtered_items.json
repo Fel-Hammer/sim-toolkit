@@ -35,7 +35,7 @@
   {
     "id": 56442,
     "name": "Cursed Skardyn Vest",
-    "icon": "inv_chest_cloth_15",
+    "icon": "inv_chest_leather_31",
     "quality": 3,
     "itemClass": 4,
     "itemSubClass": 2,
@@ -966,7 +966,7 @@
       },
       {
         "id": 36,
-        "alloc": 3506
+        "alloc": 3494
       },
       {
         "id": 5,
@@ -1009,7 +1009,7 @@
       },
       {
         "id": 49,
-        "alloc": 3506
+        "alloc": 3494
       }
     ],
     "sources": [
