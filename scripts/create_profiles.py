@@ -143,11 +143,10 @@ def generate_consumable_profilesets(consumables: List[Dict[str, Any]]) -> List[s
     profilesets = []
     for consumable in consumables:
         name = clean_name(consumable["name"])
-        item_id = consumable["itemId"]
         if "potion" in consumable["value"]:
-            profileset = f'profileset."{name}"=potion={item_id}'
+            profileset = f'profileset."{name}"=potion={name}'
         elif "flask" in consumable["value"]:
-            profileset = f'profileset."{name}"=flask={item_id}'
+            profileset = f'profileset."{name}"=flask={name}'
         else:
             continue  # Skip other types of consumables
 
