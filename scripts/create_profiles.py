@@ -45,7 +45,14 @@ def generate_trinket_profilesets(trinkets: List[Dict[str, Any]]) -> List[str]:
             name = clean_name(trinket["name"])
             gear_name = name.lower()
             item_id = trinket["id"]
-            item_levels = [593, 606, 619, 626, 639]
+            quality = trinket.get(
+                "quality", 0
+            )  # Default to 0 if quality is not present
+
+            if quality == 2:
+                item_levels = [593, 606, 619]  # Maximum item level is 619 for quality 2
+            else:
+                item_levels = [593, 606, 619, 626, 639]
 
             # Darkmoon Decks only have one ilevel
             if "Darkmoon Deck" in trinket["name"]:

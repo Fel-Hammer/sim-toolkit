@@ -1,16 +1,16 @@
 # Soul fragment thresholds with Fiery Demise active
 $(st_spbomb_thresh_fd)=5
 $(st_spburst_thresh_fd)=5
-$(small_aoe_spbomb_thresh_fd)=4
-$(small_aoe_spburst_thresh_fd)=4
+$(small_aoe_spbomb_thresh_fd)=5
+$(small_aoe_spburst_thresh_fd)=5
 $(big_aoe_spbomb_thresh_fd)=4
 $(big_aoe_spburst_thresh_fd)=4
 
 # Soul fragment thresholds without Fiery Demise active
 $(st_spbomb_thresh)=5
 $(st_spburst_thresh)=5
-$(small_aoe_spbomb_thresh)=4
-$(small_aoe_spburst_thresh)=4
+$(small_aoe_spbomb_thresh)=5
+$(small_aoe_spburst_thresh)=5
 $(big_aoe_spbomb_thresh)=4
 $(big_aoe_spburst_thresh)=4
 
@@ -105,7 +105,7 @@ actions.fel_dev_prep+=/fiery_brand,if=talent.fiery_demise&$(enough_fury_to_fel_d
 actions.fel_dev_prep+=/fel_devastation,if=$(enough_fury_to_fel_dev)&$(enough_souls_to_fel_dev)
 actions.fel_dev_prep+=/sigil_of_spite,if=(!talent.cycle_of_binding|cooldown.metamorphosis.remains>20)&(soul_fragments.total<=1|(!$(enough_souls_to_fel_dev)&action.fracture.charges_fractional<1))
 actions.fel_dev_prep+=/soul_carver,if=(!talent.cycle_of_binding|cooldown.metamorphosis.remains>20)&(soul_fragments.total<=1|(!$(enough_souls_to_fel_dev)&action.fracture.charges_fractional<1))&!prev_gcd.1.sigil_of_spite&!prev_gcd.2.sigil_of_spite
-actions.fel_dev_prep+=/felblade,if=!$(enough_fury_to_fel_dev)
+actions.fel_dev_prep+=/felblade,if=!$(enough_fury_to_fel_dev)&$(enough_souls_to_fel_dev)
 actions.fel_dev_prep+=/fracture,if=!$(enough_souls_to_fel_dev)|!$(enough_fury_to_fel_dev)
 actions.fel_dev_prep+=/felblade
 actions.fel_dev_prep+=/fracture
@@ -156,28 +156,32 @@ actions.metamorphosis+=/felblade,if=((cooldown.sigil_of_spite.remains<execute_ti
 actions.metamorphosis+=/soul_carver,if=(!talent.spirit_bomb|(variable.single_target&!buff.demonsurge_spirit_burst.up))|(((soul_fragments.total+3)<=6)&fury>=40&!prev_gcd.1.sigil_of_spite)
 # Use Sigil of Spite if we are able to Spirit Burst now or soon, so that we can double burst one after the other (use one SpB while the souls from Sigil of Spite are still spawning)
 actions.metamorphosis+=/sigil_of_spite,if=!talent.spirit_bomb|(fury>=80&(variable.can_spburst|variable.can_spburst_soon|soul_fragments.total<=(2-talent.soul_sigils.rank)))|(soul_fragments.total<=2&buff.demonsurge_fel_desolation.up&fury>=50)
-# High priority Spirit Burst to consume demonsurge and to avoid overcapping souls when FD is up
-actions.metamorphosis+=/spirit_burst,if=variable.can_spburst&(buff.demonsurge_spirit_burst.up|$(fd_active)&soul_fragments>=4)
+# High priority Spirit Burst to consume demonsurge and when FD is up and when in
+actions.metamorphosis+=/spirit_burst,if=variable.can_spburst&buff.demonsurge_spirit_burst.up
 # Sigil of Spite if we're empty on soul fragments
 actions.metamorphosis+=/sigil_of_spite,if=soul_fragments.total<=(2-talent.soul_sigils.rank)
 # Fel Desolation if we didn't find a better time to use it
 actions.metamorphosis+=/fel_desolation
 # The Hunt as a relatively low priority
 actions.metamorphosis+=/the_hunt
-# Fracture if we need to consume spirit burst but don't have enough souls
-actions.metamorphosis+=/fracture,if=talent.spirit_bomb&buff.demonsurge_spirit_burst.up&!(variable.can_spburst|variable.can_spburst_soon)
-# Soul Sunder a little earlier if its demonsurge is active
-actions.metamorphosis+=/soul_sunder,if=buff.demonsurge_soul_sunder.up|(variable.single_target&!variable.dont_soul_cleave)
+# Soul Sunder earlier if its demonsurge is active, but not if we still need to consume Spirit Burst's demonsurge
+actions.metamorphosis+=/soul_sunder,if=buff.demonsurge_soul_sunder.up&!buff.demonsurge_spirit_burst.up&!variable.can_spburst_one_gcd
+# Mid-priority Spirit Burst at good soul counts, while FD is active, or if we're in a big AOE
+actions.metamorphosis+=/spirit_burst,if=variable.can_spburst&($(fd_active)|variable.big_aoe)&buff.metamorphosis.remains>(gcd.max*2)
+# Felblade if we need fury to spirit burst
+actions.metamorphosis+=/felblade,if=fury<40&(variable.can_spburst|variable.can_spburst_soon)&(buff.demonsurge_spirit_burst.up|$(fd_active)|variable.big_aoe)
+# Fracture if we need fury to spirit burst and felblade isn't available
+actions.metamorphosis+=/fracture,if=fury<40&(variable.can_spburst|variable.can_spburst_soon|variable.can_spburst_one_gcd)&(buff.demonsurge_spirit_burst.up|$(fd_active)|variable.big_aoe)
+# Fracture if we need to consume a spirit burst demonsurge still or if we want to prioritize building to a Spirit Burst
+actions.metamorphosis+=/fracture,if=variable.can_spburst_one_gcd&(buff.demonsurge_spirit_burst.up|variable.big_aoe)&!prev_gcd.1.fracture
+# In Single Target, we want to use Soul Sunder at higher priority than Spirit Burst
+actions.metamorphosis+=/soul_sunder,if=variable.single_target&!variable.dont_soul_cleave
 # Lower priority Spirit Burst at good soul counts
 actions.metamorphosis+=/spirit_burst,if=variable.can_spburst&buff.metamorphosis.remains>(gcd.max*2)
-# Felblade if we need fury to spirit burst
-actions.metamorphosis+=/felblade,if=fury<40&(variable.can_spburst|variable.can_spburst_soon)
-# In big AOE during meta only, we want to spirit burst above 4 souls
-actions.metamorphosis+=/fracture,if=variable.big_aoe&talent.spirit_bomb&(soul_fragments>=2&soul_fragments<=3)
-actions.metamorphosis+=/felblade,if=fury<30
-actions.metamorphosis+=/soul_sunder,if=!variable.dont_soul_cleave
+actions.metamorphosis+=/felblade,if=fury.deficit>=40
+actions.metamorphosis+=/soul_sunder,if=!variable.dont_soul_cleave&!(variable.big_aoe&(variable.can_spburst|variable.can_spburst_soon))
 actions.metamorphosis+=/felblade
-actions.metamorphosis+=/fracture
+actions.metamorphosis+=/fracture,if=!prev_gcd.1.fracture
 
 actions.fs_execute=metamorphosis,use_off_gcd=1
 actions.fs_execute+=/the_hunt
@@ -192,16 +196,22 @@ actions.fs+=/the_hunt
 actions.fs+=/felblade,if=((cooldown.sigil_of_spite.remains<execute_time|cooldown.soul_carver.remains<execute_time)&cooldown.fel_devastation.remains<(execute_time+gcd.max)&fury<50)
 actions.fs+=/soul_carver,if=(!talent.fiery_demise|$(fd_active))&((!talent.spirit_bomb|variable.single_target)|(talent.spirit_bomb&!prev_gcd.1.sigil_of_spite&((soul_fragments.total+3<=5&fury>=40)|(soul_fragments.total=0&fury>=15))))
 actions.fs+=/sigil_of_spite,if=(!talent.spirit_bomb|variable.single_target)|cooldown.fel_devastation.remains>$(fel_dev_prep_time)&((fury>=75&talent.spirit_bomb&(variable.can_spbomb|variable.can_spbomb_soon|(buff.metamorphosis.up&(variable.can_spburst|variable.can_spburst_soon))))|soul_fragments<=1)
+# If Fiery Demise is active, we want to use Spirit Burst and Spirit Bomb at all target counts, unless we need to make sure to store fury and souls for an upcoming Fel Devastation
+actions.fs+=/spirit_burst,if=variable.can_spburst&$(fd_active)&!(cooldown.fel_devastation.remains<$(fel_dev_prep_time))
+actions.fs+=/spirit_bomb,if=variable.can_spbomb&$(fd_active)&!(cooldown.fel_devastation.remains<$(fel_dev_prep_time))
+# In Single Target, when Fiery Demise is down, we want to use Soul Cleave and Soul Sunder primarily
 actions.fs+=/soul_sunder,if=variable.single_target&!variable.dont_soul_cleave
 actions.fs+=/soul_cleave,if=variable.single_target&!variable.dont_soul_cleave
-actions.fs+=/spirit_burst,if=variable.can_spburst&!cooldown.fel_devastation.remains<$(fel_dev_prep_time)
-actions.fs+=/spirit_bomb,if=variable.can_spbomb&!cooldown.fel_devastation.remains<$(fel_dev_prep_time)
-actions.fs+=/soul_sunder,if=fury.deficit<25&!variable.dont_soul_cleave
-actions.fs+=/soul_cleave,if=fury.deficit<25&!variable.dont_soul_cleave
-actions.fs+=/felblade,if=(fury<40&$(can_bomb_or_burst_now_or_soon))|fury<30
-actions.fs+=/fracture,if=!prev_gcd.1.fracture&talent.spirit_bomb&((fury<40&$(can_bomb_or_burst_now_or_soon))|(buff.metamorphosis.up&variable.can_spburst_one_gcd)|(!buff.metamorphosis.up&variable.can_spbomb_one_gcd))
+# In all other situations, we want to use Spirit Burst and Spirit Bomb
+actions.fs+=/spirit_burst,if=variable.can_spburst&!(cooldown.fel_devastation.remains<$(fel_dev_prep_time))
+actions.fs+=/spirit_bomb,if=variable.can_spbomb&!(cooldown.fel_devastation.remains<$(fel_dev_prep_time))
+# Felblade if we need fury to Spirit Bomb or Spirit Burst
+actions.fs+=/felblade,if=((fury<40&$(can_bomb_or_burst_now_or_soon)))
+# Fracture if we need fury or souls to Spirit Bomb or Spirit Burst
+actions.fs+=/fracture,if=((fury<40&$(can_bomb_or_burst_now_or_soon))|(buff.metamorphosis.up&variable.can_spburst_one_gcd)|(!buff.metamorphosis.up&variable.can_spbomb_one_gcd))
+# Fillers
+actions.fs+=/felblade,if=fury.deficit>=40
 actions.fs+=/soul_sunder,if=!variable.dont_soul_cleave
 actions.fs+=/soul_cleave,if=!variable.dont_soul_cleave
-actions.fs+=/felblade,if=fury.deficit>=40
 actions.fs+=/fracture
 actions.fs+=/throw_glaive

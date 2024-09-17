@@ -11,7 +11,7 @@ legs=,id=212064,enchant_id=7601,ilevel=639
 feet=,id=212445,bonus_id=1540/10299
 finger1=,id=225578,enchant_id=7340,gem_id=213485/213485,ilevel=639
 finger2=,id=212447,enchant_id=7352,gem_id=213485/213485,ilevel=639
-trinket1=,id=219314,ilevel=639
+trinket1=,id=212456,ilevel=639
 trinket2=,id=178742,ilevel=639
 main_hand=,id=219877,enchant_id=7460,ilevel=639
 off_hand=,id=222441,bonus_id=10421/9633/8902/11144/10222/1485/11301/8960,enchant_id=7460,crafted_stats=36/40

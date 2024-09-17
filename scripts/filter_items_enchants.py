@@ -90,8 +90,11 @@ def is_usable_by_demon_hunter(item):
     if item_class == 4:  # Armor
         if item_subclass == 2:  # Leather
             return True
-        if item_subclass == 0 and inventory_type in [2, 11, 12]:  # Misc accessories
-            return inventory_type != 12 or is_valid_trinket_for_demon_hunter(item)
+        if item_subclass == 0:  # Misc accessories
+            if inventory_type in [2, 11]:  # Neck, Finger
+                return True
+            if inventory_type == 12:  # Trinket
+                return is_valid_trinket_for_demon_hunter(item)
     elif item_class == 2:  # Weapon
         dh_weapon_types = [
             0,
@@ -110,13 +113,17 @@ def is_usable_by_demon_hunter(item):
 def is_valid_trinket_for_demon_hunter(item):
     if "stats" not in item:
         return True
-    has_primary_stat = False
-    for stat in item["stats"]:
-        if stat["id"] in [3, 7]:  # Agility, Stamina
-            has_primary_stat = True
-            if stat["id"] == 3:  # Agility
-                return True
-    return not has_primary_stat
+
+    agility_stat_ids = [3, 71, 72, 73]  # Agility or any combo including Agility
+    primary_stat_ids = [3, 4, 5, 71, 72, 73, 74]  # All primary stats and combinations
+
+    item_stats = [stat["id"] for stat in item["stats"]]
+
+    has_agility = any(stat_id in agility_stat_ids for stat_id in item_stats)
+    has_any_primary_stat = any(stat_id in primary_stat_ids for stat_id in item_stats)
+
+    # Include if it has agility or if it has no primary stats
+    return has_agility or not has_any_primary_stat
 
 
 def is_pvp_item(item):
@@ -154,7 +161,7 @@ def filter_items(items, current_expansion):
         and not is_pvp_item(item)
         and (
             (is_from_specific_dungeon(item) and item["quality"] >= 3)
-            or (item["expansion"] == current_expansion and item["quality"] >= 4)
+            or (item["expansion"] == current_expansion and item["quality"] >= 2)
         )
     ]
 
