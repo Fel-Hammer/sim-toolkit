@@ -29,7 +29,7 @@ actions.fs+=/variable,name=fel_dev_passive_fury_gen,op=set,value=0
 # Student of suffering
 actions.fs+=/variable,name=fel_dev_passive_fury_gen,op=add,value=2.5*floor((buff.student_of_suffering.remains>?variable.fel_dev_sequence_time)),if=talent.student_of_suffering.enabled&(buff.student_of_suffering.remains>1|prev_gcd.1.sigil_of_flame)
 # Sigil of Flame
-actions.fs+=/variable,name=fel_dev_passive_fury_gen,op=add,value=30+(2*talent.flames_of_fury*spell_targets.sigil_of_flame),if=(cooldown.sigil_of_flame.remains<variable.fel_dev_sequence_time)&!variable.hold_sof
+actions.fs+=/variable,name=fel_dev_passive_fury_gen,op=add,value=30+(2*talent.flames_of_fury*spell_targets.sigil_of_flame),if=(cooldown.sigil_of_flame.remains<variable.fel_dev_sequence_time)
 # Immolation Aura initial
 actions.fs+=/variable,name=fel_dev_passive_fury_gen,op=add,value=8,if=cooldown.immolation_aura.remains<variable.fel_dev_sequence_time
 # Immolation Aura tick
@@ -74,21 +74,29 @@ $(can_bomb_or_burst_now_or_soon)=((buff.metamorphosis.up&(variable.can_spburst|v
 actions.fs+=/variable,name=dont_soul_cleave,op=setif,condition=buff.metamorphosis.up&buff.demonsurge_hardcast.up,value=buff.demonsurge_spirit_burst.up|(buff.metamorphosis.remains<(gcd.max*2)&(!$(enough_fury_to_fel_dev)|!$(enough_souls_to_fel_dev))),value_else=(cooldown.fel_devastation.remains<$(fel_dev_prep_time)&(!$(enough_fury_to_fel_dev)|!$(enough_souls_to_fel_dev)))
 
 # If we use Fiery Brand now, will it be back before meta?
-actions.fs+=/variable,name=fiery_brand_back_before_meta,op=setif,condition=talent.down_in_flames,value=charges>=max_charges|(charges_fractional>=1&cooldown.fiery_brand.full_recharge_time<=$(this_action))|(charges_fractional>=1&((max_charges-(charges_fractional-1))*cooldown.fiery_brand.duration)<=cooldown.metamorphosis.remains),value_else=cooldown.fiery_brand.duration<=cooldown.metamorphosis.remains
+actions.fs+=/variable,name=fiery_brand_back_before_meta,op=setif,condition=talent.down_in_flames,value=charges>=max_charges|(charges_fractional>=1&cooldown.fiery_brand.full_recharge_time<=$(this_action))|(charges_fractional>=1&((1-(charges_fractional-1))*cooldown.fiery_brand.duration)<=cooldown.metamorphosis.remains),value_else=(cooldown.fiery_brand.duration<=cooldown.metamorphosis.remains)
 
 # Conditions for determining whether we hold Sigil of Flame (specifically SoF, not SoD)
-actions.fs+=/variable,name=hold_sof,op=setif,condition=talent.student_of_suffering,value=(buff.student_of_suffering.remains>(4-talent.quickened_sigils))|(!talent.ascending_flame&(dot.sigil_of_flame.remains>(4-talent.quickened_sigils)))|prev_gcd.1.sigil_of_flame|(talent.illuminated_sigils&charges=1&time<(2-talent.quickened_sigils))|cooldown.metamorphosis.up|cooldown.metamorphosis.remains<cooldown.sigil_of_flame.recharge_time|cooldown.fel_devastation.remains<(cooldown.sigil_of_flame.recharge_time+(3*gcd.max)),value_else=(cooldown.metamorphosis.up&(talent.ascending_flame|(!talent.ascending_flame&cooldown.sigil_of_flame.charges_fractional<2)))|(cooldown.sigil_of_flame.max_charges>1&talent.ascending_flame&((cooldown.sigil_of_flame.max_charges-(cooldown.sigil_of_flame.charges_fractional-1))*cooldown.sigil_of_flame.duration)>cooldown.metamorphosis.remains)
+actions.fs+=/variable,name=hold_sof_for_meta,op=setif,condition=talent.illuminated_sigils,value=(charges_fractional>=1&((1-(charges_fractional-1))*cooldown.sigil_of_flame.duration)>cooldown.metamorphosis.remains),value_else=cooldown.sigil_of_flame.duration>cooldown.metamorphosis.remains
+actions.fs+=/variable,name=hold_sof_for_fel_dev,op=setif,condition=talent.illuminated_sigils,value=(charges_fractional>=1&((1-(charges_fractional-1))*cooldown.sigil_of_flame.duration)>cooldown.fel_devastation.remains),value_else=cooldown.sigil_of_flame.duration>cooldown.fel_devastation.remains
+actions.fs+=/variable,name=hold_sof_for_student,op=setif,condition=talent.student_of_suffering,value=prev_gcd.1.sigil_of_flame|(buff.student_of_suffering.remains>(4-talent.quickened_sigils)),value_else=0
+actions.fs+=/variable,name=hold_sof_for_dot,op=setif,condition=talent.ascending_flame,value=0,value_else=prev_gcd.1.sigil_of_flame|(dot.sigil_of_flame.remains>(4-talent.quickened_sigils))
+actions.fs+=/variable,name=hold_sof_for_precombat,value=(talent.illuminated_sigils&time<(2-talent.quickened_sigils))
+
 
 # Use items if we're not metamorphosing because we don't want to waste meta time on items
 actions.fs+=/use_items,use_off_gcd=1,if=!buff.metamorphosis.up
-
+# If for some reason we've started combat but failed to use immolation aura in precombat, we want to use it now
+actions.fs+=/immolation_aura,if=time<4
 # Use Immolation Aura if it won't interrupt our pre-meta SoF or if we're in aoe, have fallout talented, and are able to use a Spirit Bomb and would overflow our soul fragments.
 # Note that immolation aura is handled inside of metamorphosis action list during meta
 actions.fs+=/immolation_aura,if=!(cooldown.metamorphosis.up&prev_gcd.1.sigil_of_flame)&!(talent.fallout&talent.spirit_bomb&spell_targets.spirit_bomb>=3&$(can_bomb_or_burst_now_or_soon))&!(buff.metamorphosis.up&buff.demonsurge_hardcast.up)
-# Use Sigil of Flame if we need to
-actions.fs+=/sigil_of_flame,if=!variable.hold_sof
+# Without student of suffering, we can just send Sigil of Flame ASAP
+actions.fs+=/sigil_of_flame,if=!talent.student_of_suffering&!variable.hold_sof_for_dot&!variable.hold_sof_for_precombat
+# With Student of Suffering, we want to use Sigil of Flame to upkeep the buff, but ensuring we have the buff for Fel Dev sequences and to snapshot a Sigil of Doom with meta
+actions.fs+=/sigil_of_flame,if=!variable.hold_sof_for_precombat&(charges=max_charges|(!variable.hold_sof_for_student&!variable.hold_sof_for_dot&!variable.hold_sof_for_meta&!variable.hold_sof_for_fel_dev))
 # Use Fiery Brand if we're going to overcap, if it's not currently active, or if we don't have fiery demise and the debuff doesn't matter
-actions.fs+=/fiery_brand,if=!talent.fiery_demise|talent.fiery_demise&((talent.down_in_flames&charges>=max_charges)|(active_dot.fiery_brand=0&variable.fiery_brand_back_before_meta))
+actions.fs+=/fiery_brand,if=active_dot.fiery_brand=0&(!talent.fiery_demise|((talent.down_in_flames&charges>=max_charges)|variable.fiery_brand_back_before_meta))
 
 # Execute phase -- this should probably not be done in a dungeonslice or M+ environment because it will use all CDs inefficiently
 actions.fs+=/call_action_list,name=fs_execute,if=fight_remains<20
@@ -100,8 +108,8 @@ actions.fs+=/run_action_list,name=meta_prep,if=(cooldown.metamorphosis.remains<=
 # We fiery brand before fel dev if meta is ready to go afterward
 actions.fel_dev_prep+=/potion,use_off_gcd=1,if=prev_gcd.1.fiery_brand
 # Fiery Brand if we have demise talented and we will be able to Meta right after Fel Devastation
-actions.fel_dev_prep+=/sigil_of_flame,if=cooldown.metamorphosis.remains>recharge_time
-actions.fel_dev_prep+=/fiery_brand,if=talent.fiery_demise&$(enough_fury_to_fel_dev)&$(enough_souls_to_fel_dev)&active_dot.fiery_brand=0&(cooldown.metamorphosis.remains<(execute_time+action.fel_devastation.execute_time+(gcd.max*2)))
+actions.fel_dev_prep+=/sigil_of_flame,if=!variable.hold_sof_for_precombat&!variable.hold_sof_for_student&!variable.hold_sof_for_dot
+actions.fel_dev_prep+=/fiery_brand,if=talent.fiery_demise&$(enough_fury_to_fel_dev)&$(enough_souls_to_fel_dev)&active_dot.fiery_brand=0&((cooldown.metamorphosis.remains<(execute_time+action.fel_devastation.execute_time+(gcd.max*2)))|variable.fiery_brand_back_before_meta)
 actions.fel_dev_prep+=/fel_devastation,if=$(enough_fury_to_fel_dev)&$(enough_souls_to_fel_dev)
 actions.fel_dev_prep+=/sigil_of_spite,if=(!talent.cycle_of_binding|cooldown.metamorphosis.remains>20)&(soul_fragments.total<=1|(!$(enough_souls_to_fel_dev)&action.fracture.charges_fractional<1))
 actions.fel_dev_prep+=/soul_carver,if=(!talent.cycle_of_binding|cooldown.metamorphosis.remains>20)&(soul_fragments.total<=1|(!$(enough_souls_to_fel_dev)&action.fracture.charges_fractional<1))&!prev_gcd.1.sigil_of_spite&!prev_gcd.2.sigil_of_spite
@@ -127,8 +135,8 @@ actions.fel_dev+=/soul_sunder,if=buff.demonsurge_soul_sunder.up&(!buff.demonsurg
 actions.fel_dev+=/sigil_of_spite,if=soul_fragments.total<=2&buff.demonsurge_spirit_burst.up
 actions.fel_dev+=/soul_carver,if=soul_fragments.total<=2&!prev_gcd.1.sigil_of_spite&buff.demonsurge_spirit_burst.up
 actions.fel_dev+=/fracture,if=soul_fragments.total<=2&buff.demonsurge_spirit_burst.up
-actions.fel_dev+=/felblade
-actions.fel_dev+=/fracture
+actions.fel_dev+=/felblade,if=buff.demonsurge_spirit_burst.up|buff.demonsurge_soul_sunder.up
+actions.fel_dev+=/fracture,if=buff.demonsurge_spirit_burst.up|buff.demonsurge_soul_sunder.up
 
 # TODO: Once implemented, switch to use consuming fire instead of immolation aura
 # We want to use potions, externals, etc. to line up with the metamorphosis buff
