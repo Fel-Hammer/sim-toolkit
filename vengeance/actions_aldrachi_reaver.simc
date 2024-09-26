@@ -1,20 +1,32 @@
 # Soul fragment thresholds for Spirit Bomb usage
 $(st_spb_thresh_fd)=5
-$(small_aoe_spb_thresh_fd)=4
+$(small_aoe_spb_thresh_fd)=5
 $(big_aoe_spb_thresh_fd)=4
 
 $(st_spb_thresh)=5
 $(small_aoe_spb_thresh)=5
 $(big_aoe_spb_thresh)=4
 
-# Felblade condition, used by both Felblade and Vengeful Retreat
-$(should_felblade_ar)=(((talent.spirit_bomb&(fury<40&(variable.can_spb|variable.can_spb_soon)))|(talent.spirit_bomb&(cooldown.sigil_of_spite.remains<gcd.max|cooldown.soul_carver.remains<gcd.max)&(cooldown.fel_devastation.remains<(gcd.max*2))&fury<50))|(fury<30&(soul_fragments<=2|cooldown.fracture.charges_fractional<1)))
-
 # Number of souls to trigger Reavers Glaive
 $(rg_souls)=20
 
 # Estimate of how many souls we can generate per second
 $(souls_per_second)=(1.2*(1+raw_haste_pct))
+
+# Reaver's Glaive sequence controllers
+$(should_fracture_rg)=((variable.rg_enhance_cleave&buff.rending_strike.up&buff.glaive_flurry.up)|(!variable.rg_enhance_cleave&!buff.glaive_flurry.up))
+$(should_cleave_rg)=((!variable.rg_enhance_cleave&buff.glaive_flurry.up&buff.rending_strike.up)|(variable.rg_enhance_cleave&!buff.rending_strike.up))
+
+$(enhance_cleave_only)=(spell_targets.spirit_bomb>=4)
+
+# Check if enough fury to use Reaver's Glaive
+$(enough_fury_to_rg)=(fury+(variable.rg_enhance_cleave*25)+(talent.keen_engagement*20))>=30
+
+# How long does the RG sequence take
+$(rg_sequence_duration)=(action.reavers_glaive.execute_time+action.fracture.execute_time+action.soul_cleave.execute_time+gcd.remains+(0.5*gcd.max))
+
+# When to enter our execute phase
+$(execute_phase)=(fight_remains<10|target.time_to_die<10)
 
 # Spirit Bomb threshold for how many souls we need to use it
 actions.ar+=/variable,name=spb_threshold,op=setif,condition=$(fd_active),value=(variable.single_target*$(st_spb_thresh_fd))+(variable.small_aoe*$(small_aoe_spb_thresh_fd))+(variable.big_aoe*$(big_aoe_spb_thresh_fd)),value_else=(variable.single_target*$(st_spb_thresh))+(variable.small_aoe*$(small_aoe_spb_thresh))+(variable.big_aoe*$(big_aoe_spb_thresh))
@@ -24,70 +36,81 @@ actions.ar+=/variable,name=can_spb,op=setif,condition=talent.spirit_bomb,value=s
 actions.ar+=/variable,name=can_spb_soon,op=setif,condition=talent.spirit_bomb,value=soul_fragments.total>=variable.spb_threshold,value_else=0
 # Can Spirit Bomb next GCD if we generate souls with this GCD
 actions.ar+=/variable,name=can_spb_one_gcd,op=setif,condition=talent.spirit_bomb,value=(soul_fragments.total+variable.num_spawnable_souls)>=variable.spb_threshold,value_else=0
-# Don't soul cleave if we are able to use spirit bomb soon or are building to spirit bomb threshold
-actions.ar+=/variable,name=dont_soul_cleave,value=talent.spirit_bomb&((variable.can_spb|variable.can_spb_soon|variable.can_spb_one_gcd))
-actions.ar+=/variable,name=double_rm_expires,op=set,value=time+20,if=prev_gcd.1.fracture&debuff.reavers_mark.stack=2&debuff.reavers_mark.remains>(20-gcd.max)&!buff.rending_strike.up&!buff.glaive_flurry.up
+# Manually tracking how long we have left on our double RM because sims can't track stacks separately
 actions.ar+=/variable,name=double_rm_remains,op=setif,condition=(variable.double_rm_expires-time)>0,value=variable.double_rm_expires-time,value_else=0
-actions.ar+=/variable,name=double_rm_remains,op=print
-# Calculate how long the RG sequence will take, accounting for fury and The Hunt
-actions.ar+=/variable,name=rg_sequence_duration,op=set,value=action.fracture.execute_time+action.soul_cleave.execute_time+action.reavers_glaive.execute_time
-actions.ar+=/variable,name=rg_sequence_duration,op=add,value=gcd.max,if=!talent.keen_engagement
 # During Reaver's Glaive, enhance our soul cleave (1) or shear (0)
 actions.ar+=/variable,name=trigger_overflow,op=set,value=0,if=!buff.glaive_flurry.up&!buff.rending_strike.up
-actions.ar+=/variable,name=rg_enhance_cleave,op=setif,condition=spell_targets.spirit_bomb>4|fight_remains<8|variable.trigger_overflow,value=1,value_else=0
+actions.ar+=/variable,name=rg_enhance_cleave,op=setif,condition=variable.trigger_overflow|$(enhance_cleave_only)|$(execute_phase),value=1,value_else=0
 # Externals, potions, trinkets when reaver's mark is up and we have thrill of the fight damage up
-actions.ar+=/variable,name=cooldown_sync,value=(debuff.reavers_mark.remains>gcd.max&debuff.reavers_mark.stack=2&buff.thrill_of_the_fight_damage.remains>gcd.max)|fight_remains<20
-
-
-actions.ar+=/potion,use_off_gcd=1,if=gcd.remains=0&(variable.cooldown_sync|(buff.rending_strike.up&buff.glaive_flurry.up))
-actions.ar+=/use_items,use_off_gcd=1,if=variable.cooldown_sync
+actions.ar+=/variable,name=cooldown_sync,value=(debuff.reavers_mark.remains>gcd.max&debuff.reavers_mark.stack=2&buff.thrill_of_the_fight_damage.remains>gcd.max)|$(execute_phase)
+# Calculate how many souls we think we will generate before the next main RG sequence (every 20 seconds)
+actions.ar+=/variable,name=souls_before_next_rg_sequence,value=soul_fragments.total+buff.art_of_the_glaive.stack
+# Estimate of souls we will generate in the time until we need our next RG
+actions.ar+=/variable,name=souls_before_next_rg_sequence,op=add,value=$(souls_per_second)*(variable.double_rm_remains-$(rg_sequence_duration))
+# If we will have Sigil of Spite during that time, add its souls
+actions.ar+=/variable,name=souls_before_next_rg_sequence,op=add,value=3+talent.soul_sigils,if=cooldown.sigil_of_spite.remains<variable.double_rm_remains
+# If we will have Soul Carver during that time, add its souls
+actions.ar+=/variable,name=souls_before_next_rg_sequence,op=add,value=6,if=cooldown.soul_carver.remains<variable.double_rm_remains
+# Use items ASAP
+actions.ar+=/use_items,use_off_gcd=1
+# Sync potions with our damage amps
+actions.ar+=/potion,use_off_gcd=1,if=(variable.cooldown_sync|(buff.rending_strike.up&buff.glaive_flurry.up))
+# Sync externals with our damage amps
 actions.ar+=/call_action_list,name=externals,if=variable.cooldown_sync
-
+# Lock into the RG sequence if we have our buffs up that we want to consume
 actions.ar+=/run_action_list,name=rg_sequence,if=buff.glaive_flurry.up|buff.rending_strike.up
 # Time metamorphosis to optimize soul fragment generation. Don't use it when we know we're not going to be pressing fracture soon.
-actions.ar+=/metamorphosis,use_off_gcd=1,if=!buff.metamorphosis.up&gcd.remains=0&cooldown.the_hunt.remains>5&!(buff.rending_strike.up&buff.glaive_flurry.up)
-# Use Vengeful Retreat to reset felblade if we take unhindered assault and want to felblade
-actions.ar+=/vengeful_retreat,use_off_gcd=1,if=talent.unhindered_assault&!cooldown.felblade.up&$(should_felblade_ar)
+actions.ar+=/metamorphosis,use_off_gcd=1,if=cooldown.fel_devastation.remains>=20
 # We always want to use The Hunt ASAP if we won't overcap reaver's glaive
 actions.ar+=/the_hunt,if=!buff.reavers_glaive.up&(buff.art_of_the_glaive.stack+soul_fragments.total)<$(rg_souls)
 # Always maintain immolation aura for fury generation
-actions.ar+=/immolation_aura,if=!(buff.glaive_flurry.up|buff.rending_strike.up)
+actions.ar+=/immolation_aura
 # Always maintain sigil of flame for fury generation. If we have illuminated sigils and ascending flame, it's okay to double stack. If we don't, make sure the dot is about to fall off before we reapply (can time this with sigil activation time).
-actions.ar+=/sigil_of_flame,if=!(buff.glaive_flurry.up|buff.rending_strike.up)&(talent.ascending_flame|(!talent.ascending_flame&!(prev_gcd.1.sigil_of_flame|(dot.sigil_of_flame.remains>(4-talent.quickened_sigils)))))
-# Occasionally, we will generate a Reaver's Glaive while there is plenty of time left on Reaver's Mark. We can use this "overflow" RG immediately as long as it doesn't cause the Reaver's Mark to fall off.
-actions.ar+=/call_action_list,name=rg_overflow,if=buff.reavers_glaive.up&buff.thrill_of_the_fight_damage.up&buff.thrill_of_the_fight_damage.remains<variable.rg_sequence_duration&(((($(souls_per_second)*(variable.double_rm_remains-variable.rg_sequence_duration))+soul_fragments.total+buff.art_of_the_glaive.stack)>=$(rg_souls))|((cooldown.the_hunt.remains)<(variable.double_rm_remains-(variable.rg_sequence_duration+action.the_hunt.execute_time))))
-actions.ar+=/call_action_list,name=ar_execute,if=fight_remains<20
+actions.ar+=/sigil_of_flame,if=talent.ascending_flame|(!prev_gcd.1.sigil_of_flame&dot.sigil_of_flame.remains<(4-talent.quickened_sigils))
+# Occasionally, we will generate a Reaver's Glaive while there is plenty of time left on Reaver's Mark. We can use this "overflow" RG mid-cycle as long as it doesn't cause the scheduled Reaver's Mark to fall off.
+actions.ar+=/run_action_list,name=rg_overflow,if=buff.reavers_glaive.up&(!buff.thrill_of_the_fight_damage.up|(buff.thrill_of_the_fight_damage.remains<$(rg_sequence_duration)))&((variable.double_rm_remains-$(rg_sequence_duration))>$(rg_sequence_duration))&((variable.souls_before_next_rg_sequence>=$(rg_souls))|((cooldown.the_hunt.remains)<(variable.double_rm_remains-($(rg_sequence_duration)+action.the_hunt.execute_time))))
+actions.ar+=/call_action_list,name=ar_execute,if=$(execute_phase)
 # If Reaver's Mark is going to fall off soon and consuming our currently available soul fragments would generate a new Reaver's Glaive in one GCD, we want to do so immediately. Do this with Spirit Bomb if we have enough souls, Soul Cleave if we only need 2 souls to be consumed, or Bulk Extraction if we need mroe than 2 souls and aren't at a Spirit Bomb threshold.
-actions.ar+=/soul_cleave,if=(variable.double_rm_remains<=(execute_time+variable.rg_sequence_duration))&(soul_fragments.total>=2&buff.art_of_the_glaive.stack>=($(rg_souls)-2))&(fury<40|!variable.can_spb)
-actions.ar+=/spirit_bomb,if=(variable.double_rm_remains<=(execute_time+variable.rg_sequence_duration))&(buff.art_of_the_glaive.stack+soul_fragments.total>=$(rg_souls))
-actions.ar+=/bulk_extraction,if=(variable.double_rm_remains<=(execute_time+variable.rg_sequence_duration))&(buff.art_of_the_glaive.stack+(spell_targets>?5)>=$(rg_souls))
+actions.ar+=/soul_cleave,if=(variable.double_rm_remains<=(execute_time+$(rg_sequence_duration)))&(soul_fragments.total>=2&buff.art_of_the_glaive.stack>=($(rg_souls)-2))&(fury<40|!variable.can_spb)
+actions.ar+=/spirit_bomb,if=(variable.double_rm_remains<=(execute_time+$(rg_sequence_duration)))&(buff.art_of_the_glaive.stack+soul_fragments.total>=$(rg_souls))
+actions.ar+=/bulk_extraction,if=(variable.double_rm_remains<=(execute_time+$(rg_sequence_duration)))&(buff.art_of_the_glaive.stack+(spell_targets>?5)>=$(rg_souls))
+# If The Hunt is going to come off cooldown soon, just send RG ASAP
+$(use_rg_hunt)=(cooldown.the_hunt.remains<$(rg_sequence_duration))
 # Time reaver's glaive such that our empowered abilities are cast while the previous reaver's glaive is still active. We usually have about 2-3 GCDs worth of actions to take for this sequence. If we are enhancing cleave, we just want to send this ASAP. If we are enhancing fracture, we want to delay until the end of previous reavers mark to ensure full reavers mark uptime.
-actions.ar+=/reavers_glaive,if=(variable.rg_enhance_cleave&fury>=5|!variable.rg_enhance_cleave&fury>=30)&buff.thrill_of_the_fight_damage.remains<variable.rg_sequence_duration&(!buff.thrill_of_the_fight_attack_speed.up|(variable.double_rm_remains<=variable.rg_sequence_duration)|variable.rg_enhance_cleave)
+$(use_rg_main)=(!buff.thrill_of_the_fight_damage.up&(!buff.thrill_of_the_fight_attack_speed.up|(variable.double_rm_remains<=$(rg_sequence_duration))))
+# Otherwise, enter an RG sequence
+actions.ar+=/reavers_glaive,if=$(enough_fury_to_rg)&($(use_rg_hunt)|$(use_rg_main)|$(enhance_cleave_only))&!(buff.rending_strike.up|buff.glaive_flurry.up)
+# Generate fury ASAP if we need to RG and don't have enough
+actions.ar+=/call_action_list,name=rg_prep,if=!$(enough_fury_to_rg)&($(use_rg_hunt)|$(use_rg_main))
 # Fiery Brand if we're going to overcap or it's not currently active.
-actions.ar+=/fiery_brand,if=(talent.down_in_flames&(charges=max_charges))|(active_dot.fiery_brand=0)
+actions.ar+=/fiery_brand,if=(!talent.fiery_demise&active_dot.fiery_brand=0)|(talent.down_in_flames&(full_recharge_time<gcd.max))|(talent.fiery_demise&active_dot.fiery_brand=0&(buff.reavers_glaive.up|cooldown.the_hunt.remains<5|buff.art_of_the_glaive.stack>=15|buff.thrill_of_the_fight_damage.remains>5))
 # Sigil of Spite right before a spirit bomb (at 4-5 soul fragments) so that the new soul fragments arrive just after we spend the current ones with a spirit bomb. We can also use this if we happen to be at a single soul fragment and don't have any incoming.
-actions.ar+=/sigil_of_spite,if=!talent.spirit_bomb|variable.single_target|buff.thrill_of_the_fight_damage.up|(fury>=40&(variable.can_spb|variable.can_spb_soon|soul_fragments.total<=(2-talent.soul_sigils.rank)))
+actions.ar+=/sigil_of_spite,if=buff.thrill_of_the_fight_damage.up|(fury>=80&(variable.can_spb|variable.can_spb_soon))|((soul_fragments.total+buff.art_of_the_glaive.stack+($(souls_per_second)*(variable.double_rm_remains-$(rg_sequence_duration))))<$(rg_souls))
 # If we can use Spirit Bomb, do so
 actions.ar+=/spirit_bomb,if=variable.can_spb
-# Time Fel Devastation with high priority when we can channel while waiting for soul fragments to spawn
-actions.ar+=/fel_devastation,if=talent.spirit_bomb&!variable.can_spb&(variable.can_spb_soon|soul_fragments.inactive>=2|prev_gcd.1.sigil_of_spite|prev_gcd.1.soul_carver)
+# If we can use Spirit Bomb but don't have enough fury, we want to use Felblade when it won't mean we overcap our fracture charges
+actions.ar+=/felblade,if=(variable.can_spb|variable.can_spb_soon)&fury<40
+# Reset Felblade if we need to in order to do the above
+actions.ar+=/vengeful_retreat,use_off_gcd=1,if=(variable.can_spb|variable.can_spb_soon)&fury<40&!cooldown.felblade.up&talent.unhindered_assault
+# Fracture if we need fury to use Spirit Bomb but felblade and vengeful retreat are not ready, or if we need both fury and soul fragments to use Spirit Bomb, or if not using it will overcap on soul fragments
+actions.ar+=/fracture,if=(variable.can_spb|variable.can_spb_soon|variable.can_spb_one_gcd)&fury<40
 # Soul Carver when we won't overcap on soul fragments and will be able to Spirit Bomb soon to use them. Don't use it if we've just cast Sigil of Spite, since we'll overcap on soul fragments.
-actions.ar+=/soul_carver,if=buff.thrill_of_the_fight_damage.up
-# Fel Devastation only during thrill of the fight in single target
-actions.ar+=/fel_devastation,if=!buff.metamorphosis.up&(variable.single_target&action.fracture.charges_fractional>=1|!variable.single_target&buff.thrill_of_the_fight_damage.up)
-# We want to optimize our soul fragment generation by never overcapping on fracture charges and using it as much as we can while meta is up
-actions.ar+=/fracture,if=charges_fractional>=1.8|buff.metamorphosis.up
-# Dump fury when we're going to overcap
-actions.ar+=/soul_cleave,if=fury.deficit<25
-# Fracture if we need fury to use Spirit Bomb but felblade and vengeful retreat are not ready, or if we need both fury and soul fragments to use Spirit Bomb
-actions.ar+=/fracture,if=talent.spirit_bomb&(variable.can_spb|variable.can_spb_soon|variable.can_spb_one_gcd)&fury<40&!cooldown.felblade.up&(!talent.unhindered_assault|(talent.unhindered_assault&!cooldown.vengeful_retreat.up))
-# Bulk extraction is only worth casting at 5+ targets
-actions.ar+=/bulk_extraction,if=spell_targets>=5
+actions.ar+=/soul_carver,if=buff.thrill_of_the_fight_damage.up|((soul_fragments.total+buff.art_of_the_glaive.stack+($(souls_per_second)*(variable.double_rm_remains-$(rg_sequence_duration))))<$(rg_souls))
+# Fel Devastation to optimize our soul fragment generation via Fracture. We want to make sure we come out of Fel Dev with 2 fracture charges ready to use.
+actions.ar+=/fel_devastation,if=!buff.metamorphosis.up&((action.fracture.full_recharge_time<(2+gcd.max))|(!variable.single_target&buff.thrill_of_the_fight_damage.up))
 # Felblade to enable a Spirit Bomb or Fel Devastation
-actions.ar+=/felblade,if=$(should_felblade_ar)
-# Soul Cleave when we're about to overcap on fury, are using a non-Spirit Bomb build, or we're not using Spirit Bomb soon.
-actions.ar+=/soul_cleave,if=fury.deficit<=25|!variable.dont_soul_cleave
+actions.ar+=/felblade,if=cooldown.fel_devastation.remains<gcd.max&fury<50
+actions.ar+=/vengeful_retreat,use_off_gcd=1,if=cooldown.fel_devastation.remains<gcd.max&fury<50&!cooldown.felblade.up&talent.unhindered_assault
+actions.ar+=/fracture,if=cooldown.fel_devastation.remains<gcd.max&fury<50
+# We want to optimize our soul fragment generation by never overcapping on fracture charges and using it as much as we can while meta is up
+actions.ar+=/fracture,if=(full_recharge_time<gcd.max)|buff.metamorphosis.up|variable.can_spb|variable.can_spb_soon
+# Primary soul cleave if we're consuming fragments
+actions.ar+=/soul_cleave,if=soul_fragments>=1
+# Bulk extraction is only worth casting at 3+ targets
+actions.ar+=/bulk_extraction,if=spell_targets>=3
 actions.ar+=/fracture
+# Soul Cleave when we're about to overcap on fury, are using a non-Spirit Bomb build, or we're not using Spirit Bomb soon.
+actions.ar+=/soul_cleave
 actions.ar+=/shear
 actions.ar+=/felblade
 actions.ar+=/throw_glaive
@@ -95,12 +118,11 @@ actions.ar+=/throw_glaive
 # Overflow Reaver's Glaive
 actions.rg_overflow=variable,name=trigger_overflow,op=set,value=1
 actions.rg_overflow+=/variable,name=rg_enhance_cleave,op=set,value=1
-actions.rg_overflow+=/reavers_glaive,if=(variable.rg_enhance_cleave&fury>=5|!variable.rg_enhance_cleave&fury>=30)&!buff.rending_strike.up&!buff.glaive_flurry.up
+actions.rg_overflow+=/reavers_glaive,if=$(enough_fury_to_rg)&!buff.rending_strike.up&!buff.glaive_flurry.up
+actions.rg_overflow+=/call_action_list,name=rg_prep,if=!$(enough_fury_to_rg)
 
-# Reaver's Glaive sequence
-$(should_fracture_rg)=(variable.rg_enhance_cleave&buff.rending_strike.up&buff.glaive_flurry.up|!variable.rg_enhance_cleave&!buff.glaive_flurry.up)
-$(should_cleave_rg)=(!variable.rg_enhance_cleave&buff.glaive_flurry.up&buff.rending_strike.up|variable.rg_enhance_cleave&!buff.rending_strike.up)
-
+# Set our double RM expiration time
+actions.rg_sequence=variable,name=double_rm_expires,value=time+action.fracture.execute_time+20,if=!buff.glaive_flurry.up&buff.rending_strike.up
 # Filler if we need fury to use Reaver's Glaive buffs or we have to wait for fracture to rechage
 actions.rg_sequence+=/call_action_list,name=rg_sequence_filler,if=(fury<30&$(should_cleave_rg))|(action.fracture.charges_fractional<1&$(should_fracture_rg))
 # Use RG buffs in the order that the variable rg_enhance_cleave dictates
@@ -108,7 +130,13 @@ actions.rg_sequence+=/fracture,if=$(should_fracture_rg)
 actions.rg_sequence+=/shear,if=$(should_fracture_rg)
 actions.rg_sequence+=/soul_cleave,if=$(should_cleave_rg)
 
-actions.rg_sequence_filler+=/felblade,if=fury.deficit>30
+actions.rg_prep=felblade
+actions.rg_prep+=/vengeful_retreat,use_off_gcd=1,if=!cooldown.felblade.up&talent.unhindered_assault
+actions.rg_prep+=/sigil_of_flame
+actions.rg_prep+=/immolation_aura
+actions.rg_prep+=/fracture
+
+actions.rg_sequence_filler+=/felblade
 actions.rg_sequence_filler+=/fracture,if=!buff.rending_strike.up
 # Wait a very short period of time if fracture needs to be used and will be back shortly
 actions.rg_sequence_filler+=/wait,sec=0.1,if=action.fracture.charges_fractional>=0.8&$(should_fracture_rg)
@@ -120,7 +148,8 @@ actions.rg_sequence_filler+=/throw_glaive
 
 # During the last few seconds of a fight, send whatever cooldowns we have left.
 actions.ar_execute=metamorphosis,use_off_gcd=1
-actions.ar_execute+=/reavers_glaive,if=fury>=30
+actions.ar_execute+=/reavers_glaive,if=$(enough_fury_to_rg)&!(buff.rending_strike.up|buff.glaive_flurry.up)
+actions.ar_execute+=/call_action_list,name=rg_prep,if=buff.reavers_glaive.up&!$(enough_fury_to_rg)
 actions.ar_execute+=/the_hunt,if=!buff.reavers_glaive.up
 actions.ar_execute+=/bulk_extraction,if=spell_targets>=3&buff.art_of_the_glaive.stack>=$(rg_souls)
 actions.ar_execute+=/sigil_of_flame
