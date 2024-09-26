@@ -581,7 +581,7 @@ profileset."darkmoon_sigil_vivacity_and_roiling_thunderstrike_talons"+=wrist=,id
 
 profileset."waders_of_the_unifying_flame_and_adrenal_surge_clasp"=feet=219489,bonus_id=8960/10421/9633/8902
 profileset."waders_of_the_unifying_flame_and_adrenal_surge_clasp"+=waist=219502,bonus_id=8960/10421/9633/8902
-profileset."waders_of_the_unifying_flame_and_adrenal_surge_clasp"+=wrist=,id=219334,enchant_id=7391,gem_id=213485,ilevel=636,crafted_stats=36/40
+profileset."waders_of_the_unifying_flame_and_adrenal_surge_clasp"+=off_hand=,id=222441,enchant_id=7460,crafted_stats=36/40
 
 profileset."waders_of_the_unifying_flame_and_rook_feather_wristwraps"=feet=219489,bonus_id=8960/10421/9633/8902
 profileset."waders_of_the_unifying_flame_and_rook_feather_wristwraps"+=wrist=219511,bonus_id=8960/10421/9633/8902
@@ -589,11 +589,11 @@ profileset."waders_of_the_unifying_flame_and_rook_feather_wristwraps"+=off_hand=
 
 profileset."waders_of_the_unifying_flame_and_weathered_stormfront_vest"=feet=219489,bonus_id=8960/10421/9633/8902
 profileset."waders_of_the_unifying_flame_and_weathered_stormfront_vest"+=chest=219512,bonus_id=8960/10421/9633/8902
-profileset."waders_of_the_unifying_flame_and_weathered_stormfront_vest"+=wrist=,id=219334,enchant_id=7391,gem_id=213485,ilevel=636,crafted_stats=36/40
+profileset."waders_of_the_unifying_flame_and_weathered_stormfront_vest"+=off_hand=,id=222441,enchant_id=7460,crafted_stats=36/40
 
 profileset."waders_of_the_unifying_flame_and_roiling_thunderstrike_talons"=feet=219489,bonus_id=8960/10421/9633/8902
 profileset."waders_of_the_unifying_flame_and_roiling_thunderstrike_talons"+=hands=219513,bonus_id=8960/10421/9633/8902
-profileset."waders_of_the_unifying_flame_and_roiling_thunderstrike_talons"+=wrist=,id=219334,enchant_id=7391,gem_id=213485,ilevel=636,crafted_stats=36/40
+profileset."waders_of_the_unifying_flame_and_roiling_thunderstrike_talons"+=off_hand=,id=222441,enchant_id=7460,crafted_stats=36/40
 
 profileset."adrenal_surge_clasp_and_rook_feather_wristwraps"=waist=219502,bonus_id=8960/10421/9633/8902
 profileset."adrenal_surge_clasp_and_rook_feather_wristwraps"+=wrist=219511,bonus_id=8960/10421/9633/8902
@@ -601,11 +601,11 @@ profileset."adrenal_surge_clasp_and_rook_feather_wristwraps"+=off_hand=,id=22244
 
 profileset."adrenal_surge_clasp_and_weathered_stormfront_vest"=waist=219502,bonus_id=8960/10421/9633/8902
 profileset."adrenal_surge_clasp_and_weathered_stormfront_vest"+=chest=219512,bonus_id=8960/10421/9633/8902
-profileset."adrenal_surge_clasp_and_weathered_stormfront_vest"+=wrist=,id=219334,enchant_id=7391,gem_id=213485,ilevel=636,crafted_stats=36/40
+profileset."adrenal_surge_clasp_and_weathered_stormfront_vest"+=off_hand=,id=222441,enchant_id=7460,crafted_stats=36/40
 
 profileset."adrenal_surge_clasp_and_roiling_thunderstrike_talons"=waist=219502,bonus_id=8960/10421/9633/8902
 profileset."adrenal_surge_clasp_and_roiling_thunderstrike_talons"+=hands=219513,bonus_id=8960/10421/9633/8902
-profileset."adrenal_surge_clasp_and_roiling_thunderstrike_talons"+=wrist=,id=219334,enchant_id=7391,gem_id=213485,ilevel=636,crafted_stats=36/40
+profileset."adrenal_surge_clasp_and_roiling_thunderstrike_talons"+=off_hand=,id=222441,enchant_id=7460,crafted_stats=36/40
 
 profileset."rook_feather_wristwraps_and_weathered_stormfront_vest"=wrist=219511,bonus_id=8960/10421/9633/8902
 profileset."rook_feather_wristwraps_and_weathered_stormfront_vest"+=chest=219512,bonus_id=8960/10421/9633/8902
@@ -617,5 +617,5 @@ profileset."rook_feather_wristwraps_and_roiling_thunderstrike_talons"+=off_hand=
 
 profileset."weathered_stormfront_vest_and_roiling_thunderstrike_talons"=chest=219512,bonus_id=8960/10421/9633/8902
 profileset."weathered_stormfront_vest_and_roiling_thunderstrike_talons"+=hands=219513,bonus_id=8960/10421/9633/8902
-profileset."weathered_stormfront_vest_and_roiling_thunderstrike_talons"+=wrist=,id=219334,enchant_id=7391,gem_id=213485,ilevel=636,crafted_stats=36/40
+profileset."weathered_stormfront_vest_and_roiling_thunderstrike_talons"+=off_hand=,id=222441,enchant_id=7460,crafted_stats=36/40
 

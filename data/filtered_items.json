@@ -2308,6 +2308,12 @@
         "alloc": 3050
       }
     ],
+    "sources": [
+      {
+        "instanceId": -69,
+        "encounterId": -69
+      }
+    ],
     "expansion": 10
   },
   {
@@ -2335,6 +2341,12 @@
       {
         "id": 40,
         "alloc": 3050
+      }
+    ],
+    "sources": [
+      {
+        "instanceId": -69,
+        "encounterId": -69
       }
     ],
     "expansion": 10
@@ -2366,6 +2378,12 @@
         "alloc": 3350
       }
     ],
+    "sources": [
+      {
+        "instanceId": -69,
+        "encounterId": -69
+      }
+    ],
     "expansion": 10
   },
   {
@@ -2393,6 +2411,12 @@
       {
         "id": 36,
         "alloc": 3200
+      }
+    ],
+    "sources": [
+      {
+        "instanceId": -69,
+        "encounterId": -69
       }
     ],
     "expansion": 10
@@ -2424,6 +2448,12 @@
         "alloc": 3350
       }
     ],
+    "sources": [
+      {
+        "instanceId": -69,
+        "encounterId": -69
+      }
+    ],
     "expansion": 10
   },
   {
@@ -2451,6 +2481,12 @@
       {
         "id": 49,
         "alloc": 3200
+      }
+    ],
+    "sources": [
+      {
+        "instanceId": -69,
+        "encounterId": -69
       }
     ],
     "expansion": 10
@@ -2482,6 +2518,12 @@
         "alloc": 3200
       }
     ],
+    "sources": [
+      {
+        "instanceId": -69,
+        "encounterId": -69
+      }
+    ],
     "expansion": 10
   },
   {
@@ -2509,6 +2551,12 @@
       {
         "id": 32,
         "alloc": 3350
+      }
+    ],
+    "sources": [
+      {
+        "instanceId": -69,
+        "encounterId": -69
       }
     ],
     "expansion": 10
@@ -2544,6 +2592,12 @@
         "alloc": 25370
       }
     ],
+    "sources": [
+      {
+        "instanceId": -69,
+        "encounterId": -69
+      }
+    ],
     "expansion": 10
   },
   {
@@ -2571,6 +2625,12 @@
       {
         "id": 32,
         "alloc": 3200
+      }
+    ],
+    "sources": [
+      {
+        "instanceId": -69,
+        "encounterId": -69
       }
     ],
     "expansion": 10
@@ -2602,6 +2662,12 @@
         "alloc": 3200
       }
     ],
+    "sources": [
+      {
+        "instanceId": -69,
+        "encounterId": -69
+      }
+    ],
     "expansion": 10
   },
   {
@@ -2628,6 +2694,12 @@
         "alloc": 7500
       }
     ],
+    "sources": [
+      {
+        "instanceId": -69,
+        "encounterId": -69
+      }
+    ],
     "expansion": 10
   },
   {
@@ -2652,6 +2724,12 @@
       {
         "id": 40,
         "alloc": 8500
+      }
+    ],
+    "sources": [
+      {
+        "instanceId": -69,
+        "encounterId": -69
       }
     ],
     "expansion": 10
@@ -2683,6 +2761,12 @@
         "alloc": 3050
       }
     ],
+    "sources": [
+      {
+        "instanceId": -69,
+        "encounterId": -69
+      }
+    ],
     "expansion": 10
   },
   {
@@ -2710,6 +2794,12 @@
       {
         "id": 36,
         "alloc": 3200
+      }
+    ],
+    "sources": [
+      {
+        "instanceId": -69,
+        "encounterId": -69
       }
     ],
     "expansion": 10
@@ -2745,6 +2835,12 @@
         "alloc": 25370
       }
     ],
+    "sources": [
+      {
+        "instanceId": -69,
+        "encounterId": -69
+      }
+    ],
     "expansion": 10
   },
   {
@@ -2772,6 +2868,12 @@
       {
         "id": 36,
         "alloc": 3200
+      }
+    ],
+    "sources": [
+      {
+        "instanceId": -69,
+        "encounterId": -69
       }
     ],
     "expansion": 10
@@ -2803,6 +2905,12 @@
         "alloc": 3200
       }
     ],
+    "sources": [
+      {
+        "instanceId": -69,
+        "encounterId": -69
+      }
+    ],
     "expansion": 10
   },
   {
@@ -2829,6 +2937,12 @@
         "alloc": 8500
       }
     ],
+    "sources": [
+      {
+        "instanceId": -69,
+        "encounterId": -69
+      }
+    ],
     "expansion": 10
   },
   {
@@ -2852,6 +2966,12 @@
       {
         "id": 32,
         "alloc": 7750
+      }
+    ],
+    "sources": [
+      {
+        "instanceId": -69,
+        "encounterId": -69
       }
     ],
     "expansion": 10
@@ -2886,6 +3006,12 @@
         "alloc": 2287
       }
     ],
+    "sources": [
+      {
+        "instanceId": -70,
+        "encounterId": -70
+      }
+    ],
     "expansion": 10
   },
   {
@@ -2916,6 +3042,12 @@
       {
         "id": 49,
         "alloc": 2444
+      }
+    ],
+    "sources": [
+      {
+        "instanceId": -70,
+        "encounterId": -70
       }
     ],
     "expansion": 10
@@ -2951,6 +3083,12 @@
         "alloc": 2058
       }
     ],
+    "sources": [
+      {
+        "instanceId": -70,
+        "encounterId": -70
+      }
+    ],
     "expansion": 10
   },
   {
@@ -2982,6 +3120,12 @@
       {
         "id": 36,
         "alloc": 2129
+      }
+    ],
+    "sources": [
+      {
+        "instanceId": -70,
+        "encounterId": -70
       }
     ],
     "expansion": 10
@@ -3017,6 +3161,12 @@
         "alloc": 2279
       }
     ],
+    "sources": [
+      {
+        "instanceId": -70,
+        "encounterId": -70
+      }
+    ],
     "expansion": 10
   },
   {
@@ -3048,6 +3198,12 @@
       {
         "id": 32,
         "alloc": 2235
+      }
+    ],
+    "sources": [
+      {
+        "instanceId": -70,
+        "encounterId": -70
       }
     ],
     "expansion": 10
@@ -3082,6 +3238,12 @@
         "alloc": 2222
       }
     ],
+    "sources": [
+      {
+        "instanceId": -70,
+        "encounterId": -70
+      }
+    ],
     "expansion": 10
   },
   {
@@ -3113,6 +3275,12 @@
       {
         "id": 49,
         "alloc": 2334
+      }
+    ],
+    "sources": [
+      {
+        "instanceId": -70,
+        "encounterId": -70
       }
     ],
     "expansion": 10
@@ -4034,7 +4202,6 @@
     "uniqueEquipped": true,
     "specs": [
       103,
-      104,
       253,
       254,
       255,
@@ -4042,10 +4209,8 @@
       260,
       261,
       263,
-      268,
       269,
-      577,
-      581
+      577
     ],
     "stats": [
       {
@@ -4857,6 +5022,12 @@
         "alloc": 6666
       }
     ],
+    "sources": [
+      {
+        "instanceId": -69,
+        "encounterId": -69
+      }
+    ],
     "expansion": 10
   },
   {
@@ -4873,6 +5044,12 @@
       {
         "id": 72,
         "alloc": 6666
+      }
+    ],
+    "sources": [
+      {
+        "instanceId": -69,
+        "encounterId": -69
       }
     ],
     "onUseTrinket": true,
@@ -4900,6 +5077,12 @@
       {
         "id": 72,
         "alloc": 6666
+      }
+    ],
+    "sources": [
+      {
+        "instanceId": -69,
+        "encounterId": -69
       }
     ],
     "onUseTrinket": true,
@@ -5003,6 +5186,13 @@
         "alloc": 6666
       }
     ],
+    "sources": [
+      {
+        "instanceId": -69,
+        "encounterId": -69
+      }
+    ],
+    "onUseTrinket": true,
     "expansion": 10
   },
   {
@@ -5074,6 +5264,12 @@
       {
         "id": 49,
         "alloc": 6666
+      }
+    ],
+    "sources": [
+      {
+        "instanceId": -69,
+        "encounterId": -69
       }
     ],
     "expansion": 10
@@ -6149,6 +6345,12 @@
         "alloc": 6666
       }
     ],
+    "sources": [
+      {
+        "instanceId": -69,
+        "encounterId": -69
+      }
+    ],
     "expansion": 10
   },
   {
@@ -6241,6 +6443,12 @@
         "alloc": 2900
       }
     ],
+    "sources": [
+      {
+        "instanceId": -69,
+        "encounterId": -69
+      }
+    ],
     "expansion": 10
   },
   {
@@ -6268,6 +6476,12 @@
       {
         "id": 40,
         "alloc": 2750
+      }
+    ],
+    "sources": [
+      {
+        "instanceId": -69,
+        "encounterId": -69
       }
     ],
     "expansion": 10
@@ -6299,6 +6513,12 @@
         "alloc": 2600
       }
     ],
+    "sources": [
+      {
+        "instanceId": -69,
+        "encounterId": -69
+      }
+    ],
     "expansion": 10
   },
   {
@@ -6326,6 +6546,12 @@
       {
         "id": 49,
         "alloc": 2450
+      }
+    ],
+    "sources": [
+      {
+        "instanceId": -69,
+        "encounterId": -69
       }
     ],
     "expansion": 10
@@ -6357,6 +6583,12 @@
         "alloc": 2450
       }
     ],
+    "sources": [
+      {
+        "instanceId": -69,
+        "encounterId": -69
+      }
+    ],
     "expansion": 10
   },
   {
@@ -6384,6 +6616,12 @@
       {
         "id": 49,
         "alloc": 2750
+      }
+    ],
+    "sources": [
+      {
+        "instanceId": -69,
+        "encounterId": -69
       }
     ],
     "expansion": 10
@@ -6415,6 +6653,12 @@
         "alloc": 2900
       }
     ],
+    "sources": [
+      {
+        "instanceId": -69,
+        "encounterId": -69
+      }
+    ],
     "expansion": 10
   },
   {
@@ -6444,6 +6688,12 @@
         "alloc": 2600
       }
     ],
+    "sources": [
+      {
+        "instanceId": -69,
+        "encounterId": -69
+      }
+    ],
     "expansion": 10
   },
   {
@@ -6467,6 +6717,12 @@
       {
         "id": 49,
         "alloc": 7250
+      }
+    ],
+    "sources": [
+      {
+        "instanceId": -69,
+        "encounterId": -69
       }
     ],
     "expansion": 10
@@ -6495,6 +6751,12 @@
         "alloc": 5500
       }
     ],
+    "sources": [
+      {
+        "instanceId": -69,
+        "encounterId": -69
+      }
+    ],
     "expansion": 10
   },
   {
@@ -6521,6 +6783,12 @@
         "alloc": 5750
       }
     ],
+    "sources": [
+      {
+        "instanceId": -69,
+        "encounterId": -69
+      }
+    ],
     "expansion": 10
   },
   {
@@ -6545,6 +6813,12 @@
       {
         "id": 49,
         "alloc": 5250
+      }
+    ],
+    "sources": [
+      {
+        "instanceId": -69,
+        "encounterId": -69
       }
     ],
     "expansion": 10
@@ -6580,6 +6854,12 @@
         "alloc": 25370
       }
     ],
+    "sources": [
+      {
+        "instanceId": -69,
+        "encounterId": -69
+      }
+    ],
     "expansion": 10
   },
   {
@@ -6607,6 +6887,12 @@
       {
         "id": 40,
         "alloc": 2600
+      }
+    ],
+    "sources": [
+      {
+        "instanceId": -69,
+        "encounterId": -69
       }
     ],
     "expansion": 10
@@ -6638,6 +6924,12 @@
         "alloc": 2750
       }
     ],
+    "sources": [
+      {
+        "instanceId": -69,
+        "encounterId": -69
+      }
+    ],
     "expansion": 10
   },
   {
@@ -6661,6 +6953,12 @@
       {
         "id": 40,
         "alloc": 7250
+      }
+    ],
+    "sources": [
+      {
+        "instanceId": -69,
+        "encounterId": -69
       }
     ],
     "expansion": 10
@@ -6687,6 +6985,12 @@
       {
         "id": 40,
         "alloc": 5500
+      }
+    ],
+    "sources": [
+      {
+        "instanceId": -69,
+        "encounterId": -69
       }
     ],
     "expansion": 10
@@ -8149,6 +8453,12 @@
         "alloc": 3050
       }
     ],
+    "sources": [
+      {
+        "instanceId": -69,
+        "encounterId": -69
+      }
+    ],
     "expansion": 10
   },
   {
@@ -8180,6 +8490,12 @@
       {
         "id": 5,
         "alloc": 25370
+      }
+    ],
+    "sources": [
+      {
+        "instanceId": -69,
+        "encounterId": -69
       }
     ],
     "expansion": 10
@@ -10502,6 +10818,12 @@
       {
         "id": 5,
         "alloc": 25370
+      }
+    ],
+    "sources": [
+      {
+        "instanceId": -69,
+        "encounterId": -69
       }
     ],
     "expansion": 10
@@ -18969,6 +19291,12 @@
         "alloc": 6666
       }
     ],
+    "sources": [
+      {
+        "instanceId": -69,
+        "encounterId": -69
+      }
+    ],
     "expansion": 10
   },
   {
@@ -19100,6 +19428,12 @@
         "alloc": 6666
       }
     ],
+    "sources": [
+      {
+        "instanceId": -69,
+        "encounterId": -69
+      }
+    ],
     "onUseTrinket": true,
     "expansion": 10
   },
@@ -19127,6 +19461,12 @@
         "alloc": 6666
       }
     ],
+    "sources": [
+      {
+        "instanceId": -69,
+        "encounterId": -69
+      }
+    ],
     "expansion": 10
   },
   {
@@ -19147,6 +19487,12 @@
       {
         "id": 36,
         "alloc": 3333
+      }
+    ],
+    "sources": [
+      {
+        "instanceId": -69,
+        "encounterId": -69
       }
     ],
     "onUseTrinket": true,
@@ -19190,6 +19536,12 @@
         "alloc": 6666
       }
     ],
+    "sources": [
+      {
+        "instanceId": -69,
+        "encounterId": -69
+      }
+    ],
     "expansion": 10
   },
   {
@@ -19202,6 +19554,12 @@
     "inventoryType": 12,
     "itemLevel": 250,
     "uniqueEquipped": true,
+    "sources": [
+      {
+        "instanceId": -69,
+        "encounterId": -69
+      }
+    ],
     "expansion": 10
   },
   {
@@ -19214,6 +19572,12 @@
     "inventoryType": 12,
     "itemLevel": 250,
     "uniqueEquipped": true,
+    "sources": [
+      {
+        "instanceId": -69,
+        "encounterId": -69
+      }
+    ],
     "expansion": 10
   },
   {
@@ -19226,6 +19590,12 @@
     "inventoryType": 12,
     "itemLevel": 250,
     "uniqueEquipped": true,
+    "sources": [
+      {
+        "instanceId": -69,
+        "encounterId": -69
+      }
+    ],
     "expansion": 10
   },
   {
@@ -19238,6 +19608,12 @@
     "inventoryType": 12,
     "itemLevel": 250,
     "uniqueEquipped": true,
+    "sources": [
+      {
+        "instanceId": -69,
+        "encounterId": -69
+      }
+    ],
     "expansion": 10
   },
   {
@@ -19250,6 +19626,12 @@
     "inventoryType": 12,
     "itemLevel": 250,
     "uniqueEquipped": true,
+    "sources": [
+      {
+        "instanceId": -69,
+        "encounterId": -69
+      }
+    ],
     "expansion": 10
   },
   {
@@ -20000,6 +20382,12 @@
         "alloc": 6666
       }
     ],
+    "sources": [
+      {
+        "instanceId": -69,
+        "encounterId": -69
+      }
+    ],
     "expansion": 10
   },
   {
@@ -20036,6 +20424,12 @@
       {
         "id": 3,
         "alloc": 6666
+      }
+    ],
+    "sources": [
+      {
+        "instanceId": -69,
+        "encounterId": -69
       }
     ],
     "expansion": 10

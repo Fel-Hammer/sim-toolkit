@@ -18,15 +18,6 @@
     "craftingQuality": 3
   },
   {
-    "value": "grotesque_vial_3",
-    "shortName": "Grotesque 3",
-    "name": "Grotesque Vial (Quality 3)",
-    "itemId": 212256,
-    "icon": "inv_summerfest_firepotion",
-    "expansion": 10,
-    "craftingQuality": 3
-  },
-  {
     "value": "flask_of_alchemical_chaos_3",
     "shortName": "Alchemical Chaos 3",
     "name": "Flask of Alchemical Chaos (Quality 3)",
