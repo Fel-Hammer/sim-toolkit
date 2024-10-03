@@ -8,6 +8,9 @@ actions.precombat+=/snapshot_stats
 actions.precombat+=/variable,name=single_target,value=spell_targets.spirit_bomb=1
 actions.precombat+=/variable,name=small_aoe,value=spell_targets.spirit_bomb>=2&spell_targets.spirit_bomb<=5
 actions.precombat+=/variable,name=big_aoe,value=spell_targets.spirit_bomb>=6
+actions.precombat+=/variable,name=trinket_1_buffs,value=trinket.1.has_use_buff|(trinket.1.has_buff.agility|trinket.1.has_buff.mastery|trinket.1.has_buff.versatility|trinket.1.has_buff.haste|trinket.1.has_buff.crit)
+actions.precombat+=/variable,name=trinket_2_buffs,value=trinket.2.has_use_buff|(trinket.2.has_buff.agility|trinket.2.has_buff.mastery|trinket.2.has_buff.versatility|trinket.2.has_buff.haste|trinket.2.has_buff.crit)
+
 
 # Max number of souls we can reliably generate with our next GCD (excluding major cooldowns)
 actions+=/variable,name=num_spawnable_souls,op=reset,default=0

@@ -41,8 +41,6 @@ actions.ar+=/variable,name=double_rm_remains,op=setif,condition=(variable.double
 # During Reaver's Glaive, enhance our soul cleave (1) or shear (0)
 actions.ar+=/variable,name=trigger_overflow,op=set,value=0,if=!buff.glaive_flurry.up&!buff.rending_strike.up
 actions.ar+=/variable,name=rg_enhance_cleave,op=setif,condition=variable.trigger_overflow|$(enhance_cleave_only)|$(execute_phase),value=1,value_else=0
-# Externals, potions, trinkets when reaver's mark is up and we have thrill of the fight damage up
-actions.ar+=/variable,name=cooldown_sync,value=(debuff.reavers_mark.remains>gcd.max&debuff.reavers_mark.stack=2&buff.thrill_of_the_fight_damage.remains>gcd.max)|$(execute_phase)
 # Calculate how many souls we think we will generate before the next main RG sequence (every 20 seconds)
 actions.ar+=/variable,name=souls_before_next_rg_sequence,value=soul_fragments.total+buff.art_of_the_glaive.stack
 # Estimate of souls we will generate in the time until we need our next RG
@@ -51,12 +49,13 @@ actions.ar+=/variable,name=souls_before_next_rg_sequence,op=add,value=$(souls_pe
 actions.ar+=/variable,name=souls_before_next_rg_sequence,op=add,value=3+talent.soul_sigils,if=cooldown.sigil_of_spite.remains<variable.double_rm_remains
 # If we will have Soul Carver during that time, add its souls
 actions.ar+=/variable,name=souls_before_next_rg_sequence,op=add,value=6,if=cooldown.soul_carver.remains<variable.double_rm_remains
-# Use items ASAP
-actions.ar+=/use_items,use_off_gcd=1
+# Use trinkets that give stats during RG sequence + thrill damage windows
+actions.ar+=/use_item,slot=trinket1,if=!variable.trinket_1_buffs|(variable.trinket_1_buffs&((buff.rending_strike.up&buff.glaive_flurry.up)|(prev_gcd.1.reavers_glaive)|(buff.thrill_of_the_fight_damage.remains>8)|(buff.reavers_glaive.up&cooldown.the_hunt.remains<5)))
+actions.ar+=/use_item,slot=trinket2,if=!variable.trinket_2_buffs|(variable.trinket_2_buffs&((buff.rending_strike.up&buff.glaive_flurry.up)|(prev_gcd.1.reavers_glaive)|(buff.thrill_of_the_fight_damage.remains>8)|(buff.reavers_glaive.up&cooldown.the_hunt.remains<5)))
 # Sync potions with our damage amps
-actions.ar+=/potion,use_off_gcd=1,if=(variable.cooldown_sync|(buff.rending_strike.up&buff.glaive_flurry.up))
+actions.ar+=/potion,use_off_gcd=1,if=(buff.rending_strike.up&buff.glaive_flurry.up)|prev_gcd.1.reavers_glaive
 # Sync externals with our damage amps
-actions.ar+=/call_action_list,name=externals,if=variable.cooldown_sync
+actions.ar+=/call_action_list,name=externals,if=(buff.rending_strike.up&buff.glaive_flurry.up)|prev_gcd.1.reavers_glaive
 # Lock into the RG sequence if we have our buffs up that we want to consume
 actions.ar+=/run_action_list,name=rg_sequence,if=buff.glaive_flurry.up|buff.rending_strike.up
 # Time metamorphosis to optimize soul fragment generation. Don't use it when we know we're not going to be pressing fracture soon.
@@ -71,14 +70,14 @@ actions.ar+=/sigil_of_flame,if=(talent.ascending_flame|(!prev_gcd.1.sigil_of_fla
 actions.ar+=/run_action_list,name=rg_overflow,if=buff.reavers_glaive.up&!$(enhance_cleave_only)&debuff.reavers_mark.up&(variable.double_rm_remains>$(rg_sequence_duration))&(!buff.thrill_of_the_fight_damage.up|(buff.thrill_of_the_fight_damage.remains<$(rg_sequence_duration)))&((variable.double_rm_remains-$(rg_sequence_duration))>$(rg_sequence_duration))&((variable.souls_before_next_rg_sequence>=$(rg_souls))|(variable.double_rm_remains>($(rg_sequence_duration)+cooldown.the_hunt.remains+action.the_hunt.execute_time)))
 
 actions.ar+=/call_action_list,name=ar_execute,if=$(execute_phase)
-# If Reaver's Mark is going to fall off soon and consuming our currently available soul fragments would generate a new Reaver's Glaive in one GCD, we want to do so immediately. Do this with Spirit Bomb if we have enough souls, Soul Cleave if we only need 2 souls to be consumed, or Bulk Extraction if we need mroe than 2 souls and aren't at a Spirit Bomb threshold.
-actions.ar+=/soul_cleave,if=(variable.double_rm_remains<=(execute_time+$(rg_sequence_duration)))&(soul_fragments.total>=2&buff.art_of_the_glaive.stack>=($(rg_souls)-2))&(fury<40|!variable.can_spb)
-actions.ar+=/spirit_bomb,if=(variable.double_rm_remains<=(execute_time+$(rg_sequence_duration)))&(buff.art_of_the_glaive.stack+soul_fragments.total>=$(rg_souls))
-actions.ar+=/bulk_extraction,if=(variable.double_rm_remains<=(execute_time+$(rg_sequence_duration)))&(buff.art_of_the_glaive.stack+(spell_targets>?5)>=$(rg_souls))
+# If Reaver's Mark is going to fall off soon and consuming our currently available soul fragments would generate a new Reaver's Glaive in one GCD, we want to do so immediately. Do this with Spirit Bomb if we have enough souls, Soul Cleave if we only need 2 souls to be consumed, or Bulk Extraction if we need more than 2 souls and aren't at a Spirit Bomb threshold.
+actions.ar+=/soul_cleave,if=!buff.reavers_glaive.up&(variable.double_rm_remains<=(execute_time+$(rg_sequence_duration)))&(soul_fragments<3&((buff.art_of_the_glaive.stack+soul_fragments)>=$(rg_souls)))
+actions.ar+=/spirit_bomb,if=!buff.reavers_glaive.up&(variable.double_rm_remains<=(execute_time+$(rg_sequence_duration)))&((buff.art_of_the_glaive.stack+soul_fragments)>=$(rg_souls))
+actions.ar+=/bulk_extraction,if=!buff.reavers_glaive.up&(variable.double_rm_remains<=(execute_time+$(rg_sequence_duration)))&((buff.art_of_the_glaive.stack+(spell_targets>?5))>=$(rg_souls))
 # If The Hunt is going to come off cooldown soon, just send RG ASAP
 $(use_rg_hunt)=(cooldown.the_hunt.remains<$(rg_sequence_duration))
 # Time reaver's glaive such that our empowered abilities are cast while the previous reaver's glaive is still active. We usually have about 2-3 GCDs worth of actions to take for this sequence. If we are enhancing cleave, we just want to send this ASAP. If we are enhancing fracture, we want to delay until the end of previous reavers mark to ensure full reavers mark uptime.
-$(use_rg_main)=(!buff.thrill_of_the_fight_damage.up&(!buff.thrill_of_the_fight_attack_speed.up|(variable.double_rm_remains<=$(rg_sequence_duration))))
+$(use_rg_main)=(!buff.thrill_of_the_fight_attack_speed.up|(variable.double_rm_remains<=$(rg_sequence_duration)))
 # Otherwise, enter an RG sequence
 actions.ar+=/reavers_glaive,if=$(enough_fury_to_rg)&($(use_rg_hunt)|$(use_rg_main)|$(enhance_cleave_only))&!(buff.rending_strike.up|buff.glaive_flurry.up)
 # Generate fury ASAP if we need to RG and don't have enough
