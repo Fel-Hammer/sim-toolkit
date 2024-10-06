@@ -11,7 +11,7 @@ $(big_aoe_spb_thresh)=4
 $(rg_souls)=20
 
 # Estimate of how many souls we can generate per second
-$(souls_per_second)=(1.2*(1+raw_haste_pct))
+$(souls_per_second)=(1.1*(1+raw_haste_pct))
 
 # Reaver's Glaive sequence controllers
 $(should_fracture_rg)=((variable.rg_enhance_cleave&buff.rending_strike.up&buff.glaive_flurry.up)|(!variable.rg_enhance_cleave&!buff.glaive_flurry.up))
@@ -39,16 +39,17 @@ actions.ar+=/variable,name=can_spb_one_gcd,op=setif,condition=talent.spirit_bomb
 # Manually tracking how long we have left on our double RM because sims can't track stacks separately
 actions.ar+=/variable,name=double_rm_remains,op=setif,condition=(variable.double_rm_expires-time)>0,value=variable.double_rm_expires-time,value_else=0
 # During Reaver's Glaive, enhance our soul cleave (1) or shear (0)
-actions.ar+=/variable,name=trigger_overflow,op=set,value=0,if=!buff.glaive_flurry.up&!buff.rending_strike.up
+actions.ar+=/variable,name=trigger_overflow,op=set,value=0,if=!buff.glaive_flurry.up&!buff.rending_strike.up&!prev_gcd.1.reavers_glaive
 actions.ar+=/variable,name=rg_enhance_cleave,op=setif,condition=variable.trigger_overflow|$(enhance_cleave_only)|$(execute_phase),value=1,value_else=0
 # Calculate how many souls we think we will generate before the next main RG sequence (every 20 seconds)
 actions.ar+=/variable,name=souls_before_next_rg_sequence,value=soul_fragments.total+buff.art_of_the_glaive.stack
 # Estimate of souls we will generate in the time until we need our next RG
 actions.ar+=/variable,name=souls_before_next_rg_sequence,op=add,value=$(souls_per_second)*(variable.double_rm_remains-$(rg_sequence_duration))
 # If we will have Sigil of Spite during that time, add its souls
-actions.ar+=/variable,name=souls_before_next_rg_sequence,op=add,value=3+talent.soul_sigils,if=cooldown.sigil_of_spite.remains<variable.double_rm_remains
-# If we will have Soul Carver during that time, add its souls
-actions.ar+=/variable,name=souls_before_next_rg_sequence,op=add,value=6,if=cooldown.soul_carver.remains<variable.double_rm_remains
+actions.ar+=/variable,name=souls_before_next_rg_sequence,op=add,value=3+talent.soul_sigils,if=cooldown.sigil_of_spite.remains<(variable.double_rm_remains-gcd.max-(2-talent.soul_sigils))
+# If we will have Soul Carver during that time, add its souls (initial +3 and over time +3)
+actions.ar+=/variable,name=souls_before_next_rg_sequence,op=add,value=3,if=cooldown.soul_carver.remains<(variable.double_rm_remains-gcd.max)
+actions.ar+=/variable,name=souls_before_next_rg_sequence,op=add,value=3,if=cooldown.soul_carver.remains<(variable.double_rm_remains-gcd.max-3)
 # Use trinkets that give stats during RG sequence + thrill damage windows
 actions.ar+=/use_item,slot=trinket1,if=!variable.trinket_1_buffs|(variable.trinket_1_buffs&((buff.rending_strike.up&buff.glaive_flurry.up)|(prev_gcd.1.reavers_glaive)|(buff.thrill_of_the_fight_damage.remains>8)|(buff.reavers_glaive.up&cooldown.the_hunt.remains<5)))
 actions.ar+=/use_item,slot=trinket2,if=!variable.trinket_2_buffs|(variable.trinket_2_buffs&((buff.rending_strike.up&buff.glaive_flurry.up)|(prev_gcd.1.reavers_glaive)|(buff.thrill_of_the_fight_damage.remains>8)|(buff.reavers_glaive.up&cooldown.the_hunt.remains<5)))
@@ -57,11 +58,12 @@ actions.ar+=/potion,use_off_gcd=1,if=(buff.rending_strike.up&buff.glaive_flurry.
 # Sync externals with our damage amps
 actions.ar+=/call_action_list,name=externals,if=(buff.rending_strike.up&buff.glaive_flurry.up)|prev_gcd.1.reavers_glaive
 # Lock into the RG sequence if we have our buffs up that we want to consume
-actions.ar+=/run_action_list,name=rg_sequence,if=buff.glaive_flurry.up|buff.rending_strike.up
+actions.ar+=/run_action_list,name=rg_sequence,if=buff.glaive_flurry.up|buff.rending_strike.up|prev_gcd.1.reavers_glaive
 # Time metamorphosis to optimize soul fragment generation. Don't use it when we know we're not going to be pressing fracture soon.
 actions.ar+=/metamorphosis,use_off_gcd=1,if=time<5|cooldown.fel_devastation.remains>=20
 # We always want to use The Hunt ASAP if we won't overcap reaver's glaive
 actions.ar+=/the_hunt,if=!buff.reavers_glaive.up&(buff.art_of_the_glaive.stack+soul_fragments.total)<$(rg_souls)
+actions.ar+=/spirit_bomb,if=variable.can_spb&(soul_fragments.inactive>2|prev_gcd.1.sigil_of_spite|prev_gcd.1.soul_carver|(spell_targets.spirit_bomb>=4&talent.fallout&cooldown.immolation_aura.remains<gcd.max))
 # Always maintain immolation aura for fury generation
 actions.ar+=/immolation_aura,if=$(enhance_cleave_only)|(!buff.reavers_glaive.up|(variable.double_rm_remains>($(rg_sequence_duration)+gcd.max)))
 # Always maintain sigil of flame for fury generation. If we have illuminated sigils and ascending flame, it's okay to double stack. If we don't, make sure the dot is about to fall off before we reapply (can time this with sigil activation time).
