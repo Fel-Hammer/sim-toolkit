@@ -692,7 +692,7 @@
     "stats": [
       {
         "id": 4,
-        "alloc": 3997
+        "alloc": 5259
       },
       {
         "id": 7,
@@ -2562,45 +2562,6 @@
     "expansion": 10
   },
   {
-    "id": 211045,
-    "name": "Delver's Spellblade",
-    "icon": "inv_sword_1h_blackdragonoutdoor_d_01",
-    "quality": 2,
-    "itemClass": 2,
-    "itemSubClass": 7,
-    "inventoryType": 13,
-    "itemLevel": 350,
-    "stats": [
-      {
-        "id": 5,
-        "alloc": 5259
-      },
-      {
-        "id": 7,
-        "alloc": 7889
-      },
-      {
-        "id": 32,
-        "alloc": 3800
-      },
-      {
-        "id": 36,
-        "alloc": 3200
-      },
-      {
-        "id": 5,
-        "alloc": 25370
-      }
-    ],
-    "sources": [
-      {
-        "instanceId": -69,
-        "encounterId": -69
-      }
-    ],
-    "expansion": 10
-  },
-  {
     "id": 211048,
     "name": "Pathfinder's Stonecarver",
     "icon": "inv_sword_1h_undergroundquest_b_01",
@@ -2612,41 +2573,6 @@
     "stats": [
       {
         "id": 4,
-        "alloc": 5259
-      },
-      {
-        "id": 7,
-        "alloc": 7889
-      },
-      {
-        "id": 49,
-        "alloc": 3800
-      },
-      {
-        "id": 32,
-        "alloc": 3200
-      }
-    ],
-    "sources": [
-      {
-        "instanceId": -69,
-        "encounterId": -69
-      }
-    ],
-    "expansion": 10
-  },
-  {
-    "id": 211049,
-    "name": "Delver's Blade",
-    "icon": "inv_sword_1h_blackdragonoutdoor_d_01",
-    "quality": 2,
-    "itemClass": 2,
-    "itemSubClass": 7,
-    "inventoryType": 13,
-    "itemLevel": 350,
-    "stats": [
-      {
-        "id": 3,
         "alloc": 5259
       },
       {
@@ -2724,185 +2650,6 @@
       {
         "id": 40,
         "alloc": 8500
-      }
-    ],
-    "sources": [
-      {
-        "instanceId": -69,
-        "encounterId": -69
-      }
-    ],
-    "expansion": 10
-  },
-  {
-    "id": 211053,
-    "name": "Delver's Hacker",
-    "icon": "inv_axe_1h_blackdragonoutdoor_d_01",
-    "quality": 2,
-    "itemClass": 2,
-    "itemSubClass": 0,
-    "inventoryType": 13,
-    "itemLevel": 350,
-    "stats": [
-      {
-        "id": 4,
-        "alloc": 5259
-      },
-      {
-        "id": 7,
-        "alloc": 7889
-      },
-      {
-        "id": 49,
-        "alloc": 3950
-      },
-      {
-        "id": 40,
-        "alloc": 3050
-      }
-    ],
-    "sources": [
-      {
-        "instanceId": -69,
-        "encounterId": -69
-      }
-    ],
-    "expansion": 10
-  },
-  {
-    "id": 211054,
-    "name": "Delver's Cleaver",
-    "icon": "inv_axe_1h_blackdragonoutdoor_d_01",
-    "quality": 2,
-    "itemClass": 2,
-    "itemSubClass": 0,
-    "inventoryType": 13,
-    "itemLevel": 350,
-    "stats": [
-      {
-        "id": 3,
-        "alloc": 5259
-      },
-      {
-        "id": 7,
-        "alloc": 7889
-      },
-      {
-        "id": 32,
-        "alloc": 3800
-      },
-      {
-        "id": 36,
-        "alloc": 3200
-      }
-    ],
-    "sources": [
-      {
-        "instanceId": -69,
-        "encounterId": -69
-      }
-    ],
-    "expansion": 10
-  },
-  {
-    "id": 211055,
-    "name": "Delver's Censer",
-    "icon": "inv_mace_1h_blackdragonoutdoor_b_02",
-    "quality": 2,
-    "itemClass": 2,
-    "itemSubClass": 4,
-    "inventoryType": 13,
-    "itemLevel": 350,
-    "stats": [
-      {
-        "id": 5,
-        "alloc": 5259
-      },
-      {
-        "id": 7,
-        "alloc": 7889
-      },
-      {
-        "id": 32,
-        "alloc": 3650
-      },
-      {
-        "id": 36,
-        "alloc": 3350
-      },
-      {
-        "id": 5,
-        "alloc": 25370
-      }
-    ],
-    "sources": [
-      {
-        "instanceId": -69,
-        "encounterId": -69
-      }
-    ],
-    "expansion": 10
-  },
-  {
-    "id": 211056,
-    "name": "Delver's Mallet",
-    "icon": "inv_mace_1h_blackdragonoutdoor_d_01",
-    "quality": 2,
-    "itemClass": 2,
-    "itemSubClass": 4,
-    "inventoryType": 13,
-    "itemLevel": 350,
-    "stats": [
-      {
-        "id": 4,
-        "alloc": 5259
-      },
-      {
-        "id": 7,
-        "alloc": 7889
-      },
-      {
-        "id": 49,
-        "alloc": 3800
-      },
-      {
-        "id": 36,
-        "alloc": 3200
-      }
-    ],
-    "sources": [
-      {
-        "instanceId": -69,
-        "encounterId": -69
-      }
-    ],
-    "expansion": 10
-  },
-  {
-    "id": 211057,
-    "name": "Delver's Cudgel",
-    "icon": "inv_mace_1h_blackdragonoutdoor_d_01",
-    "quality": 2,
-    "itemClass": 2,
-    "itemSubClass": 4,
-    "inventoryType": 13,
-    "itemLevel": 350,
-    "stats": [
-      {
-        "id": 3,
-        "alloc": 5259
-      },
-      {
-        "id": 7,
-        "alloc": 7889
-      },
-      {
-        "id": 49,
-        "alloc": 3800
-      },
-      {
-        "id": 36,
-        "alloc": 3200
       }
     ],
     "sources": [
@@ -3449,68 +3196,6 @@
     "expansion": 10
   },
   {
-    "id": 212402,
-    "name": "11.0 Raid Template - Axe1H - Agi - Weapon",
-    "icon": "inv_axe_1h_newplayer_a_01",
-    "quality": 4,
-    "itemClass": 2,
-    "itemSubClass": 0,
-    "inventoryType": 13,
-    "itemLevel": 280,
-    "stats": [
-      {
-        "id": 3,
-        "alloc": 5259
-      },
-      {
-        "id": 7,
-        "alloc": 7889
-      },
-      {
-        "id": 36,
-        "alloc": 3950
-      },
-      {
-        "id": 32,
-        "alloc": 3050
-      }
-    ],
-    "expansion": 10
-  },
-  {
-    "id": 212403,
-    "name": "11.0 Raid Template - Axe1H - Int - Weapon",
-    "icon": "inv_axe_1h_newplayer_a_01",
-    "quality": 4,
-    "itemClass": 2,
-    "itemSubClass": 0,
-    "inventoryType": 13,
-    "itemLevel": 280,
-    "stats": [
-      {
-        "id": 5,
-        "alloc": 5259
-      },
-      {
-        "id": 7,
-        "alloc": 7889
-      },
-      {
-        "id": 49,
-        "alloc": 3800
-      },
-      {
-        "id": 32,
-        "alloc": 3200
-      },
-      {
-        "id": 5,
-        "alloc": 25370
-      }
-    ],
-    "expansion": 10
-  },
-  {
     "id": 212404,
     "name": "Scepter of Manifested Miasma",
     "icon": "inv_mace_1h_nerubianraid_d_02",
@@ -3584,35 +3269,6 @@
       {
         "instanceId": 1273,
         "encounterId": 2599
-      }
-    ],
-    "expansion": 10
-  },
-  {
-    "id": 212406,
-    "name": "11.0 Raid Template - Mace1H - Str - Weapon",
-    "icon": "inv_mace_1h_revendrethquest_b_01",
-    "quality": 4,
-    "itemClass": 2,
-    "itemSubClass": 4,
-    "inventoryType": 13,
-    "itemLevel": 280,
-    "stats": [
-      {
-        "id": 4,
-        "alloc": 5259
-      },
-      {
-        "id": 7,
-        "alloc": 7889
-      },
-      {
-        "id": 49,
-        "alloc": 3650
-      },
-      {
-        "id": 36,
-        "alloc": 3350
       }
     ],
     "expansion": 10
@@ -4155,41 +3811,6 @@
     "expansion": 10
   },
   {
-    "id": 212455,
-    "name": "11.0 Raid Template - Physical DPS - Trinket",
-    "icon": "sha_spell_fire_bluehellfire_nightmare",
-    "quality": 4,
-    "itemClass": 4,
-    "itemSubClass": 0,
-    "inventoryType": 12,
-    "itemLevel": 280,
-    "uniqueEquipped": true,
-    "specs": [
-      70,
-      71,
-      72,
-      103,
-      251,
-      252,
-      253,
-      254,
-      255,
-      259,
-      260,
-      261,
-      263,
-      269,
-      577
-    ],
-    "stats": [
-      {
-        "id": 72,
-        "alloc": 6666
-      }
-    ],
-    "expansion": 10
-  },
-  {
     "id": 212456,
     "name": "Void Reaper's Contract",
     "icon": "inv_10_inscription2_repcontracts_trade_archaeology_apexisscroll_uprez_color4",
@@ -4222,122 +3843,6 @@
       {
         "instanceId": 1273,
         "encounterId": 2601
-      }
-    ],
-    "expansion": 10
-  },
-  {
-    "id": 213423,
-    "name": "Bygone Weapon Charm",
-    "icon": "inv_archaeology_70_highborne_inertleystonecharm",
-    "quality": 4,
-    "itemClass": 4,
-    "itemSubClass": 0,
-    "inventoryType": 12,
-    "itemLevel": 1,
-    "stats": [
-      {
-        "id": 38,
-        "alloc": 200
-      },
-      {
-        "id": 41,
-        "alloc": 200
-      },
-      {
-        "id": 7,
-        "alloc": 400
-      },
-      {
-        "id": 36,
-        "alloc": 50
-      }
-    ],
-    "expansion": 10
-  },
-  {
-    "id": 213533,
-    "name": "Ancient Weapon Charm",
-    "icon": "inv_archaeology_70_highborne_inertleystonecharm",
-    "quality": 5,
-    "itemClass": 4,
-    "itemSubClass": 0,
-    "inventoryType": 12,
-    "itemLevel": 1,
-    "stats": [
-      {
-        "id": 38,
-        "alloc": 400
-      },
-      {
-        "id": 41,
-        "alloc": 400
-      },
-      {
-        "id": 7,
-        "alloc": 800
-      },
-      {
-        "id": 36,
-        "alloc": 100
-      }
-    ],
-    "expansion": 10
-  },
-  {
-    "id": 213534,
-    "name": "Bygone Armor Charm",
-    "icon": "inv_jewelry_ring_13",
-    "quality": 4,
-    "itemClass": 4,
-    "itemSubClass": 0,
-    "inventoryType": 12,
-    "itemLevel": 1,
-    "stats": [
-      {
-        "id": 38,
-        "alloc": 200
-      },
-      {
-        "id": 41,
-        "alloc": 200
-      },
-      {
-        "id": 7,
-        "alloc": 400
-      },
-      {
-        "id": 36,
-        "alloc": 50
-      }
-    ],
-    "expansion": 10
-  },
-  {
-    "id": 213535,
-    "name": "Ancient Armor Charm",
-    "icon": "inv_jewelry_ring_13",
-    "quality": 5,
-    "itemClass": 4,
-    "itemSubClass": 0,
-    "inventoryType": 12,
-    "itemLevel": 1,
-    "stats": [
-      {
-        "id": 38,
-        "alloc": 400
-      },
-      {
-        "id": 41,
-        "alloc": 400
-      },
-      {
-        "id": 7,
-        "alloc": 800
-      },
-      {
-        "id": 36,
-        "alloc": 100
       }
     ],
     "expansion": 10
@@ -6148,114 +5653,6 @@
     "expansion": 10
   },
   {
-    "id": 217402,
-    "name": "Olden Armor Charm",
-    "icon": "inv_jewelry_ring_13",
-    "quality": 3,
-    "itemClass": 4,
-    "itemSubClass": 0,
-    "inventoryType": 12,
-    "itemLevel": 1,
-    "stats": [
-      {
-        "id": 38,
-        "alloc": 100
-      },
-      {
-        "id": 41,
-        "alloc": 100
-      },
-      {
-        "id": 7,
-        "alloc": 200
-      },
-      {
-        "id": 36,
-        "alloc": 50
-      }
-    ],
-    "expansion": 10
-  },
-  {
-    "id": 217403,
-    "name": "Olden Weapon Charm",
-    "icon": "inv_archaeology_70_highborne_inertleystonecharm",
-    "quality": 3,
-    "itemClass": 4,
-    "itemSubClass": 0,
-    "inventoryType": 12,
-    "itemLevel": 1,
-    "stats": [
-      {
-        "id": 38,
-        "alloc": 100
-      },
-      {
-        "id": 41,
-        "alloc": 100
-      },
-      {
-        "id": 7,
-        "alloc": 200
-      },
-      {
-        "id": 36,
-        "alloc": 50
-      }
-    ],
-    "expansion": 10
-  },
-  {
-    "id": 217404,
-    "name": "Time-Worn Armor Charm",
-    "icon": "inv_jewelry_ring_13",
-    "quality": 2,
-    "itemClass": 4,
-    "itemSubClass": 0,
-    "inventoryType": 12,
-    "itemLevel": 1,
-    "stats": [
-      {
-        "id": 38,
-        "alloc": 50
-      },
-      {
-        "id": 41,
-        "alloc": 50
-      },
-      {
-        "id": 7,
-        "alloc": 100
-      }
-    ],
-    "expansion": 10
-  },
-  {
-    "id": 217405,
-    "name": "Time-Worn Weapon Charm",
-    "icon": "inv_archaeology_70_highborne_inertleystonecharm",
-    "quality": 2,
-    "itemClass": 4,
-    "itemSubClass": 0,
-    "inventoryType": 12,
-    "itemLevel": 1,
-    "stats": [
-      {
-        "id": 38,
-        "alloc": 50
-      },
-      {
-        "id": 41,
-        "alloc": 50
-      },
-      {
-        "id": 7,
-        "alloc": 100
-      }
-    ],
-    "expansion": 10
-  },
-  {
     "id": 217894,
     "name": "Nerubian Pheromone Secreter",
     "icon": "trade_alchemy_potione2",
@@ -6265,39 +5662,6 @@
     "inventoryType": 12,
     "itemLevel": 571,
     "uniqueEquipped": true,
-    "expansion": 10
-  },
-  {
-    "id": 217918,
-    "name": "Pressurized Alloy Sword",
-    "icon": "spell_misc_emotionsad",
-    "quality": 3,
-    "itemClass": 2,
-    "itemSubClass": 7,
-    "inventoryType": 13,
-    "itemLevel": 330,
-    "stats": [
-      {
-        "id": 72,
-        "alloc": 5259
-      },
-      {
-        "id": 7,
-        "alloc": 7889
-      },
-      {
-        "id": 24,
-        "alloc": 3500
-      },
-      {
-        "id": 25,
-        "alloc": 3500
-      }
-    ],
-    "bonusLists": [
-      8851,
-      8852
-    ],
     "expansion": 10
   },
   {
@@ -7606,7 +6970,6 @@
     "itemLevel": 437,
     "uniqueEquipped": true,
     "specs": [
-      65,
       66,
       70,
       71,
@@ -11127,138 +10490,6 @@
     "expansion": 10
   },
   {
-    "id": 220957,
-    "name": "Echoing Tuncheon",
-    "icon": "inv_sword_1h_dragonquest_b_01",
-    "quality": 4,
-    "itemClass": 2,
-    "itemSubClass": 7,
-    "inventoryType": 13,
-    "itemLevel": 330,
-    "stats": [
-      {
-        "id": 72,
-        "alloc": 5259
-      },
-      {
-        "id": 7,
-        "alloc": 7889
-      },
-      {
-        "id": 24,
-        "alloc": 3500
-      },
-      {
-        "id": 25,
-        "alloc": 3500
-      }
-    ],
-    "bonusLists": [
-      8851,
-      8852
-    ],
-    "expansion": 10
-  },
-  {
-    "id": 220958,
-    "name": "Haunting Void",
-    "icon": "inv_sword_1h_dragonquest_b_01",
-    "quality": 4,
-    "itemClass": 2,
-    "itemSubClass": 7,
-    "inventoryType": 13,
-    "itemLevel": 330,
-    "stats": [
-      {
-        "id": 72,
-        "alloc": 5259
-      },
-      {
-        "id": 7,
-        "alloc": 7889
-      },
-      {
-        "id": 24,
-        "alloc": 3500
-      },
-      {
-        "id": 25,
-        "alloc": 3500
-      }
-    ],
-    "bonusLists": [
-      8851,
-      8852
-    ],
-    "expansion": 10
-  },
-  {
-    "id": 220959,
-    "name": "Entangling Cutlass",
-    "icon": "inv_sword_1h_dragonquest_b_01",
-    "quality": 4,
-    "itemClass": 2,
-    "itemSubClass": 7,
-    "inventoryType": 13,
-    "itemLevel": 330,
-    "stats": [
-      {
-        "id": 72,
-        "alloc": 5259
-      },
-      {
-        "id": 7,
-        "alloc": 7889
-      },
-      {
-        "id": 24,
-        "alloc": 3500
-      },
-      {
-        "id": 25,
-        "alloc": 3500
-      }
-    ],
-    "bonusLists": [
-      8851,
-      8852
-    ],
-    "expansion": 10
-  },
-  {
-    "id": 220960,
-    "name": "Siphoning Stiletto",
-    "icon": "inv_sword_1h_dragonquest_b_01",
-    "quality": 4,
-    "itemClass": 2,
-    "itemSubClass": 7,
-    "inventoryType": 13,
-    "itemLevel": 330,
-    "stats": [
-      {
-        "id": 72,
-        "alloc": 5259
-      },
-      {
-        "id": 7,
-        "alloc": 7889
-      },
-      {
-        "id": 24,
-        "alloc": 3500
-      },
-      {
-        "id": 25,
-        "alloc": 3500
-      }
-    ],
-    "bonusLists": [
-      8851,
-      8852
-    ],
-    "expansion": 10
-  },
-  {
     "id": 221023,
     "name": "Treacherous Transmitter",
     "icon": "inv_etherealraid_communicator_color1",
@@ -11626,23 +10857,6 @@
       {
         "instanceId": -32,
         "encounterId": 1272
-      }
-    ],
-    "expansion": 10
-  },
-  {
-    "id": 221066,
-    "name": "Template - Accessory - Finger",
-    "quality": 3,
-    "itemClass": 4,
-    "itemSubClass": 0,
-    "inventoryType": 11,
-    "itemLevel": 437,
-    "uniqueEquipped": true,
-    "stats": [
-      {
-        "id": 7,
-        "alloc": 7889
       }
     ],
     "expansion": 10
@@ -17133,35 +16347,6 @@
     "expansion": 10
   },
   {
-    "id": 223947,
-    "name": "[PH] Steam-Powered Wristwatch",
-    "icon": "inv_bracer_leather_undergroundquest_b_01",
-    "quality": 3,
-    "itemClass": 4,
-    "itemSubClass": 2,
-    "inventoryType": 9,
-    "itemLevel": 437,
-    "stats": [
-      {
-        "id": 73,
-        "alloc": 5259
-      },
-      {
-        "id": 7,
-        "alloc": 7889
-      },
-      {
-        "id": 36,
-        "alloc": 4100
-      },
-      {
-        "id": 40,
-        "alloc": 2900
-      }
-    ],
-    "expansion": 10
-  },
-  {
     "id": 223950,
     "name": "Corruption Sifter's Treads",
     "icon": "inv_boot_leather_undergroundquest_b_01",
@@ -18682,93 +17867,6 @@
     "expansion": 10
   },
   {
-    "id": 225517,
-    "name": "[PH] Armor Grips",
-    "icon": "inv_glove_leather_oribosdungeon_c_01",
-    "quality": 2,
-    "itemClass": 4,
-    "itemSubClass": 2,
-    "inventoryType": 10,
-    "itemLevel": 400,
-    "stats": [
-      {
-        "id": 73,
-        "alloc": 5259
-      },
-      {
-        "id": 7,
-        "alloc": 7889
-      },
-      {
-        "id": 32,
-        "alloc": 3650
-      },
-      {
-        "id": 49,
-        "alloc": 3350
-      }
-    ],
-    "expansion": 10
-  },
-  {
-    "id": 225518,
-    "name": "[PH] Armor Helm",
-    "icon": "inv_helm_leather_oribosdungeon_c_01",
-    "quality": 2,
-    "itemClass": 4,
-    "itemSubClass": 2,
-    "inventoryType": 1,
-    "itemLevel": 400,
-    "stats": [
-      {
-        "id": 73,
-        "alloc": 5259
-      },
-      {
-        "id": 7,
-        "alloc": 7889
-      },
-      {
-        "id": 32,
-        "alloc": 3800
-      },
-      {
-        "id": 40,
-        "alloc": 3200
-      }
-    ],
-    "expansion": 10
-  },
-  {
-    "id": 225519,
-    "name": "[PH] Armor Breeches",
-    "icon": "inv_pant_leather_oribosdungeon_c_01",
-    "quality": 2,
-    "itemClass": 4,
-    "itemSubClass": 2,
-    "inventoryType": 7,
-    "itemLevel": 400,
-    "stats": [
-      {
-        "id": 73,
-        "alloc": 5259
-      },
-      {
-        "id": 7,
-        "alloc": 7889
-      },
-      {
-        "id": 32,
-        "alloc": 3950
-      },
-      {
-        "id": 36,
-        "alloc": 3050
-      }
-    ],
-    "expansion": 10
-  },
-  {
     "id": 225520,
     "name": "Smuggled Nerubian Belt",
     "icon": "inv_belt_leather_undergroundquest_b_01",
@@ -18851,35 +17949,6 @@
       {
         "id": 36,
         "alloc": 3200
-      }
-    ],
-    "expansion": 10
-  },
-  {
-    "id": 225539,
-    "name": "[PH] Armor Epaulets",
-    "icon": "inv_shoulder_leather_oribosdungeon_c_01",
-    "quality": 2,
-    "itemClass": 4,
-    "itemSubClass": 2,
-    "inventoryType": 3,
-    "itemLevel": 400,
-    "stats": [
-      {
-        "id": 73,
-        "alloc": 5259
-      },
-      {
-        "id": 7,
-        "alloc": 7889
-      },
-      {
-        "id": 32,
-        "alloc": 3650
-      },
-      {
-        "id": 40,
-        "alloc": 3350
       }
     ],
     "expansion": 10
@@ -19536,96 +18605,6 @@
         "alloc": 6666
       }
     ],
-    "sources": [
-      {
-        "instanceId": -69,
-        "encounterId": -69
-      }
-    ],
-    "expansion": 10
-  },
-  {
-    "id": 225669,
-    "name": "Brute Force Idol",
-    "icon": "ability_bossfelmagnaron_handempowered",
-    "quality": 2,
-    "itemClass": 4,
-    "itemSubClass": 0,
-    "inventoryType": 12,
-    "itemLevel": 250,
-    "uniqueEquipped": true,
-    "sources": [
-      {
-        "instanceId": -69,
-        "encounterId": -69
-      }
-    ],
-    "expansion": 10
-  },
-  {
-    "id": 225682,
-    "name": "Time Lost Relic",
-    "icon": "inv_belt_armor_waistoftime_d_01",
-    "quality": 2,
-    "itemClass": 4,
-    "itemSubClass": 0,
-    "inventoryType": 12,
-    "itemLevel": 250,
-    "uniqueEquipped": true,
-    "sources": [
-      {
-        "instanceId": -69,
-        "encounterId": -69
-      }
-    ],
-    "expansion": 10
-  },
-  {
-    "id": 225683,
-    "name": "Grasping Necrotic Relic",
-    "icon": "spell_necro_necroticcore",
-    "quality": 2,
-    "itemClass": 4,
-    "itemSubClass": 0,
-    "inventoryType": 12,
-    "itemLevel": 250,
-    "uniqueEquipped": true,
-    "sources": [
-      {
-        "instanceId": -69,
-        "encounterId": -69
-      }
-    ],
-    "expansion": 10
-  },
-  {
-    "id": 225684,
-    "name": "Relicblood of Zekvir",
-    "icon": "inv_10_elementalcombinedfoozles_blood",
-    "quality": 2,
-    "itemClass": 4,
-    "itemSubClass": 0,
-    "inventoryType": 12,
-    "itemLevel": 250,
-    "uniqueEquipped": true,
-    "sources": [
-      {
-        "instanceId": -69,
-        "encounterId": -69
-      }
-    ],
-    "expansion": 10
-  },
-  {
-    "id": 225685,
-    "name": "Relic of Sentience",
-    "icon": "inv_misc_statue_10",
-    "quality": 2,
-    "itemClass": 4,
-    "itemSubClass": 0,
-    "inventoryType": 12,
-    "itemLevel": 250,
-    "uniqueEquipped": true,
     "sources": [
       {
         "instanceId": -69,
