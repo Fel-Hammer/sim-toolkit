@@ -82,7 +82,7 @@ actions.ar+=/fel_devastation,if=!buff.metamorphosis.up&((variable.double_rm_rema
 actions.ar+=/felblade,if=cooldown.fel_devastation.remains<gcd.max&fury<50
 actions.ar+=/vengeful_retreat,use_off_gcd=1,if=cooldown.fel_devastation.remains<gcd.max&fury<50&!cooldown.felblade.up&talent.unhindered_assault
 actions.ar+=/fracture,if=cooldown.fel_devastation.remains<gcd.max&fury<50
-actions.ar+=/fracture,if=(full_recharge_time<gcd.max)|buff.metamorphosis.up|variable.can_spb|variable.can_spb_soon
+actions.ar+=/fracture,if=(full_recharge_time<gcd.max)|buff.metamorphosis.up|variable.can_spb|variable.can_spb_soon|buff.warblades_hunger.stack>=5
 actions.ar+=/soul_cleave,if=soul_fragments>=1
 actions.ar+=/bulk_extraction,if=spell_targets>=3
 actions.ar+=/fracture

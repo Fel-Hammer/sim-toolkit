@@ -105,7 +105,7 @@ actions.ar+=/felblade,if=cooldown.fel_devastation.remains<gcd.max&fury<50
 actions.ar+=/vengeful_retreat,use_off_gcd=1,if=cooldown.fel_devastation.remains<gcd.max&fury<50&!cooldown.felblade.up&talent.unhindered_assault
 actions.ar+=/fracture,if=cooldown.fel_devastation.remains<gcd.max&fury<50
 # We want to optimize our soul fragment generation by never overcapping on fracture charges and using it as much as we can while meta is up
-actions.ar+=/fracture,if=(full_recharge_time<gcd.max)|buff.metamorphosis.up|variable.can_spb|variable.can_spb_soon
+actions.ar+=/fracture,if=(full_recharge_time<gcd.max)|buff.metamorphosis.up|variable.can_spb|variable.can_spb_soon|buff.warblades_hunger.stack>=5
 # Primary soul cleave if we're consuming fragments
 actions.ar+=/soul_cleave,if=soul_fragments>=1
 # Bulk extraction is only worth casting at 3+ targets
