@@ -1,3 +1,15 @@
+profileset."councils_guile_3"+=main_hand=,id=219877,enchant_id=7460,ilevel=639,enchant_id=7439
+profileset."councils_guile_3"+=off_hand=,id=222441,bonus_id=10421/9633/8902/11144/10222/1485/11301/8960,enchant_id=7460,crafted_stats=36/40,enchant_id=7439
+
+profileset."stormriders_fury_3"+=main_hand=,id=219877,enchant_id=7460,ilevel=639,enchant_id=7442
+profileset."stormriders_fury_3"+=off_hand=,id=222441,bonus_id=10421/9633/8902/11144/10222/1485/11301/8960,enchant_id=7460,crafted_stats=36/40,enchant_id=7442
+
+profileset."stonebound_artistry_3"+=main_hand=,id=219877,enchant_id=7460,ilevel=639,enchant_id=7445
+profileset."stonebound_artistry_3"+=off_hand=,id=222441,bonus_id=10421/9633/8902/11144/10222/1485/11301/8960,enchant_id=7460,crafted_stats=36/40,enchant_id=7445
+
+profileset."oathsworns_tenacity_3"+=main_hand=,id=219877,enchant_id=7460,ilevel=639,enchant_id=7448
+profileset."oathsworns_tenacity_3"+=off_hand=,id=222441,bonus_id=10421/9633/8902/11144/10222/1485/11301/8960,enchant_id=7460,crafted_stats=36/40,enchant_id=7448
+
 profileset."authority_of_air_3"+=main_hand=,id=219877,enchant_id=7460,ilevel=639,enchant_id=7451
 profileset."authority_of_air_3"+=off_hand=,id=222441,bonus_id=10421/9633/8902/11144/10222/1485/11301/8960,enchant_id=7460,crafted_stats=36/40,enchant_id=7451
 

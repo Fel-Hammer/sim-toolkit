@@ -1,14 +1,26 @@
 profileset."190_crit"+=finger1=,id=225578,enchant_id=7340,gem_id=213485/213485,ilevel=639,enchant_id=7331
 profileset."190_crit"+=finger2=,id=212447,enchant_id=7352,gem_id=213485/213485,ilevel=639,enchant_id=7331
 
+profileset."315_crit"+=finger1=,id=225578,enchant_id=7340,gem_id=213485/213485,ilevel=639,enchant_id=7334
+profileset."315_crit"+=finger2=,id=212447,enchant_id=7352,gem_id=213485/213485,ilevel=639,enchant_id=7334
+
 profileset."190_haste"+=finger1=,id=225578,enchant_id=7340,gem_id=213485/213485,ilevel=639,enchant_id=7337
 profileset."190_haste"+=finger2=,id=212447,enchant_id=7352,gem_id=213485/213485,ilevel=639,enchant_id=7337
+
+profileset."315_haste"+=finger1=,id=225578,enchant_id=7340,gem_id=213485/213485,ilevel=639,enchant_id=7340
+profileset."315_haste"+=finger2=,id=212447,enchant_id=7352,gem_id=213485/213485,ilevel=639,enchant_id=7340
 
 profileset."190_mast"+=finger1=,id=225578,enchant_id=7340,gem_id=213485/213485,ilevel=639,enchant_id=7343
 profileset."190_mast"+=finger2=,id=212447,enchant_id=7352,gem_id=213485/213485,ilevel=639,enchant_id=7343
 
+profileset."315_mast"+=finger1=,id=225578,enchant_id=7340,gem_id=213485/213485,ilevel=639,enchant_id=7346
+profileset."315_mast"+=finger2=,id=212447,enchant_id=7352,gem_id=213485/213485,ilevel=639,enchant_id=7346
+
 profileset."190_vers"+=finger1=,id=225578,enchant_id=7340,gem_id=213485/213485,ilevel=639,enchant_id=7349
 profileset."190_vers"+=finger2=,id=212447,enchant_id=7352,gem_id=213485/213485,ilevel=639,enchant_id=7349
+
+profileset."315_vers"+=finger1=,id=225578,enchant_id=7340,gem_id=213485/213485,ilevel=639,enchant_id=7352
+profileset."315_vers"+=finger2=,id=212447,enchant_id=7352,gem_id=213485/213485,ilevel=639,enchant_id=7352
 
 profileset."cursed_crit_3"+=finger1=,id=225578,enchant_id=7340,gem_id=213485/213485,ilevel=639,enchant_id=7470
 profileset."cursed_crit_3"+=finger2=,id=212447,enchant_id=7352,gem_id=213485/213485,ilevel=639,enchant_id=7470

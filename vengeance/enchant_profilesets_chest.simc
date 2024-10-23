@@ -1,3 +1,6 @@
-profileset."Chest_Stormriders_Agi_3"+=chest=omnivores_venomous_camouflage,id=212433,ilevel=639,enchant_id=7364,enchant_id=7355
-profileset."Chest_Oathsworns_Str_3"+=chest=omnivores_venomous_camouflage,id=212433,ilevel=639,enchant_id=7364,enchant_id=7361
-profileset."Chest_Crystalline_Radiance_3"+=chest=omnivores_venomous_camouflage,id=212433,ilevel=639,enchant_id=7364,enchant_id=7364
+profileset."stormriders_agi_3"+=chest=,id=212433,enchant_id=7364,ilevel=639,enchant_id=7355
+
+profileset."oathsworns_str_3"+=chest=,id=212433,enchant_id=7364,ilevel=639,enchant_id=7361
+
+profileset."crystalline_radiance_3"+=chest=,id=212433,enchant_id=7364,ilevel=639,enchant_id=7364
+

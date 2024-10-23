@@ -16503,6 +16503,9 @@
         "alloc": 7889
       }
     ],
+    "bonusLists": [
+      10844
+    ],
     "expansion": 10
   },
   {
@@ -16521,6 +16524,9 @@
         "alloc": 7889
       }
     ],
+    "bonusLists": [
+      10844
+    ],
     "expansion": 10
   },
   {
@@ -16537,6 +16543,9 @@
         "id": 7,
         "alloc": 7889
       }
+    ],
+    "bonusLists": [
+      10844
     ],
     "expansion": 10
   },
@@ -16559,6 +16568,9 @@
         "alloc": 7889
       }
     ],
+    "bonusLists": [
+      10844
+    ],
     "expansion": 10
   },
   {
@@ -16579,6 +16591,9 @@
         "id": 7,
         "alloc": 7889
       }
+    ],
+    "bonusLists": [
+      10844
     ],
     "expansion": 10
   },
@@ -16601,6 +16616,9 @@
         "alloc": 7889
       }
     ],
+    "bonusLists": [
+      10844
+    ],
     "expansion": 10
   },
   {
@@ -16621,6 +16639,9 @@
         "id": 7,
         "alloc": 7889
       }
+    ],
+    "bonusLists": [
+      10844
     ],
     "expansion": 10
   },
@@ -16643,6 +16664,9 @@
         "alloc": 7889
       }
     ],
+    "bonusLists": [
+      10844
+    ],
     "expansion": 10
   },
   {
@@ -16663,6 +16687,9 @@
         "id": 7,
         "alloc": 7889
       }
+    ],
+    "bonusLists": [
+      10844
     ],
     "expansion": 10
   },
@@ -16685,6 +16712,9 @@
         "alloc": 7889
       }
     ],
+    "bonusLists": [
+      10844
+    ],
     "expansion": 10
   },
   {
@@ -16705,6 +16735,9 @@
         "id": 7,
         "alloc": 7889
       }
+    ],
+    "bonusLists": [
+      10844
     ],
     "expansion": 10
   },
@@ -16841,6 +16874,7 @@
     "itemSubClass": 0,
     "inventoryType": 11,
     "itemLevel": 518,
+    "uniqueEquipped": true,
     "stats": [
       {
         "id": 7,
@@ -20061,6 +20095,9 @@
         "alloc": 7889
       }
     ],
+    "bonusLists": [
+      10844
+    ],
     "expansion": 10
   },
   {
@@ -20081,6 +20118,9 @@
         "id": 7,
         "alloc": 7889
       }
+    ],
+    "bonusLists": [
+      10844
     ],
     "expansion": 10
   },
@@ -20103,6 +20143,9 @@
         "alloc": 7889
       }
     ],
+    "bonusLists": [
+      10844
+    ],
     "expansion": 10
   },
   {
@@ -20123,6 +20166,9 @@
         "id": 7,
         "alloc": 7889
       }
+    ],
+    "bonusLists": [
+      10844
     ],
     "expansion": 10
   },
@@ -20145,6 +20191,9 @@
         "alloc": 7889
       }
     ],
+    "bonusLists": [
+      10844
+    ],
     "expansion": 10
   },
   {
@@ -20165,6 +20214,9 @@
         "id": 7,
         "alloc": 7889
       }
+    ],
+    "bonusLists": [
+      10844
     ],
     "expansion": 10
   },
@@ -20187,6 +20239,9 @@
         "alloc": 7889
       }
     ],
+    "bonusLists": [
+      10844
+    ],
     "expansion": 10
   },
   {
@@ -20207,6 +20262,9 @@
         "id": 7,
         "alloc": 7889
       }
+    ],
+    "bonusLists": [
+      10844
     ],
     "expansion": 10
   },
